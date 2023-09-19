@@ -1,0 +1,1871 @@
+<html>
+<head>
+<style>
+pre {margin: 0.1em }
+
+            span {
+                white-space: pre;
+            }
+
+            .label-100 {
+                border: 1px solid gray;
+            }
+
+            .label0 {
+                border: 1px solid white;
+            }
+
+            .label1 {
+                border: 1px solid blue;
+            }
+            .new {
+                background-color: #8FFF92;
+            }
+
+            .context-size {
+	            padding: 0.1em;
+	            color: white;
+	            background-color: black;
+	            border-radius: 50%;
+	            width: 1.5em;
+	            display: inline-block;
+	            text-align: center;
+	            height: 1.5em;
+	            line-height: 1.5em;
+                margin-right: 0.6em;
+            }
+.pred0{background-color: rgba(255, 0, 0, 0.0);}
+.pred1{background-color: rgba(255, 0, 0, 0.1);}
+.pred2{background-color: rgba(255, 0, 0, 0.2);}
+.pred3{background-color: rgba(255, 0, 0, 0.3);}
+.pred4{background-color: rgba(255, 0, 0, 0.4);}
+.pred5{background-color: rgba(255, 0, 0, 0.5);}
+.pred6{background-color: rgba(255, 0, 0, 0.6);}
+.pred7{background-color: rgba(255, 0, 0, 0.7);}
+.pred8{background-color: rgba(255, 0, 0, 0.8);}
+.pred9{background-color: rgba(255, 0, 0, 0.9);}
+.pred10{background-color: rgba(255, 0, 0, 1.0);}
+</style>
+</head>
+<body>
+<div>
+<h3>
+Chart, 25
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>        if (meanValue == null) {<br/>            return;<br/>        }<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>        Number n = dataset.getStdDevValue(row, column);<br/>        if (n!= null) {<br/>            double valueDelta = n.doubleValue();<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>        }<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>        if (meanValue == null) {<br/>            return;<br/>        }<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>        Number n = dataset.getStdDevValue(row, column);<br/>        if (n!= null) {<br/>            double valueDelta = n.doubleValue();<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>        }<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+                                     </span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> row</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0">
+                                     </span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> column</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Rectangle</span><!--
+--><span class="label-100 pred0">Edge</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">Axis</span><!--
+--><span class="label-100 pred0">Location</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> plot</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Domain</span><!--
+--><span class="label-100 pred0">Axis</span><!--
+--><span class="label-100 pred0">Edge</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> BAR</span><!--
+--><span class="label-100 pred0"> Y</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> rect</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> domain</span><!--
+--><span class="label-100 pred0">Axis</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Category</span><!--
+--><span class="label-100 pred0">Start</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">column</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">Column</span><!--
+--><span class="label-100 pred0">Count</span><!--
+--><span class="label-100 pred0">(),</span><!--
+--><span class="label-100 pred0"> 
+               </span><!--
+--><span class="label-100 pred0"> data</span><!--
+--><span class="label-100 pred0">Area</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">Axis</span><!--
+--><span class="label-100 pred0">Location</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> series</span><!--
+--><span class="label-100 pred0">Count</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">RowCount</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> category</span><!--
+--><span class="label-100 pred0">Count</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">Column</span><!--
+--><span class="label-100 pred0">Count</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">series</span><!--
+--><span class="label-100 pred0">Count</span><!--
+--><span class="label-100 pred0"> &gt;</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> series</span><!--
+--><span class="label-100 pred0">Gap</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> data</span><!--
+--><span class="label-100 pred0">Area</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getHeight</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> getItem</span><!--
+--><span class="label-100 pred0">Margin</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0">
+                              </span><!--
+--><span class="label-100 pred0"> /</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">category</span><!--
+--><span class="label-100 pred0">Count</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">series</span><!--
+--><span class="label-100 pred0">Count</span><!--
+--><span class="label-100 pred0"> -</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">));</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> rect</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> rect</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> row</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">state</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Bar</span><!--
+--><span class="label-100 pred0">Width</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> series</span><!--
+--><span class="label-100 pred0">Gap</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> rect</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> rect</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> row</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> state</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Bar</span><!--
+--><span class="label-100 pred0">Width</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> BAR</span><!--
+--><span class="label-100 pred0"> X</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Number</span><!--
+--><span class="label-100 pred0"> mean</span><!--
+--><span class="label-100 pred0">Value</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> dataset</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Mean</span><!--
+--><span class="label-100 pred0">Value</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">row</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> column</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> mean</span><!--
+--><span class="label-100 pred0">Value</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">doubleValue</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> base</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> l</span><!--
+--><span class="label-100 pred0">clip</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">Lower</span><!--
+--><span class="label-100 pred0">Clip</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> uc</span><!--
+--><span class="label-100 pred0">lip</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">Upper</span><!--
+--><span class="label-100 pred0">Clip</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">uc</span><!--
+--><span class="label-100 pred0">lip</span><!--
+--><span class="label-100 pred0"> &lt;=</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> cases</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">3</span><!--
+--><span class="label-100 pred0"> and</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">4</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">value</span><!--
+--><span class="label-100 pred0"> &gt;=</span><!--
+--><span class="label-100 pred0"> uc</span><!--
+--><span class="label-100 pred0">lip</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> bar</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> visible</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> base</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> uc</span><!--
+--><span class="label-100 pred0">lip</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">value</span><!--
+--><span class="label-100 pred0"> &lt;=</span><!--
+--><span class="label-100 pred0"> l</span><!--
+--><span class="label-100 pred0">clip</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> l</span><!--
+--><span class="label-100 pred0">clip</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Rectangle</span><!--
+--><span class="label-100 pred0">Edge</span><!--
+--><span class="label-100 pred0"> y</span><!--
+--><span class="label-100 pred0">Axis</span><!--
+--><span class="label-100 pred0">Location</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> plot</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Range</span><!--
+--><span class="label-100 pred0">Axis</span><!--
+--><span class="label-100 pred0">Edge</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> trans</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> range</span><!--
+--><span class="label-100 pred0">Axis</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">value</span><!--
+--><span class="label-100 pred0">To</span><!--
+--><span class="label-100 pred0">Java</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">D</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">base</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> data</span><!--
+--><span class="label-100 pred0">Area</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> y</span><!--
+--><span class="label-100 pred0">Axis</span><!--
+--><span class="label-100 pred0">Location</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> trans</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> range</span><!--
+--><span class="label-100 pred0">Axis</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">value</span><!--
+--><span class="label-100 pred0">To</span><!--
+--><span class="label-100 pred0">Java</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">D</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">value</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> data</span><!--
+--><span class="label-100 pred0">Area</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> 
+               </span><!--
+--><span class="label-100 pred0"> y</span><!--
+--><span class="label-100 pred0">Axis</span><!--
+--><span class="label-100 pred0">Location</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> rect</span><!--
+--><span class="label-100 pred0">X</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> Math</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">min</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">trans</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> trans</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> rect</span><!--
+--><span class="label-100 pred0">Height</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> state</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Bar</span><!--
+--><span class="label-100 pred0">Width</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> rect</span><!--
+--><span class="label-100 pred0">Width</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> Math</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">abs</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">trans</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0"> -</span><!--
+--><span class="label-100 pred0"> trans</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Rectangle</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">D</span><!--
+--><span class="label-100 pred0"> bar</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Rectangle</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">D</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Double</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">rect</span><!--
+--><span class="label-100 pred0">X</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> rect</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> rect</span><!--
+--><span class="label-100 pred0">Width</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> 
+               </span><!--
+--><span class="label-100 pred0"> rect</span><!--
+--><span class="label-100 pred0">Height</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Paint</span><!--
+--><span class="label-100 pred0"> series</span><!--
+--><span class="label-100 pred0">Paint</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> getItem</span><!--
+--><span class="label-100 pred0">Paint</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">row</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> column</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> g</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Paint</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">series</span><!--
+--><span class="label-100 pred0">Paint</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> g</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">fill</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">bar</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">is</span><!--
+--><span class="label-100 pred0">Draw</span><!--
+--><span class="label-100 pred0">Bar</span><!--
+--><span class="label-100 pred0">Outline</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> &amp;&amp;</span><!--
+--><span class="label-100 pred0"> state</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Bar</span><!--
+--><span class="label-100 pred0">Width</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> &gt;</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">3</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> g</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Stroke</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">getItem</span><!--
+--><span class="label-100 pred0">Stroke</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">row</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> column</span><!--
+--><span class="label-100 pred0">));</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> g</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Paint</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">getItem</span><!--
+--><span class="label-100 pred0">Outline</span><!--
+--><span class="label-100 pred0">Paint</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">row</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> column</span><!--
+--><span class="label-100 pred0">));</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> g</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">draw</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">bar</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> standard</span><!--
+--><span class="label-100 pred0"> deviation</span><!--
+--><span class="label-100 pred0"> lines</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0">Delta</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> item</span><!--
+--><span class="label0 pred0">No</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (!</span><!--
+--><span class="label0 pred0">Double</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred6">isNaN</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">y</span><!--
+--><span class="label0 pred0">))</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">y</span><!--
+--><span class="label0 pred0"> &gt;</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+                       </span><!--
+--><span class="label0 pred0"> positive</span><!--
+--><span class="label0 pred0"> +=</span><!--
+--><span class="label0 pred0"> y</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+                       </span><!--
+--><span class="label0 pred0"> negative</span><!--
+--><span class="label0 pred0"> +=</span><!--
+--><span class="label0 pred0"> y</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">positive</span><!--
+--><span class="label0 pred0"> &gt;</span><!--
+--><span class="label0 pred0"> maximum</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> maximum</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> positive</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0"> 
+           </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">negative</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0"> minimum</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> minimum</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> negative</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0"> 
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">minimum</span><!--
+--><span class="label0 pred0"> &lt;=</span><!--
+--><span class="label0 pred0"> maximum</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Range</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">minimum</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> maximum</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">   
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Calculates</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> total</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> y</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">values</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> all</span><!--
+--><span class="label0 pred0"> series</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> given</span><!--
+--><span class="label0 pred0"> item</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> index</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> dataset</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> dataset</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> item</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> item</span><!--
+--><span class="label0 pred0"> index</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> total</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">since</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> calculate</span><!--
+--><span class="label0 pred0">Stack</span><!--
+--><span class="label0 pred0">Total</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Table</span><!--
+--><span class="label0 pred0">XY</span><!--
+--><span class="label0 pred0">Dataset</span><!--
+--><span class="label0 pred0"> dataset</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> item</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> total</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> series</span><!--
+--><span class="label0 pred0">Count</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> dataset</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">get</span><!--
+--><span class="label0 pred0">Series</span><!--
+--><span class="label0 pred0">Count</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">int</span><!--
+--><span class="label0 pred0"> s</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> s</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0"> series</span><!--
+--><span class="label0 pred0">Count</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> s</span><!--
+--><span class="label0 pred0">++)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> dataset</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getY</span><!--
+--><span class="label0 pred0">Value</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> item</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (!</span><!--
+--><span class="label0 pred0">Double</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred6">isNaN</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">value</span><!--
+--><span class="label0 pred0">))</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> total</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> total</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> total</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Calculates</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> range</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> values</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> dataset</span><!--
+--><span class="label0 pred0"> where</span><!--
+--><span class="label0 pred0"> each</span><!--
+--><span class="label0 pred0"> item</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> running</span><!--
+--><span class="label0 pred0"> total</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> items</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> current</span><!--
+--><span class="label0 pred0"> series</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> dataset</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> dataset</span><!--
+--><span class="label0 pred0"> (&lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">null</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> permitted</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> range</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">see</span><!--
+--><span class="label0 pred0"> #</span><!--
+--><span class="label0 pred0">find</span><!--
+--><span class="label0 pred0">Range</span><!--
+--><span class="label0 pred0">Bounds</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Category</span><!--
+--><span class="label0 pred0">Dataset</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> Range</span><!--
+--><span class="label0 pred0"> find</span><!--
+--><span class="label0 pred0">C</span><!--
+--><span class="label0 pred0">umulative</span><!--
+--><span class="label0 pred0">Range</span><!--
+--><span class="label0 pred0">Bounds</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Category</span><!--
+--><span class="label0 pred0">Dataset</span><!--
+--><span class="label0 pred0"> dataset</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">dataset</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> throw</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> IllegalArgumentException</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">Null</span><!--
+--><span class="label0 pred0"> &#x27;</span><!--
+--><span class="label0 pred0">dataset</span><!--
+--><span class="label0 pred0">&#x27;</span><!--
+--><span class="label0 pred0"> argument</span><!--
+--><span class="label0 pred0">.&quot;);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label0 pred0"> all</span><!--
+--><span class="label0 pred0">Items</span><!--
+--><span class="label0 pred0">Null</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> true</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> we</span><!--
+--><span class="label0 pred0">&#x27;ll</span><!--
+--><span class="label0 pred0"> set</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> false</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> there</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> at</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">
+                                    </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> least</span><!--
+--><span class="label0 pred0"> one</span><!--
+--><span class="label0 pred0"> non</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">null</span><!--
+--><span class="label0 pred0"> data</span><!--
+--><span class="label0 pred0"> item</span><!--
+--><span class="label0 pred0">...</span><!--
+--><span class="label0 pred0"> 
+       </span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> minimum</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> maximum</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">int</span><!--
+--><span class="label0 pred0"> row</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> row</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0"> dataset</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getRow</span><!--
+--><span class="label0 pred0">Count</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0"> row</span><!--
+--><span class="label0 pred0">++)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> running</span><!--
+--><span class="label0 pred0">Total</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">int</span><!--
+--><span class="label0 pred0"> column</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> column</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0"> dataset</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getColumn</span><!--
+--><span class="label0 pred0">Count</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> 
+                </span><!--
+--><span class="label0 pred0"> column</span><!--
+--><span class="label0 pred0">++)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> Number</span><!--
+--><span class="label1 pred0"> n</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> dataset</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred2">getValue</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">row</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> column</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label1 pred0">n</span><!--
+--><span class="label0 pred0"> !=</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> all</span><!--
+--><span class="label0 pred0">Items</span><!--
+--><span class="label0 pred0">Null</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> false</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> double</span>
+</div>
+<hr/>
+<div>
+<h3>
+Chart, 25
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>        if (meanValue == null) {<br/>            return;<br/>        }<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>        Number n = dataset.getStdDevValue(row, column);<br/>        if (n!= null) {<br/>            double valueDelta = n.doubleValue();<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>        }<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>        if (meanValue == null) {<br/>            return;<br/>        }<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>        Number n = dataset.getStdDevValue(row, column);<br/>        if (n!= null) {<br/>            double valueDelta = n.doubleValue();<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>        }<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+                                     </span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> row</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0">
+                                     </span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> column</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Rectangle</span><!--
+--><span class="label-100 pred0">Edge</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">Axis</span><!--
+--><span class="label-100 pred0">Location</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> plot</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Domain</span><!--
+--><span class="label-100 pred0">Axis</span><!--
+--><span class="label-100 pred0">Edge</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> BAR</span><!--
+--><span class="label-100 pred0"> Y</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> rect</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> domain</span><!--
+--><span class="label-100 pred0">Axis</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Category</span><!--
+--><span class="label-100 pred0">Start</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">column</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">Column</span><!--
+--><span class="label-100 pred0">Count</span><!--
+--><span class="label-100 pred0">(),</span><!--
+--><span class="label-100 pred0"> 
+               </span><!--
+--><span class="label-100 pred0"> data</span><!--
+--><span class="label-100 pred0">Area</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">Axis</span><!--
+--><span class="label-100 pred0">Location</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> series</span><!--
+--><span class="label-100 pred0">Count</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">RowCount</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> category</span><!--
+--><span class="label-100 pred0">Count</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">Column</span><!--
+--><span class="label-100 pred0">Count</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">series</span><!--
+--><span class="label-100 pred0">Count</span><!--
+--><span class="label-100 pred0"> &gt;</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> series</span><!--
+--><span class="label-100 pred0">Gap</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> data</span><!--
+--><span class="label-100 pred0">Area</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getHeight</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> getItem</span><!--
+--><span class="label-100 pred0">Margin</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0">
+                              </span><!--
+--><span class="label-100 pred0"> /</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">category</span><!--
+--><span class="label-100 pred0">Count</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">series</span><!--
+--><span class="label-100 pred0">Count</span><!--
+--><span class="label-100 pred0"> -</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">));</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> rect</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> rect</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> row</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">state</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Bar</span><!--
+--><span class="label-100 pred0">Width</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> series</span><!--
+--><span class="label-100 pred0">Gap</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> rect</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> rect</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> row</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> state</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Bar</span><!--
+--><span class="label-100 pred0">Width</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> BAR</span><!--
+--><span class="label-100 pred0"> X</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Number</span><!--
+--><span class="label-100 pred0"> mean</span><!--
+--><span class="label-100 pred0">Value</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> dataset</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Mean</span><!--
+--><span class="label-100 pred0">Value</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">row</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> column</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> mean</span><!--
+--><span class="label-100 pred0">Value</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">doubleValue</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> base</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> l</span><!--
+--><span class="label-100 pred0">clip</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">Lower</span><!--
+--><span class="label-100 pred0">Clip</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> uc</span><!--
+--><span class="label-100 pred0">lip</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">Upper</span><!--
+--><span class="label-100 pred0">Clip</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">uc</span><!--
+--><span class="label-100 pred0">lip</span><!--
+--><span class="label-100 pred0"> &lt;=</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> cases</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">3</span><!--
+--><span class="label-100 pred0"> and</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">4</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">value</span><!--
+--><span class="label-100 pred0"> &gt;=</span><!--
+--><span class="label-100 pred0"> uc</span><!--
+--><span class="label-100 pred0">lip</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> bar</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> visible</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> base</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> uc</span><!--
+--><span class="label-100 pred0">lip</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">value</span><!--
+--><span class="label-100 pred0"> &lt;=</span><!--
+--><span class="label-100 pred0"> l</span><!--
+--><span class="label-100 pred0">clip</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> l</span><!--
+--><span class="label-100 pred0">clip</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Rectangle</span><!--
+--><span class="label-100 pred0">Edge</span><!--
+--><span class="label-100 pred0"> y</span><!--
+--><span class="label-100 pred0">Axis</span><!--
+--><span class="label-100 pred0">Location</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> plot</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Range</span><!--
+--><span class="label-100 pred0">Axis</span><!--
+--><span class="label-100 pred0">Edge</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> trans</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> range</span><!--
+--><span class="label-100 pred0">Axis</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">value</span><!--
+--><span class="label-100 pred0">To</span><!--
+--><span class="label-100 pred0">Java</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">D</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">base</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> data</span><!--
+--><span class="label-100 pred0">Area</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> y</span><!--
+--><span class="label-100 pred0">Axis</span><!--
+--><span class="label-100 pred0">Location</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> trans</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> range</span><!--
+--><span class="label-100 pred0">Axis</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">value</span><!--
+--><span class="label-100 pred0">To</span><!--
+--><span class="label-100 pred0">Java</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">D</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">value</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> data</span><!--
+--><span class="label-100 pred0">Area</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> 
+               </span><!--
+--><span class="label-100 pred0"> y</span><!--
+--><span class="label-100 pred0">Axis</span><!--
+--><span class="label-100 pred0">Location</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> rect</span><!--
+--><span class="label-100 pred0">X</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> Math</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">min</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">trans</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> trans</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> rect</span><!--
+--><span class="label-100 pred0">Height</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> state</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Bar</span><!--
+--><span class="label-100 pred0">Width</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> rect</span><!--
+--><span class="label-100 pred0">Width</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> Math</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">abs</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">trans</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0"> -</span><!--
+--><span class="label-100 pred0"> trans</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Rectangle</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">D</span><!--
+--><span class="label-100 pred0"> bar</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Rectangle</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">D</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Double</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">rect</span><!--
+--><span class="label-100 pred0">X</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> rect</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> rect</span><!--
+--><span class="label-100 pred0">Width</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> 
+               </span><!--
+--><span class="label-100 pred0"> rect</span><!--
+--><span class="label-100 pred0">Height</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Paint</span><!--
+--><span class="label-100 pred0"> series</span><!--
+--><span class="label-100 pred0">Paint</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> getItem</span><!--
+--><span class="label-100 pred0">Paint</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">row</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> column</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> g</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Paint</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">series</span><!--
+--><span class="label-100 pred0">Paint</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> g</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">fill</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">bar</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">is</span><!--
+--><span class="label-100 pred0">Draw</span><!--
+--><span class="label-100 pred0">Bar</span><!--
+--><span class="label-100 pred0">Outline</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> &amp;&amp;</span><!--
+--><span class="label-100 pred0"> state</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Bar</span><!--
+--><span class="label-100 pred0">Width</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> &gt;</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">3</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> g</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Stroke</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">getItem</span><!--
+--><span class="label-100 pred0">Stroke</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">row</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> column</span><!--
+--><span class="label-100 pred0">));</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> g</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Paint</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">getItem</span><!--
+--><span class="label-100 pred0">Outline</span><!--
+--><span class="label-100 pred0">Paint</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">row</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> column</span><!--
+--><span class="label-100 pred0">));</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> g</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">draw</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">bar</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> standard</span><!--
+--><span class="label-100 pred0"> deviation</span><!--
+--><span class="label-100 pred0"> lines</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0">Delta</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label1 pred0"> n</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">doubleValue</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> running</span><!--
+--><span class="label0 pred0">Total</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> running</span><!--
+--><span class="label0 pred0">Total</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> minimum</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> Math</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">min</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">minimum</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> running</span><!--
+--><span class="label0 pred0">Total</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> maximum</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> Math</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred5">max</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">maximum</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> running</span><!--
+--><span class="label0 pred0">Total</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">    
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (!</span><!--
+--><span class="label0 pred0">all</span><!--
+--><span class="label0 pred0">Items</span><!--
+--><span class="label0 pred0">Null</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Range</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">minimum</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> maximum</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">}</span>
+</div>
+<hr/>
+</body>
+</html>

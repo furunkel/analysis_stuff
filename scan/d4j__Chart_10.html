@@ -1,0 +1,3847 @@
+<html>
+<head>
+<style>
+pre {margin: 0.1em }
+
+            span {
+                white-space: pre;
+            }
+
+            .label-100 {
+                border: 1px solid gray;
+            }
+
+            .label0 {
+                border: 1px solid white;
+            }
+
+            .label1 {
+                border: 1px solid blue;
+            }
+            .new {
+                background-color: #8FFF92;
+            }
+
+            .context-size {
+	            padding: 0.1em;
+	            color: white;
+	            background-color: black;
+	            border-radius: 50%;
+	            width: 1.5em;
+	            display: inline-block;
+	            text-align: center;
+	            height: 1.5em;
+	            line-height: 1.5em;
+                margin-right: 0.6em;
+            }
+.pred0{background-color: rgba(255, 0, 0, 0.0);}
+.pred1{background-color: rgba(255, 0, 0, 0.1);}
+.pred2{background-color: rgba(255, 0, 0, 0.2);}
+.pred3{background-color: rgba(255, 0, 0, 0.3);}
+.pred4{background-color: rgba(255, 0, 0, 0.4);}
+.pred5{background-color: rgba(255, 0, 0, 0.5);}
+.pred6{background-color: rgba(255, 0, 0, 0.6);}
+.pred7{background-color: rgba(255, 0, 0, 0.7);}
+.pred8{background-color: rgba(255, 0, 0, 0.8);}
+.pred9{background-color: rgba(255, 0, 0, 0.9);}
+.pred10{background-color: rgba(255, 0, 0, 1.0);}
+</style>
+</head>
+<body>
+<div>
+<h3>
+Chart, 10
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>        return &quot; title=\&quot;&quot; + ImageMapUtilities.htmlEscape(toolTipText) <br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Generates</span><!--
+--><span class="label-100 pred0"> tooltip</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> using</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> HTML</span><!--
+--><span class="label-100 pred0"> title</span><!--
+--><span class="label-100 pred0"> attribute</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> image</span><!--
+--><span class="label-100 pred0"> map</span><!--
+--><span class="label-100 pred0"> area</span><!--
+--><span class="label-100 pred0"> tags</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0"></span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">public</span><!--
+--><span class="label-100 pred0"> class</span><!--
+--><span class="label-100 pred0"> Standard</span><!--
+--><span class="label-100 pred0">ToolTip</span><!--
+--><span class="label-100 pred0">Tag</span><!--
+--><span class="label-100 pred0">Fragment</span><!--
+--><span class="label-100 pred0">Generator</span><!--
+--><span class="label-100 pred0"> 
+       </span><!--
+--><span class="label-100 pred0"> implements</span><!--
+--><span class="label-100 pred0"> Tool</span><!--
+--><span class="label-100 pred0">Tip</span><!--
+--><span class="label-100 pred0">Tag</span><!--
+--><span class="label-100 pred0">Fragment</span><!--
+--><span class="label-100 pred0">Generator</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Creates</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> instance</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> Standard</span><!--
+--><span class="label-100 pred0">ToolTip</span><!--
+--><span class="label-100 pred0">Tag</span><!--
+--><span class="label-100 pred0">Fragment</span><!--
+--><span class="label-100 pred0">Generator</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> super</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Generates</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> tooltip</span><!--
+--><span class="label-100 pred0"> string</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> go</span><!--
+--><span class="label-100 pred0"> in</span><!--
+--><span class="label-100 pred0"> an</span><!--
+--><span class="label-100 pred0"> HTML</span><!--
+--><span class="label-100 pred0"> image</span><!--
+--><span class="label-100 pred0"> map</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> tool</span><!--
+--><span class="label-100 pred0">Tip</span><!--
+--><span class="label-100 pred0">Text</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> tooltip</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">return</span><!--
+--><span class="label-100 pred0"> The</span><!--
+--><span class="label-100 pred0"> formatted</span><!--
+--><span class="label-100 pred0"> HTML</span><!--
+--><span class="label-100 pred0"> area</span><!--
+--><span class="label-100 pred0"> tag</span><!--
+--><span class="label-100 pred0"> attribute</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0">).</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> String</span><!--
+--><span class="label-100 pred0"> generate</span><!--
+--><span class="label-100 pred0">ToolTip</span><!--
+--><span class="label-100 pred0">Fragment</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">String</span><!--
+--><span class="label-100 pred0"> tool</span><!--
+--><span class="label-100 pred0">Tip</span><!--
+--><span class="label-100 pred0">Text</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0"> title</span><!--
+--><span class="label-100 pred0">=\&quot;&quot;</span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> tool</span><!--
+--><span class="label-100 pred0">Tip</span><!--
+--><span class="label-100 pred0">Text</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> &quot;\&quot;</span><!--
+--><span class="label-100 pred0"> alt</span><!--
+--><span class="label-100 pred0">=\&quot;</span><!--
+--><span class="label-100 pred0">\&quot;</span><!--
+--><span class="label-100 pred0">&quot;;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"></span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">}</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">/*</span><!--
+--><span class="label0 pred0"> =================================================</span><!--
+--><span class="label0 pred0">==========</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> J</span><!--
+--><span class="label0 pred0">Free</span><!--
+--><span class="label0 pred0">Chart</span><!--
+--><span class="label0 pred0"> :</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> free</span><!--
+--><span class="label0 pred0"> chart</span><!--
+--><span class="label0 pred0"> library</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> Java</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">tm</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> platform</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> =================================================</span><!--
+--><span class="label0 pred0">==========</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">C</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> Copyright</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">7</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> Object</span><!--
+--><span class="label0 pred0"> Re</span><!--
+--><span class="label0 pred0">fin</span><!--
+--><span class="label0 pred0">ery</span><!--
+--><span class="label0 pred0"> Limited</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> Contributors</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Project</span><!--
+--><span class="label0 pred0"> Info</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> http</span><!--
+--><span class="label0 pred0">://</span><!--
+--><span class="label0 pred0">www</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">jfree</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">org</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">jfree</span><!--
+--><span class="label0 pred0">chart</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">index</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">html</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> This</span><!--
+--><span class="label0 pred0"> library</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> free</span><!--
+--><span class="label0 pred0"> software</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> you</span><!--
+--><span class="label0 pred0"> can</span><!--
+--><span class="label0 pred0"> redistribute</span><!--
+--><span class="label0 pred0"> it</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">or</span><!--
+--><span class="label0 pred0"> modify</span><!--
+--><span class="label0 pred0"> it</span><!--
+--><span class="label0 pred0"> 
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> terms</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> GNU</span><!--
+--><span class="label0 pred0"> Lesser</span><!--
+--><span class="label0 pred0"> General</span><!--
+--><span class="label0 pred0"> Public</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> as</span><!--
+--><span class="label0 pred0"> published</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> 
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> Free</span><!--
+--><span class="label0 pred0"> Software</span><!--
+--><span class="label0 pred0"> Foundation</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> either</span><!--
+--><span class="label0 pred0"> version</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> 
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">at</span><!--
+--><span class="label0 pred0"> your</span><!--
+--><span class="label0 pred0"> option</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> any</span><!--
+--><span class="label0 pred0"> later</span><!--
+--><span class="label0 pred0"> version</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> This</span><!--
+--><span class="label0 pred0"> library</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> distributed</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> hope</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0"> it</span><!--
+--><span class="label0 pred0"> will</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> useful</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> but</span><!--
+--><span class="label0 pred0"> 
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> WITHOUT</span><!--
+--><span class="label0 pred0"> ANY</span><!--
+--><span class="label0 pred0"> WARRANTY</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> without</span><!--
+--><span class="label0 pred0"> even</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> implied</span><!--
+--><span class="label0 pred0"> warranty</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> MERCHANTABILITY</span><!--
+--><span class="label0 pred0"> 
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> FITNESS</span><!--
+--><span class="label0 pred0"> FOR</span><!--
+--><span class="label0 pred0"> A</span><!--
+--><span class="label0 pred0"> PARTICULAR</span><!--
+--><span class="label0 pred0"> PURPOSE</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> See</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> GNU</span><!--
+--><span class="label0 pred0"> Lesser</span><!--
+--><span class="label0 pred0"> General</span><!--
+--><span class="label0 pred0"> Public</span><!--
+--><span class="label0 pred0"> 
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> more</span><!--
+--><span class="label0 pred0"> details</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> You</span><!--
+--><span class="label0 pred0"> should</span><!--
+--><span class="label0 pred0"> have</span><!--
+--><span class="label0 pred0"> received</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> copy</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> GNU</span><!--
+--><span class="label0 pred0"> Lesser</span><!--
+--><span class="label0 pred0"> General</span><!--
+--><span class="label0 pred0"> Public</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> along</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> library</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> write</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> Free</span><!--
+--><span class="label0 pred0"> Software</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Foundation</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Inc</span><!--
+--><span class="label0 pred0">.,</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0"> Franklin</span><!--
+--><span class="label0 pred0"> Street</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Fifth</span><!--
+--><span class="label0 pred0"> Floor</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Boston</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> MA</span><!--
+--><span class="label0 pred0">  </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> 
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> USA</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">  
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> [</span><!--
+--><span class="label0 pred0">Java</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> trade</span><!--
+--><span class="label0 pred0">mark</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> registered</span><!--
+--><span class="label0 pred0"> trade</span><!--
+--><span class="label0 pred0">mark</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> Sun</span><!--
+--><span class="label0 pred0"> Micro</span><!--
+--><span class="label0 pred0">systems</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Inc</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> 
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> United</span><!--
+--><span class="label0 pred0"> States</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> other</span><!--
+--><span class="label0 pred0"> countries</span><!--
+--><span class="label0 pred0">.]</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> ----------------</span><!--
+--><span class="label0 pred0">------</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Image</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">Utilities</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">java</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> ----------------</span><!--
+--><span class="label0 pred0">------</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">C</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> Copyright</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">7</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> Richard</span><!--
+--><span class="label0 pred0"> At</span><!--
+--><span class="label0 pred0">kin</span><!--
+--><span class="label0 pred0">son</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> Contributors</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Original</span><!--
+--><span class="label0 pred0"> Author</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> Richard</span><!--
+--><span class="label0 pred0"> At</span><!--
+--><span class="label0 pred0">kin</span><!--
+--><span class="label0 pred0">son</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Contributor</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0">):</span><!--
+--><span class="label0 pred0">  </span><!--
+--><span class="label0 pred0"> David</span><!--
+--><span class="label0 pred0"> G</span><!--
+--><span class="label0 pred0">il</span><!--
+--><span class="label0 pred0">bert</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">for</span><!--
+--><span class="label0 pred0"> Object</span><!--
+--><span class="label0 pred0"> Re</span><!--
+--><span class="label0 pred0">fin</span><!--
+--><span class="label0 pred0">ery</span><!--
+--><span class="label0 pred0"> Limited</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Changes</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> -------</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">Aug</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0"> :</span><!--
+--><span class="label0 pred0"> Initial</span><!--
+--><span class="label0 pred0"> version</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">RA</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">Jan</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0"> :</span><!--
+--><span class="label0 pred0"> Rename</span><!--
+--><span class="label0 pred0">d</span><!--
+--><span class="label0 pred0"> Image</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">Utilities</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">DG</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">Jan</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0"> :</span><!--
+--><span class="label0 pred0"> Re</span><!--
+--><span class="label0 pred0">versed</span><!--
+--><span class="label0 pred0"> order</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> tags</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> chart</span><!--
+--><span class="label0 pred0"> entities</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0"> correct</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">              </span><!--
+--><span class="label0 pred0"> layer</span><!--
+--><span class="label0 pred0">ing</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">DG</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> -------------</span><!--
+--><span class="label0 pred0"> J</span><!--
+--><span class="label0 pred0">FREE</span><!--
+--><span class="label0 pred0">CH</span><!--
+--><span class="label0 pred0">ART</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">x</span><!--
+--><span class="label0 pred0"> --------------------------------</span><!--
+--><span class="label0 pred0">-------------</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">Feb</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0"> :</span><!--
+--><span class="label0 pred0"> API</span><!--
+--><span class="label0 pred0"> doc</span><!--
+--><span class="label0 pred0"> updates</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">DG</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">Jun</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">7</span><!--
+--><span class="label0 pred0"> :</span><!--
+--><span class="label0 pred0"> Removed</span><!--
+--><span class="label0 pred0"> J</span><!--
+--><span class="label0 pred0">Common</span><!--
+--><span class="label0 pred0"> dependencies</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">DG</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">Dec</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">7</span><!--
+--><span class="label0 pred0"> :</span><!--
+--><span class="label0 pred0"> Added</span><!--
+--><span class="label0 pred0"> html</span><!--
+--><span class="label0 pred0">Escape</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> method</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> escape</span><!--
+--><span class="label0 pred0"> &#x27;</span><!--
+--><span class="label0 pred0">name</span><!--
+--><span class="label0 pred0">&#x27;</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> 
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">              </span><!--
+--><span class="label0 pred0"> getImage</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">DG</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> 
+</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">package</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">jfree</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">chart</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">image</span><!--
+--><span class="label0 pred0">map</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">io</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">IOException</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">io</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">PrintWriter</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">jfree</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">chart</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Chart</span><!--
+--><span class="label0 pred0">Rendering</span><!--
+--><span class="label0 pred0">Info</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">jfree</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">chart</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">entity</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Chart</span><!--
+--><span class="label0 pred0">Entity</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">jfree</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">chart</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">entity</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Entity</span><!--
+--><span class="label0 pred0">Collection</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">jfree</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">chart</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0">Utilities</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">/**</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Collection</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> utility</span><!--
+--><span class="label0 pred0"> methods</span><!--
+--><span class="label0 pred0"> related</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> producing</span><!--
+--><span class="label0 pred0"> image</span><!--
+--><span class="label0 pred0"> maps</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">  
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Function</span><!--
+--><span class="label0 pred0">ality</span><!--
+--><span class="label0 pred0"> was</span><!--
+--><span class="label0 pred0"> originally</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">link</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">jfree</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">chart</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Chart</span><!--
+--><span class="label0 pred0">Utilities</span><!--
+--><span class="label0 pred0">}.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">public</span><!--
+--><span class="label0 pred0"> class</span><!--
+--><span class="label1 pred0"> Image</span><!--
+--><span class="label1 pred0">Map</span><!--
+--><span class="label1 pred0">Utilities</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Writes</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> image</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> output</span><!--
+--><span class="label0 pred0"> stream</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> writer</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> writer</span><!--
+--><span class="label0 pred0"> (&lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">null</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> permitted</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0"> (&lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">null</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> permitted</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> info</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> chart</span><!--
+--><span class="label0 pred0"> rendering</span><!--
+--><span class="label0 pred0"> info</span><!--
+--><span class="label0 pred0"> (&lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">null</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> permitted</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">throws</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">io</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">IOException</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> there</span><!--
+--><span class="label0 pred0"> are</span><!--
+--><span class="label0 pred0"> any</span><!--
+--><span class="label0 pred0"> I</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">O</span><!--
+--><span class="label0 pred0"> errors</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> write</span><!--
+--><span class="label0 pred0">Image</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">PrintWriter</span><!--
+--><span class="label0 pred0"> writer</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">
+                                    </span><!--
+--><span class="label0 pred0"> Chart</span><!--
+--><span class="label0 pred0">Rendering</span><!--
+--><span class="label0 pred0">Info</span><!--
+--><span class="label0 pred0"> info</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> throws</span><!--
+--><span class="label0 pred0"> IOException</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> defer</span><!--
+--><span class="label0 pred0"> argument</span><!--
+--><span class="label0 pred0"> checking</span><!--
+--><span class="label0 pred0">...</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label1 pred0"> Image</span><!--
+--><span class="label1 pred0">Map</span><!--
+--><span class="label1 pred0">Utilities</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">write</span><!--
+--><span class="label0 pred0">Image</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">writer</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> info</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Standard</span><!--
+--><span class="label0 pred0">ToolTip</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0">(),</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Standard</span><!--
+--><span class="label0 pred0">URL</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Writes</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> image</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> output</span><!--
+--><span class="label0 pred0"> stream</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> writer</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> writer</span><!--
+--><span class="label0 pred0"> (&lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">null</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> permitted</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0"> (&lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">null</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> permitted</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> info</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> chart</span><!--
+--><span class="label0 pred0"> rendering</span><!--
+--><span class="label0 pred0"> info</span><!--
+--><span class="label0 pred0"> (&lt;</span><!--
+--><span class="label0 pred0">code</span>
+</div>
+<hr/>
+<div>
+<h3>
+Chart, 10
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>        return &quot; title=\&quot;&quot; + ImageMapUtilities.htmlEscape(toolTipText) <br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Generates</span><!--
+--><span class="label-100 pred0"> tooltip</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> using</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> HTML</span><!--
+--><span class="label-100 pred0"> title</span><!--
+--><span class="label-100 pred0"> attribute</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> image</span><!--
+--><span class="label-100 pred0"> map</span><!--
+--><span class="label-100 pred0"> area</span><!--
+--><span class="label-100 pred0"> tags</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0"></span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">public</span><!--
+--><span class="label-100 pred0"> class</span><!--
+--><span class="label-100 pred0"> Standard</span><!--
+--><span class="label-100 pred0">ToolTip</span><!--
+--><span class="label-100 pred0">Tag</span><!--
+--><span class="label-100 pred0">Fragment</span><!--
+--><span class="label-100 pred0">Generator</span><!--
+--><span class="label-100 pred0"> 
+       </span><!--
+--><span class="label-100 pred0"> implements</span><!--
+--><span class="label-100 pred0"> Tool</span><!--
+--><span class="label-100 pred0">Tip</span><!--
+--><span class="label-100 pred0">Tag</span><!--
+--><span class="label-100 pred0">Fragment</span><!--
+--><span class="label-100 pred0">Generator</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Creates</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> instance</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> Standard</span><!--
+--><span class="label-100 pred0">ToolTip</span><!--
+--><span class="label-100 pred0">Tag</span><!--
+--><span class="label-100 pred0">Fragment</span><!--
+--><span class="label-100 pred0">Generator</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> super</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Generates</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> tooltip</span><!--
+--><span class="label-100 pred0"> string</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> go</span><!--
+--><span class="label-100 pred0"> in</span><!--
+--><span class="label-100 pred0"> an</span><!--
+--><span class="label-100 pred0"> HTML</span><!--
+--><span class="label-100 pred0"> image</span><!--
+--><span class="label-100 pred0"> map</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> tool</span><!--
+--><span class="label-100 pred0">Tip</span><!--
+--><span class="label-100 pred0">Text</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> tooltip</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">return</span><!--
+--><span class="label-100 pred0"> The</span><!--
+--><span class="label-100 pred0"> formatted</span><!--
+--><span class="label-100 pred0"> HTML</span><!--
+--><span class="label-100 pred0"> area</span><!--
+--><span class="label-100 pred0"> tag</span><!--
+--><span class="label-100 pred0"> attribute</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0">).</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> String</span><!--
+--><span class="label-100 pred0"> generate</span><!--
+--><span class="label-100 pred0">ToolTip</span><!--
+--><span class="label-100 pred0">Fragment</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">String</span><!--
+--><span class="label-100 pred0"> tool</span><!--
+--><span class="label-100 pred0">Tip</span><!--
+--><span class="label-100 pred0">Text</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0"> title</span><!--
+--><span class="label-100 pred0">=\&quot;&quot;</span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> tool</span><!--
+--><span class="label-100 pred0">Tip</span><!--
+--><span class="label-100 pred0">Text</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> &quot;\&quot;</span><!--
+--><span class="label-100 pred0"> alt</span><!--
+--><span class="label-100 pred0">=\&quot;</span><!--
+--><span class="label-100 pred0">\&quot;</span><!--
+--><span class="label-100 pred0">&quot;;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"></span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">}</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">null</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> permitted</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> use</span><!--
+--><span class="label0 pred0">Over</span><!--
+--><span class="label0 pred0">Lib</span><!--
+--><span class="label0 pred0">For</span><!--
+--><span class="label0 pred0">ToolTip</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> whether</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> use</span><!--
+--><span class="label0 pred0"> Over</span><!--
+--><span class="label0 pred0">LIB</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> tooltip</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">                              </span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">http</span><!--
+--><span class="label0 pred0">://</span><!--
+--><span class="label0 pred0">www</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">bos</span><!--
+--><span class="label0 pred0">r</span><!--
+--><span class="label0 pred0">up</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">com</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">web</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">over</span><!--
+--><span class="label0 pred0">lib</span><!--
+--><span class="label0 pred0">/).</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">throws</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">io</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">IOException</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> there</span><!--
+--><span class="label0 pred0"> are</span><!--
+--><span class="label0 pred0"> any</span><!--
+--><span class="label0 pred0"> I</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">O</span><!--
+--><span class="label0 pred0"> errors</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> write</span><!--
+--><span class="label0 pred0">Image</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">PrintWriter</span><!--
+--><span class="label0 pred0"> writer</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+                                    </span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+                                    </span><!--
+--><span class="label0 pred0"> Chart</span><!--
+--><span class="label0 pred0">Rendering</span><!--
+--><span class="label0 pred0">Info</span><!--
+--><span class="label0 pred0"> info</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+                                    </span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label0 pred0"> use</span><!--
+--><span class="label0 pred0">Over</span><!--
+--><span class="label0 pred0">Lib</span><!--
+--><span class="label0 pred0">For</span><!--
+--><span class="label0 pred0">ToolTip</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> 
+       </span><!--
+--><span class="label0 pred0"> throws</span><!--
+--><span class="label0 pred0"> IOException</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Tool</span><!--
+--><span class="label0 pred0">Tip</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0"> tool</span><!--
+--><span class="label0 pred0">Tip</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">use</span><!--
+--><span class="label0 pred0">Over</span><!--
+--><span class="label0 pred0">Lib</span><!--
+--><span class="label0 pred0">For</span><!--
+--><span class="label0 pred0">ToolTip</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> tool</span><!--
+--><span class="label0 pred0">Tip</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0"> 
+                   </span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Over</span><!--
+--><span class="label0 pred0">LIB</span><!--
+--><span class="label0 pred0">ToolTip</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> tool</span><!--
+--><span class="label0 pred0">Tip</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0"> 
+                   </span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Standard</span><!--
+--><span class="label0 pred0">ToolTip</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label1 pred0"> Image</span><!--
+--><span class="label1 pred0">Map</span><!--
+--><span class="label1 pred0">Utilities</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">write</span><!--
+--><span class="label0 pred0">Image</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">writer</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> info</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> 
+               </span><!--
+--><span class="label0 pred0"> tool</span><!--
+--><span class="label0 pred0">Tip</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> 
+               </span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Standard</span><!--
+--><span class="label0 pred0">URL</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Writes</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> image</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> output</span><!--
+--><span class="label0 pred0"> stream</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> writer</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> writer</span><!--
+--><span class="label0 pred0"> (&lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">null</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> permitted</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0"> (&lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">null</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> permitted</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> info</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> chart</span><!--
+--><span class="label0 pred0"> rendering</span><!--
+--><span class="label0 pred0"> info</span><!--
+--><span class="label0 pred0"> (&lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">null</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> permitted</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> tool</span><!--
+--><span class="label0 pred0">Tip</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> generator</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> HTML</span><!--
+--><span class="label0 pred0"> fragment</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">    </span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0"> will</span><!--
+--><span class="label0 pred0"> contain</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> tooltip</span><!--
+--><span class="label0 pred0"> text</span><!--
+--><span class="label0 pred0"> (&lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">null</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> permitted</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">    </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">info</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> contains</span><!--
+--><span class="label0 pred0"> tooltip</span><!--
+--><span class="label0 pred0"> information</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> url</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> generator</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> HTML</span><!--
+--><span class="label0 pred0"> fragment</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">    </span><!--
+--><span class="label0 pred0"> will</span><!--
+--><span class="label0 pred0"> contain</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> URL</span><!--
+--><span class="label0 pred0"> reference</span><!--
+--><span class="label0 pred0"> (&lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">null</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> permitted</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">    </span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">info</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> contains</span><!--
+--><span class="label0 pred0"> URLs</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">throws</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">io</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">IOException</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> there</span><!--
+--><span class="label0 pred0"> are</span><!--
+--><span class="label0 pred0"> any</span><!--
+--><span class="label0 pred0"> I</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">O</span><!--
+--><span class="label0 pred0"> errors</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> write</span><!--
+--><span class="label0 pred0">Image</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">PrintWriter</span><!--
+--><span class="label0 pred0"> writer</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> 
+           </span><!--
+--><span class="label0 pred0"> Chart</span><!--
+--><span class="label0 pred0">Rendering</span><!--
+--><span class="label0 pred0">Info</span><!--
+--><span class="label0 pred0"> info</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> Tool</span><!--
+--><span class="label0 pred0">Tip</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0"> tool</span><!--
+--><span class="label0 pred0">Tip</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> URL</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0"> url</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> 
+       </span><!--
+--><span class="label0 pred0"> throws</span><!--
+--><span class="label0 pred0"> IOException</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> writer</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">println</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label1 pred0">Image</span><!--
+--><span class="label1 pred0">Map</span><!--
+--><span class="label1 pred0">Utilities</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getImage</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">name</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> info</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> 
+               </span><!--
+--><span class="label0 pred0"> tool</span><!--
+--><span class="label0 pred0">Tip</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> url</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Creates</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> image</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0"> comp</span><!--
+--><span class="label0 pred0">lies</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> XHTML</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> specification</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0"> (&lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">null</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> permitted</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> info</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> chart</span><!--
+--><span class="label0 pred0"> rendering</span><!--
+--><span class="label0 pred0"> info</span><!--
+--><span class="label0 pred0"> (&lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">null</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> permitted</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> getImage</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Chart</span><!--
+--><span class="label0 pred0">Rendering</span><!--
+--><span class="label0 pred0">Info</span><!--
+--><span class="label0 pred0"> info</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label1 pred0"> Image</span><!--
+--><span class="label1 pred0">Map</span><!--
+--><span class="label1 pred0">Utilities</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getImage</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">name</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> info</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Standard</span><!--
+--><span class="label0 pred0">ToolTip</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0">(),</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Standard</span><!--
+--><span class="label0 pred0">URL</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Creates</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> image</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0"> comp</span><!--
+--><span class="label0 pred0">lies</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> XHTML</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> specification</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0"> (&lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">null</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> permitted</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> info</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> chart</span><!--
+--><span class="label0 pred0"> rendering</span><!--
+--><span class="label0 pred0"> info</span><!--
+--><span class="label0 pred0"> (&lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">null</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> permitted</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> tool</span><!--
+--><span class="label0 pred0">Tip</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> generator</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> HTML</span><!--
+--><span class="label0 pred0"> fragment</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">    </span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0"> will</span><!--
+--><span class="label0 pred0"> contain</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> tooltip</span><!--
+--><span class="label0 pred0"> text</span><!--
+--><span class="label0 pred0"> (&lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">null</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> permitted</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">    </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">info</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> contains</span><!--
+--><span class="label0 pred0"> tooltip</span><!--
+--><span class="label0 pred0"> information</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> url</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> generator</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> HTML</span><!--
+--><span class="label0 pred0"> fragment</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">    </span><!--
+--><span class="label0 pred0"> will</span><!--
+--><span class="label0 pred0"> contain</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> URL</span><!--
+--><span class="label0 pred0"> reference</span><!--
+--><span class="label0 pred0"> (&lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">null</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> permitted</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">    </span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">info</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> contains</span><!--
+--><span class="label0 pred0"> URLs</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0"> tag</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> getImage</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Chart</span><!--
+--><span class="label0 pred0">Rendering</span><!--
+--><span class="label0 pred0">Info</span><!--
+--><span class="label0 pred0"> info</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> Tool</span><!--
+--><span class="label0 pred0">Tip</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0"> tool</span><!--
+--><span class="label0 pred0">Tip</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> URL</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0"> url</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> StringBuffer</span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> StringBuffer</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(&quot;&lt;</span><!--
+--><span class="label0 pred0">map</span><!--
+--><span class="label0 pred0"> id</span><!--
+--><span class="label0 pred0">=\&quot;&quot;</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label1 pred10"> html</span><!--
+--><span class="label1 pred10">Escape</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">name</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> &quot;\&quot;</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0">=\&quot;&quot;</span><!--
+--><span class="label0 pred0"> 
+               </span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label1 pred9"> html</span><!--
+--><span class="label1 pred9">Escape</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">name</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> &quot;\</span><!--
+--><span class="label0 pred0">&quot;&gt;</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred1">String</span><!--
+--><span class="label0 pred1">Utilities</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getLine</span><!--
+--><span class="label0 pred0">Separator</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Entity</span><!--
+--><span class="label0 pred0">Collection</span><!--
+--><span class="label0 pred0"> entities</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> info</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getEntity</span><!--
+--><span class="label0 pred0">Collection</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">entities</span><!--
+--><span class="label0 pred0"> !=</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> count</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> entities</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getEntity</span><!--
+--><span class="label0 pred0">Count</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> (</span>
+</div>
+<hr/>
+<div>
+<h3>
+Chart, 10
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>        return &quot; title=\&quot;&quot; + ImageMapUtilities.htmlEscape(toolTipText) <br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Generates</span><!--
+--><span class="label-100 pred0"> tooltip</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> using</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> HTML</span><!--
+--><span class="label-100 pred0"> title</span><!--
+--><span class="label-100 pred0"> attribute</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> image</span><!--
+--><span class="label-100 pred0"> map</span><!--
+--><span class="label-100 pred0"> area</span><!--
+--><span class="label-100 pred0"> tags</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0"></span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">public</span><!--
+--><span class="label-100 pred0"> class</span><!--
+--><span class="label-100 pred0"> Standard</span><!--
+--><span class="label-100 pred0">ToolTip</span><!--
+--><span class="label-100 pred0">Tag</span><!--
+--><span class="label-100 pred0">Fragment</span><!--
+--><span class="label-100 pred0">Generator</span><!--
+--><span class="label-100 pred0"> 
+       </span><!--
+--><span class="label-100 pred0"> implements</span><!--
+--><span class="label-100 pred0"> Tool</span><!--
+--><span class="label-100 pred0">Tip</span><!--
+--><span class="label-100 pred0">Tag</span><!--
+--><span class="label-100 pred0">Fragment</span><!--
+--><span class="label-100 pred0">Generator</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Creates</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> instance</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> Standard</span><!--
+--><span class="label-100 pred0">ToolTip</span><!--
+--><span class="label-100 pred0">Tag</span><!--
+--><span class="label-100 pred0">Fragment</span><!--
+--><span class="label-100 pred0">Generator</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> super</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Generates</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> tooltip</span><!--
+--><span class="label-100 pred0"> string</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> go</span><!--
+--><span class="label-100 pred0"> in</span><!--
+--><span class="label-100 pred0"> an</span><!--
+--><span class="label-100 pred0"> HTML</span><!--
+--><span class="label-100 pred0"> image</span><!--
+--><span class="label-100 pred0"> map</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> tool</span><!--
+--><span class="label-100 pred0">Tip</span><!--
+--><span class="label-100 pred0">Text</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> tooltip</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">return</span><!--
+--><span class="label-100 pred0"> The</span><!--
+--><span class="label-100 pred0"> formatted</span><!--
+--><span class="label-100 pred0"> HTML</span><!--
+--><span class="label-100 pred0"> area</span><!--
+--><span class="label-100 pred0"> tag</span><!--
+--><span class="label-100 pred0"> attribute</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0">).</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> String</span><!--
+--><span class="label-100 pred0"> generate</span><!--
+--><span class="label-100 pred0">ToolTip</span><!--
+--><span class="label-100 pred0">Fragment</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">String</span><!--
+--><span class="label-100 pred0"> tool</span><!--
+--><span class="label-100 pred0">Tip</span><!--
+--><span class="label-100 pred0">Text</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0"> title</span><!--
+--><span class="label-100 pred0">=\&quot;&quot;</span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> tool</span><!--
+--><span class="label-100 pred0">Tip</span><!--
+--><span class="label-100 pred0">Text</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> &quot;\&quot;</span><!--
+--><span class="label-100 pred0"> alt</span><!--
+--><span class="label-100 pred0">=\&quot;</span><!--
+--><span class="label-100 pred0">\&quot;</span><!--
+--><span class="label-100 pred0">&quot;;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"></span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">}</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">int</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> count</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0"> &gt;=</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0">--)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> Chart</span><!--
+--><span class="label0 pred0">Entity</span><!--
+--><span class="label0 pred0"> entity</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> entities</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getEntity</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">i</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">entity</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">get</span><!--
+--><span class="label0 pred0">ToolTip</span><!--
+--><span class="label0 pred0">Text</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> !=</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0"> 
+                       </span><!--
+--><span class="label0 pred0"> ||</span><!--
+--><span class="label0 pred0"> entity</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">get</span><!--
+--><span class="label0 pred0">URL</span><!--
+--><span class="label0 pred0">Text</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> !=</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> area</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> entity</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getImage</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">Area</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">
+                           </span><!--
+--><span class="label0 pred0"> tool</span><!--
+--><span class="label0 pred0">Tip</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> 
+                           </span><!--
+--><span class="label0 pred0"> url</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">area</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">length</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> &gt;</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+                       </span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">area</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+                       </span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0">Utilities</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getLine</span><!--
+--><span class="label0 pred0">Separator</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(&quot;&lt;/</span><!--
+--><span class="label0 pred0">map</span><!--
+--><span class="label0 pred0">&gt;&quot;);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">toString</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Returns</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> string</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> equivalent</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> input</span><!--
+--><span class="label0 pred0"> string</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> but</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> special</span><!--
+--><span class="label0 pred0"> characters</span><!--
+--><span class="label0 pred0"> converted</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> HTML</span><!--
+--><span class="label0 pred0"> escape</span><!--
+--><span class="label0 pred0"> sequences</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> input</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> string</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> escape</span><!--
+--><span class="label0 pred0"> (&lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">null</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> permitted</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> A</span><!--
+--><span class="label0 pred0"> string</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> characters</span><!--
+--><span class="label0 pred0"> escaped</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">since</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label1 pred9"> html</span><!--
+--><span class="label1 pred9">Escape</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> input</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">input</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> throw</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> IllegalArgumentException</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">Null</span><!--
+--><span class="label0 pred0"> &#x27;</span><!--
+--><span class="label0 pred0">input</span><!--
+--><span class="label0 pred0">&#x27;</span><!--
+--><span class="label0 pred0"> argument</span><!--
+--><span class="label0 pred0">.&quot;);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> StringBuffer</span><!--
+--><span class="label0 pred0"> result</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> StringBuffer</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> length</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> input</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">length</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">int</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0"> length</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0">++)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> char</span><!--
+--><span class="label0 pred0"> c</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> input</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">charAt</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">i</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">c</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> &#x27;&amp;</span><!--
+--><span class="label0 pred0">&#x27;)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> result</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(&quot;&amp;</span><!--
+--><span class="label0 pred0">amp</span><!--
+--><span class="label0 pred0">;&quot;);</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">c</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> &#x27;\&quot;</span><!--
+--><span class="label0 pred0">&#x27;)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> result</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(&quot;&amp;</span><!--
+--><span class="label0 pred0">quot</span><!--
+--><span class="label0 pred0">;&quot;);</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">c</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> &#x27;&lt;</span><!--
+--><span class="label0 pred0">&#x27;)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> result</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(&quot;&amp;</span><!--
+--><span class="label0 pred0">lt</span><!--
+--><span class="label0 pred0">;&quot;);</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">c</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> &#x27;</span><!--
+--><span class="label0 pred0">&gt;&#x27;)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> result</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(&quot;&amp;</span><!--
+--><span class="label0 pred0">gt</span><!--
+--><span class="label0 pred0">;&quot;);</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">c</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> &#x27;\&#x27;</span><!--
+--><span class="label0 pred0">&#x27;)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> result</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">&amp;#</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">;&quot;);</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">c</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> &#x27;\\</span><!--
+--><span class="label0 pred0">&#x27;)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> result</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">&amp;#</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">;&quot;);</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">            
+           </span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> result</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">c</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> result</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">toString</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">}</span>
+</div>
+<hr/>
+<div>
+<h3>
+Chart, 10
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>        return &quot; title=\&quot;&quot; + ImageMapUtilities.htmlEscape(toolTipText) <br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Generates</span><!--
+--><span class="label-100 pred0"> tooltip</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> using</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> HTML</span><!--
+--><span class="label-100 pred0"> title</span><!--
+--><span class="label-100 pred0"> attribute</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> image</span><!--
+--><span class="label-100 pred0"> map</span><!--
+--><span class="label-100 pred0"> area</span><!--
+--><span class="label-100 pred0"> tags</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0"></span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">public</span><!--
+--><span class="label-100 pred0"> class</span><!--
+--><span class="label-100 pred0"> Standard</span><!--
+--><span class="label-100 pred0">ToolTip</span><!--
+--><span class="label-100 pred0">Tag</span><!--
+--><span class="label-100 pred0">Fragment</span><!--
+--><span class="label-100 pred0">Generator</span><!--
+--><span class="label-100 pred0"> 
+       </span><!--
+--><span class="label-100 pred0"> implements</span><!--
+--><span class="label-100 pred0"> Tool</span><!--
+--><span class="label-100 pred0">Tip</span><!--
+--><span class="label-100 pred0">Tag</span><!--
+--><span class="label-100 pred0">Fragment</span><!--
+--><span class="label-100 pred0">Generator</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Creates</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> instance</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> Standard</span><!--
+--><span class="label-100 pred0">ToolTip</span><!--
+--><span class="label-100 pred0">Tag</span><!--
+--><span class="label-100 pred0">Fragment</span><!--
+--><span class="label-100 pred0">Generator</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> super</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Generates</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> tooltip</span><!--
+--><span class="label-100 pred0"> string</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> go</span><!--
+--><span class="label-100 pred0"> in</span><!--
+--><span class="label-100 pred0"> an</span><!--
+--><span class="label-100 pred0"> HTML</span><!--
+--><span class="label-100 pred0"> image</span><!--
+--><span class="label-100 pred0"> map</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> tool</span><!--
+--><span class="label-100 pred0">Tip</span><!--
+--><span class="label-100 pred0">Text</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> tooltip</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">return</span><!--
+--><span class="label-100 pred0"> The</span><!--
+--><span class="label-100 pred0"> formatted</span><!--
+--><span class="label-100 pred0"> HTML</span><!--
+--><span class="label-100 pred0"> area</span><!--
+--><span class="label-100 pred0"> tag</span><!--
+--><span class="label-100 pred0"> attribute</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0">).</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> String</span><!--
+--><span class="label-100 pred0"> generate</span><!--
+--><span class="label-100 pred0">ToolTip</span><!--
+--><span class="label-100 pred0">Fragment</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">String</span><!--
+--><span class="label-100 pred0"> tool</span><!--
+--><span class="label-100 pred0">Tip</span><!--
+--><span class="label-100 pred0">Text</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0"> title</span><!--
+--><span class="label-100 pred0">=\&quot;&quot;</span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> tool</span><!--
+--><span class="label-100 pred0">Tip</span><!--
+--><span class="label-100 pred0">Text</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> &quot;\&quot;</span><!--
+--><span class="label-100 pred0"> alt</span><!--
+--><span class="label-100 pred0">=\&quot;</span><!--
+--><span class="label-100 pred0">\&quot;</span><!--
+--><span class="label-100 pred0">&quot;;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"></span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">}</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">/*</span><!--
+--><span class="label0 pred0"> =================================================</span><!--
+--><span class="label0 pred0">==========</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> J</span><!--
+--><span class="label0 pred0">Free</span><!--
+--><span class="label0 pred0">Chart</span><!--
+--><span class="label0 pred0"> :</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> free</span><!--
+--><span class="label0 pred0"> chart</span><!--
+--><span class="label0 pred0"> library</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> Java</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">tm</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> platform</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> =================================================</span><!--
+--><span class="label0 pred0">==========</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">C</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> Copyright</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> Object</span><!--
+--><span class="label0 pred0"> Re</span><!--
+--><span class="label0 pred0">fin</span><!--
+--><span class="label0 pred0">ery</span><!--
+--><span class="label0 pred0"> Limited</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> Contributors</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Project</span><!--
+--><span class="label0 pred0"> Info</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> http</span><!--
+--><span class="label0 pred0">://</span><!--
+--><span class="label0 pred0">www</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">jfree</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">org</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">jfree</span><!--
+--><span class="label0 pred0">chart</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">index</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">html</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> This</span><!--
+--><span class="label0 pred0"> library</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> free</span><!--
+--><span class="label0 pred0"> software</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> you</span><!--
+--><span class="label0 pred0"> can</span><!--
+--><span class="label0 pred0"> redistribute</span><!--
+--><span class="label0 pred0"> it</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">or</span><!--
+--><span class="label0 pred0"> modify</span><!--
+--><span class="label0 pred0"> it</span><!--
+--><span class="label0 pred0"> 
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> terms</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> GNU</span><!--
+--><span class="label0 pred0"> Lesser</span><!--
+--><span class="label0 pred0"> General</span><!--
+--><span class="label0 pred0"> Public</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> as</span><!--
+--><span class="label0 pred0"> published</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> 
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> Free</span><!--
+--><span class="label0 pred0"> Software</span><!--
+--><span class="label0 pred0"> Foundation</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> either</span><!--
+--><span class="label0 pred0"> version</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> 
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">at</span><!--
+--><span class="label0 pred0"> your</span><!--
+--><span class="label0 pred0"> option</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> any</span><!--
+--><span class="label0 pred0"> later</span><!--
+--><span class="label0 pred0"> version</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> This</span><!--
+--><span class="label0 pred0"> library</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> distributed</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> hope</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0"> it</span><!--
+--><span class="label0 pred0"> will</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> useful</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> but</span><!--
+--><span class="label0 pred0"> 
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> WITHOUT</span><!--
+--><span class="label0 pred0"> ANY</span><!--
+--><span class="label0 pred0"> WARRANTY</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> without</span><!--
+--><span class="label0 pred0"> even</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> implied</span><!--
+--><span class="label0 pred0"> warranty</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> MERCHANTABILITY</span><!--
+--><span class="label0 pred0"> 
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> FITNESS</span><!--
+--><span class="label0 pred0"> FOR</span><!--
+--><span class="label0 pred0"> A</span><!--
+--><span class="label0 pred0"> PARTICULAR</span><!--
+--><span class="label0 pred0"> PURPOSE</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> See</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> GNU</span><!--
+--><span class="label0 pred0"> Lesser</span><!--
+--><span class="label0 pred0"> General</span><!--
+--><span class="label0 pred0"> Public</span><!--
+--><span class="label0 pred0"> 
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> more</span><!--
+--><span class="label0 pred0"> details</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> You</span><!--
+--><span class="label0 pred0"> should</span><!--
+--><span class="label0 pred0"> have</span><!--
+--><span class="label0 pred0"> received</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> copy</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> GNU</span><!--
+--><span class="label0 pred0"> Lesser</span><!--
+--><span class="label0 pred0"> General</span><!--
+--><span class="label0 pred0"> Public</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> along</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> library</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> write</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> Free</span><!--
+--><span class="label0 pred0"> Software</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Foundation</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Inc</span><!--
+--><span class="label0 pred0">.,</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0"> Franklin</span><!--
+--><span class="label0 pred0"> Street</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Fifth</span><!--
+--><span class="label0 pred0"> Floor</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Boston</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> MA</span><!--
+--><span class="label0 pred0">  </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> 
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> USA</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">  
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> [</span><!--
+--><span class="label0 pred0">Java</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> trade</span><!--
+--><span class="label0 pred0">mark</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> registered</span><!--
+--><span class="label0 pred0"> trade</span><!--
+--><span class="label0 pred0">mark</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> Sun</span><!--
+--><span class="label0 pred0"> Micro</span><!--
+--><span class="label0 pred0">systems</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Inc</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> 
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> United</span><!--
+--><span class="label0 pred0"> States</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> other</span><!--
+--><span class="label0 pred0"> countries</span><!--
+--><span class="label0 pred0">.]</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> --------------------------------</span><!--
+--><span class="label0 pred0">-------</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Over</span><!--
+--><span class="label0 pred0">Lib</span><!--
+--><span class="label0 pred0">ToolTip</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">java</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> --------------------------------</span><!--
+--><span class="label0 pred0">-------</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">C</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> Copyright</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> Richard</span><!--
+--><span class="label0 pred0"> At</span><!--
+--><span class="label0 pred0">kin</span><!--
+--><span class="label0 pred0">son</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> Contributors</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Original</span><!--
+--><span class="label0 pred0"> Author</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> Richard</span><!--
+--><span class="label0 pred0"> At</span><!--
+--><span class="label0 pred0">kin</span><!--
+--><span class="label0 pred0">son</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Contributors</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0">    </span><!--
+--><span class="label0 pred0"> David</span><!--
+--><span class="label0 pred0"> G</span><!--
+--><span class="label0 pred0">il</span><!--
+--><span class="label0 pred0">bert</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">for</span><!--
+--><span class="label0 pred0"> Object</span><!--
+--><span class="label0 pred0"> Re</span><!--
+--><span class="label0 pred0">fin</span><!--
+--><span class="label0 pred0">ery</span><!--
+--><span class="label0 pred0"> Limited</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Changes</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> -------</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">Aug</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0"> :</span><!--
+--><span class="label0 pred0"> Version</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">RA</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">Dec</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">7</span><!--
+--><span class="label0 pred0"> :</span><!--
+--><span class="label0 pred0"> E</span><!--
+--><span class="label0 pred0">scape</span><!--
+--><span class="label0 pred0"> tool</span><!--
+--><span class="label0 pred0"> tip</span><!--
+--><span class="label0 pred0"> text</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> fix</span><!--
+--><span class="label0 pred0"> bug</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">7</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">DG</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> 
+</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">package</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">jfree</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">chart</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">image</span><!--
+--><span class="label0 pred0">map</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">/**</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Generates</span><!--
+--><span class="label0 pred0"> tooltip</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0"> using</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> Over</span><!--
+--><span class="label0 pred0">LIB</span><!--
+--><span class="label0 pred0"> library</span><!--
+--><span class="label0 pred0"> 
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">http</span><!--
+--><span class="label0 pred0">://</span><!--
+--><span class="label0 pred0">www</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">bos</span><!--
+--><span class="label0 pred0">r</span><!--
+--><span class="label0 pred0">up</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">com</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">web</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">over</span><!--
+--><span class="label0 pred0">lib</span><!--
+--><span class="label0 pred0">/).</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">public</span><!--
+--><span class="label0 pred0"> class</span><!--
+--><span class="label0 pred0"> Over</span><!--
+--><span class="label0 pred0">LIB</span><!--
+--><span class="label0 pred0">ToolTip</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0"> 
+       </span><!--
+--><span class="label0 pred0"> implements</span><!--
+--><span class="label0 pred0"> Tool</span><!--
+--><span class="label0 pred0">Tip</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Creates</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> instance</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> Over</span><!--
+--><span class="label0 pred0">LIB</span><!--
+--><span class="label0 pred0">ToolTip</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> super</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Generates</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> tooltip</span><!--
+--><span class="label0 pred0"> string</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> go</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> HTML</span><!--
+--><span class="label0 pred0"> image</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> tool</span><!--
+--><span class="label0 pred0">Tip</span><!--
+--><span class="label0 pred0">Text</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> tooltip</span><!--
+--><span class="label0 pred0"> text</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> formatted</span><!--
+--><span class="label0 pred0"> HTML</span><!--
+--><span class="label0 pred0"> area</span><!--
+--><span class="label0 pred0"> tag</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> generate</span><!--
+--><span class="label0 pred0">ToolTip</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> tool</span><!--
+--><span class="label0 pred0">Tip</span><!--
+--><span class="label0 pred0">Text</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0"> onMouse</span><!--
+--><span class="label0 pred0">Over</span><!--
+--><span class="label0 pred0">=\&quot;</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> over</span><!--
+--><span class="label0 pred0">lib</span><!--
+--><span class="label0 pred0">(&#x27;&quot;</span><!--
+--><span class="label0 pred0"> 
+               </span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label1 pred10"> Image</span><!--
+--><span class="label1 pred10">Map</span><!--
+--><span class="label1 pred10">Utilities</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label1 pred10">html</span><!--
+--><span class="label1 pred10">Escape</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">tool</span><!--
+--><span class="label0 pred0">Tip</span><!--
+--><span class="label0 pred0">Text</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> 
+               </span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">&#x27;);</span><!--
+--><span class="label0 pred0">\&quot;</span><!--
+--><span class="label0 pred0"> onMouse</span><!--
+--><span class="label0 pred0">Out</span><!--
+--><span class="label0 pred0">=\&quot;</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> nd</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">\&quot;</span><!--
+--><span class="label0 pred0">&quot;;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">}</span>
+</div>
+<hr/>
+</body>
+</html>

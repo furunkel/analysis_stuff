@@ -1,0 +1,1179 @@
+<html>
+<head>
+<style>
+pre {margin: 0.1em }
+
+            span {
+                white-space: pre;
+            }
+
+            .label-100 {
+                border: 1px solid gray;
+            }
+
+            .label0 {
+                border: 1px solid white;
+            }
+
+            .label1 {
+                border: 1px solid blue;
+            }
+            .new {
+                background-color: #8FFF92;
+            }
+
+            .context-size {
+	            padding: 0.1em;
+	            color: white;
+	            background-color: black;
+	            border-radius: 50%;
+	            width: 1.5em;
+	            display: inline-block;
+	            text-align: center;
+	            height: 1.5em;
+	            line-height: 1.5em;
+                margin-right: 0.6em;
+            }
+.pred0{background-color: rgba(255, 0, 0, 0.0);}
+.pred1{background-color: rgba(255, 0, 0, 0.1);}
+.pred2{background-color: rgba(255, 0, 0, 0.2);}
+.pred3{background-color: rgba(255, 0, 0, 0.3);}
+.pred4{background-color: rgba(255, 0, 0, 0.4);}
+.pred5{background-color: rgba(255, 0, 0, 0.5);}
+.pred6{background-color: rgba(255, 0, 0, 0.6);}
+.pred7{background-color: rgba(255, 0, 0, 0.7);}
+.pred8{background-color: rgba(255, 0, 0, 0.8);}
+.pred9{background-color: rgba(255, 0, 0, 0.9);}
+.pred10{background-color: rgba(255, 0, 0, 1.0);}
+</style>
+</head>
+<body>
+<div>
+<h3>
+Lang, 48
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>            if (lhs instanceof java.math.BigDecimal) {<br/>                isEquals = (((java.math.BigDecimal)lhs).compareTo(rhs) == 0);<br/>            } else {<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>            }<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> lhs</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> left</span><!--
+--><span class="label-100 pred0"> hand</span><!--
+--><span class="label-100 pred0"> object</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> rhs</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> right</span><!--
+--><span class="label-100 pred0"> hand</span><!--
+--><span class="label-100 pred0"> object</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">return</span><!--
+--><span class="label-100 pred0"> Equals</span><!--
+--><span class="label-100 pred0">Builder</span><!--
+--><span class="label-100 pred0"> -</span><!--
+--><span class="label-100 pred0"> used</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> chain</span><!--
+--><span class="label-100 pred0"> calls</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> Equals</span><!--
+--><span class="label-100 pred0">Builder</span><!--
+--><span class="label-100 pred0"> append</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Object</span><!--
+--><span class="label-100 pred0"> lhs</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> Object</span><!--
+--><span class="label-100 pred0"> rhs</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">is</span><!--
+--><span class="label-100 pred0">Equals</span><!--
+--><span class="label-100 pred0"> ==</span><!--
+--><span class="label-100 pred0"> false</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">lhs</span><!--
+--><span class="label-100 pred0"> ==</span><!--
+--><span class="label-100 pred0"> rhs</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">lhs</span><!--
+--><span class="label-100 pred0"> ==</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0"> ||</span><!--
+--><span class="label-100 pred0"> rhs</span><!--
+--><span class="label-100 pred0"> ==</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Equals</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">false</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Class</span><!--
+--><span class="label-100 pred0"> lhs</span><!--
+--><span class="label-100 pred0">Class</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> lhs</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getClass</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (!</span><!--
+--><span class="label-100 pred0">lhs</span><!--
+--><span class="label-100 pred0">Class</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">isArray</span><!--
+--><span class="label-100 pred0">())</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> The</span><!--
+--><span class="label-100 pred0"> simple</span><!--
+--><span class="label-100 pred0"> case</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> an</span><!--
+--><span class="label-100 pred0"> array</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> just</span><!--
+--><span class="label-100 pred0"> test</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> element</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0">Equals</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> lhs</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">equals</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">rhs</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">lhs</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getClass</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> !=</span><!--
+--><span class="label-100 pred0"> rhs</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getClass</span><!--
+--><span class="label-100 pred0">())</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> Here</span><!--
+--><span class="label-100 pred0"> when</span><!--
+--><span class="label-100 pred0"> we</span><!--
+--><span class="label-100 pred0"> compare</span><!--
+--><span class="label-100 pred0"> different</span><!--
+--><span class="label-100 pred0"> dimensions</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> example</span><!--
+--><span class="label-100 pred0">:</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> boolean</span><!--
+--><span class="label-100 pred0">[][]</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> boolean</span><!--
+--><span class="label-100 pred0">[]</span><!--
+--><span class="label-100 pred0"> 
+           </span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Equals</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">false</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> &#x27;</span><!--
+--><span class="label-100 pred0">Switch</span><!--
+--><span class="label-100 pred0">&#x27;</span><!--
+--><span class="label-100 pred0"> on</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> array</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> dispatch</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> correct</span><!--
+--><span class="label-100 pred0"> handler</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> This</span><!--
+--><span class="label-100 pred0"> handles</span><!--
+--><span class="label-100 pred0"> multi</span><!--
+--><span class="label-100 pred0"> dimensional</span><!--
+--><span class="label-100 pred0"> arrays</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> same</span><!--
+--><span class="label-100 pred0"> depth</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">lhs</span><!--
+--><span class="label-100 pred0"> instanceof</span><!--
+--><span class="label-100 pred0"> long</span><!--
+--><span class="label-100 pred0">[])</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> append</span><!--
+--><span class="label-100 pred0">((</span><!--
+--><span class="label-100 pred0">long</span><!--
+--><span class="label-100 pred0">[])</span><!--
+--><span class="label-100 pred0"> lhs</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">long</span><!--
+--><span class="label-100 pred0">[])</span><!--
+--><span class="label-100 pred0"> rhs</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">lhs</span><!--
+--><span class="label-100 pred0"> instanceof</span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0">[])</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> append</span><!--
+--><span class="label-100 pred0">((</span><!--
+--><span class="label-100 pred0">int</span><!--
+--><span class="label-100 pred0">[])</span><!--
+--><span class="label-100 pred0"> lhs</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">int</span><!--
+--><span class="label-100 pred0">[])</span><!--
+--><span class="label-100 pred0"> rhs</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">lhs</span><!--
+--><span class="label-100 pred0"> instanceof</span><!--
+--><span class="label-100 pred0"> short</span><!--
+--><span class="label-100 pred0">[])</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> append</span><!--
+--><span class="label-100 pred0">((</span><!--
+--><span class="label-100 pred0">short</span><!--
+--><span class="label-100 pred0">[])</span><!--
+--><span class="label-100 pred0"> lhs</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">short</span><!--
+--><span class="label-100 pred0">[])</span><!--
+--><span class="label-100 pred0"> rhs</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">Double</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> o</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> o</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred9"> assertTrue</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> Equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">().</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">o</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> o</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">Equals</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred9"> assertTrue</span><!--
+--><span class="label0 pred0">(!</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> Equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">().</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">o</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> o</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">Equals</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred9"> assertTrue</span><!--
+--><span class="label0 pred0">(!</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> Equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">().</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">o</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Double</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">NaN</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">Equals</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred9"> assertTrue</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> Equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">().</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Double</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">NaN</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Double</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">NaN</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">Equals</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred9"> assertTrue</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> Equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">().</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Double</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">POSITIVE</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">INFINITY</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Double</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">POSITIVE</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">INFINITY</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">Equals</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">Float</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> float</span><!--
+--><span class="label0 pred0"> o</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> float</span><!--
+--><span class="label0 pred0"> o</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred9"> assertTrue</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> Equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">().</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">o</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> o</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">Equals</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred9"> assertTrue</span><!--
+--><span class="label0 pred0">(!</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> Equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">().</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">o</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> o</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">Equals</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred9"> assertTrue</span><!--
+--><span class="label0 pred0">(!</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> Equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">().</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">o</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Float</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">NaN</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">Equals</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred9"> assertTrue</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> Equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">().</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Float</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">NaN</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Float</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">NaN</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">Equals</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred9"> assertTrue</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> Equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">().</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Float</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">POSITIVE</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">INFINITY</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Float</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">POSITIVE</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">INFINITY</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">Equals</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> https</span><!--
+--><span class="label0 pred0">://</span><!--
+--><span class="label0 pred0">issues</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">apache</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">org</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">jira</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">browse</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">LANG</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">BigDecimal</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label1 pred0"> BigDecimal</span><!--
+--><span class="label0 pred0"> o</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label1 pred0"> BigDecimal</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label1 pred0"> BigDecimal</span><!--
+--><span class="label0 pred0"> o</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label1 pred0"> BigDecimal</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred9"> assertTrue</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> Equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">().</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">o</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> o</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">Equals</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred9"> assertTrue</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> Equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">().</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">o</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> o</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">Equals</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">Accessors</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0"> equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred9"> assertTrue</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">Equals</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">set</span><!--
+--><span class="label0 pred0">Equals</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">true</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred9"> assertTrue</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">Equals</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">set</span><!--
+--><span class="label0 pred0">Equals</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">false</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred2"> assertFalse</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">Equals</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">Boolean</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label0 pred0"> o</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> true</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label0 pred0"> o</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> false</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred9"> assertTrue</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> Equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">().</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">o</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> o</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">Equals</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred9"> assertTrue</span><!--
+--><span class="label0 pred0">(!</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> Equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">().</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">o</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> o</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">Equals</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">Object</span><!--
+--><span class="label0 pred0">Array</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Test</span><!--
+--><span class="label0 pred0">Object</span><!--
+--><span class="label0 pred0">[]</span><!--
+--><span class="label0 pred0"> obj</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Test</span><!--
+--><span class="label0 pred0">Object</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">];</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> obj</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">]</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Test</span><!--
+--><span class="label0 pred0">Object</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> obj</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">]</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Test</span><!--
+--><span class="label0 pred0">Object</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> obj</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">]</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Test</span><!--
+--><span class="label0 pred0">Object</span><!--
+--><span class="label0 pred0">[]</span><!--
+--><span class="label0 pred0"> obj</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Test</span><!--
+--><span class="label0 pred0">Object</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">];</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> obj</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">]</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Test</span><!--
+--><span class="label0 pred0">Object</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> obj</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">]</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Test</span><!--
+--><span class="label0 pred0">Object</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> obj</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">]</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred9"> assertTrue</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> Equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">().</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">obj</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> obj</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">Equals</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred9"> assertTrue</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> Equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">().</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">obj</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> obj</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">Equals</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred9"> assertTrue</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> Equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">().</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">obj</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> obj</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">Equals</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> obj</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">].</span><!--
+--><span class="label0 pred0">set</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred9"> assertTrue</span><!--
+--><span class="label0 pred0">(!</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> Equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">().</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">obj</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> obj</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">Equals</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> obj</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">].</span><!--
+--><span class="label0 pred0">set</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred9"> assertTrue</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> Equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">().</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">obj</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> obj</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">Equals</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> obj</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">]</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> obj</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">];</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred9"> assertTrue</span><!--
+--><span class="label0 pred0">(!</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> Equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">().</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">obj</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> obj</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">Equals</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> obj</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">]</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred9"> assertTrue</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> Equals</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">().</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">obj</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> obj</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">is</span>
+</div>
+<hr/>
+</body>
+</html>

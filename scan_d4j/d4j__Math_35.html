@@ -1,0 +1,3202 @@
+<html>
+<head>
+<style>
+pre {margin: 0.1em }
+
+            span {
+                white-space: pre;
+            }
+
+            .label-100 {
+                border: 1px solid gray;
+            }
+
+            .label0 {
+                border: 1px solid white;
+            }
+
+            .label1 {
+                border: 1px solid blue;
+            }
+            .new {
+                background-color: #8FFF92;
+            }
+
+            .context-size {
+	            padding: 0.1em;
+	            color: white;
+	            background-color: black;
+	            border-radius: 50%;
+	            width: 1.5em;
+	            display: inline-block;
+	            text-align: center;
+	            height: 1.5em;
+	            line-height: 1.5em;
+                margin-right: 0.6em;
+            }
+.pred0{background-color: rgba(255, 0, 0, 0.0);}
+.pred1{background-color: rgba(255, 0, 0, 0.1);}
+.pred2{background-color: rgba(255, 0, 0, 0.2);}
+.pred3{background-color: rgba(255, 0, 0, 0.3);}
+.pred4{background-color: rgba(255, 0, 0, 0.4);}
+.pred5{background-color: rgba(255, 0, 0, 0.5);}
+.pred6{background-color: rgba(255, 0, 0, 0.6);}
+.pred7{background-color: rgba(255, 0, 0, 0.7);}
+.pred8{background-color: rgba(255, 0, 0, 0.8);}
+.pred9{background-color: rgba(255, 0, 0, 0.9);}
+.pred10{background-color: rgba(255, 0, 0, 1.0);}
+</style>
+</head>
+<body>
+<div>
+<h3>
+Math, 35
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>        setElitismRate(elitismRate);<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>        setElitismRate(elitismRate);<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">since</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">public</span><!--
+--><span class="label-100 pred0"> class</span><!--
+--><span class="label-100 pred0"> E</span><!--
+--><span class="label-100 pred0">lit</span><!--
+--><span class="label-100 pred0">istic</span><!--
+--><span class="label-100 pred0">List</span><!--
+--><span class="label-100 pred0">Population</span><!--
+--><span class="label-100 pred0"> extends</span><!--
+--><span class="label-100 pred0"> List</span><!--
+--><span class="label-100 pred0">Population</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0"> percentage</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> chromosome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> copied</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0"> generation</span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> private</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">9</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Creates</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> E</span><!--
+--><span class="label-100 pred0">lit</span><!--
+--><span class="label-100 pred0">istic</span><!--
+--><span class="label-100 pred0">List</span><!--
+--><span class="label-100 pred0">Population</span><!--
+--><span class="label-100 pred0"> instance</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> chromosome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> list</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> chromosome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> in</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> population</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> population</span><!--
+--><span class="label-100 pred0">Limit</span><!--
+--><span class="label-100 pred0"> max</span><!--
+--><span class="label-100 pred0">imal</span><!--
+--><span class="label-100 pred0"> size</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> population</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0"> how</span><!--
+--><span class="label-100 pred0"> many</span><!--
+--><span class="label-100 pred0"> best</span><!--
+--><span class="label-100 pred0"> chromosome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> will</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> directly</span><!--
+--><span class="label-100 pred0"> transferred</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">                   </span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0"> generation</span><!--
+--><span class="label-100 pred0"> [</span><!--
+--><span class="label-100 pred0">in</span><!--
+--><span class="label-100 pred0"> %</span><!--
+--><span class="label-100 pred0">]</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">throws</span><!--
+--><span class="label-100 pred0"> Out</span><!--
+--><span class="label-100 pred0">Of</span><!--
+--><span class="label-100 pred0">Range</span><!--
+--><span class="label-100 pred0">Exception</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0"> rate</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> outside</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> [</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">]</span><!--
+--><span class="label-100 pred0"> range</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> E</span><!--
+--><span class="label-100 pred0">lit</span><!--
+--><span class="label-100 pred0">istic</span><!--
+--><span class="label-100 pred0">List</span><!--
+--><span class="label-100 pred0">Population</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">final</span><!--
+--><span class="label-100 pred0"> List</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Chrom</span><!--
+--><span class="label-100 pred0">osome</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> chromosome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0">
+                                  </span><!--
+--><span class="label-100 pred0"> final</span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> population</span><!--
+--><span class="label-100 pred0">Limit</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0">
+                                  </span><!--
+--><span class="label-100 pred0"> final</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> super</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">chrom</span><!--
+--><span class="label-100 pred0">osome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> population</span><!--
+--><span class="label-100 pred0">Limit</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Creates</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> List</span><!--
+--><span class="label-100 pred0">Population</span><!--
+--><span class="label-100 pred0"> instance</span><!--
+--><span class="label-100 pred0"> and</span><!--
+--><span class="label-100 pred0"> initializes</span><!--
+--><span class="label-100 pred0"> its</span><!--
+--><span class="label-100 pred0"> inner</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> chromosome</span><!--
+--><span class="label-100 pred0"> list</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> population</span><!--
+--><span class="label-100 pred0">Limit</span><!--
+--><span class="label-100 pred0"> max</span><!--
+--><span class="label-100 pred0">imal</span><!--
+--><span class="label-100 pred0"> size</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> population</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0"> how</span><!--
+--><span class="label-100 pred0"> many</span><!--
+--><span class="label-100 pred0"> best</span><!--
+--><span class="label-100 pred0"> chromosome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> will</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> directly</span><!--
+--><span class="label-100 pred0"> transferred</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">                   </span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0"> generation</span><!--
+--><span class="label-100 pred0"> [</span><!--
+--><span class="label-100 pred0">in</span><!--
+--><span class="label-100 pred0"> %</span><!--
+--><span class="label-100 pred0">]</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">throws</span><!--
+--><span class="label-100 pred0"> Out</span><!--
+--><span class="label-100 pred0">Of</span><!--
+--><span class="label-100 pred0">Range</span><!--
+--><span class="label-100 pred0">Exception</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0"> rate</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> outside</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> [</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">]</span><!--
+--><span class="label-100 pred0"> range</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> E</span><!--
+--><span class="label-100 pred0">lit</span><!--
+--><span class="label-100 pred0">istic</span><!--
+--><span class="label-100 pred0">List</span><!--
+--><span class="label-100 pred0">Population</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">final</span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> population</span><!--
+--><span class="label-100 pred0">Limit</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> final</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> super</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">population</span><!--
+--><span class="label-100 pred0">Limit</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Start</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> population</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0"> generation</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0"> The</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;{@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0">}&lt;/</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> percent</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> best</span><!--
+--><span class="label-100 pred0"> chromosome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> are</span><!--
+--><span class="label-100 pred0"> directly</span><!--
+--><span class="label-100 pred0"> copied</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0"> generation</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">return</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> beginning</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0"> generation</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> Pop</span><!--
+--><span class="label-100 pred0">ulation</span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0">Generation</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> initialize</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> generation</span><!--
+--><span class="label-100 pred0"> with</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> same</span><!--
+--><span class="label-100 pred0"> parameters</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> E</span><!--
+--><span class="label-100 pred0">lit</span><!--
+--><span class="label-100 pred0">istic</span><!--
+--><span class="label-100 pred0">List</span><!--
+--><span class="label-100 pred0">Population</span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0">Generation</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> E</span><!--
+--><span class="label-100 pred0">lit</span><!--
+--><span class="label-100 pred0">istic</span><!--
+--><span class="label-100 pred0">List</span><!--
+--><span class="label-100 pred0">Population</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Population</span><!--
+--><span class="label-100 pred0">Limit</span><!--
+--><span class="label-100 pred0">(),</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">E</span><!--
+--><span class="label-100 pred0">lit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0">());</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> List</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Chrom</span><!--
+--><span class="label-100 pred0">osome</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> old</span><!--
+--><span class="label-100 pred0">Chrom</span><!--
+--><span class="label-100 pred0">osome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Chrom</span><!--
+--><span class="label-100 pred0">osome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Collections</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">sort</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">old</span><!--
+--><span class="label-100 pred0">Chrom</span><!--
+--><span class="label-100 pred0">osome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">/*</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Licensed</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> Apache</span><!--
+--><span class="label0 pred0"> Software</span><!--
+--><span class="label0 pred0"> Foundation</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">ASF</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> one</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> more</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> contributor</span><!--
+--><span class="label0 pred0"> license</span><!--
+--><span class="label0 pred0"> agreements</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> See</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> NOTICE</span><!--
+--><span class="label0 pred0"> file</span><!--
+--><span class="label0 pred0"> distributed</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> work</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> additional</span><!--
+--><span class="label0 pred0"> information</span><!--
+--><span class="label0 pred0"> regarding</span><!--
+--><span class="label0 pred0"> copyright</span><!--
+--><span class="label0 pred0"> ownership</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> ASF</span><!--
+--><span class="label0 pred0"> licenses</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> file</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> You</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> Apache</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Version</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">the</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">License</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0"> you</span><!--
+--><span class="label0 pred0"> may</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> use</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> file</span><!--
+--><span class="label0 pred0"> except</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> compliance</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> You</span><!--
+--><span class="label0 pred0"> may</span><!--
+--><span class="label0 pred0"> obtain</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> copy</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> at</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">     </span><!--
+--><span class="label0 pred0"> http</span><!--
+--><span class="label0 pred0">://</span><!--
+--><span class="label0 pred0">www</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">apache</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">org</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">licenses</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">LICENSE</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Unless</span><!--
+--><span class="label0 pred0"> required</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> applicable</span><!--
+--><span class="label0 pred0"> law</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> agreed</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> writing</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> software</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> distributed</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> distributed</span><!--
+--><span class="label0 pred0"> on</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">AS</span><!--
+--><span class="label0 pred0"> IS</span><!--
+--><span class="label0 pred0">&quot;</span><!--
+--><span class="label0 pred0"> BASIS</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> WITHOUT</span><!--
+--><span class="label0 pred0"> WARRANTIES</span><!--
+--><span class="label0 pred0"> OR</span><!--
+--><span class="label0 pred0"> CONDITIONS</span><!--
+--><span class="label0 pred0"> OF</span><!--
+--><span class="label0 pred0"> ANY</span><!--
+--><span class="label0 pred0"> KIND</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> either</span><!--
+--><span class="label0 pred0"> express</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> implied</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> See</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> specific</span><!--
+--><span class="label0 pred0"> language</span><!--
+--><span class="label0 pred0"> governing</span><!--
+--><span class="label0 pred0"> permissions</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> limitations</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">package</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">apache</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">commons</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">math</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">gen</span><!--
+--><span class="label0 pred0">etics</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Collections</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">List</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">apache</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">commons</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">math</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">exception</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">OutOfRangeException</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">apache</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">commons</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">math</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">exception</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Localized</span><!--
+--><span class="label0 pred0">Formats</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">apache</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">commons</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">math</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Fast</span><!--
+--><span class="label0 pred0">Math</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">/**</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Pop</span><!--
+--><span class="label0 pred0">ulation</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> chromosome</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0"> which</span><!--
+--><span class="label0 pred0"> uses</span><!--
+--><span class="label0 pred0"> elit</span><!--
+--><span class="label0 pred0">ism</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">cert</span><!--
+--><span class="label0 pred0">ain</span><!--
+--><span class="label0 pred0"> percentage</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> best</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> chromosome</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> directly</span><!--
+--><span class="label0 pred0"> copied</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> next</span><!--
+--><span class="label0 pred0"> generation</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">version</span><!--
+--><span class="label0 pred0"> $</span><!--
+--><span class="label0 pred0">Id</span><!--
+--><span class="label0 pred0">$</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> index</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> last</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">not</span><!--
+--><span class="label0 pred0"> good</span><!--
+--><span class="label0 pred0"> enough</span><!--
+--><span class="label0 pred0">&quot;</span><!--
+--><span class="label0 pred0"> chromosome</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> bound</span><!--
+--><span class="label0 pred0">Index</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">int</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> Fast</span><!--
+--><span class="label0 pred0">Math</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">ceil</span><!--
+--><span class="label0 pred0">((</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred10">get</span><!--
+--><span class="label0 pred9">E</span><!--
+--><span class="label0 pred9">lit</span><!--
+--><span class="label0 pred9">ism</span><!--
+--><span class="label0 pred9">Rate</span><!--
+--><span class="label0 pred0">())</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> old</span><!--
+--><span class="label0 pred0">Chrom</span><!--
+--><span class="label0 pred0">osome</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">size</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">int</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0">=</span><!--
+--><span class="label0 pred0">bound</span><!--
+--><span class="label0 pred0">Index</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">old</span><!--
+--><span class="label0 pred0">Chrom</span><!--
+--><span class="label0 pred0">osome</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">size</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0">++)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> next</span><!--
+--><span class="label0 pred0">Generation</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">add</span><!--
+--><span class="label0 pred0">Chrom</span><!--
+--><span class="label0 pred0">osome</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">old</span><!--
+--><span class="label0 pred0">Chrom</span><!--
+--><span class="label0 pred0">osome</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">get</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">i</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> next</span><!--
+--><span class="label0 pred0">Generation</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Sets</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> elit</span><!--
+--><span class="label0 pred0">ism</span><!--
+--><span class="label0 pred0"> rate</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">e</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> how</span><!--
+--><span class="label0 pred0"> many</span><!--
+--><span class="label0 pred0"> best</span><!--
+--><span class="label0 pred0"> chromosome</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0"> will</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> directly</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> transferred</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> next</span><!--
+--><span class="label0 pred0"> generation</span><!--
+--><span class="label0 pred0"> [</span><!--
+--><span class="label0 pred0">in</span><!--
+--><span class="label0 pred0"> %</span><!--
+--><span class="label0 pred0">].</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> elit</span><!--
+--><span class="label0 pred0">ism</span><!--
+--><span class="label0 pred0">Rate</span><!--
+--><span class="label0 pred0"> how</span><!--
+--><span class="label0 pred0"> many</span><!--
+--><span class="label0 pred0"> best</span><!--
+--><span class="label0 pred0"> chromosome</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0"> will</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> directly</span><!--
+--><span class="label0 pred0"> transferred</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">                   </span><!--
+--><span class="label0 pred0"> next</span><!--
+--><span class="label0 pred0"> generation</span><!--
+--><span class="label0 pred0"> [</span><!--
+--><span class="label0 pred0">in</span><!--
+--><span class="label0 pred0"> %</span><!--
+--><span class="label0 pred0">]</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">throws</span><!--
+--><span class="label0 pred0"> Out</span><!--
+--><span class="label0 pred0">Of</span><!--
+--><span class="label0 pred0">Range</span><!--
+--><span class="label0 pred0">Exception</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> elit</span><!--
+--><span class="label0 pred0">ism</span><!--
+--><span class="label0 pred0"> rate</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> outside</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> [</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">]</span><!--
+--><span class="label0 pred0"> range</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label1 pred0"> set</span><!--
+--><span class="label1 pred0">E</span><!--
+--><span class="label1 pred0">lit</span><!--
+--><span class="label1 pred0">ism</span><!--
+--><span class="label1 pred0">Rate</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> elit</span><!--
+--><span class="label0 pred0">ism</span><!--
+--><span class="label0 pred0">Rate</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">elit</span><!--
+--><span class="label0 pred0">ism</span><!--
+--><span class="label0 pred0">Rate</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0"> ||</span><!--
+--><span class="label0 pred0"> elit</span><!--
+--><span class="label0 pred0">ism</span><!--
+--><span class="label0 pred0">Rate</span><!--
+--><span class="label0 pred0"> &gt;</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> throw</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Out</span><!--
+--><span class="label0 pred0">Of</span><!--
+--><span class="label0 pred0">Range</span><!--
+--><span class="label0 pred0">Exception</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Localized</span><!--
+--><span class="label0 pred0">Formats</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">EL</span><!--
+--><span class="label0 pred0">IT</span><!--
+--><span class="label0 pred0">IS</span><!--
+--><span class="label0 pred0">M</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">RATE</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> elit</span><!--
+--><span class="label0 pred0">ism</span><!--
+--><span class="label0 pred0">Rate</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">elit</span><!--
+--><span class="label0 pred0">ism</span><!--
+--><span class="label0 pred0">Rate</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> elit</span><!--
+--><span class="label0 pred0">ism</span><!--
+--><span class="label0 pred0">Rate</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span>
+</div>
+<hr/>
+<div>
+<h3>
+Math, 35
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>        setElitismRate(elitismRate);<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>        setElitismRate(elitismRate);<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">since</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">public</span><!--
+--><span class="label-100 pred0"> class</span><!--
+--><span class="label-100 pred0"> E</span><!--
+--><span class="label-100 pred0">lit</span><!--
+--><span class="label-100 pred0">istic</span><!--
+--><span class="label-100 pred0">List</span><!--
+--><span class="label-100 pred0">Population</span><!--
+--><span class="label-100 pred0"> extends</span><!--
+--><span class="label-100 pred0"> List</span><!--
+--><span class="label-100 pred0">Population</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0"> percentage</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> chromosome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> copied</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0"> generation</span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> private</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">9</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Creates</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> E</span><!--
+--><span class="label-100 pred0">lit</span><!--
+--><span class="label-100 pred0">istic</span><!--
+--><span class="label-100 pred0">List</span><!--
+--><span class="label-100 pred0">Population</span><!--
+--><span class="label-100 pred0"> instance</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> chromosome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> list</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> chromosome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> in</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> population</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> population</span><!--
+--><span class="label-100 pred0">Limit</span><!--
+--><span class="label-100 pred0"> max</span><!--
+--><span class="label-100 pred0">imal</span><!--
+--><span class="label-100 pred0"> size</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> population</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0"> how</span><!--
+--><span class="label-100 pred0"> many</span><!--
+--><span class="label-100 pred0"> best</span><!--
+--><span class="label-100 pred0"> chromosome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> will</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> directly</span><!--
+--><span class="label-100 pred0"> transferred</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">                   </span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0"> generation</span><!--
+--><span class="label-100 pred0"> [</span><!--
+--><span class="label-100 pred0">in</span><!--
+--><span class="label-100 pred0"> %</span><!--
+--><span class="label-100 pred0">]</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">throws</span><!--
+--><span class="label-100 pred0"> Out</span><!--
+--><span class="label-100 pred0">Of</span><!--
+--><span class="label-100 pred0">Range</span><!--
+--><span class="label-100 pred0">Exception</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0"> rate</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> outside</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> [</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">]</span><!--
+--><span class="label-100 pred0"> range</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> E</span><!--
+--><span class="label-100 pred0">lit</span><!--
+--><span class="label-100 pred0">istic</span><!--
+--><span class="label-100 pred0">List</span><!--
+--><span class="label-100 pred0">Population</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">final</span><!--
+--><span class="label-100 pred0"> List</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Chrom</span><!--
+--><span class="label-100 pred0">osome</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> chromosome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0">
+                                  </span><!--
+--><span class="label-100 pred0"> final</span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> population</span><!--
+--><span class="label-100 pred0">Limit</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0">
+                                  </span><!--
+--><span class="label-100 pred0"> final</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> super</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">chrom</span><!--
+--><span class="label-100 pred0">osome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> population</span><!--
+--><span class="label-100 pred0">Limit</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Creates</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> List</span><!--
+--><span class="label-100 pred0">Population</span><!--
+--><span class="label-100 pred0"> instance</span><!--
+--><span class="label-100 pred0"> and</span><!--
+--><span class="label-100 pred0"> initializes</span><!--
+--><span class="label-100 pred0"> its</span><!--
+--><span class="label-100 pred0"> inner</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> chromosome</span><!--
+--><span class="label-100 pred0"> list</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> population</span><!--
+--><span class="label-100 pred0">Limit</span><!--
+--><span class="label-100 pred0"> max</span><!--
+--><span class="label-100 pred0">imal</span><!--
+--><span class="label-100 pred0"> size</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> population</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0"> how</span><!--
+--><span class="label-100 pred0"> many</span><!--
+--><span class="label-100 pred0"> best</span><!--
+--><span class="label-100 pred0"> chromosome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> will</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> directly</span><!--
+--><span class="label-100 pred0"> transferred</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">                   </span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0"> generation</span><!--
+--><span class="label-100 pred0"> [</span><!--
+--><span class="label-100 pred0">in</span><!--
+--><span class="label-100 pred0"> %</span><!--
+--><span class="label-100 pred0">]</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">throws</span><!--
+--><span class="label-100 pred0"> Out</span><!--
+--><span class="label-100 pred0">Of</span><!--
+--><span class="label-100 pred0">Range</span><!--
+--><span class="label-100 pred0">Exception</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0"> rate</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> outside</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> [</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">]</span><!--
+--><span class="label-100 pred0"> range</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> E</span><!--
+--><span class="label-100 pred0">lit</span><!--
+--><span class="label-100 pred0">istic</span><!--
+--><span class="label-100 pred0">List</span><!--
+--><span class="label-100 pred0">Population</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">final</span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> population</span><!--
+--><span class="label-100 pred0">Limit</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> final</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> super</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">population</span><!--
+--><span class="label-100 pred0">Limit</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Start</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> population</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0"> generation</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0"> The</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;{@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0">}&lt;/</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> percent</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> best</span><!--
+--><span class="label-100 pred0"> chromosome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> are</span><!--
+--><span class="label-100 pred0"> directly</span><!--
+--><span class="label-100 pred0"> copied</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0"> generation</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">return</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> beginning</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0"> generation</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> Pop</span><!--
+--><span class="label-100 pred0">ulation</span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0">Generation</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> initialize</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> generation</span><!--
+--><span class="label-100 pred0"> with</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> same</span><!--
+--><span class="label-100 pred0"> parameters</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> E</span><!--
+--><span class="label-100 pred0">lit</span><!--
+--><span class="label-100 pred0">istic</span><!--
+--><span class="label-100 pred0">List</span><!--
+--><span class="label-100 pred0">Population</span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0">Generation</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> E</span><!--
+--><span class="label-100 pred0">lit</span><!--
+--><span class="label-100 pred0">istic</span><!--
+--><span class="label-100 pred0">List</span><!--
+--><span class="label-100 pred0">Population</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Population</span><!--
+--><span class="label-100 pred0">Limit</span><!--
+--><span class="label-100 pred0">(),</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">E</span><!--
+--><span class="label-100 pred0">lit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0">());</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> List</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Chrom</span><!--
+--><span class="label-100 pred0">osome</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> old</span><!--
+--><span class="label-100 pred0">Chrom</span><!--
+--><span class="label-100 pred0">osome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Chrom</span><!--
+--><span class="label-100 pred0">osome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Collections</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">sort</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">old</span><!--
+--><span class="label-100 pred0">Chrom</span><!--
+--><span class="label-100 pred0">osome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">/*</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Licensed</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> Apache</span><!--
+--><span class="label0 pred0"> Software</span><!--
+--><span class="label0 pred0"> Foundation</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">ASF</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> one</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> more</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> contributor</span><!--
+--><span class="label0 pred0"> license</span><!--
+--><span class="label0 pred0"> agreements</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> See</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> NOTICE</span><!--
+--><span class="label0 pred0"> file</span><!--
+--><span class="label0 pred0"> distributed</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> work</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> additional</span><!--
+--><span class="label0 pred0"> information</span><!--
+--><span class="label0 pred0"> regarding</span><!--
+--><span class="label0 pred0"> copyright</span><!--
+--><span class="label0 pred0"> ownership</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> ASF</span><!--
+--><span class="label0 pred0"> licenses</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> file</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> You</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> Apache</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Version</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">the</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">License</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0"> you</span><!--
+--><span class="label0 pred0"> may</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> use</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> file</span><!--
+--><span class="label0 pred0"> except</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> compliance</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> You</span><!--
+--><span class="label0 pred0"> may</span><!--
+--><span class="label0 pred0"> obtain</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> copy</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> at</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">     </span><!--
+--><span class="label0 pred0"> http</span><!--
+--><span class="label0 pred0">://</span><!--
+--><span class="label0 pred0">www</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">apache</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">org</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">licenses</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">LICENSE</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Unless</span><!--
+--><span class="label0 pred0"> required</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> applicable</span><!--
+--><span class="label0 pred0"> law</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> agreed</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> writing</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> software</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> distributed</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> distributed</span><!--
+--><span class="label0 pred0"> on</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">AS</span><!--
+--><span class="label0 pred0"> IS</span><!--
+--><span class="label0 pred0">&quot;</span><!--
+--><span class="label0 pred0"> BASIS</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> WITHOUT</span><!--
+--><span class="label0 pred0"> WARRANTIES</span><!--
+--><span class="label0 pred0"> OR</span><!--
+--><span class="label0 pred0"> CONDITIONS</span><!--
+--><span class="label0 pred0"> OF</span><!--
+--><span class="label0 pred0"> ANY</span><!--
+--><span class="label0 pred0"> KIND</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> either</span><!--
+--><span class="label0 pred0"> express</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> implied</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> See</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> specific</span><!--
+--><span class="label0 pred0"> language</span><!--
+--><span class="label0 pred0"> governing</span><!--
+--><span class="label0 pred0"> permissions</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> limitations</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">package</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">apache</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">commons</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">math</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">gen</span><!--
+--><span class="label0 pred0">etics</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Collections</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">List</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">apache</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">commons</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">math</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">exception</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">OutOfRangeException</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">junit</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Assert</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">junit</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Test</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">public</span><!--
+--><span class="label0 pred0"> class</span><!--
+--><span class="label0 pred0"> E</span><!--
+--><span class="label0 pred0">lit</span><!--
+--><span class="label0 pred0">istic</span><!--
+--><span class="label0 pred0">List</span><!--
+--><span class="label0 pred0">Population</span><!--
+--><span class="label0 pred0">Test</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> counter</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">Test</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">Next</span><!--
+--><span class="label0 pred0">Generation</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> E</span><!--
+--><span class="label0 pred0">lit</span><!--
+--><span class="label0 pred0">istic</span><!--
+--><span class="label0 pred0">List</span><!--
+--><span class="label0 pred0">Population</span><!--
+--><span class="label0 pred0"> pop</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> E</span><!--
+--><span class="label0 pred0">lit</span><!--
+--><span class="label0 pred0">istic</span><!--
+--><span class="label0 pred0">List</span><!--
+--><span class="label0 pred0">Population</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">int</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0">=</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">pop</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">get</span><!--
+--><span class="label0 pred0">Population</span><!--
+--><span class="label0 pred0">Limit</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0">++)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> pop</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">add</span><!--
+--><span class="label0 pred0">Chrom</span><!--
+--><span class="label0 pred0">osome</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> Dummy</span><!--
+--><span class="label0 pred0">Chrom</span><!--
+--><span class="label0 pred0">osome</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Pop</span><!--
+--><span class="label0 pred0">ulation</span><!--
+--><span class="label0 pred0"> next</span><!--
+--><span class="label0 pred0">Generation</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> pop</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">next</span><!--
+--><span class="label0 pred0">Generation</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Assert</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">assertEquals</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> next</span><!--
+--><span class="label0 pred0">Generation</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">get</span><!--
+--><span class="label0 pred0">Population</span><!--
+--><span class="label0 pred0">Size</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">Test</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">Set</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">lit</span><!--
+--><span class="label0 pred0">ism</span><!--
+--><span class="label0 pred0">Rate</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> rate</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> E</span><!--
+--><span class="label0 pred0">lit</span><!--
+--><span class="label0 pred0">istic</span><!--
+--><span class="label0 pred0">List</span><!--
+--><span class="label0 pred0">Population</span><!--
+--><span class="label0 pred0"> pop</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> E</span><!--
+--><span class="label0 pred0">lit</span><!--
+--><span class="label0 pred0">istic</span><!--
+--><span class="label0 pred0">List</span><!--
+--><span class="label0 pred0">Population</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> pop</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label1 pred1">set</span><!--
+--><span class="label1 pred1">E</span><!--
+--><span class="label1 pred1">lit</span><!--
+--><span class="label1 pred1">ism</span><!--
+--><span class="label1 pred1">Rate</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">rate</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Assert</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">assertEquals</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">rate</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> pop</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred10">get</span><!--
+--><span class="label0 pred9">E</span><!--
+--><span class="label0 pred9">lit</span><!--
+--><span class="label0 pred9">ism</span><!--
+--><span class="label0 pred9">Rate</span><!--
+--><span class="label0 pred0">(),</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">e</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">Test</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">expected</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> Out</span><!--
+--><span class="label0 pred0">Of</span><!--
+--><span class="label0 pred0">Range</span><!--
+--><span class="label0 pred0">Exception</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">class</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">Set</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">lit</span><!--
+--><span class="label0 pred0">ism</span><!--
+--><span class="label0 pred0">Rate</span><!--
+--><span class="label0 pred0">Too</span><!--
+--><span class="label0 pred0">Low</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> rate</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> E</span><!--
+--><span class="label0 pred0">lit</span><!--
+--><span class="label0 pred0">istic</span><!--
+--><span class="label0 pred0">List</span><!--
+--><span class="label0 pred0">Population</span><!--
+--><span class="label0 pred0"> pop</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> E</span><!--
+--><span class="label0 pred0">lit</span><!--
+--><span class="label0 pred0">istic</span><!--
+--><span class="label0 pred0">List</span><!--
+--><span class="label0 pred0">Population</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> pop</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label1 pred1">set</span><!--
+--><span class="label1 pred1">E</span><!--
+--><span class="label1 pred1">lit</span><!--
+--><span class="label1 pred1">ism</span><!--
+--><span class="label1 pred1">Rate</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">rate</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">Test</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">expected</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> Out</span><!--
+--><span class="label0 pred0">Of</span><!--
+--><span class="label0 pred0">Range</span><!--
+--><span class="label0 pred0">Exception</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">class</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">Set</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">lit</span><!--
+--><span class="label0 pred0">ism</span><!--
+--><span class="label0 pred0">Rate</span><!--
+--><span class="label0 pred0">Too</span><!--
+--><span class="label0 pred0">High</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> rate</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span>
+</div>
+<hr/>
+<div>
+<h3>
+Math, 35
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>        setElitismRate(elitismRate);<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>        setElitismRate(elitismRate);<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">since</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">public</span><!--
+--><span class="label-100 pred0"> class</span><!--
+--><span class="label-100 pred0"> E</span><!--
+--><span class="label-100 pred0">lit</span><!--
+--><span class="label-100 pred0">istic</span><!--
+--><span class="label-100 pred0">List</span><!--
+--><span class="label-100 pred0">Population</span><!--
+--><span class="label-100 pred0"> extends</span><!--
+--><span class="label-100 pred0"> List</span><!--
+--><span class="label-100 pred0">Population</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0"> percentage</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> chromosome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> copied</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0"> generation</span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> private</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">9</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Creates</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> E</span><!--
+--><span class="label-100 pred0">lit</span><!--
+--><span class="label-100 pred0">istic</span><!--
+--><span class="label-100 pred0">List</span><!--
+--><span class="label-100 pred0">Population</span><!--
+--><span class="label-100 pred0"> instance</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> chromosome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> list</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> chromosome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> in</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> population</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> population</span><!--
+--><span class="label-100 pred0">Limit</span><!--
+--><span class="label-100 pred0"> max</span><!--
+--><span class="label-100 pred0">imal</span><!--
+--><span class="label-100 pred0"> size</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> population</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0"> how</span><!--
+--><span class="label-100 pred0"> many</span><!--
+--><span class="label-100 pred0"> best</span><!--
+--><span class="label-100 pred0"> chromosome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> will</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> directly</span><!--
+--><span class="label-100 pred0"> transferred</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">                   </span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0"> generation</span><!--
+--><span class="label-100 pred0"> [</span><!--
+--><span class="label-100 pred0">in</span><!--
+--><span class="label-100 pred0"> %</span><!--
+--><span class="label-100 pred0">]</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">throws</span><!--
+--><span class="label-100 pred0"> Out</span><!--
+--><span class="label-100 pred0">Of</span><!--
+--><span class="label-100 pred0">Range</span><!--
+--><span class="label-100 pred0">Exception</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0"> rate</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> outside</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> [</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">]</span><!--
+--><span class="label-100 pred0"> range</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> E</span><!--
+--><span class="label-100 pred0">lit</span><!--
+--><span class="label-100 pred0">istic</span><!--
+--><span class="label-100 pred0">List</span><!--
+--><span class="label-100 pred0">Population</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">final</span><!--
+--><span class="label-100 pred0"> List</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Chrom</span><!--
+--><span class="label-100 pred0">osome</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> chromosome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0">
+                                  </span><!--
+--><span class="label-100 pred0"> final</span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> population</span><!--
+--><span class="label-100 pred0">Limit</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0">
+                                  </span><!--
+--><span class="label-100 pred0"> final</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> super</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">chrom</span><!--
+--><span class="label-100 pred0">osome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> population</span><!--
+--><span class="label-100 pred0">Limit</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Creates</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> List</span><!--
+--><span class="label-100 pred0">Population</span><!--
+--><span class="label-100 pred0"> instance</span><!--
+--><span class="label-100 pred0"> and</span><!--
+--><span class="label-100 pred0"> initializes</span><!--
+--><span class="label-100 pred0"> its</span><!--
+--><span class="label-100 pred0"> inner</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> chromosome</span><!--
+--><span class="label-100 pred0"> list</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> population</span><!--
+--><span class="label-100 pred0">Limit</span><!--
+--><span class="label-100 pred0"> max</span><!--
+--><span class="label-100 pred0">imal</span><!--
+--><span class="label-100 pred0"> size</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> population</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0"> how</span><!--
+--><span class="label-100 pred0"> many</span><!--
+--><span class="label-100 pred0"> best</span><!--
+--><span class="label-100 pred0"> chromosome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> will</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> directly</span><!--
+--><span class="label-100 pred0"> transferred</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">                   </span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0"> generation</span><!--
+--><span class="label-100 pred0"> [</span><!--
+--><span class="label-100 pred0">in</span><!--
+--><span class="label-100 pred0"> %</span><!--
+--><span class="label-100 pred0">]</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">throws</span><!--
+--><span class="label-100 pred0"> Out</span><!--
+--><span class="label-100 pred0">Of</span><!--
+--><span class="label-100 pred0">Range</span><!--
+--><span class="label-100 pred0">Exception</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0"> rate</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> outside</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> [</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">]</span><!--
+--><span class="label-100 pred0"> range</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> E</span><!--
+--><span class="label-100 pred0">lit</span><!--
+--><span class="label-100 pred0">istic</span><!--
+--><span class="label-100 pred0">List</span><!--
+--><span class="label-100 pred0">Population</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">final</span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> population</span><!--
+--><span class="label-100 pred0">Limit</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> final</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> super</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">population</span><!--
+--><span class="label-100 pred0">Limit</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Start</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> population</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0"> generation</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0"> The</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;{@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">elit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0">}&lt;/</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> percent</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> best</span><!--
+--><span class="label-100 pred0"> chromosome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> are</span><!--
+--><span class="label-100 pred0"> directly</span><!--
+--><span class="label-100 pred0"> copied</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0"> generation</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">return</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> beginning</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0"> generation</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> Pop</span><!--
+--><span class="label-100 pred0">ulation</span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0">Generation</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> initialize</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> generation</span><!--
+--><span class="label-100 pred0"> with</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> same</span><!--
+--><span class="label-100 pred0"> parameters</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> E</span><!--
+--><span class="label-100 pred0">lit</span><!--
+--><span class="label-100 pred0">istic</span><!--
+--><span class="label-100 pred0">List</span><!--
+--><span class="label-100 pred0">Population</span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0">Generation</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> E</span><!--
+--><span class="label-100 pred0">lit</span><!--
+--><span class="label-100 pred0">istic</span><!--
+--><span class="label-100 pred0">List</span><!--
+--><span class="label-100 pred0">Population</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Population</span><!--
+--><span class="label-100 pred0">Limit</span><!--
+--><span class="label-100 pred0">(),</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">E</span><!--
+--><span class="label-100 pred0">lit</span><!--
+--><span class="label-100 pred0">ism</span><!--
+--><span class="label-100 pred0">Rate</span><!--
+--><span class="label-100 pred0">());</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> List</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Chrom</span><!--
+--><span class="label-100 pred0">osome</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> old</span><!--
+--><span class="label-100 pred0">Chrom</span><!--
+--><span class="label-100 pred0">osome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Chrom</span><!--
+--><span class="label-100 pred0">osome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Collections</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">sort</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">old</span><!--
+--><span class="label-100 pred0">Chrom</span><!--
+--><span class="label-100 pred0">osome</span><!--
+--><span class="label-100 pred0">s</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0"> E</span><!--
+--><span class="label0 pred0">lit</span><!--
+--><span class="label0 pred0">istic</span><!--
+--><span class="label0 pred0">List</span><!--
+--><span class="label0 pred0">Population</span><!--
+--><span class="label0 pred0"> pop</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> E</span><!--
+--><span class="label0 pred0">lit</span><!--
+--><span class="label0 pred0">istic</span><!--
+--><span class="label0 pred0">List</span><!--
+--><span class="label0 pred0">Population</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> pop</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label1 pred10">set</span><!--
+--><span class="label1 pred10">E</span><!--
+--><span class="label1 pred10">lit</span><!--
+--><span class="label1 pred10">ism</span><!--
+--><span class="label1 pred10">Rate</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">rate</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">Test</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">expected</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> Out</span><!--
+--><span class="label0 pred0">Of</span><!--
+--><span class="label0 pred0">Range</span><!--
+--><span class="label0 pred0">Exception</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">class</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">Constructor</span><!--
+--><span class="label0 pred0">Too</span><!--
+--><span class="label0 pred0">Low</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> rate</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> E</span><!--
+--><span class="label0 pred0">lit</span><!--
+--><span class="label0 pred0">istic</span><!--
+--><span class="label0 pred0">List</span><!--
+--><span class="label0 pred0">Population</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> rate</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">Test</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">expected</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> Out</span><!--
+--><span class="label0 pred0">Of</span><!--
+--><span class="label0 pred0">Range</span><!--
+--><span class="label0 pred0">Exception</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">class</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">Constructor</span><!--
+--><span class="label0 pred0">Too</span><!--
+--><span class="label0 pred0">High</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> rate</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> E</span><!--
+--><span class="label0 pred0">lit</span><!--
+--><span class="label0 pred0">istic</span><!--
+--><span class="label0 pred0">List</span><!--
+--><span class="label0 pred0">Population</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> rate</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">Test</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">expected</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> Out</span><!--
+--><span class="label0 pred0">Of</span><!--
+--><span class="label0 pred0">Range</span><!--
+--><span class="label0 pred0">Exception</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">class</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">Chrom</span><!--
+--><span class="label0 pred0">osome</span><!--
+--><span class="label0 pred0">List</span><!--
+--><span class="label0 pred0">Constructor</span><!--
+--><span class="label0 pred0">Too</span><!--
+--><span class="label0 pred0">Low</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> List</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">Chrom</span><!--
+--><span class="label0 pred0">osome</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> chromosome</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> Collections</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">emptyList</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> rate</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> E</span><!--
+--><span class="label0 pred0">lit</span><!--
+--><span class="label0 pred0">istic</span><!--
+--><span class="label0 pred0">List</span><!--
+--><span class="label0 pred0">Population</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">chrom</span><!--
+--><span class="label0 pred0">osome</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> rate</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">Test</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">expected</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> Out</span><!--
+--><span class="label0 pred0">Of</span><!--
+--><span class="label0 pred0">Range</span><!--
+--><span class="label0 pred0">Exception</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">class</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">Chrom</span><!--
+--><span class="label0 pred0">osome</span><!--
+--><span class="label0 pred0">List</span><!--
+--><span class="label0 pred0">Constructor</span><!--
+--><span class="label0 pred0">Too</span><!--
+--><span class="label0 pred0">High</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> List</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">Chrom</span><!--
+--><span class="label0 pred0">osome</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> chromosome</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> Collections</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">emptyList</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> rate</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> E</span><!--
+--><span class="label0 pred0">lit</span><!--
+--><span class="label0 pred0">istic</span><!--
+--><span class="label0 pred0">List</span><!--
+--><span class="label0 pred0">Population</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">chrom</span><!--
+--><span class="label0 pred0">osome</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> rate</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> class</span><!--
+--><span class="label0 pred0"> Dummy</span><!--
+--><span class="label0 pred0">Chrom</span><!--
+--><span class="label0 pred0">osome</span><!--
+--><span class="label0 pred0"> extends</span><!--
+--><span class="label0 pred0"> Ch</span><!--
+--><span class="label0 pred0">rom</span><!--
+--><span class="label0 pred0">osome</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> fitness</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> Dummy</span><!--
+--><span class="label0 pred0">Chrom</span><!--
+--><span class="label0 pred0">osome</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">fitness</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> counter</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> counter</span><!--
+--><span class="label0 pred0">++;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> fitness</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">fitness</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">}</span>
+</div>
+<hr/>
+</body>
+</html>

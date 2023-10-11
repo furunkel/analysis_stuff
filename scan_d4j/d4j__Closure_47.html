@@ -1,0 +1,3329 @@
+<html>
+<head>
+<style>
+pre {margin: 0.1em }
+
+            span {
+                white-space: pre;
+            }
+
+            .label-100 {
+                border: 1px solid gray;
+            }
+
+            .label0 {
+                border: 1px solid white;
+            }
+
+            .label1 {
+                border: 1px solid blue;
+            }
+            .new {
+                background-color: #8FFF92;
+            }
+
+            .context-size {
+	            padding: 0.1em;
+	            color: white;
+	            background-color: black;
+	            border-radius: 50%;
+	            width: 1.5em;
+	            display: inline-block;
+	            text-align: center;
+	            height: 1.5em;
+	            line-height: 1.5em;
+                margin-right: 0.6em;
+            }
+.pred0{background-color: rgba(255, 0, 0, 0.0);}
+.pred1{background-color: rgba(255, 0, 0, 0.1);}
+.pred2{background-color: rgba(255, 0, 0, 0.2);}
+.pred3{background-color: rgba(255, 0, 0, 0.3);}
+.pred4{background-color: rgba(255, 0, 0, 0.4);}
+.pred5{background-color: rgba(255, 0, 0, 0.5);}
+.pred6{background-color: rgba(255, 0, 0, 0.6);}
+.pred7{background-color: rgba(255, 0, 0, 0.7);}
+.pred8{background-color: rgba(255, 0, 0, 0.8);}
+.pred9{background-color: rgba(255, 0, 0, 0.9);}
+.pred10{background-color: rgba(255, 0, 0, 1.0);}
+</style>
+</head>
+<body>
+<div>
+<h3>
+Closure, 47
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>       .setLineNumber(entry.getSourceLine() + 1)<br/>       .setColumnPosition(entry.getSourceColumn() + 1);<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>    int lineBaseOffset = 1;<br/>    if (generator instanceof SourceMapGeneratorV1<br/>        || generator instanceof SourceMapGeneratorV2) {<br/>      lineBaseOffset = 0;<br/>    }<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>        new FilePosition(node.getLineno() - lineBaseOffset, node.getCharno()),<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">line</span><!--
+--><span class="label-100 pred0">Number</span><!--
+--><span class="label-100 pred0"> ==</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> lineNumber</span><!--
+--><span class="label-100 pred0">--;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> while</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">lines</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">line</span><!--
+--><span class="label-100 pred0">Number</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> ==</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> ArrayList</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Entry</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> entries</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> lines</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">line</span><!--
+--><span class="label-100 pred0">Number</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">Original</span><!--
+--><span class="label-100 pred0">Mapping</span><!--
+--><span class="label-100 pred0">For</span><!--
+--><span class="label-100 pred0">Entry</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">entries</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">entries</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">size</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> -</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">));</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+  </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Creates</span><!--
+--><span class="label-100 pred0"> an</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0">Original</span><!--
+--><span class="label-100 pred0">Mapping</span><!--
+--><span class="label-100 pred0">&quot;</span><!--
+--><span class="label-100 pred0"> object</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> given</span><!--
+--><span class="label-100 pred0"> entry</span><!--
+--><span class="label-100 pred0"> object</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+  </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> private</span><!--
+--><span class="label-100 pred0"> Original</span><!--
+--><span class="label-100 pred0">Mapping</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">Original</span><!--
+--><span class="label-100 pred0">Mapping</span><!--
+--><span class="label-100 pred0">For</span><!--
+--><span class="label-100 pred0">Entry</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Entry</span><!--
+--><span class="label-100 pred0"> entry</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">entry</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">SourceFile</span><!--
+--><span class="label-100 pred0">Id</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> ==</span><!--
+--><span class="label-100 pred0"> UN</span><!--
+--><span class="label-100 pred0">MAP</span><!--
+--><span class="label-100 pred0">PED</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> Adjust</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> line</span><!--
+--><span class="label-100 pred0">/</span><!--
+--><span class="label-100 pred0">column</span><!--
+--><span class="label-100 pred0"> here</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> start</span><!--
+--><span class="label-100 pred0"> at</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> Builder</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> Original</span><!--
+--><span class="label-100 pred0">Mapping</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">newBuilder</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> .</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Original</span><!--
+--><span class="label-100 pred0">File</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">sources</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">entry</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">SourceFile</span><!--
+--><span class="label-100 pred0">Id</span><!--
+--><span class="label-100 pred0">()])</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> .</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">LineNumber</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">entry</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getSource</span><!--
+--><span class="label-100 pred0">Line</span><!--
+--><span class="label-100 pred0">())</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> .</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Column</span><!--
+--><span class="label-100 pred0">Position</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">entry</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getSource</span><!--
+--><span class="label-100 pred0">Column</span><!--
+--><span class="label-100 pred0">());</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">entry</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getName</span><!--
+--><span class="label-100 pred0">Id</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> !=</span><!--
+--><span class="label-100 pred0"> UN</span><!--
+--><span class="label-100 pred0">MAP</span><!--
+--><span class="label-100 pred0">PED</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Identifier</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">names</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">entry</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getName</span><!--
+--><span class="label-100 pred0">Id</span><!--
+--><span class="label-100 pred0">()]);</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">build</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+  </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Reverse</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> source</span><!--
+--><span class="label-100 pred0"> map</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> created</span><!--
+--><span class="label-100 pred0"> mapping</span><!--
+--><span class="label-100 pred0"> will</span><!--
+--><span class="label-100 pred0"> allow</span><!--
+--><span class="label-100 pred0"> us</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> quickly</span><!--
+--><span class="label-100 pred0"> go</span><!--
+--><span class="label-100 pred0">
+  </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> from</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> source</span><!--
+--><span class="label-100 pred0"> file</span><!--
+--><span class="label-100 pred0"> and</span><!--
+--><span class="label-100 pred0"> line</span><!--
+--><span class="label-100 pred0"> number</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> collection</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> target</span><!--
+--><span class="label-100 pred0">
+  </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Original</span><!--
+--><span class="label-100 pred0">Mappings</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+  </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> private</span><!--
+--><span class="label-100 pred0"> void</span><!--
+--><span class="label-100 pred0"> create</span><!--
+--><span class="label-100 pred0">Reverse</span><!--
+--><span class="label-100 pred0">Mapping</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> void</span><!--
+--><span class="label-100 pred0"> add</span><!--
+--><span class="label-100 pred0">Mapping</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> Node</span><!--
+--><span class="label-100 pred0"> node</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> File</span><!--
+--><span class="label-100 pred0">Position</span><!--
+--><span class="label-100 pred0"> output</span><!--
+--><span class="label-100 pred0">Start</span><!--
+--><span class="label-100 pred0">Position</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> File</span><!--
+--><span class="label-100 pred0">Position</span><!--
+--><span class="label-100 pred0"> output</span><!--
+--><span class="label-100 pred0">End</span><!--
+--><span class="label-100 pred0">Position</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> String</span><!--
+--><span class="label-100 pred0"> source</span><!--
+--><span class="label-100 pred0">File</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> node</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getSource</span><!--
+--><span class="label-100 pred0">FileName</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> If</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> node</span><!--
+--><span class="label-100 pred0"> does</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> have</span><!--
+--><span class="label-100 pred0"> an</span><!--
+--><span class="label-100 pred0"> associated</span><!--
+--><span class="label-100 pred0"> source</span><!--
+--><span class="label-100 pred0"> file</span><!--
+--><span class="label-100 pred0"> or</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> its</span><!--
+--><span class="label-100 pred0"> line</span><!--
+--><span class="label-100 pred0"> number</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> -</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> then</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> node</span><!--
+--><span class="label-100 pred0"> does</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> have</span><!--
+--><span class="label-100 pred0"> sufficient</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> information</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> mapping</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> useful</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">source</span><!--
+--><span class="label-100 pred0">File</span><!--
+--><span class="label-100 pred0"> ==</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0"> ||</span><!--
+--><span class="label-100 pred0"> node</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Lin</span><!--
+--><span class="label-100 pred0">eno</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> source</span><!--
+--><span class="label-100 pred0">File</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> fix</span><!--
+--><span class="label-100 pred0">up</span><!--
+--><span class="label-100 pred0">Source</span><!--
+--><span class="label-100 pred0">Location</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">source</span><!--
+--><span class="label-100 pred0">File</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> String</span><!--
+--><span class="label-100 pred0"> original</span><!--
+--><span class="label-100 pred0">Name</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">String</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> node</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Prop</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Node</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">ORIGIN</span><!--
+--><span class="label-100 pred0">AL</span><!--
+--><span class="label-100 pred0">NAME</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">PROP</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> Str</span><!--
+--><span class="label-100 pred0">ange</span><!--
+--><span class="label-100 pred0">ly</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> R</span><!--
+--><span class="label-100 pred0">h</span><!--
+--><span class="label-100 pred0">ino</span><!--
+--><span class="label-100 pred0"> source</span><!--
+--><span class="label-100 pred0"> lines</span><!--
+--><span class="label-100 pred0"> are</span><!--
+--><span class="label-100 pred0"> one</span><!--
+--><span class="label-100 pred0"> based</span><!--
+--><span class="label-100 pred0"> but</span><!--
+--><span class="label-100 pred0"> columns</span><!--
+--><span class="label-100 pred0"> are</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> zero</span><!--
+--><span class="label-100 pred0"> based</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> We</span><!--
+--><span class="label-100 pred0"> don</span><!--
+--><span class="label-100 pred0">&#x27;t</span><!--
+--><span class="label-100 pred0"> change</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> v</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0"> or</span><!--
+--><span class="label-100 pred0"> v</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0"> source</span><!--
+--><span class="label-100 pred0"> maps</span><!--
+--><span class="label-100 pred0"> but</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> v</span><!--
+--><span class="label-100 pred0">3</span><!--
+--><span class="label-100 pred0"> we</span><!--
+--><span class="label-100 pred0"> make</span><!--
+--><span class="label-100 pred0"> them</span><!--
+--><span class="label-100 pred0"> both</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0"> based</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> generator</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">add</span><!--
+--><span class="label-100 pred0">Mapping</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> source</span><!--
+--><span class="label-100 pred0">File</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> original</span><!--
+--><span class="label-100 pred0">Name</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> File</span><!--
+--><span class="label-100 pred0">Position</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">node</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Lin</span><!--
+--><span class="label-100 pred0">eno</span><!--
+--><span class="label-100 pred0">(),</span><!--
+--><span class="label-100 pred0"> node</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Char</span><!--
+--><span class="label-100 pred0">no</span><!--
+--><span class="label-100 pred0">()),</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> output</span><!--
+--><span class="label-100 pred0">Start</span><!--
+--><span class="label-100 pred0">Position</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> output</span><!--
+--><span class="label-100 pred0">End</span><!--
+--><span class="label-100 pred0">Position</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">/*</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Copyright</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> Closure</span><!--
+--><span class="label0 pred0"> Compiler</span><!--
+--><span class="label0 pred0"> Authors</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Licensed</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> Apache</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Version</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">the</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">License</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> you</span><!--
+--><span class="label0 pred0"> may</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> use</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> file</span><!--
+--><span class="label0 pred0"> except</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> compliance</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> You</span><!--
+--><span class="label0 pred0"> may</span><!--
+--><span class="label0 pred0"> obtain</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> copy</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> at</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">    </span><!--
+--><span class="label0 pred0"> http</span><!--
+--><span class="label0 pred0">://</span><!--
+--><span class="label0 pred0">www</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">apache</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">org</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">licenses</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">LICENSE</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Unless</span><!--
+--><span class="label0 pred0"> required</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> applicable</span><!--
+--><span class="label0 pred0"> law</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> agreed</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> writing</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> software</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> distributed</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> distributed</span><!--
+--><span class="label0 pred0"> on</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">AS</span><!--
+--><span class="label0 pred0"> IS</span><!--
+--><span class="label0 pred0">&quot;</span><!--
+--><span class="label0 pred0"> BASIS</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> WITHOUT</span><!--
+--><span class="label0 pred0"> WARRANTIES</span><!--
+--><span class="label0 pred0"> OR</span><!--
+--><span class="label0 pred0"> CONDITIONS</span><!--
+--><span class="label0 pred0"> OF</span><!--
+--><span class="label0 pred0"> ANY</span><!--
+--><span class="label0 pred0"> KIND</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> either</span><!--
+--><span class="label0 pred0"> express</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> implied</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> See</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> specific</span><!--
+--><span class="label0 pred0"> language</span><!--
+--><span class="label0 pred0"> governing</span><!--
+--><span class="label0 pred0"> permissions</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> limitations</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">package</span><!--
+--><span class="label0 pred0"> com</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">google</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">debugging</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">source</span><!--
+--><span class="label0 pred0">map</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> com</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">google</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">common</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">annotations</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Visible</span><!--
+--><span class="label0 pred0">ForTesting</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> com</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">google</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">common</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">base</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Preconditions</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> com</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">google</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">common</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">collect</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Lists</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> com</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">google</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">common</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">collect</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Maps</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">io</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">IOException</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Array</span><!--
+--><span class="label0 pred0">Deque</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Deque</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Linked</span><!--
+--><span class="label0 pred0">HashMap</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">List</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Entry</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> javax</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">annotation</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Nullable</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">/**</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Collect</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0"> information</span><!--
+--><span class="label0 pred0"> mapping</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> generated</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">compiled</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> source</span><!--
+--><span class="label0 pred0"> back</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> its</span><!--
+--><span class="label0 pred0"> original</span><!--
+--><span class="label0 pred0"> source</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> debugging</span><!--
+--><span class="label0 pred0"> purposes</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">public</span><!--
+--><span class="label0 pred0"> class</span><!--
+--><span class="label1 pred0"> Source</span><!--
+--><span class="label1 pred0">Map</span><!--
+--><span class="label1 pred0">Generator</span><!--
+--><span class="label1 pred0">V</span><!--
+--><span class="label1 pred0">2</span><!--
+--><span class="label0 pred0"> implements</span><!--
+--><span class="label0 pred0"> Source</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label0 pred0"> validate</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> false</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> UN</span><!--
+--><span class="label0 pred0">MAP</span><!--
+--><span class="label0 pred0">PED</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> A</span><!--
+--><span class="label0 pred0"> pre</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">order</span><!--
+--><span class="label0 pred0"> traversal</span><!--
+--><span class="label0 pred0"> ordered</span><!--
+--><span class="label0 pred0"> list</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> mappings</span><!--
+--><span class="label0 pred0"> stored</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> List</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">Mapping</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> mappings</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> Lists</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">newArrayList</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> A</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> source</span><!--
+--><span class="label0 pred0"> names</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> source</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0"> index</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> LinkedHashMap</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred3"> Integer</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> source</span><!--
+--><span class="label0 pred0">File</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> Maps</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0">Linked</span><!--
+--><span class="label0 pred0">HashMap</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> A</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> symbol</span><!--
+--><span class="label0 pred0"> names</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> symbol</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0"> index</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> LinkedHashMap</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred3"> Integer</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> original</span><!--
+--><span class="label0 pred0">Name</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> Maps</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0">Linked</span><!--
+--><span class="label0 pred0">HashMap</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Cache</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> last</span><!--
+--><span class="label0 pred0"> mappings</span><!--
+--><span class="label0 pred0"> source</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> last</span><!--
+--><span class="label0 pred0">SourceFile</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Cache</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> last</span><!--
+--><span class="label0 pred0"> mappings</span><!--
+--><span class="label0 pred0"> source</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0"> index</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> last</span><!--
+--><span class="label0 pred0">SourceFile</span><!--
+--><span class="label0 pred0">Index</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> For</span><!--
+--><span class="label0 pred0"> validation</span><!--
+--><span class="label0 pred0"> store</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> last</span><!--
+--><span class="label0 pred0"> mapping</span><!--
+--><span class="label0 pred0"> added</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> Mapping</span><!--
+--><span class="label0 pred0"> last</span><!--
+--><span class="label0 pred0">Mapping</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> The</span>
+</div>
+<hr/>
+<div>
+<h3>
+Closure, 47
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>       .setLineNumber(entry.getSourceLine() + 1)<br/>       .setColumnPosition(entry.getSourceColumn() + 1);<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>    int lineBaseOffset = 1;<br/>    if (generator instanceof SourceMapGeneratorV1<br/>        || generator instanceof SourceMapGeneratorV2) {<br/>      lineBaseOffset = 0;<br/>    }<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>        new FilePosition(node.getLineno() - lineBaseOffset, node.getCharno()),<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">line</span><!--
+--><span class="label-100 pred0">Number</span><!--
+--><span class="label-100 pred0"> ==</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> lineNumber</span><!--
+--><span class="label-100 pred0">--;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> while</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">lines</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">line</span><!--
+--><span class="label-100 pred0">Number</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> ==</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> ArrayList</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Entry</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> entries</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> lines</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">line</span><!--
+--><span class="label-100 pred0">Number</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">Original</span><!--
+--><span class="label-100 pred0">Mapping</span><!--
+--><span class="label-100 pred0">For</span><!--
+--><span class="label-100 pred0">Entry</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">entries</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">entries</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">size</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> -</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">));</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+  </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Creates</span><!--
+--><span class="label-100 pred0"> an</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0">Original</span><!--
+--><span class="label-100 pred0">Mapping</span><!--
+--><span class="label-100 pred0">&quot;</span><!--
+--><span class="label-100 pred0"> object</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> given</span><!--
+--><span class="label-100 pred0"> entry</span><!--
+--><span class="label-100 pred0"> object</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+  </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> private</span><!--
+--><span class="label-100 pred0"> Original</span><!--
+--><span class="label-100 pred0">Mapping</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">Original</span><!--
+--><span class="label-100 pred0">Mapping</span><!--
+--><span class="label-100 pred0">For</span><!--
+--><span class="label-100 pred0">Entry</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Entry</span><!--
+--><span class="label-100 pred0"> entry</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">entry</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">SourceFile</span><!--
+--><span class="label-100 pred0">Id</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> ==</span><!--
+--><span class="label-100 pred0"> UN</span><!--
+--><span class="label-100 pred0">MAP</span><!--
+--><span class="label-100 pred0">PED</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> Adjust</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> line</span><!--
+--><span class="label-100 pred0">/</span><!--
+--><span class="label-100 pred0">column</span><!--
+--><span class="label-100 pred0"> here</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> start</span><!--
+--><span class="label-100 pred0"> at</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> Builder</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> Original</span><!--
+--><span class="label-100 pred0">Mapping</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">newBuilder</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> .</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Original</span><!--
+--><span class="label-100 pred0">File</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">sources</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">entry</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">SourceFile</span><!--
+--><span class="label-100 pred0">Id</span><!--
+--><span class="label-100 pred0">()])</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> .</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">LineNumber</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">entry</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getSource</span><!--
+--><span class="label-100 pred0">Line</span><!--
+--><span class="label-100 pred0">())</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> .</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Column</span><!--
+--><span class="label-100 pred0">Position</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">entry</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getSource</span><!--
+--><span class="label-100 pred0">Column</span><!--
+--><span class="label-100 pred0">());</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">entry</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getName</span><!--
+--><span class="label-100 pred0">Id</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> !=</span><!--
+--><span class="label-100 pred0"> UN</span><!--
+--><span class="label-100 pred0">MAP</span><!--
+--><span class="label-100 pred0">PED</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Identifier</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">names</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">entry</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getName</span><!--
+--><span class="label-100 pred0">Id</span><!--
+--><span class="label-100 pred0">()]);</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">build</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+  </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Reverse</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> source</span><!--
+--><span class="label-100 pred0"> map</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> created</span><!--
+--><span class="label-100 pred0"> mapping</span><!--
+--><span class="label-100 pred0"> will</span><!--
+--><span class="label-100 pred0"> allow</span><!--
+--><span class="label-100 pred0"> us</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> quickly</span><!--
+--><span class="label-100 pred0"> go</span><!--
+--><span class="label-100 pred0">
+  </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> from</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> source</span><!--
+--><span class="label-100 pred0"> file</span><!--
+--><span class="label-100 pred0"> and</span><!--
+--><span class="label-100 pred0"> line</span><!--
+--><span class="label-100 pred0"> number</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> collection</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> target</span><!--
+--><span class="label-100 pred0">
+  </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Original</span><!--
+--><span class="label-100 pred0">Mappings</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+  </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> private</span><!--
+--><span class="label-100 pred0"> void</span><!--
+--><span class="label-100 pred0"> create</span><!--
+--><span class="label-100 pred0">Reverse</span><!--
+--><span class="label-100 pred0">Mapping</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> void</span><!--
+--><span class="label-100 pred0"> add</span><!--
+--><span class="label-100 pred0">Mapping</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> Node</span><!--
+--><span class="label-100 pred0"> node</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> File</span><!--
+--><span class="label-100 pred0">Position</span><!--
+--><span class="label-100 pred0"> output</span><!--
+--><span class="label-100 pred0">Start</span><!--
+--><span class="label-100 pred0">Position</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> File</span><!--
+--><span class="label-100 pred0">Position</span><!--
+--><span class="label-100 pred0"> output</span><!--
+--><span class="label-100 pred0">End</span><!--
+--><span class="label-100 pred0">Position</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> String</span><!--
+--><span class="label-100 pred0"> source</span><!--
+--><span class="label-100 pred0">File</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> node</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getSource</span><!--
+--><span class="label-100 pred0">FileName</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> If</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> node</span><!--
+--><span class="label-100 pred0"> does</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> have</span><!--
+--><span class="label-100 pred0"> an</span><!--
+--><span class="label-100 pred0"> associated</span><!--
+--><span class="label-100 pred0"> source</span><!--
+--><span class="label-100 pred0"> file</span><!--
+--><span class="label-100 pred0"> or</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> its</span><!--
+--><span class="label-100 pred0"> line</span><!--
+--><span class="label-100 pred0"> number</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> -</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> then</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> node</span><!--
+--><span class="label-100 pred0"> does</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> have</span><!--
+--><span class="label-100 pred0"> sufficient</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> information</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> mapping</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> useful</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">source</span><!--
+--><span class="label-100 pred0">File</span><!--
+--><span class="label-100 pred0"> ==</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0"> ||</span><!--
+--><span class="label-100 pred0"> node</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Lin</span><!--
+--><span class="label-100 pred0">eno</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> source</span><!--
+--><span class="label-100 pred0">File</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> fix</span><!--
+--><span class="label-100 pred0">up</span><!--
+--><span class="label-100 pred0">Source</span><!--
+--><span class="label-100 pred0">Location</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">source</span><!--
+--><span class="label-100 pred0">File</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> String</span><!--
+--><span class="label-100 pred0"> original</span><!--
+--><span class="label-100 pred0">Name</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">String</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> node</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Prop</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Node</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">ORIGIN</span><!--
+--><span class="label-100 pred0">AL</span><!--
+--><span class="label-100 pred0">NAME</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">PROP</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> Str</span><!--
+--><span class="label-100 pred0">ange</span><!--
+--><span class="label-100 pred0">ly</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> R</span><!--
+--><span class="label-100 pred0">h</span><!--
+--><span class="label-100 pred0">ino</span><!--
+--><span class="label-100 pred0"> source</span><!--
+--><span class="label-100 pred0"> lines</span><!--
+--><span class="label-100 pred0"> are</span><!--
+--><span class="label-100 pred0"> one</span><!--
+--><span class="label-100 pred0"> based</span><!--
+--><span class="label-100 pred0"> but</span><!--
+--><span class="label-100 pred0"> columns</span><!--
+--><span class="label-100 pred0"> are</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> zero</span><!--
+--><span class="label-100 pred0"> based</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> We</span><!--
+--><span class="label-100 pred0"> don</span><!--
+--><span class="label-100 pred0">&#x27;t</span><!--
+--><span class="label-100 pred0"> change</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> v</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0"> or</span><!--
+--><span class="label-100 pred0"> v</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0"> source</span><!--
+--><span class="label-100 pred0"> maps</span><!--
+--><span class="label-100 pred0"> but</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> v</span><!--
+--><span class="label-100 pred0">3</span><!--
+--><span class="label-100 pred0"> we</span><!--
+--><span class="label-100 pred0"> make</span><!--
+--><span class="label-100 pred0"> them</span><!--
+--><span class="label-100 pred0"> both</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0"> based</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> generator</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">add</span><!--
+--><span class="label-100 pred0">Mapping</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> source</span><!--
+--><span class="label-100 pred0">File</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> original</span><!--
+--><span class="label-100 pred0">Name</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> File</span><!--
+--><span class="label-100 pred0">Position</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">node</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Lin</span><!--
+--><span class="label-100 pred0">eno</span><!--
+--><span class="label-100 pred0">(),</span><!--
+--><span class="label-100 pred0"> node</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Char</span><!--
+--><span class="label-100 pred0">no</span><!--
+--><span class="label-100 pred0">()),</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> output</span><!--
+--><span class="label-100 pred0">Start</span><!--
+--><span class="label-100 pred0">Position</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> output</span><!--
+--><span class="label-100 pred0">End</span><!--
+--><span class="label-100 pred0">Position</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">/*</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Copyright</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> Closure</span><!--
+--><span class="label0 pred0"> Compiler</span><!--
+--><span class="label0 pred0"> Authors</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Licensed</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> Apache</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Version</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">the</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">License</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> you</span><!--
+--><span class="label0 pred0"> may</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> use</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> file</span><!--
+--><span class="label0 pred0"> except</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> compliance</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> You</span><!--
+--><span class="label0 pred0"> may</span><!--
+--><span class="label0 pred0"> obtain</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> copy</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> at</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">    </span><!--
+--><span class="label0 pred0"> http</span><!--
+--><span class="label0 pred0">://</span><!--
+--><span class="label0 pred0">www</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">apache</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">org</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">licenses</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">LICENSE</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Unless</span><!--
+--><span class="label0 pred0"> required</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> applicable</span><!--
+--><span class="label0 pred0"> law</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> agreed</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> writing</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> software</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> distributed</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> distributed</span><!--
+--><span class="label0 pred0"> on</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">AS</span><!--
+--><span class="label0 pred0"> IS</span><!--
+--><span class="label0 pred0">&quot;</span><!--
+--><span class="label0 pred0"> BASIS</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> WITHOUT</span><!--
+--><span class="label0 pred0"> WARRANTIES</span><!--
+--><span class="label0 pred0"> OR</span><!--
+--><span class="label0 pred0"> CONDITIONS</span><!--
+--><span class="label0 pred0"> OF</span><!--
+--><span class="label0 pred0"> ANY</span><!--
+--><span class="label0 pred0"> KIND</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> either</span><!--
+--><span class="label0 pred0"> express</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> implied</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> See</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> specific</span><!--
+--><span class="label0 pred0"> language</span><!--
+--><span class="label0 pred0"> governing</span><!--
+--><span class="label0 pred0"> permissions</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> limitations</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">package</span><!--
+--><span class="label0 pred0"> com</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">google</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">debugging</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">source</span><!--
+--><span class="label0 pred0">map</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> com</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">google</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">common</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">base</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Preconditions</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> com</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">google</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">common</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">collect</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Lists</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">io</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">IOException</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Array</span><!--
+--><span class="label0 pred0">Deque</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Deque</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">List</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> javax</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">annotation</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Nullable</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">/**</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Collect</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0"> information</span><!--
+--><span class="label0 pred0"> mapping</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> generated</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">compiled</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> source</span><!--
+--><span class="label0 pred0"> back</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> its</span><!--
+--><span class="label0 pred0"> original</span><!--
+--><span class="label0 pred0"> source</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> debugging</span><!--
+--><span class="label0 pred0"> purposes</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">public</span><!--
+--><span class="label0 pred0"> class</span><!--
+--><span class="label1 pred0"> Source</span><!--
+--><span class="label1 pred0">Map</span><!--
+--><span class="label1 pred0">Generator</span><!--
+--><span class="label1 pred0">V</span><!--
+--><span class="label1 pred0">1</span><!--
+--><span class="label0 pred0"> implements</span><!--
+--><span class="label0 pred0"> Source</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> UN</span><!--
+--><span class="label0 pred0">MAP</span><!--
+--><span class="label0 pred0">PED</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> A</span><!--
+--><span class="label0 pred0"> mapping</span><!--
+--><span class="label0 pred0"> from</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> given</span><!--
+--><span class="label0 pred0"> position</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> input</span><!--
+--><span class="label0 pred0"> source</span><!--
+--><span class="label0 pred0"> file</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> given</span><!--
+--><span class="label0 pred0"> position</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> generated</span><!--
+--><span class="label0 pred0"> code</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> class</span><!--
+--><span class="label0 pred0"> Mapping</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> A</span><!--
+--><span class="label0 pred0"> unique</span><!--
+--><span class="label0 pred0"> ID</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> mapping</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> record</span><!--
+--><span class="label0 pred0"> keeping</span><!--
+--><span class="label0 pred0"> purposes</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> id</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> UN</span><!--
+--><span class="label0 pred0">MAP</span><!--
+--><span class="label0 pred0">PED</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> input</span><!--
+--><span class="label0 pred0"> source</span><!--
+--><span class="label0 pred0"> file</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> source</span><!--
+--><span class="label0 pred0">File</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> position</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> code</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> input</span><!--
+--><span class="label0 pred0"> source</span><!--
+--><span class="label0 pred0"> file</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> Both</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> line</span><!--
+--><span class="label0 pred0"> number</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> character</span><!--
+--><span class="label0 pred0"> index</span><!--
+--><span class="label0 pred0"> are</span><!--
+--><span class="label0 pred0"> indexed</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> legacy</span><!--
+--><span class="label0 pred0"> reasons</span><!--
+--><span class="label0 pred0"> via</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> R</span><!--
+--><span class="label0 pred0">h</span><!--
+--><span class="label0 pred0">ino</span><!--
+--><span class="label0 pred0"> Node</span><!--
+--><span class="label0 pred0"> class</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> File</span><!--
+--><span class="label0 pred0">Position</span><!--
+--><span class="label0 pred0"> original</span><!--
+--><span class="label0 pred0">Position</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> starting</span><!--
+--><span class="label0 pred0"> position</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> code</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> generated</span><!--
+--><span class="label0 pred0"> source</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> file</span><!--
+--><span class="label0 pred0"> which</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> mapping</span><!--
+--><span class="label0 pred0"> represents</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> Indexed</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> File</span><!--
+--><span class="label0 pred0">Position</span><!--
+--><span class="label0 pred0"> startPosition</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> ending</span><!--
+--><span class="label0 pred0"> position</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> code</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> generated</span><!--
+--><span class="label0 pred0"> source</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> file</span><!--
+--><span class="label0 pred0"> which</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> mapping</span><!--
+--><span class="label0 pred0"> represents</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> Indexed</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> File</span><!--
+--><span class="label0 pred0">Position</span><!--
+--><span class="label0 pred6"> end</span><!--
+--><span class="label0 pred7">Position</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> original</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> token</span><!--
+--><span class="label0 pred0"> found</span><!--
+--><span class="label0 pred0"> at</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> position</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> represented</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> mapping</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">if</span><!--
+--><span class="label0 pred0"> any</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> original</span><!--
+--><span class="label0 pred0">Name</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Whether</span><!--
+--><span class="label0 pred0"> the</span>
+</div>
+<hr/>
+<div>
+<h3>
+Closure, 47
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>       .setLineNumber(entry.getSourceLine() + 1)<br/>       .setColumnPosition(entry.getSourceColumn() + 1);<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>    int lineBaseOffset = 1;<br/>    if (generator instanceof SourceMapGeneratorV1<br/>        || generator instanceof SourceMapGeneratorV2) {<br/>      lineBaseOffset = 0;<br/>    }<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>        new FilePosition(node.getLineno() - lineBaseOffset, node.getCharno()),<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">line</span><!--
+--><span class="label-100 pred0">Number</span><!--
+--><span class="label-100 pred0"> ==</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> lineNumber</span><!--
+--><span class="label-100 pred0">--;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> while</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">lines</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">line</span><!--
+--><span class="label-100 pred0">Number</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> ==</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> ArrayList</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Entry</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> entries</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> lines</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">line</span><!--
+--><span class="label-100 pred0">Number</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">Original</span><!--
+--><span class="label-100 pred0">Mapping</span><!--
+--><span class="label-100 pred0">For</span><!--
+--><span class="label-100 pred0">Entry</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">entries</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">entries</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">size</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> -</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">));</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+  </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Creates</span><!--
+--><span class="label-100 pred0"> an</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0">Original</span><!--
+--><span class="label-100 pred0">Mapping</span><!--
+--><span class="label-100 pred0">&quot;</span><!--
+--><span class="label-100 pred0"> object</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> given</span><!--
+--><span class="label-100 pred0"> entry</span><!--
+--><span class="label-100 pred0"> object</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+  </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> private</span><!--
+--><span class="label-100 pred0"> Original</span><!--
+--><span class="label-100 pred0">Mapping</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">Original</span><!--
+--><span class="label-100 pred0">Mapping</span><!--
+--><span class="label-100 pred0">For</span><!--
+--><span class="label-100 pred0">Entry</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Entry</span><!--
+--><span class="label-100 pred0"> entry</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">entry</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">SourceFile</span><!--
+--><span class="label-100 pred0">Id</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> ==</span><!--
+--><span class="label-100 pred0"> UN</span><!--
+--><span class="label-100 pred0">MAP</span><!--
+--><span class="label-100 pred0">PED</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> Adjust</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> line</span><!--
+--><span class="label-100 pred0">/</span><!--
+--><span class="label-100 pred0">column</span><!--
+--><span class="label-100 pred0"> here</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> start</span><!--
+--><span class="label-100 pred0"> at</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> Builder</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> Original</span><!--
+--><span class="label-100 pred0">Mapping</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">newBuilder</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> .</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Original</span><!--
+--><span class="label-100 pred0">File</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">sources</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">entry</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">SourceFile</span><!--
+--><span class="label-100 pred0">Id</span><!--
+--><span class="label-100 pred0">()])</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> .</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">LineNumber</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">entry</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getSource</span><!--
+--><span class="label-100 pred0">Line</span><!--
+--><span class="label-100 pred0">())</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> .</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Column</span><!--
+--><span class="label-100 pred0">Position</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">entry</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getSource</span><!--
+--><span class="label-100 pred0">Column</span><!--
+--><span class="label-100 pred0">());</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">entry</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getName</span><!--
+--><span class="label-100 pred0">Id</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> !=</span><!--
+--><span class="label-100 pred0"> UN</span><!--
+--><span class="label-100 pred0">MAP</span><!--
+--><span class="label-100 pred0">PED</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Identifier</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">names</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">entry</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getName</span><!--
+--><span class="label-100 pred0">Id</span><!--
+--><span class="label-100 pred0">()]);</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">build</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+  </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Reverse</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> source</span><!--
+--><span class="label-100 pred0"> map</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> created</span><!--
+--><span class="label-100 pred0"> mapping</span><!--
+--><span class="label-100 pred0"> will</span><!--
+--><span class="label-100 pred0"> allow</span><!--
+--><span class="label-100 pred0"> us</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> quickly</span><!--
+--><span class="label-100 pred0"> go</span><!--
+--><span class="label-100 pred0">
+  </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> from</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> source</span><!--
+--><span class="label-100 pred0"> file</span><!--
+--><span class="label-100 pred0"> and</span><!--
+--><span class="label-100 pred0"> line</span><!--
+--><span class="label-100 pred0"> number</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> collection</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> target</span><!--
+--><span class="label-100 pred0">
+  </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Original</span><!--
+--><span class="label-100 pred0">Mappings</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+  </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> private</span><!--
+--><span class="label-100 pred0"> void</span><!--
+--><span class="label-100 pred0"> create</span><!--
+--><span class="label-100 pred0">Reverse</span><!--
+--><span class="label-100 pred0">Mapping</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> void</span><!--
+--><span class="label-100 pred0"> add</span><!--
+--><span class="label-100 pred0">Mapping</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> Node</span><!--
+--><span class="label-100 pred0"> node</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> File</span><!--
+--><span class="label-100 pred0">Position</span><!--
+--><span class="label-100 pred0"> output</span><!--
+--><span class="label-100 pred0">Start</span><!--
+--><span class="label-100 pred0">Position</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> File</span><!--
+--><span class="label-100 pred0">Position</span><!--
+--><span class="label-100 pred0"> output</span><!--
+--><span class="label-100 pred0">End</span><!--
+--><span class="label-100 pred0">Position</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> String</span><!--
+--><span class="label-100 pred0"> source</span><!--
+--><span class="label-100 pred0">File</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> node</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getSource</span><!--
+--><span class="label-100 pred0">FileName</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> If</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> node</span><!--
+--><span class="label-100 pred0"> does</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> have</span><!--
+--><span class="label-100 pred0"> an</span><!--
+--><span class="label-100 pred0"> associated</span><!--
+--><span class="label-100 pred0"> source</span><!--
+--><span class="label-100 pred0"> file</span><!--
+--><span class="label-100 pred0"> or</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> its</span><!--
+--><span class="label-100 pred0"> line</span><!--
+--><span class="label-100 pred0"> number</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> -</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> then</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> node</span><!--
+--><span class="label-100 pred0"> does</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> have</span><!--
+--><span class="label-100 pred0"> sufficient</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> information</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> mapping</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> useful</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">source</span><!--
+--><span class="label-100 pred0">File</span><!--
+--><span class="label-100 pred0"> ==</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0"> ||</span><!--
+--><span class="label-100 pred0"> node</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Lin</span><!--
+--><span class="label-100 pred0">eno</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> source</span><!--
+--><span class="label-100 pred0">File</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> fix</span><!--
+--><span class="label-100 pred0">up</span><!--
+--><span class="label-100 pred0">Source</span><!--
+--><span class="label-100 pred0">Location</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">source</span><!--
+--><span class="label-100 pred0">File</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> String</span><!--
+--><span class="label-100 pred0"> original</span><!--
+--><span class="label-100 pred0">Name</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">String</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> node</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Prop</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Node</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">ORIGIN</span><!--
+--><span class="label-100 pred0">AL</span><!--
+--><span class="label-100 pred0">NAME</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">PROP</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> Str</span><!--
+--><span class="label-100 pred0">ange</span><!--
+--><span class="label-100 pred0">ly</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> R</span><!--
+--><span class="label-100 pred0">h</span><!--
+--><span class="label-100 pred0">ino</span><!--
+--><span class="label-100 pred0"> source</span><!--
+--><span class="label-100 pred0"> lines</span><!--
+--><span class="label-100 pred0"> are</span><!--
+--><span class="label-100 pred0"> one</span><!--
+--><span class="label-100 pred0"> based</span><!--
+--><span class="label-100 pred0"> but</span><!--
+--><span class="label-100 pred0"> columns</span><!--
+--><span class="label-100 pred0"> are</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> zero</span><!--
+--><span class="label-100 pred0"> based</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> We</span><!--
+--><span class="label-100 pred0"> don</span><!--
+--><span class="label-100 pred0">&#x27;t</span><!--
+--><span class="label-100 pred0"> change</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> v</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0"> or</span><!--
+--><span class="label-100 pred0"> v</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0"> source</span><!--
+--><span class="label-100 pred0"> maps</span><!--
+--><span class="label-100 pred0"> but</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> v</span><!--
+--><span class="label-100 pred0">3</span><!--
+--><span class="label-100 pred0"> we</span><!--
+--><span class="label-100 pred0"> make</span><!--
+--><span class="label-100 pred0"> them</span><!--
+--><span class="label-100 pred0"> both</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0"> based</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> generator</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">add</span><!--
+--><span class="label-100 pred0">Mapping</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> source</span><!--
+--><span class="label-100 pred0">File</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> original</span><!--
+--><span class="label-100 pred0">Name</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> File</span><!--
+--><span class="label-100 pred0">Position</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">node</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Lin</span><!--
+--><span class="label-100 pred0">eno</span><!--
+--><span class="label-100 pred0">(),</span><!--
+--><span class="label-100 pred0"> node</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Char</span><!--
+--><span class="label-100 pred0">no</span><!--
+--><span class="label-100 pred0">()),</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> output</span><!--
+--><span class="label-100 pred0">Start</span><!--
+--><span class="label-100 pred0">Position</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> output</span><!--
+--><span class="label-100 pred0">End</span><!--
+--><span class="label-100 pred0">Position</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">/*</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Copyright</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> Closure</span><!--
+--><span class="label0 pred0"> Compiler</span><!--
+--><span class="label0 pred0"> Authors</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Licensed</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> Apache</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Version</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">the</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">License</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> you</span><!--
+--><span class="label0 pred0"> may</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> use</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> file</span><!--
+--><span class="label0 pred0"> except</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> compliance</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> You</span><!--
+--><span class="label0 pred0"> may</span><!--
+--><span class="label0 pred0"> obtain</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> copy</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> at</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">    </span><!--
+--><span class="label0 pred0"> http</span><!--
+--><span class="label0 pred0">://</span><!--
+--><span class="label0 pred0">www</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">apache</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">org</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">licenses</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">LICENSE</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Unless</span><!--
+--><span class="label0 pred0"> required</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> applicable</span><!--
+--><span class="label0 pred0"> law</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> agreed</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> writing</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> software</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> distributed</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> distributed</span><!--
+--><span class="label0 pred0"> on</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">AS</span><!--
+--><span class="label0 pred0"> IS</span><!--
+--><span class="label0 pred0">&quot;</span><!--
+--><span class="label0 pred0"> BASIS</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> WITHOUT</span><!--
+--><span class="label0 pred0"> WARRANTIES</span><!--
+--><span class="label0 pred0"> OR</span><!--
+--><span class="label0 pred0"> CONDITIONS</span><!--
+--><span class="label0 pred0"> OF</span><!--
+--><span class="label0 pred0"> ANY</span><!--
+--><span class="label0 pred0"> KIND</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> either</span><!--
+--><span class="label0 pred0"> express</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> implied</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> See</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> specific</span><!--
+--><span class="label0 pred0"> language</span><!--
+--><span class="label0 pred0"> governing</span><!--
+--><span class="label0 pred0"> permissions</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> limitations</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">package</span><!--
+--><span class="label0 pred0"> com</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">google</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">debugging</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">source</span><!--
+--><span class="label0 pred0">map</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">/**</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">author</span><!--
+--><span class="label0 pred0"> j</span><!--
+--><span class="label0 pred0">ohn</span><!--
+--><span class="label0 pred0">len</span><!--
+--><span class="label0 pred0">z</span><!--
+--><span class="label0 pred0">@</span><!--
+--><span class="label0 pred0">google</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">com</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">John</span><!--
+--><span class="label0 pred0"> L</span><!--
+--><span class="label0 pred0">enz</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">public</span><!--
+--><span class="label0 pred0"> class</span><!--
+--><span class="label0 pred0"> Source</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0">Factory</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> appropriate</span><!--
+--><span class="label0 pred0"> source</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0"> object</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> given</span><!--
+--><span class="label0 pred0"> source</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0"> format</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> Source</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0"> getInstance</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> getInstance</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Source</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">Format</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">DEFAULT</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> appropriate</span><!--
+--><span class="label0 pred0"> source</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0"> object</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> given</span><!--
+--><span class="label0 pred0"> source</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0"> format</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> Source</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0"> getInstance</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Source</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">Format</span><!--
+--><span class="label0 pred0"> format</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> switch</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">format</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> case</span><!--
+--><span class="label0 pred0"> V</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label1 pred0"> Source</span><!--
+--><span class="label1 pred0">Map</span><!--
+--><span class="label1 pred0">Generator</span><!--
+--><span class="label1 pred0">V</span><!--
+--><span class="label1 pred0">1</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> case</span><!--
+--><span class="label0 pred0"> DEFAULT</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> case</span><!--
+--><span class="label0 pred0"> V</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label1 pred0"> Source</span><!--
+--><span class="label1 pred0">Map</span><!--
+--><span class="label1 pred0">Generator</span><!--
+--><span class="label1 pred0">V</span><!--
+--><span class="label1 pred0">2</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> case</span><!--
+--><span class="label0 pred0"> V</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Source</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">Generator</span><!--
+--><span class="label0 pred0">V</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> default</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> throw</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> IllegalStateException</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">unsupported</span><!--
+--><span class="label0 pred0"> source</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0"> format</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">}</span>
+</div>
+<hr/>
+</body>
+</html>

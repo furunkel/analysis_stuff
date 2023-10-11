@@ -1,0 +1,3680 @@
+<html>
+<head>
+<style>
+pre {margin: 0.1em }
+
+            span {
+                white-space: pre;
+            }
+
+            .label-100 {
+                border: 1px solid gray;
+            }
+
+            .label0 {
+                border: 1px solid white;
+            }
+
+            .label1 {
+                border: 1px solid blue;
+            }
+            .new {
+                background-color: #8FFF92;
+            }
+
+            .context-size {
+	            padding: 0.1em;
+	            color: white;
+	            background-color: black;
+	            border-radius: 50%;
+	            width: 1.5em;
+	            display: inline-block;
+	            text-align: center;
+	            height: 1.5em;
+	            line-height: 1.5em;
+                margin-right: 0.6em;
+            }
+.pred0{background-color: rgba(255, 0, 0, 0.0);}
+.pred1{background-color: rgba(255, 0, 0, 0.1);}
+.pred2{background-color: rgba(255, 0, 0, 0.2);}
+.pred3{background-color: rgba(255, 0, 0, 0.3);}
+.pred4{background-color: rgba(255, 0, 0, 0.4);}
+.pred5{background-color: rgba(255, 0, 0, 0.5);}
+.pred6{background-color: rgba(255, 0, 0, 0.6);}
+.pred7{background-color: rgba(255, 0, 0, 0.7);}
+.pred8{background-color: rgba(255, 0, 0, 0.8);}
+.pred9{background-color: rgba(255, 0, 0, 0.9);}
+.pred10{background-color: rgba(255, 0, 0, 1.0);}
+</style>
+</head>
+<body>
+<div>
+<h3>
+Gson, 1
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>      } else if (typeToEvaluate instanceof TypeVariable&lt;?&gt;) {<br/>        Type theSearchedType = null;<br/>        do {<br/>          theSearchedType = extractTypeForHierarchy(parentType, (TypeVariable&lt;?&gt;) typeToEvaluate);<br/>        } while ((theSearchedType!= null) &amp;&amp; (theSearchedType instanceof TypeVariable&lt;?&gt;));<br/>        if (theSearchedType!= null) {<br/>          return theSearchedType;<br/>        }<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>  private static Type extractTypeForHierarchy(Type parentType, TypeVariable&lt;?&gt; typeToEvaluate) {<br/>    Class&lt;?&gt; rawParentType = null;<br/>    if (parentType instanceof Class&lt;?&gt;) {<br/>      rawParentType = (Class&lt;?&gt;) parentType;<br/>    } else if (parentType instanceof ParameterizedType) {<br/>      ParameterizedType parentTypeAsPT = (ParameterizedType) parentType;<br/>      rawParentType = (Class&lt;?&gt;) parentTypeAsPT.getRawType();<br/>    } else {<br/>      return null;<br/>    }<br/>    Type superClass = rawParentType.getGenericSuperclass();<br/>    if (superClass instanceof ParameterizedType<br/>        &amp;&amp; ((ParameterizedType) superClass).getRawType() == typeToEvaluate.getGenericDeclaration()) {<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>      TypeVariable&lt;?&gt;[] classTypeVariables =<br/>          ((Class&lt;?&gt;) ((ParameterizedType) superClass).getRawType()).getTypeParameters();<br/>      int indexOfActualTypeArgument = getIndex(classTypeVariables, typeToEvaluate);<br/>      Type[] actualTypeArguments = null;<br/>      if (parentType instanceof Class&lt;?&gt;) {<br/>        actualTypeArguments = ((ParameterizedType) superClass).getActualTypeArguments();<br/>      } else if (parentType instanceof ParameterizedType) {<br/>        actualTypeArguments = ((ParameterizedType) parentType).getActualTypeArguments();<br/>      } else {<br/>        return null;<br/>      }<br/>      return actualTypeArguments[indexOfActualTypeArgument];<br/>    }<br/>    Type searchedType = null;<br/>    if (superClass!= null) {<br/>      searchedType = extractTypeForHierarchy(superClass, typeToEvaluate);<br/>    }<br/>    return searchedType;<br/>  }<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> instanceof</span><!--
+--><span class="label-100 pred0"> Class</span><!--
+--><span class="label-100 pred0">&lt;?&gt;</span><!--
+--><span class="label-100 pred0"> ?</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">Utils</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">wrap</span><!--
+--><span class="label-100 pred0">With</span><!--
+--><span class="label-100 pred0">Array</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Utils</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">to</span><!--
+--><span class="label-100 pred0">Raw</span><!--
+--><span class="label-100 pred0">Class</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">))</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Generic</span><!--
+--><span class="label-100 pred0">ArrayType</span><!--
+--><span class="label-100 pred0">Impl</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">type</span><!--
+--><span class="label-100 pred0">To</span><!--
+--><span class="label-100 pred0">Evaluate</span><!--
+--><span class="label-100 pred0"> instanceof</span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">Variable</span><!--
+--><span class="label-100 pred0">&lt;?</span><!--
+--><span class="label-100 pred0">&gt;)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">parent</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> instanceof</span><!--
+--><span class="label-100 pred0"> Parameter</span><!--
+--><span class="label-100 pred0">ized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> The</span><!--
+--><span class="label-100 pred0"> class</span><!--
+--><span class="label-100 pred0"> definition</span><!--
+--><span class="label-100 pred0"> has</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0"> types</span><!--
+--><span class="label-100 pred0"> used</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0"> variables</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> Find</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> matching</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0"> Variable</span><!--
+--><span class="label-100 pred0"> used</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> field</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> For</span><!--
+--><span class="label-100 pred0"> example</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> class</span><!--
+--><span class="label-100 pred0"> Foo</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">A</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0"> A</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Foo</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Integer</span><!--
+--><span class="label-100 pred0">&gt;();</span><!--
+--><span class="label-100 pred0"> defines</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> A</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> Integer</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> So</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> find</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> field</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> we</span><!--
+--><span class="label-100 pred0"> will</span><!--
+--><span class="label-100 pred0"> have</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> look</span><!--
+--><span class="label-100 pred0"> at</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> class</span><!--
+--><span class="label-100 pred0">&#x27;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0"> arguments</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">Variable</span><!--
+--><span class="label-100 pred0">&lt;?&gt;</span><!--
+--><span class="label-100 pred0"> fieldType</span><!--
+--><span class="label-100 pred0">Variable</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Variable</span><!--
+--><span class="label-100 pred0">&lt;?</span><!--
+--><span class="label-100 pred0">&gt;)</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">To</span><!--
+--><span class="label-100 pred0">Evaluate</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">Variable</span><!--
+--><span class="label-100 pred0">&lt;?&gt;</span><!--
+--><span class="label-100 pred0">[]</span><!--
+--><span class="label-100 pred0"> class</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Variables</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> raw</span><!--
+--><span class="label-100 pred0">Parent</span><!--
+--><span class="label-100 pred0">Class</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getType</span><!--
+--><span class="label-100 pred0">Parameters</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Parameter</span><!--
+--><span class="label-100 pred0">ized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> obj</span><!--
+--><span class="label-100 pred0">Parameterized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Parameterized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> indexOf</span><!--
+--><span class="label-100 pred0">Actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Argument</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">Index</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">class</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Variables</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> fieldType</span><!--
+--><span class="label-100 pred0">Variable</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">[]</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> obj</span><!--
+--><span class="label-100 pred0">Parameterized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">indexOf</span><!--
+--><span class="label-100 pred0">Actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Argument</span><!--
+--><span class="label-100 pred0">];</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> throw</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> UnsupportedOperationException</span><!--
+--><span class="label-100 pred0">(&quot;</span><!--
+--><span class="label-100 pred0">Expecting</span><!--
+--><span class="label-100 pred0"> parameter</span><!--
+--><span class="label-100 pred0">ized</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> got</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> &quot;.</span><!--
+--><span class="label-100 pred0">\</span><!--
+--><span class="label-100 pred0">n</span><!--
+--><span class="label-100 pred0"> Are</span><!--
+--><span class="label-100 pred0"> you</span><!--
+--><span class="label-100 pred0"> missing</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> use</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">Token</span><!--
+--><span class="label-100 pred0"> id</span><!--
+--><span class="label-100 pred0">iom</span><!--
+--><span class="label-100 pred0">?\</span><!--
+--><span class="label-100 pred0">n</span><!--
+--><span class="label-100 pred0"> See</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0">http</span><!--
+--><span class="label-100 pred0">://</span><!--
+--><span class="label-100 pred0">sites</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">google</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">com</span><!--
+--><span class="label-100 pred0">/</span><!--
+--><span class="label-100 pred0">site</span><!--
+--><span class="label-100 pred0">/</span><!--
+--><span class="label-100 pred0">gson</span><!--
+--><span class="label-100 pred0">/</span><!--
+--><span class="label-100 pred0">gson</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">user</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">guide</span><!--
+--><span class="label-100 pred0">#</span><!--
+--><span class="label-100 pred0">TOC</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">Serial</span><!--
+--><span class="label-100 pred0">izing</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">and</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">Deserial</span><!--
+--><span class="label-100 pred0">izing</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">Gener</span><!--
+--><span class="label-100 pred0">&quot;);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">type</span><!--
+--><span class="label-100 pred0">To</span><!--
+--><span class="label-100 pred0">Evaluate</span><!--
+--><span class="label-100 pred0"> instanceof</span><!--
+--><span class="label-100 pred0"> W</span><!--
+--><span class="label-100 pred0">ildcard</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> W</span><!--
+--><span class="label-100 pred0">ildcard</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> cast</span><!--
+--><span class="label-100 pred0">ed</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Wildcard</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">To</span><!--
+--><span class="label-100 pred0">Evaluate</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">Actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">cast</span><!--
+--><span class="label-100 pred0">ed</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Upper</span><!--
+--><span class="label-100 pred0">Bounds</span><!--
+--><span class="label-100 pred0">()[</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">],</span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> raw</span><!--
+--><span class="label-100 pred0">Parent</span><!--
+--><span class="label-100 pred0">Class</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> throw</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> IllegalArgumentException</span><!--
+--><span class="label-100 pred0">(&quot;</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> \</span><!--
+--><span class="label-100 pred0">&#x27;&quot;</span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">To</span><!--
+--><span class="label-100 pred0">Evaluate</span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> &quot;\</span><!--
+--><span class="label-100 pred0">&#x27;</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> Class</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0">Parameterized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> Generic</span><!--
+--><span class="label-100 pred0">ArrayType</span><!--
+--><span class="label-100 pred0"> or</span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">Variable</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0"> Can</span><!--
+--><span class="label-100 pred0">&#x27;t</span><!--
+--><span class="label-100 pred0"> extract</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">.&quot;);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> Evaluate</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0"> on</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> private</span><!--
+--><span class="label-100 pred0"> static</span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">[]</span><!--
+--><span class="label-100 pred0"> extract</span><!--
+--><span class="label-100 pred0">Real</span><!--
+--><span class="label-100 pred0">Types</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">[]</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> Class</span><!--
+--><span class="label-100 pred0">&lt;?&gt;</span><!--
+--><span class="label-100 pred0"> raw</span><!--
+--><span class="label-100 pred0">Parent</span><!--
+--><span class="label-100 pred0">Class</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> Preconditions</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">checkNotNull</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">[]</span><!--
+--><span class="label-100 pred0"> ret</span><!--
+--><span class="label-100 pred0">Types</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">length</span><!--
+--><span class="label-100 pred0">];</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">int</span><!--
+--><span class="label-100 pred0"> i</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0"> i</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">length</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0"> ++</span><!--
+--><span class="label-100 pred0">i</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> ret</span><!--
+--><span class="label-100 pred0">Types</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">i</span><!--
+--><span class="label-100 pred0">]</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0"> type</span><!--
+--><span class="label0 pred0">To</span><!--
+--><span class="label0 pred0">Evaluate</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0"> parent</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Class</span><!--
+--><span class="label0 pred0">&lt;?&gt;</span><!--
+--><span class="label0 pred0"> raw</span><!--
+--><span class="label0 pred0">Parent</span><!--
+--><span class="label0 pred0">Class</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">type</span><!--
+--><span class="label0 pred0">To</span><!--
+--><span class="label0 pred0">Evaluate</span><!--
+--><span class="label0 pred0"> instanceof</span><!--
+--><span class="label0 pred0"> Class</span><!--
+--><span class="label0 pred0">&lt;?</span><!--
+--><span class="label0 pred0">&gt;)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> type</span><!--
+--><span class="label0 pred0">To</span><!--
+--><span class="label0 pred0">Evaluate</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">type</span><!--
+--><span class="label0 pred0">To</span><!--
+--><span class="label0 pred0">Evaluate</span><!--
+--><span class="label0 pred0"> instanceof</span><!--
+--><span class="label0 pred0"> Parameter</span><!--
+--><span class="label0 pred0">ized</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> Parameter</span><!--
+--><span class="label0 pred0">ized</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0"> cast</span><!--
+--><span class="label0 pred0">ed</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">Parameterized</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> type</span><!--
+--><span class="label0 pred0">To</span><!--
+--><span class="label0 pred0">Evaluate</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0"> owner</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> cast</span><!--
+--><span class="label0 pred0">ed</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred1">getOwner</span><!--
+--><span class="label0 pred1">Type</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0">[]</span><!--
+--><span class="label0 pred0"> actual</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">Parameters</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0">
+         </span><!--
+--><span class="label0 pred1"> extract</span><!--
+--><span class="label0 pred1">Real</span><!--
+--><span class="label0 pred1">Types</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">cast</span><!--
+--><span class="label0 pred0">ed</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred2">get</span><!--
+--><span class="label0 pred1">Actual</span><!--
+--><span class="label0 pred1">Type</span><!--
+--><span class="label0 pred1">Arguments</span><!--
+--><span class="label0 pred0">(),</span><!--
+--><span class="label0 pred0"> parent</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> raw</span><!--
+--><span class="label0 pred0">Parent</span><!--
+--><span class="label0 pred0">Class</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0"> raw</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> cast</span><!--
+--><span class="label0 pred0">ed</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label1 pred0">getRaw</span><!--
+--><span class="label1 pred0">Type</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Parameter</span><!--
+--><span class="label0 pred0">ized</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">Impl</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">raw</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> actual</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">Parameters</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> owner</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">type</span><!--
+--><span class="label0 pred0">To</span><!--
+--><span class="label0 pred0">Evaluate</span><!--
+--><span class="label0 pred0"> instanceof</span><!--
+--><span class="label0 pred0"> Generic</span><!--
+--><span class="label0 pred0">ArrayType</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> Generic</span><!--
+--><span class="label0 pred0">ArrayType</span><!--
+--><span class="label0 pred0"> cast</span><!--
+--><span class="label0 pred0">ed</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">Generic</span><!--
+--><span class="label0 pred0">ArrayType</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> type</span><!--
+--><span class="label0 pred0">To</span><!--
+--><span class="label0 pred0">Evaluate</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0"> component</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> cast</span><!--
+--><span class="label0 pred0">ed</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">get</span><!--
+--><span class="label0 pred0">Generic</span><!--
+--><span class="label0 pred0">ComponentType</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0"> actual</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">Actual</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">component</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> parent</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> raw</span><!--
+--><span class="label0 pred0">Parent</span><!--
+--><span class="label0 pred0">Class</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">component</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred1">equals</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">actual</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">))</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> cast</span><!--
+--><span class="label0 pred0">ed</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> throw</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred1"> IllegalStateException</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">How</span><!--
+--><span class="label0 pred0"> can</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> type</span><!--
+--><span class="label0 pred0"> variable</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> present</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> class</span><!--
+--><span class="label0 pred0"> declaration</span><!--
+--><span class="label0 pred0">!&quot;);</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">}</span>
+</div>
+<hr/>
+<div>
+<h3>
+Gson, 1
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>      } else if (typeToEvaluate instanceof TypeVariable&lt;?&gt;) {<br/>        Type theSearchedType = null;<br/>        do {<br/>          theSearchedType = extractTypeForHierarchy(parentType, (TypeVariable&lt;?&gt;) typeToEvaluate);<br/>        } while ((theSearchedType!= null) &amp;&amp; (theSearchedType instanceof TypeVariable&lt;?&gt;));<br/>        if (theSearchedType!= null) {<br/>          return theSearchedType;<br/>        }<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>  private static Type extractTypeForHierarchy(Type parentType, TypeVariable&lt;?&gt; typeToEvaluate) {<br/>    Class&lt;?&gt; rawParentType = null;<br/>    if (parentType instanceof Class&lt;?&gt;) {<br/>      rawParentType = (Class&lt;?&gt;) parentType;<br/>    } else if (parentType instanceof ParameterizedType) {<br/>      ParameterizedType parentTypeAsPT = (ParameterizedType) parentType;<br/>      rawParentType = (Class&lt;?&gt;) parentTypeAsPT.getRawType();<br/>    } else {<br/>      return null;<br/>    }<br/>    Type superClass = rawParentType.getGenericSuperclass();<br/>    if (superClass instanceof ParameterizedType<br/>        &amp;&amp; ((ParameterizedType) superClass).getRawType() == typeToEvaluate.getGenericDeclaration()) {<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>      TypeVariable&lt;?&gt;[] classTypeVariables =<br/>          ((Class&lt;?&gt;) ((ParameterizedType) superClass).getRawType()).getTypeParameters();<br/>      int indexOfActualTypeArgument = getIndex(classTypeVariables, typeToEvaluate);<br/>      Type[] actualTypeArguments = null;<br/>      if (parentType instanceof Class&lt;?&gt;) {<br/>        actualTypeArguments = ((ParameterizedType) superClass).getActualTypeArguments();<br/>      } else if (parentType instanceof ParameterizedType) {<br/>        actualTypeArguments = ((ParameterizedType) parentType).getActualTypeArguments();<br/>      } else {<br/>        return null;<br/>      }<br/>      return actualTypeArguments[indexOfActualTypeArgument];<br/>    }<br/>    Type searchedType = null;<br/>    if (superClass!= null) {<br/>      searchedType = extractTypeForHierarchy(superClass, typeToEvaluate);<br/>    }<br/>    return searchedType;<br/>  }<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> instanceof</span><!--
+--><span class="label-100 pred0"> Class</span><!--
+--><span class="label-100 pred0">&lt;?&gt;</span><!--
+--><span class="label-100 pred0"> ?</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">Utils</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">wrap</span><!--
+--><span class="label-100 pred0">With</span><!--
+--><span class="label-100 pred0">Array</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Utils</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">to</span><!--
+--><span class="label-100 pred0">Raw</span><!--
+--><span class="label-100 pred0">Class</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">))</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Generic</span><!--
+--><span class="label-100 pred0">ArrayType</span><!--
+--><span class="label-100 pred0">Impl</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">type</span><!--
+--><span class="label-100 pred0">To</span><!--
+--><span class="label-100 pred0">Evaluate</span><!--
+--><span class="label-100 pred0"> instanceof</span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">Variable</span><!--
+--><span class="label-100 pred0">&lt;?</span><!--
+--><span class="label-100 pred0">&gt;)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">parent</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> instanceof</span><!--
+--><span class="label-100 pred0"> Parameter</span><!--
+--><span class="label-100 pred0">ized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> The</span><!--
+--><span class="label-100 pred0"> class</span><!--
+--><span class="label-100 pred0"> definition</span><!--
+--><span class="label-100 pred0"> has</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0"> types</span><!--
+--><span class="label-100 pred0"> used</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0"> variables</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> Find</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> matching</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0"> Variable</span><!--
+--><span class="label-100 pred0"> used</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> field</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> For</span><!--
+--><span class="label-100 pred0"> example</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> class</span><!--
+--><span class="label-100 pred0"> Foo</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">A</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0"> A</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Foo</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Integer</span><!--
+--><span class="label-100 pred0">&gt;();</span><!--
+--><span class="label-100 pred0"> defines</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> A</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> Integer</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> So</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> find</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> field</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> we</span><!--
+--><span class="label-100 pred0"> will</span><!--
+--><span class="label-100 pred0"> have</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> look</span><!--
+--><span class="label-100 pred0"> at</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> class</span><!--
+--><span class="label-100 pred0">&#x27;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0"> arguments</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">Variable</span><!--
+--><span class="label-100 pred0">&lt;?&gt;</span><!--
+--><span class="label-100 pred0"> fieldType</span><!--
+--><span class="label-100 pred0">Variable</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Variable</span><!--
+--><span class="label-100 pred0">&lt;?</span><!--
+--><span class="label-100 pred0">&gt;)</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">To</span><!--
+--><span class="label-100 pred0">Evaluate</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">Variable</span><!--
+--><span class="label-100 pred0">&lt;?&gt;</span><!--
+--><span class="label-100 pred0">[]</span><!--
+--><span class="label-100 pred0"> class</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Variables</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> raw</span><!--
+--><span class="label-100 pred0">Parent</span><!--
+--><span class="label-100 pred0">Class</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getType</span><!--
+--><span class="label-100 pred0">Parameters</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Parameter</span><!--
+--><span class="label-100 pred0">ized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> obj</span><!--
+--><span class="label-100 pred0">Parameterized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Parameterized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> indexOf</span><!--
+--><span class="label-100 pred0">Actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Argument</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">Index</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">class</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Variables</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> fieldType</span><!--
+--><span class="label-100 pred0">Variable</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">[]</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> obj</span><!--
+--><span class="label-100 pred0">Parameterized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">indexOf</span><!--
+--><span class="label-100 pred0">Actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Argument</span><!--
+--><span class="label-100 pred0">];</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> throw</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> UnsupportedOperationException</span><!--
+--><span class="label-100 pred0">(&quot;</span><!--
+--><span class="label-100 pred0">Expecting</span><!--
+--><span class="label-100 pred0"> parameter</span><!--
+--><span class="label-100 pred0">ized</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> got</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> &quot;.</span><!--
+--><span class="label-100 pred0">\</span><!--
+--><span class="label-100 pred0">n</span><!--
+--><span class="label-100 pred0"> Are</span><!--
+--><span class="label-100 pred0"> you</span><!--
+--><span class="label-100 pred0"> missing</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> use</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">Token</span><!--
+--><span class="label-100 pred0"> id</span><!--
+--><span class="label-100 pred0">iom</span><!--
+--><span class="label-100 pred0">?\</span><!--
+--><span class="label-100 pred0">n</span><!--
+--><span class="label-100 pred0"> See</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0">http</span><!--
+--><span class="label-100 pred0">://</span><!--
+--><span class="label-100 pred0">sites</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">google</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">com</span><!--
+--><span class="label-100 pred0">/</span><!--
+--><span class="label-100 pred0">site</span><!--
+--><span class="label-100 pred0">/</span><!--
+--><span class="label-100 pred0">gson</span><!--
+--><span class="label-100 pred0">/</span><!--
+--><span class="label-100 pred0">gson</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">user</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">guide</span><!--
+--><span class="label-100 pred0">#</span><!--
+--><span class="label-100 pred0">TOC</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">Serial</span><!--
+--><span class="label-100 pred0">izing</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">and</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">Deserial</span><!--
+--><span class="label-100 pred0">izing</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">Gener</span><!--
+--><span class="label-100 pred0">&quot;);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">type</span><!--
+--><span class="label-100 pred0">To</span><!--
+--><span class="label-100 pred0">Evaluate</span><!--
+--><span class="label-100 pred0"> instanceof</span><!--
+--><span class="label-100 pred0"> W</span><!--
+--><span class="label-100 pred0">ildcard</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> W</span><!--
+--><span class="label-100 pred0">ildcard</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> cast</span><!--
+--><span class="label-100 pred0">ed</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Wildcard</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">To</span><!--
+--><span class="label-100 pred0">Evaluate</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">Actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">cast</span><!--
+--><span class="label-100 pred0">ed</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Upper</span><!--
+--><span class="label-100 pred0">Bounds</span><!--
+--><span class="label-100 pred0">()[</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">],</span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> raw</span><!--
+--><span class="label-100 pred0">Parent</span><!--
+--><span class="label-100 pred0">Class</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> throw</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> IllegalArgumentException</span><!--
+--><span class="label-100 pred0">(&quot;</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> \</span><!--
+--><span class="label-100 pred0">&#x27;&quot;</span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">To</span><!--
+--><span class="label-100 pred0">Evaluate</span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> &quot;\</span><!--
+--><span class="label-100 pred0">&#x27;</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> Class</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0">Parameterized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> Generic</span><!--
+--><span class="label-100 pred0">ArrayType</span><!--
+--><span class="label-100 pred0"> or</span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">Variable</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0"> Can</span><!--
+--><span class="label-100 pred0">&#x27;t</span><!--
+--><span class="label-100 pred0"> extract</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">.&quot;);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> Evaluate</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0"> on</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> private</span><!--
+--><span class="label-100 pred0"> static</span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">[]</span><!--
+--><span class="label-100 pred0"> extract</span><!--
+--><span class="label-100 pred0">Real</span><!--
+--><span class="label-100 pred0">Types</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">[]</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> Class</span><!--
+--><span class="label-100 pred0">&lt;?&gt;</span><!--
+--><span class="label-100 pred0"> raw</span><!--
+--><span class="label-100 pred0">Parent</span><!--
+--><span class="label-100 pred0">Class</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> Preconditions</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">checkNotNull</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">[]</span><!--
+--><span class="label-100 pred0"> ret</span><!--
+--><span class="label-100 pred0">Types</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">length</span><!--
+--><span class="label-100 pred0">];</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">int</span><!--
+--><span class="label-100 pred0"> i</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0"> i</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">length</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0"> ++</span><!--
+--><span class="label-100 pred0">i</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> ret</span><!--
+--><span class="label-100 pred0">Types</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">i</span><!--
+--><span class="label-100 pred0">]</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">/*</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Copyright</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">C</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0"> Google</span><!--
+--><span class="label0 pred0"> Inc</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Licensed</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> Apache</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Version</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">the</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">License</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> you</span><!--
+--><span class="label0 pred0"> may</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> use</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> file</span><!--
+--><span class="label0 pred0"> except</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> compliance</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> You</span><!--
+--><span class="label0 pred0"> may</span><!--
+--><span class="label0 pred0"> obtain</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> copy</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> at</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> http</span><!--
+--><span class="label0 pred0">://</span><!--
+--><span class="label0 pred0">www</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">apache</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">org</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">licenses</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">LICENSE</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Unless</span><!--
+--><span class="label0 pred0"> required</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> applicable</span><!--
+--><span class="label0 pred0"> law</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> agreed</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> writing</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> software</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> distributed</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> distributed</span><!--
+--><span class="label0 pred0"> on</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">AS</span><!--
+--><span class="label0 pred0"> IS</span><!--
+--><span class="label0 pred0">&quot;</span><!--
+--><span class="label0 pred0"> BASIS</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> WITHOUT</span><!--
+--><span class="label0 pred0"> WARRANTIES</span><!--
+--><span class="label0 pred0"> OR</span><!--
+--><span class="label0 pred0"> CONDITIONS</span><!--
+--><span class="label0 pred0"> OF</span><!--
+--><span class="label0 pred0"> ANY</span><!--
+--><span class="label0 pred0"> KIND</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> either</span><!--
+--><span class="label0 pred0"> express</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> implied</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> See</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> specific</span><!--
+--><span class="label0 pred0"> language</span><!--
+--><span class="label0 pred0"> governing</span><!--
+--><span class="label0 pred0"> permissions</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> limitations</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">package</span><!--
+--><span class="label0 pred0"> com</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">google</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">gson</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">lang</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">reflect</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Parameterized</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">lang</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">reflect</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Arrays</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">/**</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> An</span><!--
+--><span class="label0 pred0"> immutable</span><!--
+--><span class="label0 pred0"> implementation</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">link</span><!--
+--><span class="label0 pred0"> Parameter</span><!--
+--><span class="label0 pred0">ized</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0"> interface</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> This</span><!--
+--><span class="label0 pred0"> object</span><!--
+--><span class="label0 pred0"> allows</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> us</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> build</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> reflect</span><!--
+--><span class="label0 pred0">ive</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">link</span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0"> objects</span><!--
+--><span class="label0 pred0"> on</span><!--
+--><span class="label0 pred0"> demand</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> This</span><!--
+--><span class="label0 pred0"> object</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> used</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> support</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> serialization</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> de</span><!--
+--><span class="label0 pred0">serialization</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> classes</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> Parameter</span><!--
+--><span class="label0 pred0">ized</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0"> field</span><!--
+--><span class="label0 pred0"> where</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> as</span><!--
+--><span class="label0 pred0"> least</span><!--
+--><span class="label0 pred0"> one</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> actual</span><!--
+--><span class="label0 pred0"> type</span><!--
+--><span class="label0 pred0"> parameters</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0">Variable</span><!--
+--><span class="label0 pred0">}.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">Here</span><!--
+--><span class="label0 pred0">&#x27;s</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> example</span><!--
+--><span class="label0 pred0"> class</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">pre</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> class</span><!--
+--><span class="label0 pred0"> Foo</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">T</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">  </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> List</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">T</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> some</span><!--
+--><span class="label0 pred0">List</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">  </span><!--
+--><span class="label0 pred0"> Foo</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">List</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">T</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> list</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">    </span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">some</span><!--
+--><span class="label0 pred0">List</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> list</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">  </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;/</span><!--
+--><span class="label0 pred0">pre</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">author</span><!--
+--><span class="label0 pred0"> In</span><!--
+--><span class="label0 pred0">der</span><!--
+--><span class="label0 pred0">je</span><!--
+--><span class="label0 pred0">et</span><!--
+--><span class="label0 pred0"> Sing</span><!--
+--><span class="label0 pred0">h</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">author</span><!--
+--><span class="label0 pred0"> Jo</span><!--
+--><span class="label0 pred0">el</span><!--
+--><span class="label0 pred0"> Le</span><!--
+--><span class="label0 pred0">itch</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">final</span><!--
+--><span class="label0 pred0"> class</span><!--
+--><span class="label0 pred0"> Parameter</span><!--
+--><span class="label0 pred0">ized</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">Impl</span><!--
+--><span class="label0 pred0"> implements</span><!--
+--><span class="label0 pred0"> Parameter</span><!--
+--><span class="label0 pred0">ized</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0"> raw</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0">[]</span><!--
+--><span class="label0 pred2"> actual</span><!--
+--><span class="label0 pred2">Type</span><!--
+--><span class="label0 pred1">Arguments</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0"> owner</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> Parameter</span><!--
+--><span class="label0 pred0">ized</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">Impl</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0"> raw</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0">[]</span><!--
+--><span class="label0 pred2"> actual</span><!--
+--><span class="label0 pred2">Type</span><!--
+--><span class="label0 pred1">Arguments</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0"> owner</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">raw</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> raw</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred2">actual</span><!--
+--><span class="label0 pred2">Type</span><!--
+--><span class="label0 pred2">Arguments</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred2"> actual</span><!--
+--><span class="label0 pred3">Type</span><!--
+--><span class="label0 pred2">Arguments</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">owner</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> owner</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label1 pred0"> get</span><!--
+--><span class="label1 pred0">Raw</span><!--
+--><span class="label1 pred0">Type</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> raw</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0">[]</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">Actual</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">Arguments</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred2"> actual</span><!--
+--><span class="label0 pred2">Type</span><!--
+--><span class="label0 pred1">Arguments</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred1"> get</span><!--
+--><span class="label0 pred1">Owner</span><!--
+--><span class="label0 pred1">Type</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> owner</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred6"> @</span><!--
+--><span class="label0 pred6">Override</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label0 pred0"> equals</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Object</span><!--
+--><span class="label0 pred0"> o</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (!(</span><!--
+--><span class="label0 pred0">o</span><!--
+--><span class="label0 pred0"> instanceof</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> Parameter</span>
+</div>
+<hr/>
+<div>
+<h3>
+Gson, 1
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>      } else if (typeToEvaluate instanceof TypeVariable&lt;?&gt;) {<br/>        Type theSearchedType = null;<br/>        do {<br/>          theSearchedType = extractTypeForHierarchy(parentType, (TypeVariable&lt;?&gt;) typeToEvaluate);<br/>        } while ((theSearchedType!= null) &amp;&amp; (theSearchedType instanceof TypeVariable&lt;?&gt;));<br/>        if (theSearchedType!= null) {<br/>          return theSearchedType;<br/>        }<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>  private static Type extractTypeForHierarchy(Type parentType, TypeVariable&lt;?&gt; typeToEvaluate) {<br/>    Class&lt;?&gt; rawParentType = null;<br/>    if (parentType instanceof Class&lt;?&gt;) {<br/>      rawParentType = (Class&lt;?&gt;) parentType;<br/>    } else if (parentType instanceof ParameterizedType) {<br/>      ParameterizedType parentTypeAsPT = (ParameterizedType) parentType;<br/>      rawParentType = (Class&lt;?&gt;) parentTypeAsPT.getRawType();<br/>    } else {<br/>      return null;<br/>    }<br/>    Type superClass = rawParentType.getGenericSuperclass();<br/>    if (superClass instanceof ParameterizedType<br/>        &amp;&amp; ((ParameterizedType) superClass).getRawType() == typeToEvaluate.getGenericDeclaration()) {<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>      TypeVariable&lt;?&gt;[] classTypeVariables =<br/>          ((Class&lt;?&gt;) ((ParameterizedType) superClass).getRawType()).getTypeParameters();<br/>      int indexOfActualTypeArgument = getIndex(classTypeVariables, typeToEvaluate);<br/>      Type[] actualTypeArguments = null;<br/>      if (parentType instanceof Class&lt;?&gt;) {<br/>        actualTypeArguments = ((ParameterizedType) superClass).getActualTypeArguments();<br/>      } else if (parentType instanceof ParameterizedType) {<br/>        actualTypeArguments = ((ParameterizedType) parentType).getActualTypeArguments();<br/>      } else {<br/>        return null;<br/>      }<br/>      return actualTypeArguments[indexOfActualTypeArgument];<br/>    }<br/>    Type searchedType = null;<br/>    if (superClass!= null) {<br/>      searchedType = extractTypeForHierarchy(superClass, typeToEvaluate);<br/>    }<br/>    return searchedType;<br/>  }<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> instanceof</span><!--
+--><span class="label-100 pred0"> Class</span><!--
+--><span class="label-100 pred0">&lt;?&gt;</span><!--
+--><span class="label-100 pred0"> ?</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">Utils</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">wrap</span><!--
+--><span class="label-100 pred0">With</span><!--
+--><span class="label-100 pred0">Array</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Utils</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">to</span><!--
+--><span class="label-100 pred0">Raw</span><!--
+--><span class="label-100 pred0">Class</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">))</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Generic</span><!--
+--><span class="label-100 pred0">ArrayType</span><!--
+--><span class="label-100 pred0">Impl</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">type</span><!--
+--><span class="label-100 pred0">To</span><!--
+--><span class="label-100 pred0">Evaluate</span><!--
+--><span class="label-100 pred0"> instanceof</span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">Variable</span><!--
+--><span class="label-100 pred0">&lt;?</span><!--
+--><span class="label-100 pred0">&gt;)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">parent</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> instanceof</span><!--
+--><span class="label-100 pred0"> Parameter</span><!--
+--><span class="label-100 pred0">ized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> The</span><!--
+--><span class="label-100 pred0"> class</span><!--
+--><span class="label-100 pred0"> definition</span><!--
+--><span class="label-100 pred0"> has</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0"> types</span><!--
+--><span class="label-100 pred0"> used</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0"> variables</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> Find</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> matching</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0"> Variable</span><!--
+--><span class="label-100 pred0"> used</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> field</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> For</span><!--
+--><span class="label-100 pred0"> example</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> class</span><!--
+--><span class="label-100 pred0"> Foo</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">A</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0"> A</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Foo</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Integer</span><!--
+--><span class="label-100 pred0">&gt;();</span><!--
+--><span class="label-100 pred0"> defines</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> A</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> Integer</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> So</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> find</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> field</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> we</span><!--
+--><span class="label-100 pred0"> will</span><!--
+--><span class="label-100 pred0"> have</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> look</span><!--
+--><span class="label-100 pred0"> at</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> class</span><!--
+--><span class="label-100 pred0">&#x27;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0"> arguments</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">Variable</span><!--
+--><span class="label-100 pred0">&lt;?&gt;</span><!--
+--><span class="label-100 pred0"> fieldType</span><!--
+--><span class="label-100 pred0">Variable</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Variable</span><!--
+--><span class="label-100 pred0">&lt;?</span><!--
+--><span class="label-100 pred0">&gt;)</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">To</span><!--
+--><span class="label-100 pred0">Evaluate</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">Variable</span><!--
+--><span class="label-100 pred0">&lt;?&gt;</span><!--
+--><span class="label-100 pred0">[]</span><!--
+--><span class="label-100 pred0"> class</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Variables</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> raw</span><!--
+--><span class="label-100 pred0">Parent</span><!--
+--><span class="label-100 pred0">Class</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getType</span><!--
+--><span class="label-100 pred0">Parameters</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Parameter</span><!--
+--><span class="label-100 pred0">ized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> obj</span><!--
+--><span class="label-100 pred0">Parameterized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Parameterized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> indexOf</span><!--
+--><span class="label-100 pred0">Actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Argument</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">Index</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">class</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Variables</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> fieldType</span><!--
+--><span class="label-100 pred0">Variable</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">[]</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> obj</span><!--
+--><span class="label-100 pred0">Parameterized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">indexOf</span><!--
+--><span class="label-100 pred0">Actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Argument</span><!--
+--><span class="label-100 pred0">];</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> throw</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> UnsupportedOperationException</span><!--
+--><span class="label-100 pred0">(&quot;</span><!--
+--><span class="label-100 pred0">Expecting</span><!--
+--><span class="label-100 pred0"> parameter</span><!--
+--><span class="label-100 pred0">ized</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> got</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> &quot;.</span><!--
+--><span class="label-100 pred0">\</span><!--
+--><span class="label-100 pred0">n</span><!--
+--><span class="label-100 pred0"> Are</span><!--
+--><span class="label-100 pred0"> you</span><!--
+--><span class="label-100 pred0"> missing</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> use</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">Token</span><!--
+--><span class="label-100 pred0"> id</span><!--
+--><span class="label-100 pred0">iom</span><!--
+--><span class="label-100 pred0">?\</span><!--
+--><span class="label-100 pred0">n</span><!--
+--><span class="label-100 pred0"> See</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0">http</span><!--
+--><span class="label-100 pred0">://</span><!--
+--><span class="label-100 pred0">sites</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">google</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">com</span><!--
+--><span class="label-100 pred0">/</span><!--
+--><span class="label-100 pred0">site</span><!--
+--><span class="label-100 pred0">/</span><!--
+--><span class="label-100 pred0">gson</span><!--
+--><span class="label-100 pred0">/</span><!--
+--><span class="label-100 pred0">gson</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">user</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">guide</span><!--
+--><span class="label-100 pred0">#</span><!--
+--><span class="label-100 pred0">TOC</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">Serial</span><!--
+--><span class="label-100 pred0">izing</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">and</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">Deserial</span><!--
+--><span class="label-100 pred0">izing</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">Gener</span><!--
+--><span class="label-100 pred0">&quot;);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">type</span><!--
+--><span class="label-100 pred0">To</span><!--
+--><span class="label-100 pred0">Evaluate</span><!--
+--><span class="label-100 pred0"> instanceof</span><!--
+--><span class="label-100 pred0"> W</span><!--
+--><span class="label-100 pred0">ildcard</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> W</span><!--
+--><span class="label-100 pred0">ildcard</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> cast</span><!--
+--><span class="label-100 pred0">ed</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Wildcard</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">To</span><!--
+--><span class="label-100 pred0">Evaluate</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">Actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">cast</span><!--
+--><span class="label-100 pred0">ed</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Upper</span><!--
+--><span class="label-100 pred0">Bounds</span><!--
+--><span class="label-100 pred0">()[</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">],</span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> raw</span><!--
+--><span class="label-100 pred0">Parent</span><!--
+--><span class="label-100 pred0">Class</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> throw</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> IllegalArgumentException</span><!--
+--><span class="label-100 pred0">(&quot;</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> \</span><!--
+--><span class="label-100 pred0">&#x27;&quot;</span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">To</span><!--
+--><span class="label-100 pred0">Evaluate</span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> &quot;\</span><!--
+--><span class="label-100 pred0">&#x27;</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> Class</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0">Parameterized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> Generic</span><!--
+--><span class="label-100 pred0">ArrayType</span><!--
+--><span class="label-100 pred0"> or</span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">Variable</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0"> Can</span><!--
+--><span class="label-100 pred0">&#x27;t</span><!--
+--><span class="label-100 pred0"> extract</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">.&quot;);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> Evaluate</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0"> on</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> private</span><!--
+--><span class="label-100 pred0"> static</span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">[]</span><!--
+--><span class="label-100 pred0"> extract</span><!--
+--><span class="label-100 pred0">Real</span><!--
+--><span class="label-100 pred0">Types</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">[]</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> Class</span><!--
+--><span class="label-100 pred0">&lt;?&gt;</span><!--
+--><span class="label-100 pred0"> raw</span><!--
+--><span class="label-100 pred0">Parent</span><!--
+--><span class="label-100 pred0">Class</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> Preconditions</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">checkNotNull</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">[]</span><!--
+--><span class="label-100 pred0"> ret</span><!--
+--><span class="label-100 pred0">Types</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">length</span><!--
+--><span class="label-100 pred0">];</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">int</span><!--
+--><span class="label-100 pred0"> i</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0"> i</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">length</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0"> ++</span><!--
+--><span class="label-100 pred0">i</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> ret</span><!--
+--><span class="label-100 pred0">Types</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">i</span><!--
+--><span class="label-100 pred0">]</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">ized</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">))</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> false</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> Check</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0"> information</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> equivalent</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> Parameter</span><!--
+--><span class="label0 pred0">ized</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">Parameterized</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> o</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">this</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> true</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0">Owner</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getOwner</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0">Raw</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label1 pred0">getRaw</span><!--
+--><span class="label1 pred0">Type</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">owner</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0"> ?</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0">Owner</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0"> :</span><!--
+--><span class="label0 pred0"> owner</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">equals</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">that</span><!--
+--><span class="label0 pred0">Owner</span><!--
+--><span class="label0 pred0">))</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> &amp;&amp;</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">raw</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0"> ?</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0">Raw</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0"> :</span><!--
+--><span class="label0 pred0"> raw</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">equals</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">that</span><!--
+--><span class="label0 pred0">Raw</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">))</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> &amp;&amp;</span><!--
+--><span class="label0 pred0"> Arrays</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">equals</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred1">actual</span><!--
+--><span class="label0 pred2">Type</span><!--
+--><span class="label0 pred1">Arguments</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">get</span><!--
+--><span class="label0 pred0">Actual</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">Arguments</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred9"> @</span><!--
+--><span class="label0 pred9">Override</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> hashCode</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> Arrays</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">hashCode</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred1">actual</span><!--
+--><span class="label0 pred2">Type</span><!--
+--><span class="label0 pred1">Arguments</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> ^</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">owner</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0"> ?</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0"> :</span><!--
+--><span class="label0 pred0"> owner</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">hashCode</span><!--
+--><span class="label0 pred0">())</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> ^</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">raw</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0"> ?</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0"> :</span><!--
+--><span class="label0 pred0"> raw</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">hashCode</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">}</span>
+</div>
+<hr/>
+<div>
+<h3>
+Gson, 1
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>      } else if (typeToEvaluate instanceof TypeVariable&lt;?&gt;) {<br/>        Type theSearchedType = null;<br/>        do {<br/>          theSearchedType = extractTypeForHierarchy(parentType, (TypeVariable&lt;?&gt;) typeToEvaluate);<br/>        } while ((theSearchedType!= null) &amp;&amp; (theSearchedType instanceof TypeVariable&lt;?&gt;));<br/>        if (theSearchedType!= null) {<br/>          return theSearchedType;<br/>        }<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>  private static Type extractTypeForHierarchy(Type parentType, TypeVariable&lt;?&gt; typeToEvaluate) {<br/>    Class&lt;?&gt; rawParentType = null;<br/>    if (parentType instanceof Class&lt;?&gt;) {<br/>      rawParentType = (Class&lt;?&gt;) parentType;<br/>    } else if (parentType instanceof ParameterizedType) {<br/>      ParameterizedType parentTypeAsPT = (ParameterizedType) parentType;<br/>      rawParentType = (Class&lt;?&gt;) parentTypeAsPT.getRawType();<br/>    } else {<br/>      return null;<br/>    }<br/>    Type superClass = rawParentType.getGenericSuperclass();<br/>    if (superClass instanceof ParameterizedType<br/>        &amp;&amp; ((ParameterizedType) superClass).getRawType() == typeToEvaluate.getGenericDeclaration()) {<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>      TypeVariable&lt;?&gt;[] classTypeVariables =<br/>          ((Class&lt;?&gt;) ((ParameterizedType) superClass).getRawType()).getTypeParameters();<br/>      int indexOfActualTypeArgument = getIndex(classTypeVariables, typeToEvaluate);<br/>      Type[] actualTypeArguments = null;<br/>      if (parentType instanceof Class&lt;?&gt;) {<br/>        actualTypeArguments = ((ParameterizedType) superClass).getActualTypeArguments();<br/>      } else if (parentType instanceof ParameterizedType) {<br/>        actualTypeArguments = ((ParameterizedType) parentType).getActualTypeArguments();<br/>      } else {<br/>        return null;<br/>      }<br/>      return actualTypeArguments[indexOfActualTypeArgument];<br/>    }<br/>    Type searchedType = null;<br/>    if (superClass!= null) {<br/>      searchedType = extractTypeForHierarchy(superClass, typeToEvaluate);<br/>    }<br/>    return searchedType;<br/>  }<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> instanceof</span><!--
+--><span class="label-100 pred0"> Class</span><!--
+--><span class="label-100 pred0">&lt;?&gt;</span><!--
+--><span class="label-100 pred0"> ?</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">Utils</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">wrap</span><!--
+--><span class="label-100 pred0">With</span><!--
+--><span class="label-100 pred0">Array</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Utils</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">to</span><!--
+--><span class="label-100 pred0">Raw</span><!--
+--><span class="label-100 pred0">Class</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">))</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Generic</span><!--
+--><span class="label-100 pred0">ArrayType</span><!--
+--><span class="label-100 pred0">Impl</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">type</span><!--
+--><span class="label-100 pred0">To</span><!--
+--><span class="label-100 pred0">Evaluate</span><!--
+--><span class="label-100 pred0"> instanceof</span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">Variable</span><!--
+--><span class="label-100 pred0">&lt;?</span><!--
+--><span class="label-100 pred0">&gt;)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">parent</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> instanceof</span><!--
+--><span class="label-100 pred0"> Parameter</span><!--
+--><span class="label-100 pred0">ized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> The</span><!--
+--><span class="label-100 pred0"> class</span><!--
+--><span class="label-100 pred0"> definition</span><!--
+--><span class="label-100 pred0"> has</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0"> types</span><!--
+--><span class="label-100 pred0"> used</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0"> variables</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> Find</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> matching</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0"> Variable</span><!--
+--><span class="label-100 pred0"> used</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> field</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> For</span><!--
+--><span class="label-100 pred0"> example</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> class</span><!--
+--><span class="label-100 pred0"> Foo</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">A</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0"> A</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Foo</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Integer</span><!--
+--><span class="label-100 pred0">&gt;();</span><!--
+--><span class="label-100 pred0"> defines</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> A</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> Integer</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> So</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> find</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> field</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> we</span><!--
+--><span class="label-100 pred0"> will</span><!--
+--><span class="label-100 pred0"> have</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> look</span><!--
+--><span class="label-100 pred0"> at</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> class</span><!--
+--><span class="label-100 pred0">&#x27;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0"> arguments</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">Variable</span><!--
+--><span class="label-100 pred0">&lt;?&gt;</span><!--
+--><span class="label-100 pred0"> fieldType</span><!--
+--><span class="label-100 pred0">Variable</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Variable</span><!--
+--><span class="label-100 pred0">&lt;?</span><!--
+--><span class="label-100 pred0">&gt;)</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">To</span><!--
+--><span class="label-100 pred0">Evaluate</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">Variable</span><!--
+--><span class="label-100 pred0">&lt;?&gt;</span><!--
+--><span class="label-100 pred0">[]</span><!--
+--><span class="label-100 pred0"> class</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Variables</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> raw</span><!--
+--><span class="label-100 pred0">Parent</span><!--
+--><span class="label-100 pred0">Class</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getType</span><!--
+--><span class="label-100 pred0">Parameters</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Parameter</span><!--
+--><span class="label-100 pred0">ized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> obj</span><!--
+--><span class="label-100 pred0">Parameterized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Parameterized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> indexOf</span><!--
+--><span class="label-100 pred0">Actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Argument</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">Index</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">class</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Variables</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> fieldType</span><!--
+--><span class="label-100 pred0">Variable</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">[]</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> obj</span><!--
+--><span class="label-100 pred0">Parameterized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">indexOf</span><!--
+--><span class="label-100 pred0">Actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Argument</span><!--
+--><span class="label-100 pred0">];</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> throw</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> UnsupportedOperationException</span><!--
+--><span class="label-100 pred0">(&quot;</span><!--
+--><span class="label-100 pred0">Expecting</span><!--
+--><span class="label-100 pred0"> parameter</span><!--
+--><span class="label-100 pred0">ized</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> got</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> &quot;.</span><!--
+--><span class="label-100 pred0">\</span><!--
+--><span class="label-100 pred0">n</span><!--
+--><span class="label-100 pred0"> Are</span><!--
+--><span class="label-100 pred0"> you</span><!--
+--><span class="label-100 pred0"> missing</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> use</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">Token</span><!--
+--><span class="label-100 pred0"> id</span><!--
+--><span class="label-100 pred0">iom</span><!--
+--><span class="label-100 pred0">?\</span><!--
+--><span class="label-100 pred0">n</span><!--
+--><span class="label-100 pred0"> See</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0">http</span><!--
+--><span class="label-100 pred0">://</span><!--
+--><span class="label-100 pred0">sites</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">google</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">com</span><!--
+--><span class="label-100 pred0">/</span><!--
+--><span class="label-100 pred0">site</span><!--
+--><span class="label-100 pred0">/</span><!--
+--><span class="label-100 pred0">gson</span><!--
+--><span class="label-100 pred0">/</span><!--
+--><span class="label-100 pred0">gson</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">user</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">guide</span><!--
+--><span class="label-100 pred0">#</span><!--
+--><span class="label-100 pred0">TOC</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">Serial</span><!--
+--><span class="label-100 pred0">izing</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">and</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">Deserial</span><!--
+--><span class="label-100 pred0">izing</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">Gener</span><!--
+--><span class="label-100 pred0">&quot;);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">type</span><!--
+--><span class="label-100 pred0">To</span><!--
+--><span class="label-100 pred0">Evaluate</span><!--
+--><span class="label-100 pred0"> instanceof</span><!--
+--><span class="label-100 pred0"> W</span><!--
+--><span class="label-100 pred0">ildcard</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> W</span><!--
+--><span class="label-100 pred0">ildcard</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> cast</span><!--
+--><span class="label-100 pred0">ed</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Wildcard</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">To</span><!--
+--><span class="label-100 pred0">Evaluate</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">Actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">cast</span><!--
+--><span class="label-100 pred0">ed</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Upper</span><!--
+--><span class="label-100 pred0">Bounds</span><!--
+--><span class="label-100 pred0">()[</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">],</span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> raw</span><!--
+--><span class="label-100 pred0">Parent</span><!--
+--><span class="label-100 pred0">Class</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> throw</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> IllegalArgumentException</span><!--
+--><span class="label-100 pred0">(&quot;</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> \</span><!--
+--><span class="label-100 pred0">&#x27;&quot;</span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">To</span><!--
+--><span class="label-100 pred0">Evaluate</span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> &quot;\</span><!--
+--><span class="label-100 pred0">&#x27;</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> Class</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> +</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0">Parameterized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> Generic</span><!--
+--><span class="label-100 pred0">ArrayType</span><!--
+--><span class="label-100 pred0"> or</span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">Variable</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0"> Can</span><!--
+--><span class="label-100 pred0">&#x27;t</span><!--
+--><span class="label-100 pred0"> extract</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">.&quot;);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> Evaluate</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0"> on</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> private</span><!--
+--><span class="label-100 pred0"> static</span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">[]</span><!--
+--><span class="label-100 pred0"> extract</span><!--
+--><span class="label-100 pred0">Real</span><!--
+--><span class="label-100 pred0">Types</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">[]</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> Class</span><!--
+--><span class="label-100 pred0">&lt;?&gt;</span><!--
+--><span class="label-100 pred0"> raw</span><!--
+--><span class="label-100 pred0">Parent</span><!--
+--><span class="label-100 pred0">Class</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> Preconditions</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">checkNotNull</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">[]</span><!--
+--><span class="label-100 pred0"> ret</span><!--
+--><span class="label-100 pred0">Types</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">length</span><!--
+--><span class="label-100 pred0">];</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">int</span><!--
+--><span class="label-100 pred0"> i</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0"> i</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0"> actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">length</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0"> ++</span><!--
+--><span class="label-100 pred0">i</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> ret</span><!--
+--><span class="label-100 pred0">Types</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">i</span><!--
+--><span class="label-100 pred0">]</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">&lt;?</span><!--
+--><span class="label0 pred0">&gt;)</span><!--
+--><span class="label0 pred0">type</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred1">isArray</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">type</span><!--
+--><span class="label0 pred0"> instanceof</span><!--
+--><span class="label0 pred0"> Generic</span><!--
+--><span class="label0 pred0">ArrayType</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> true</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> false</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> This</span><!--
+--><span class="label0 pred0"> method</span><!--
+--><span class="label0 pred0"> returns</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> actual</span><!--
+--><span class="label0 pred0"> raw</span><!--
+--><span class="label0 pred0"> class</span><!--
+--><span class="label0 pred0"> associated</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> specified</span><!--
+--><span class="label0 pred0"> type</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> Class</span><!--
+--><span class="label0 pred0">&lt;?&gt;</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0">Raw</span><!--
+--><span class="label0 pred0">Class</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0"> type</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">type</span><!--
+--><span class="label0 pred0"> instanceof</span><!--
+--><span class="label0 pred0"> Class</span><!--
+--><span class="label0 pred0">&lt;?</span><!--
+--><span class="label0 pred0">&gt;)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">Class</span><!--
+--><span class="label0 pred0">&lt;?</span><!--
+--><span class="label0 pred0">&gt;)</span><!--
+--><span class="label0 pred0"> type</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">type</span><!--
+--><span class="label0 pred0"> instanceof</span><!--
+--><span class="label0 pred0"> Parameter</span><!--
+--><span class="label0 pred0">ized</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> Parameter</span><!--
+--><span class="label0 pred0">ized</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0"> actual</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">Parameterized</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">type</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0">Raw</span><!--
+--><span class="label0 pred0">Class</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">actual</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label1 pred0">getRaw</span><!--
+--><span class="label1 pred0">Type</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">type</span><!--
+--><span class="label0 pred0"> instanceof</span><!--
+--><span class="label0 pred0"> Generic</span><!--
+--><span class="label0 pred0">ArrayType</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> Generic</span><!--
+--><span class="label0 pred0">ArrayType</span><!--
+--><span class="label0 pred0"> actual</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">Generic</span><!--
+--><span class="label0 pred0">ArrayType</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> type</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> Class</span><!--
+--><span class="label0 pred0">&lt;?&gt;</span><!--
+--><span class="label0 pred0"> raw</span><!--
+--><span class="label0 pred0">Class</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0">Raw</span><!--
+--><span class="label0 pred0">Class</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">actual</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">get</span><!--
+--><span class="label0 pred0">Generic</span><!--
+--><span class="label0 pred0">ComponentType</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> wrap</span><!--
+--><span class="label0 pred0">With</span><!--
+--><span class="label0 pred0">Array</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">raw</span><!--
+--><span class="label0 pred0">Class</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">type</span><!--
+--><span class="label0 pred0"> instanceof</span><!--
+--><span class="label0 pred0"> W</span><!--
+--><span class="label0 pred0">ildcard</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> W</span><!--
+--><span class="label0 pred0">ildcard</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0"> cast</span><!--
+--><span class="label0 pred0">ed</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">Wildcard</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> type</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0">Raw</span><!--
+--><span class="label0 pred0">Class</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">cast</span><!--
+--><span class="label0 pred0">ed</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">get</span><!--
+--><span class="label0 pred0">Upper</span><!--
+--><span class="label0 pred0">Bounds</span><!--
+--><span class="label0 pred0">()[</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">]);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> throw</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred1"> IllegalArgumentException</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0"> \</span><!--
+--><span class="label0 pred0">&#x27;&quot;</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> type</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> &quot;\</span><!--
+--><span class="label0 pred0">&#x27;</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> Class</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">
+         </span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">Parameterized</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> Generic</span><!--
+--><span class="label0 pred0">ArrayType</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> Can</span><!--
+--><span class="label0 pred0">&#x27;t</span><!--
+--><span class="label0 pred0"> extract</span><!--
+--><span class="label0 pred0"> class</span><!--
+--><span class="label0 pred0">.&quot;);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> Class</span><!--
+--><span class="label0 pred0">&lt;?&gt;</span><!--
+--><span class="label0 pred0"> wrap</span><!--
+--><span class="label0 pred0">With</span><!--
+--><span class="label0 pred0">Array</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Class</span><!--
+--><span class="label0 pred0">&lt;?&gt;</span><!--
+--><span class="label0 pred0"> raw</span><!--
+--><span class="label0 pred0">Class</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> Array</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">newInstance</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">raw</span><!--
+--><span class="label0 pred0">Class</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">getClass</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0">Utils</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> Class</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> just</span><!--
+--><span class="label0 pred0"> some</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> utility</span><!--
+--><span class="label0 pred0"> methods</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> should</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> instantiated</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">}</span>
+</div>
+<hr/>
+</body>
+</html>

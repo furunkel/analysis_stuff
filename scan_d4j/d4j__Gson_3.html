@@ -1,0 +1,3470 @@
+<html>
+<head>
+<style>
+pre {margin: 0.1em }
+
+            span {
+                white-space: pre;
+            }
+
+            .label-100 {
+                border: 1px solid gray;
+            }
+
+            .label0 {
+                border: 1px solid white;
+            }
+
+            .label1 {
+                border: 1px solid blue;
+            }
+            .new {
+                background-color: #8FFF92;
+            }
+
+            .context-size {
+	            padding: 0.1em;
+	            color: white;
+	            background-color: black;
+	            border-radius: 50%;
+	            width: 1.5em;
+	            display: inline-block;
+	            text-align: center;
+	            height: 1.5em;
+	            line-height: 1.5em;
+                margin-right: 0.6em;
+            }
+.pred0{background-color: rgba(255, 0, 0, 0.0);}
+.pred1{background-color: rgba(255, 0, 0, 0.1);}
+.pred2{background-color: rgba(255, 0, 0, 0.2);}
+.pred3{background-color: rgba(255, 0, 0, 0.3);}
+.pred4{background-color: rgba(255, 0, 0, 0.4);}
+.pred5{background-color: rgba(255, 0, 0, 0.5);}
+.pred6{background-color: rgba(255, 0, 0, 0.6);}
+.pred7{background-color: rgba(255, 0, 0, 0.7);}
+.pred8{background-color: rgba(255, 0, 0, 0.8);}
+.pred9{background-color: rgba(255, 0, 0, 0.9);}
+.pred10{background-color: rgba(255, 0, 0, 1.0);}
+</style>
+</head>
+<body>
+<div>
+<h3>
+Gson, 3
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>import java.util.concurrent.ConcurrentHashMap;<br/>import java.util.concurrent.ConcurrentMap;<br/>import java.util.concurrent.ConcurrentNavigableMap;<br/>import java.util.concurrent.ConcurrentSkipListMap;<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>      if (ConcurrentNavigableMap.class.isAssignableFrom(rawType)) {<br/>        return new ObjectConstructor&lt;T&gt;() {<br/>          @Override public T construct() {<br/>            return (T) new ConcurrentSkipListMap&lt;Object, Object&gt;();<br/>          }<br/>        };<br/>      } else if (ConcurrentMap.class.isAssignableFrom(rawType)) {<br/>        return new ObjectConstructor&lt;T&gt;() {<br/>          @Override public T construct() {<br/>            return (T) new ConcurrentHashMap&lt;Object, Object&gt;();<br/>          }<br/>        };<br/>      } else if (SortedMap.class.isAssignableFrom(rawType)) {<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">package</span><!--
+--><span class="label-100 pred0"> com</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">google</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">gson</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">internal</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">lang</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">reflect</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Constructor</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">lang</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">reflect</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Invocation</span><!--
+--><span class="label-100 pred0">TargetException</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">lang</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">reflect</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Parameterized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">lang</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">reflect</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">ArrayList</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Collection</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Enum</span><!--
+--><span class="label-100 pred0">Set</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Linked</span><!--
+--><span class="label-100 pred0">HashMap</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Linked</span><!--
+--><span class="label-100 pred0">HashSet</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">LinkedList</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Map</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Queue</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Set</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Sorted</span><!--
+--><span class="label-100 pred0">Map</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Sorted</span><!--
+--><span class="label-100 pred0">Set</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">TreeMap</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Tree</span><!--
+--><span class="label-100 pred0">Set</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> com</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">google</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">gson</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Instance</span><!--
+--><span class="label-100 pred0">Creator</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> com</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">google</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">gson</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Json</span><!--
+--><span class="label-100 pred0">IOException</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> com</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">google</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">gson</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">reflect</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Token</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">/**</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Returns</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> function</span><!--
+--><span class="label-100 pred0"> that</span><!--
+--><span class="label-100 pred0"> can</span><!--
+--><span class="label-100 pred0"> construct</span><!--
+--><span class="label-100 pred0"> an</span><!--
+--><span class="label-100 pred0"> instance</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> requested</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">public</span><!--
+--><span class="label-100 pred0"> final</span><!--
+--><span class="label-100 pred0"> class</span><!--
+--><span class="label-100 pred0"> Constructor</span><!--
+--><span class="label-100 pred0">Constructor</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> private</span><!--
+--><span class="label-100 pred0"> final</span><!--
+--><span class="label-100 pred0"> Map</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> Instance</span><!--
+--><span class="label-100 pred0">Creator</span><!--
+--><span class="label-100 pred0">&lt;?&gt;&gt;</span><!--
+--><span class="label-100 pred0"> instance</span><!--
+--><span class="label-100 pred0">Creators</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> Constructor</span><!--
+--><span class="label-100 pred0">Constructor</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Map</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> Instance</span><!--
+--><span class="label-100 pred0">Creator</span><!--
+--><span class="label-100 pred0">&lt;?&gt;&gt;</span><!--
+--><span class="label-100 pred0"> instance</span><!--
+--><span class="label-100 pred0">Creators</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">instance</span><!--
+--><span class="label-100 pred0">Creators</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> instance</span><!--
+--><span class="label-100 pred0">Creators</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> Object</span><!--
+--><span class="label-100 pred0">Constructor</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Token</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">Token</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Linked</span><!--
+--><span class="label-100 pred0">HashSet</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Object</span><!--
+--><span class="label-100 pred0">&gt;();</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> };</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Queue</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">class</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">isAssignableFrom</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">raw</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">))</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Object</span><!--
+--><span class="label-100 pred0">Constructor</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">&gt;()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">Override</span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> T</span><!--
+--><span class="label-100 pred0"> construct</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> LinkedList</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Object</span><!--
+--><span class="label-100 pred0">&gt;();</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> };</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Object</span><!--
+--><span class="label-100 pred0">Constructor</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">&gt;()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">Override</span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> T</span><!--
+--><span class="label-100 pred0"> construct</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> ArrayList</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Object</span><!--
+--><span class="label-100 pred0">&gt;();</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> };</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Map</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">class</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">isAssignableFrom</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">raw</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">))</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Sorted</span><!--
+--><span class="label-100 pred0">Map</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">class</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">isAssignableFrom</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">raw</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">))</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Object</span><!--
+--><span class="label-100 pred0">Constructor</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">&gt;()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">Override</span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> T</span><!--
+--><span class="label-100 pred0"> construct</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> TreeMap</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Object</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> Object</span><!--
+--><span class="label-100 pred0">&gt;();</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> };</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">type</span><!--
+--><span class="label-100 pred0"> instanceof</span><!--
+--><span class="label-100 pred0"> Parameter</span><!--
+--><span class="label-100 pred0">ized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> &amp;&amp;</span><!--
+--><span class="label-100 pred0"> !(</span><!--
+--><span class="label-100 pred0">String</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">class</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">isAssignableFrom</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">Token</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">(((</span><!--
+--><span class="label-100 pred0">Parameterized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">).</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0">()[</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">]).</span><!--
+--><span class="label-100 pred0">getRaw</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">())))</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Object</span><!--
+--><span class="label-100 pred0">Constructor</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">&gt;()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">Override</span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> T</span><!--
+--><span class="label-100 pred0"> construct</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">/*</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Copyright</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">C</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0"> Google</span><!--
+--><span class="label0 pred0"> Inc</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Licensed</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> Apache</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Version</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">the</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">License</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> you</span><!--
+--><span class="label0 pred0"> may</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> use</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> file</span><!--
+--><span class="label0 pred0"> except</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> compliance</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> You</span><!--
+--><span class="label0 pred0"> may</span><!--
+--><span class="label0 pred0"> obtain</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> copy</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> at</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> http</span><!--
+--><span class="label0 pred0">://</span><!--
+--><span class="label0 pred0">www</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">apache</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">org</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">licenses</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">LICENSE</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Unless</span><!--
+--><span class="label0 pred0"> required</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> applicable</span><!--
+--><span class="label0 pred0"> law</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> agreed</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> writing</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> software</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> distributed</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> distributed</span><!--
+--><span class="label0 pred0"> on</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">AS</span><!--
+--><span class="label0 pred0"> IS</span><!--
+--><span class="label0 pred0">&quot;</span><!--
+--><span class="label0 pred0"> BASIS</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> WITHOUT</span><!--
+--><span class="label0 pred0"> WARRANTIES</span><!--
+--><span class="label0 pred0"> OR</span><!--
+--><span class="label0 pred0"> CONDITIONS</span><!--
+--><span class="label0 pred0"> OF</span><!--
+--><span class="label0 pred0"> ANY</span><!--
+--><span class="label0 pred0"> KIND</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> either</span><!--
+--><span class="label0 pred0"> express</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> implied</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> See</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> specific</span><!--
+--><span class="label0 pred0"> language</span><!--
+--><span class="label0 pred0"> governing</span><!--
+--><span class="label0 pred0"> permissions</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> limitations</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">package</span><!--
+--><span class="label0 pred0"> com</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">google</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">gson</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">functional</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">lang</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">reflect</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Collection</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">HashMap</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Linked</span><!--
+--><span class="label0 pred0">HashMap</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Sorted</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">TreeMap</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label1 pred0"> java</span><!--
+--><span class="label1 pred0">.</span><!--
+--><span class="label1 pred0">util</span><!--
+--><span class="label1 pred0">.</span><!--
+--><span class="label1 pred0">concurrent</span><!--
+--><span class="label1 pred0">.</span><!--
+--><span class="label1 pred0">Concurrent</span><!--
+--><span class="label1 pred0">HashMap</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label1 pred0"> java</span><!--
+--><span class="label1 pred0">.</span><!--
+--><span class="label1 pred0">util</span><!--
+--><span class="label1 pred0">.</span><!--
+--><span class="label1 pred0">concurrent</span><!--
+--><span class="label1 pred0">.</span><!--
+--><span class="label1 pred0">Concurrent</span><!--
+--><span class="label1 pred0">Map</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label1 pred0"> java</span><!--
+--><span class="label1 pred0">.</span><!--
+--><span class="label1 pred0">util</span><!--
+--><span class="label1 pred0">.</span><!--
+--><span class="label1 pred0">concurrent</span><!--
+--><span class="label1 pred0">.</span><!--
+--><span class="label1 pred0">Concurrent</span><!--
+--><span class="label1 pred0">Navig</span><!--
+--><span class="label1 pred0">able</span><!--
+--><span class="label1 pred1">Map</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label1 pred1"> java</span><!--
+--><span class="label1 pred1">.</span><!--
+--><span class="label1 pred1">util</span><!--
+--><span class="label1 pred1">.</span><!--
+--><span class="label1 pred1">concurrent</span><!--
+--><span class="label1 pred1">.</span><!--
+--><span class="label1 pred1">Concurrent</span><!--
+--><span class="label1 pred1">Skip</span><!--
+--><span class="label1 pred1">List</span><!--
+--><span class="label1 pred1">Map</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> com</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">google</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">gson</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Gson</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> com</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">google</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">gson</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Gson</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> com</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">google</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">gson</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Instance</span><!--
+--><span class="label0 pred0">Creator</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> com</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">google</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">gson</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">JsonArray</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> com</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">google</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">gson</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Json</span><!--
+--><span class="label0 pred0">Element</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> com</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">google</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">gson</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Json</span><!--
+--><span class="label0 pred0">ParseException</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> com</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">google</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">gson</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Json</span><!--
+--><span class="label0 pred0">Parser</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> com</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">google</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">gson</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Json</span><!--
+--><span class="label0 pred0">Primitive</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> com</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">google</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">gson</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Json</span><!--
+--><span class="label0 pred0">Serialization</span><!--
+--><span class="label0 pred0">Context</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> com</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">google</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">gson</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Json</span><!--
+--><span class="label0 pred0">Serializer</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> com</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">google</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">gson</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Json</span><!--
+--><span class="label0 pred0">Syntax</span><!--
+--><span class="label0 pred0">Exception</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> com</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">google</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">gson</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">common</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Test</span><!--
+--><span class="label0 pred0">Types</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> com</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">google</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">gson</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">internal</span><!--
+--><span class="label0 pred0">.$</span><!--
+--><span class="label0 pred0">Gson</span><!--
+--><span class="label0 pred0">$</span><!--
+--><span class="label0 pred0">Types</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> com</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">google</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">gson</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">reflect</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">Token</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> junit</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">framework</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">TestCase</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">/**</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Functional</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> Json</span><!--
+--><span class="label0 pred0"> serialization</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> de</span><!--
+--><span class="label0 pred0">serialization</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> Maps</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">author</span><!--
+--><span class="label0 pred0"> In</span><!--
+--><span class="label0 pred0">der</span><!--
+--><span class="label0 pred0">je</span><!--
+--><span class="label0 pred0">et</span><!--
+--><span class="label0 pred0"> Sing</span><!--
+--><span class="label0 pred0">h</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">author</span><!--
+--><span class="label0 pred0"> Jo</span><!--
+--><span class="label0 pred0">el</span><!--
+--><span class="label0 pred0"> Le</span><!--
+--><span class="label0 pred0">itch</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">public</span><!--
+--><span class="label0 pred1"> class</span><!--
+--><span class="label0 pred1"> Map</span><!--
+--><span class="label0 pred1">Test</span><!--
+--><span class="label0 pred0"> extends</span><!--
+--><span class="label0 pred0"> TestCase</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred1"> Gson</span><!--
+--><span class="label0 pred0"> gson</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">Override</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> protected</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> setUp</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> throws</span><!--
+--><span class="label0 pred0"> Exception</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> super</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">setUp</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> gson</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred1"> Gson</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+ </span>
+</div>
+<hr/>
+<div>
+<h3>
+Gson, 3
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>import java.util.concurrent.ConcurrentHashMap;<br/>import java.util.concurrent.ConcurrentMap;<br/>import java.util.concurrent.ConcurrentNavigableMap;<br/>import java.util.concurrent.ConcurrentSkipListMap;<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>      if (ConcurrentNavigableMap.class.isAssignableFrom(rawType)) {<br/>        return new ObjectConstructor&lt;T&gt;() {<br/>          @Override public T construct() {<br/>            return (T) new ConcurrentSkipListMap&lt;Object, Object&gt;();<br/>          }<br/>        };<br/>      } else if (ConcurrentMap.class.isAssignableFrom(rawType)) {<br/>        return new ObjectConstructor&lt;T&gt;() {<br/>          @Override public T construct() {<br/>            return (T) new ConcurrentHashMap&lt;Object, Object&gt;();<br/>          }<br/>        };<br/>      } else if (SortedMap.class.isAssignableFrom(rawType)) {<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">package</span><!--
+--><span class="label-100 pred0"> com</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">google</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">gson</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">internal</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">lang</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">reflect</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Constructor</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">lang</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">reflect</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Invocation</span><!--
+--><span class="label-100 pred0">TargetException</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">lang</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">reflect</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Parameterized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">lang</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">reflect</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">ArrayList</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Collection</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Enum</span><!--
+--><span class="label-100 pred0">Set</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Linked</span><!--
+--><span class="label-100 pred0">HashMap</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Linked</span><!--
+--><span class="label-100 pred0">HashSet</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">LinkedList</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Map</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Queue</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Set</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Sorted</span><!--
+--><span class="label-100 pred0">Map</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Sorted</span><!--
+--><span class="label-100 pred0">Set</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">TreeMap</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Tree</span><!--
+--><span class="label-100 pred0">Set</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> com</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">google</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">gson</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Instance</span><!--
+--><span class="label-100 pred0">Creator</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> com</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">google</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">gson</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Json</span><!--
+--><span class="label-100 pred0">IOException</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> com</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">google</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">gson</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">reflect</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Token</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">/**</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Returns</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> function</span><!--
+--><span class="label-100 pred0"> that</span><!--
+--><span class="label-100 pred0"> can</span><!--
+--><span class="label-100 pred0"> construct</span><!--
+--><span class="label-100 pred0"> an</span><!--
+--><span class="label-100 pred0"> instance</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> requested</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">public</span><!--
+--><span class="label-100 pred0"> final</span><!--
+--><span class="label-100 pred0"> class</span><!--
+--><span class="label-100 pred0"> Constructor</span><!--
+--><span class="label-100 pred0">Constructor</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> private</span><!--
+--><span class="label-100 pred0"> final</span><!--
+--><span class="label-100 pred0"> Map</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> Instance</span><!--
+--><span class="label-100 pred0">Creator</span><!--
+--><span class="label-100 pred0">&lt;?&gt;&gt;</span><!--
+--><span class="label-100 pred0"> instance</span><!--
+--><span class="label-100 pred0">Creators</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> Constructor</span><!--
+--><span class="label-100 pred0">Constructor</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Map</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> Instance</span><!--
+--><span class="label-100 pred0">Creator</span><!--
+--><span class="label-100 pred0">&lt;?&gt;&gt;</span><!--
+--><span class="label-100 pred0"> instance</span><!--
+--><span class="label-100 pred0">Creators</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">instance</span><!--
+--><span class="label-100 pred0">Creators</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> instance</span><!--
+--><span class="label-100 pred0">Creators</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> Object</span><!--
+--><span class="label-100 pred0">Constructor</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Token</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">Token</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Linked</span><!--
+--><span class="label-100 pred0">HashSet</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Object</span><!--
+--><span class="label-100 pred0">&gt;();</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> };</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Queue</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">class</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">isAssignableFrom</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">raw</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">))</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Object</span><!--
+--><span class="label-100 pred0">Constructor</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">&gt;()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">Override</span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> T</span><!--
+--><span class="label-100 pred0"> construct</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> LinkedList</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Object</span><!--
+--><span class="label-100 pred0">&gt;();</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> };</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Object</span><!--
+--><span class="label-100 pred0">Constructor</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">&gt;()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">Override</span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> T</span><!--
+--><span class="label-100 pred0"> construct</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> ArrayList</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Object</span><!--
+--><span class="label-100 pred0">&gt;();</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> };</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Map</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">class</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">isAssignableFrom</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">raw</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">))</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Sorted</span><!--
+--><span class="label-100 pred0">Map</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">class</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">isAssignableFrom</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">raw</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">))</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Object</span><!--
+--><span class="label-100 pred0">Constructor</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">&gt;()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">Override</span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> T</span><!--
+--><span class="label-100 pred0"> construct</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> TreeMap</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Object</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> Object</span><!--
+--><span class="label-100 pred0">&gt;();</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> };</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">type</span><!--
+--><span class="label-100 pred0"> instanceof</span><!--
+--><span class="label-100 pred0"> Parameter</span><!--
+--><span class="label-100 pred0">ized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> &amp;&amp;</span><!--
+--><span class="label-100 pred0"> !(</span><!--
+--><span class="label-100 pred0">String</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">class</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">isAssignableFrom</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">Token</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">(((</span><!--
+--><span class="label-100 pred0">Parameterized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">).</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0">()[</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">]).</span><!--
+--><span class="label-100 pred0">getRaw</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">())))</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Object</span><!--
+--><span class="label-100 pred0">Constructor</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">&gt;()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">Override</span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> T</span><!--
+--><span class="label-100 pred0"> construct</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">containsKey</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">get</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">HashMap</span><!--
+--><span class="label0 pred0">Deserialization</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> throws</span><!--
+--><span class="label0 pred0"> Exception</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0"> typeOf</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0">Token</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred1">HashMap</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">Integer</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0">&gt;&gt;()</span><!--
+--><span class="label0 pred0"> {}</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getType</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred1"> HashMap</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">Integer</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> gson</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">fromJson</span><!--
+--><span class="label0 pred0">(&quot;{</span><!--
+--><span class="label0 pred0">\&quot;</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">\&quot;:\&quot;</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">\&quot;</span><!--
+--><span class="label0 pred0">}&quot;,</span><!--
+--><span class="label0 pred0"> typeOf</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">size</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> assertTrue</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">containsKey</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">get</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">Sorted</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> throws</span><!--
+--><span class="label0 pred0"> Exception</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0"> typeOf</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0">Token</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">Sorted</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">Integer</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0">&gt;&gt;()</span><!--
+--><span class="label0 pred0"> {}</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getType</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> Sorted</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">Integer</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> gson</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">fromJson</span><!--
+--><span class="label0 pred0">(&quot;{</span><!--
+--><span class="label0 pred0">\&quot;</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">\&quot;:\&quot;</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">\&quot;</span><!--
+--><span class="label0 pred0">}&quot;,</span><!--
+--><span class="label0 pred0"> typeOf</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">size</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> assertTrue</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">containsKey</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">get</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">Concurrent</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> throws</span><!--
+--><span class="label0 pred0"> Exception</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0"> typeOf</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0">Token</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label1 pred10">Concurrent</span><!--
+--><span class="label1 pred10">Map</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">Integer</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0">&gt;&gt;()</span><!--
+--><span class="label0 pred0"> {}</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getType</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label1 pred10"> Concurrent</span><!--
+--><span class="label1 pred10">Map</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">Integer</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> gson</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">fromJson</span><!--
+--><span class="label0 pred0">(&quot;{</span><!--
+--><span class="label0 pred0">\&quot;</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">\&quot;:\&quot;</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">\&quot;</span><!--
+--><span class="label0 pred0">}&quot;,</span><!--
+--><span class="label0 pred0"> typeOf</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">size</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> assertTrue</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">containsKey</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">get</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> json</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> gson</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">toJson</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">map</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;{</span><!--
+--><span class="label0 pred0">\&quot;</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">\&quot;:\&quot;</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">\&quot;</span><!--
+--><span class="label0 pred0">}&quot;,</span><!--
+--><span class="label0 pred0"> json</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">Concurrent</span><!--
+--><span class="label0 pred0">HashMap</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> throws</span><!--
+--><span class="label0 pred0"> Exception</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0"> typeOf</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0">Token</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label1 pred10">Concurrent</span><!--
+--><span class="label1 pred10">HashMap</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">Integer</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0">&gt;&gt;()</span><!--
+--><span class="label0 pred0"> {}</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getType</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label1 pred10"> Concurrent</span><!--
+--><span class="label1 pred10">HashMap</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">Integer</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> gson</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">fromJson</span><!--
+--><span class="label0 pred0">(&quot;{</span><!--
+--><span class="label0 pred0">\&quot;</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">\&quot;:\&quot;</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">\&quot;</span><!--
+--><span class="label0 pred0">}&quot;,</span><!--
+--><span class="label0 pred0"> typeOf</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">size</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> assertTrue</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">containsKey</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">get</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> json</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> gson</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">toJson</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">map</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;{</span><!--
+--><span class="label0 pred0">\&quot;</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">\&quot;:\&quot;</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">\&quot;</span><!--
+--><span class="label0 pred0">}&quot;,</span><!--
+--><span class="label0 pred0"> json</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">Concurrent</span><!--
+--><span class="label0 pred0">Navig</span><!--
+--><span class="label0 pred0">able</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> throws</span><!--
+--><span class="label0 pred0"> Exception</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0"> typeOf</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0">Token</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label1 pred9">Concurrent</span><!--
+--><span class="label1 pred9">Navig</span><!--
+--><span class="label1 pred9">able</span><!--
+--><span class="label1 pred9">Map</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">Integer</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0">&gt;&gt;()</span><!--
+--><span class="label0 pred0"> {}</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getType</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label1 pred9"> Concurrent</span><!--
+--><span class="label1 pred9">Navig</span><!--
+--><span class="label1 pred9">able</span><!--
+--><span class="label1 pred9">Map</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">Integer</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> gson</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">fromJson</span><!--
+--><span class="label0 pred0">(&quot;{</span><!--
+--><span class="label0 pred0">\&quot;</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">\&quot;:\&quot;</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">\&quot;</span><!--
+--><span class="label0 pred0">}&quot;,</span>
+</div>
+<hr/>
+<div>
+<h3>
+Gson, 3
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>import java.util.concurrent.ConcurrentHashMap;<br/>import java.util.concurrent.ConcurrentMap;<br/>import java.util.concurrent.ConcurrentNavigableMap;<br/>import java.util.concurrent.ConcurrentSkipListMap;<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>      if (ConcurrentNavigableMap.class.isAssignableFrom(rawType)) {<br/>        return new ObjectConstructor&lt;T&gt;() {<br/>          @Override public T construct() {<br/>            return (T) new ConcurrentSkipListMap&lt;Object, Object&gt;();<br/>          }<br/>        };<br/>      } else if (ConcurrentMap.class.isAssignableFrom(rawType)) {<br/>        return new ObjectConstructor&lt;T&gt;() {<br/>          @Override public T construct() {<br/>            return (T) new ConcurrentHashMap&lt;Object, Object&gt;();<br/>          }<br/>        };<br/>      } else if (SortedMap.class.isAssignableFrom(rawType)) {<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">package</span><!--
+--><span class="label-100 pred0"> com</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">google</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">gson</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">internal</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">lang</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">reflect</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Constructor</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">lang</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">reflect</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Invocation</span><!--
+--><span class="label-100 pred0">TargetException</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">lang</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">reflect</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Parameterized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">lang</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">reflect</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">ArrayList</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Collection</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Enum</span><!--
+--><span class="label-100 pred0">Set</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Linked</span><!--
+--><span class="label-100 pred0">HashMap</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Linked</span><!--
+--><span class="label-100 pred0">HashSet</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">LinkedList</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Map</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Queue</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Set</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Sorted</span><!--
+--><span class="label-100 pred0">Map</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Sorted</span><!--
+--><span class="label-100 pred0">Set</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">TreeMap</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Tree</span><!--
+--><span class="label-100 pred0">Set</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> com</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">google</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">gson</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Instance</span><!--
+--><span class="label-100 pred0">Creator</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> com</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">google</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">gson</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Json</span><!--
+--><span class="label-100 pred0">IOException</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> com</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">google</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">gson</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">reflect</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Token</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">/**</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Returns</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> function</span><!--
+--><span class="label-100 pred0"> that</span><!--
+--><span class="label-100 pred0"> can</span><!--
+--><span class="label-100 pred0"> construct</span><!--
+--><span class="label-100 pred0"> an</span><!--
+--><span class="label-100 pred0"> instance</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> requested</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">public</span><!--
+--><span class="label-100 pred0"> final</span><!--
+--><span class="label-100 pred0"> class</span><!--
+--><span class="label-100 pred0"> Constructor</span><!--
+--><span class="label-100 pred0">Constructor</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> private</span><!--
+--><span class="label-100 pred0"> final</span><!--
+--><span class="label-100 pred0"> Map</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> Instance</span><!--
+--><span class="label-100 pred0">Creator</span><!--
+--><span class="label-100 pred0">&lt;?&gt;&gt;</span><!--
+--><span class="label-100 pred0"> instance</span><!--
+--><span class="label-100 pred0">Creators</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> Constructor</span><!--
+--><span class="label-100 pred0">Constructor</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Map</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> Instance</span><!--
+--><span class="label-100 pred0">Creator</span><!--
+--><span class="label-100 pred0">&lt;?&gt;&gt;</span><!--
+--><span class="label-100 pred0"> instance</span><!--
+--><span class="label-100 pred0">Creators</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">instance</span><!--
+--><span class="label-100 pred0">Creators</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> instance</span><!--
+--><span class="label-100 pred0">Creators</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+ </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> Object</span><!--
+--><span class="label-100 pred0">Constructor</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Token</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">Token</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Linked</span><!--
+--><span class="label-100 pred0">HashSet</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Object</span><!--
+--><span class="label-100 pred0">&gt;();</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> };</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Queue</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">class</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">isAssignableFrom</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">raw</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">))</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Object</span><!--
+--><span class="label-100 pred0">Constructor</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">&gt;()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">Override</span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> T</span><!--
+--><span class="label-100 pred0"> construct</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> LinkedList</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Object</span><!--
+--><span class="label-100 pred0">&gt;();</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> };</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Object</span><!--
+--><span class="label-100 pred0">Constructor</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">&gt;()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">Override</span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> T</span><!--
+--><span class="label-100 pred0"> construct</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> ArrayList</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Object</span><!--
+--><span class="label-100 pred0">&gt;();</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> };</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Map</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">class</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">isAssignableFrom</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">raw</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">))</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Sorted</span><!--
+--><span class="label-100 pred0">Map</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">class</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">isAssignableFrom</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">raw</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">))</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Object</span><!--
+--><span class="label-100 pred0">Constructor</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">&gt;()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">Override</span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> T</span><!--
+--><span class="label-100 pred0"> construct</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> TreeMap</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Object</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> Object</span><!--
+--><span class="label-100 pred0">&gt;();</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> };</span><!--
+--><span class="label-100 pred0">
+     </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">type</span><!--
+--><span class="label-100 pred0"> instanceof</span><!--
+--><span class="label-100 pred0"> Parameter</span><!--
+--><span class="label-100 pred0">ized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0"> &amp;&amp;</span><!--
+--><span class="label-100 pred0"> !(</span><!--
+--><span class="label-100 pred0">String</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">class</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">isAssignableFrom</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> Type</span><!--
+--><span class="label-100 pred0">Token</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">(((</span><!--
+--><span class="label-100 pred0">Parameterized</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> type</span><!--
+--><span class="label-100 pred0">).</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Actual</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">Arguments</span><!--
+--><span class="label-100 pred0">()[</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">]).</span><!--
+--><span class="label-100 pred0">getRaw</span><!--
+--><span class="label-100 pred0">Type</span><!--
+--><span class="label-100 pred0">())))</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Object</span><!--
+--><span class="label-100 pred0">Constructor</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">&gt;()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+         </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">Override</span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> T</span><!--
+--><span class="label-100 pred0"> construct</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0"> typeOf</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">size</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> assertTrue</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">containsKey</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">get</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> json</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> gson</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">toJson</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">map</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;{</span><!--
+--><span class="label0 pred0">\&quot;</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">\&quot;:\&quot;</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">\&quot;</span><!--
+--><span class="label0 pred0">}&quot;,</span><!--
+--><span class="label0 pred0"> json</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">Concurrent</span><!--
+--><span class="label0 pred0">Skip</span><!--
+--><span class="label0 pred0">List</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> throws</span><!--
+--><span class="label0 pred0"> Exception</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0"> typeOf</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0">Token</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label1 pred3">Concurrent</span><!--
+--><span class="label1 pred3">Skip</span><!--
+--><span class="label1 pred3">List</span><!--
+--><span class="label1 pred2">Map</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">Integer</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0">&gt;&gt;()</span><!--
+--><span class="label0 pred0"> {}</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getType</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label1 pred3"> Concurrent</span><!--
+--><span class="label1 pred3">Skip</span><!--
+--><span class="label1 pred3">List</span><!--
+--><span class="label1 pred3">Map</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">Integer</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> gson</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">fromJson</span><!--
+--><span class="label0 pred0">(&quot;{</span><!--
+--><span class="label0 pred0">\&quot;</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">\&quot;:\&quot;</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">\&quot;</span><!--
+--><span class="label0 pred0">}&quot;,</span><!--
+--><span class="label0 pred0"> typeOf</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">size</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> assertTrue</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">containsKey</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">get</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> json</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> gson</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">toJson</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">map</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;{</span><!--
+--><span class="label0 pred0">\&quot;</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">\&quot;:\&quot;</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">\&quot;</span><!--
+--><span class="label0 pred0">}&quot;,</span><!--
+--><span class="label0 pred0"> json</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">Parameterized</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">Subclass</span><!--
+--><span class="label0 pred0">Serialization</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> My</span><!--
+--><span class="label0 pred0">Parameterized</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> My</span><!--
+--><span class="label0 pred0">Parameterized</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0">&gt;(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">put</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0"> type</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0">Token</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">My</span><!--
+--><span class="label0 pred0">Parameterized</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0">&gt;&gt;()</span><!--
+--><span class="label0 pred0"> {}</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getType</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> json</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> gson</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">toJson</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">map</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> type</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> assertTrue</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">json</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">contains</span><!--
+--><span class="label0 pred0">(&quot;\&quot;</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0">\&quot;:\&quot;</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0">\&quot;</span><!--
+--><span class="label0 pred0">&quot;));</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred2"> @</span><!--
+--><span class="label0 pred1">SuppressWarnings</span><!--
+--><span class="label0 pred0">({</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">unused</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">serial</span><!--
+--><span class="label0 pred0">&quot;</span><!--
+--><span class="label0 pred0"> })</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> class</span><!--
+--><span class="label0 pred0"> My</span><!--
+--><span class="label0 pred0">Parameterized</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">K</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> V</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> extends</span><!--
+--><span class="label0 pred0"> LinkedHashMap</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">K</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> V</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> foo</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> My</span><!--
+--><span class="label0 pred0">Parameterized</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">int</span><!--
+--><span class="label0 pred0"> foo</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">foo</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> foo</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">Subclass</span><!--
+--><span class="label0 pred0">Serialization</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> My</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> My</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">put</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> json</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> gson</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">toJson</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">map</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> My</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">class</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> assertTrue</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">json</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">contains</span><!--
+--><span class="label0 pred0">(&quot;\&quot;</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0">\&quot;:\&quot;</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0">\&quot;</span><!--
+--><span class="label0 pred0">&quot;));</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">Standard</span><!--
+--><span class="label0 pred0">Subclass</span><!--
+--><span class="label0 pred0">Deserialization</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> json</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> &quot;{</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0">:&#x27;</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">&#x27;,</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0">:&#x27;</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">&#x27;}</span><!--
+--><span class="label0 pred0">&quot;;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0"> type</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Type</span><!--
+--><span class="label0 pred0">Token</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred9">Linked</span><!--
+--><span class="label0 pred9">HashMap</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0">&gt;&gt;()</span><!--
+--><span class="label0 pred0"> {}</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getType</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> LinkedHashMap</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Integer</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> gson</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">fromJson</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">json</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> type</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">get</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0">&quot;));</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">get</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0">&quot;));</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">Subclass</span><!--
+--><span class="label0 pred0">Deserialization</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> Gson</span><!--
+--><span class="label0 pred0"> gson</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Gson</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">().</span><!--
+--><span class="label0 pred0">register</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">Adapter</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">My</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">class</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Instance</span><!--
+--><span class="label0 pred0">Creator</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">My</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">&gt;()</span>
+</div>
+<hr/>
+</body>
+</html>

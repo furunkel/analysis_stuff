@@ -1,0 +1,2368 @@
+<html>
+<head>
+<style>
+pre {margin: 0.1em }
+
+            span {
+                white-space: pre;
+            }
+
+            .label-100 {
+                border: 1px solid gray;
+            }
+
+            .label0 {
+                border: 1px solid white;
+            }
+
+            .label1 {
+                border: 1px solid blue;
+            }
+            .new {
+                background-color: #8FFF92;
+            }
+
+            .context-size {
+	            padding: 0.1em;
+	            color: white;
+	            background-color: black;
+	            border-radius: 50%;
+	            width: 1.5em;
+	            display: inline-block;
+	            text-align: center;
+	            height: 1.5em;
+	            line-height: 1.5em;
+                margin-right: 0.6em;
+            }
+.pred0{background-color: rgba(255, 0, 0, 0.0);}
+.pred1{background-color: rgba(255, 0, 0, 0.1);}
+.pred2{background-color: rgba(255, 0, 0, 0.2);}
+.pred3{background-color: rgba(255, 0, 0, 0.3);}
+.pred4{background-color: rgba(255, 0, 0, 0.4);}
+.pred5{background-color: rgba(255, 0, 0, 0.5);}
+.pred6{background-color: rgba(255, 0, 0, 0.6);}
+.pred7{background-color: rgba(255, 0, 0, 0.7);}
+.pred8{background-color: rgba(255, 0, 0, 0.8);}
+.pred9{background-color: rgba(255, 0, 0, 0.9);}
+.pred10{background-color: rgba(255, 0, 0, 1.0);}
+</style>
+</head>
+<body>
+<div>
+<h3>
+Math, 89
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>        if (v instanceof Comparable&lt;?&gt;){<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>        } else {<br/>            throw new IllegalArgumentException(&quot;Object must implement Comparable&quot;);<br/>        }<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> out</span><!--
+--><span class="label-100 pred0">Buffer</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">append</span><!--
+--><span class="label-100 pred0">(&#x27;\</span><!--
+--><span class="label-100 pred0">n</span><!--
+--><span class="label-100 pred0">&#x27;);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> out</span><!--
+--><span class="label-100 pred0">Buffer</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">toString</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Adds</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> frequency</span><!--
+--><span class="label-100 pred0"> count</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> v</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> If</span><!--
+--><span class="label-100 pred0"> other</span><!--
+--><span class="label-100 pred0"> objects</span><!--
+--><span class="label-100 pred0"> have</span><!--
+--><span class="label-100 pred0"> already</span><!--
+--><span class="label-100 pred0"> been</span><!--
+--><span class="label-100 pred0"> added</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> Frequency</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> v</span><!--
+--><span class="label-100 pred0"> must</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> comp</span><!--
+--><span class="label-100 pred0">arable</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> those</span><!--
+--><span class="label-100 pred0"> that</span><!--
+--><span class="label-100 pred0"> have</span><!--
+--><span class="label-100 pred0"> already</span><!--
+--><span class="label-100 pred0"> been</span><!--
+--><span class="label-100 pred0"> added</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;/</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> v</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> add</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">throws</span><!--
+--><span class="label-100 pred0"> IllegalArgumentException</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">v</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> Comparable</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">        </span><!--
+--><span class="label-100 pred0"> or</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> comp</span><!--
+--><span class="label-100 pred0">arable</span><!--
+--><span class="label-100 pred0"> with</span><!--
+--><span class="label-100 pred0"> previous</span><!--
+--><span class="label-100 pred0"> entries</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">deprecated</span><!--
+--><span class="label-100 pred0"> use</span><!--
+--><span class="label-100 pred0"> {@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">add</span><!--
+--><span class="label-100 pred0">Value</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Comparable</span><!--
+--><span class="label-100 pred0">)}</span><!--
+--><span class="label-100 pred0"> instead</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">Deprecated</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> void</span><!--
+--><span class="label-100 pred0"> add</span><!--
+--><span class="label-100 pred0">Value</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Object</span><!--
+--><span class="label-100 pred0"> v</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> add</span><!--
+--><span class="label-100 pred0">Value</span><!--
+--><span class="label-100 pred0">((</span><!--
+--><span class="label-100 pred0">Comparable</span><!--
+--><span class="label-100 pred0">&lt;?</span><!--
+--><span class="label-100 pred0">&gt;)</span><!--
+--><span class="label-100 pred0"> v</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">            </span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Adds</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> frequency</span><!--
+--><span class="label-100 pred0"> count</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> v</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> If</span><!--
+--><span class="label-100 pred0"> other</span><!--
+--><span class="label-100 pred0"> objects</span><!--
+--><span class="label-100 pred0"> have</span><!--
+--><span class="label-100 pred0"> already</span><!--
+--><span class="label-100 pred0"> been</span><!--
+--><span class="label-100 pred0"> added</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> Frequency</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> v</span><!--
+--><span class="label-100 pred0"> must</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> comp</span><!--
+--><span class="label-100 pred0">arable</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> those</span><!--
+--><span class="label-100 pred0"> that</span><!--
+--><span class="label-100 pred0"> have</span><!--
+--><span class="label-100 pred0"> already</span><!--
+--><span class="label-100 pred0"> been</span><!--
+--><span class="label-100 pred0"> added</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;/</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> v</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> add</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">throws</span><!--
+--><span class="label-100 pred0"> IllegalArgumentException</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">v</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> comp</span><!--
+--><span class="label-100 pred0">arable</span><!--
+--><span class="label-100 pred0"> with</span><!--
+--><span class="label-100 pred0"> previous</span><!--
+--><span class="label-100 pred0"> entries</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> void</span><!--
+--><span class="label-100 pred0"> add</span><!--
+--><span class="label-100 pred0">Value</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Comparable</span><!--
+--><span class="label-100 pred0">&lt;?&gt;</span><!--
+--><span class="label-100 pred0">v</span><!--
+--><span class="label-100 pred0">){</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">value</span><!--
+--><span class="label0 pred0">)));</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> out</span><!--
+--><span class="label0 pred0">Buffer</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(&#x27;\</span><!--
+--><span class="label0 pred0">t</span><!--
+--><span class="label0 pred0">&#x27;);</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> out</span><!--
+--><span class="label0 pred0">Buffer</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">nf</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">format</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">getC</span><!--
+--><span class="label0 pred0">um</span><!--
+--><span class="label0 pred0">Pct</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">value</span><!--
+--><span class="label0 pred0">)));</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Object</span><!--
+--><span class="label0 pred0"> obj</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> v</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">v</span><!--
+--><span class="label0 pred0"> instanceof</span><!--
+--><span class="label0 pred0"> Integer</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+          </span><!--
+--><span class="label0 pred0"> obj</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> Long</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">valueOf</span><!--
+--><span class="label0 pred0">(((</span><!--
+--><span class="label0 pred0">Integer</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> v</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">longValue</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> try</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> Long</span><!--
+--><span class="label0 pred0"> count</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">Long</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> freq</span><!--
+--><span class="label0 pred0">Table</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">get</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">obj</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">count</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> freq</span><!--
+--><span class="label0 pred0">Table</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">put</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">obj</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Long</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">valueOf</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> freq</span><!--
+--><span class="label0 pred0">Table</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">put</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">obj</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Long</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">valueOf</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">count</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">longValue</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0"> catch</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred3">Class</span><!--
+--><span class="label0 pred2">CastException</span><!--
+--><span class="label0 pred1"> ex</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">   
+           </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0">TreeMap</span><!--
+--><span class="label0 pred0"> will</span><!--
+--><span class="label0 pred0"> throw</span><!--
+--><span class="label0 pred0"> Class</span><!--
+--><span class="label0 pred0">CastException</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> v</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> comp</span><!--
+--><span class="label0 pred0">arable</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> throw</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label1 pred1"> IllegalArgumentException</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">Value</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> comp</span><!--
+--><span class="label0 pred0">arable</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> existing</span><!--
+--><span class="label0 pred0"> values</span><!--
+--><span class="label0 pred0">.&quot;);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Adds</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> frequency</span><!--
+--><span class="label0 pred0"> count</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> v</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> v</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0">Value</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">int</span><!--
+--><span class="label0 pred0"> v</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0">Value</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Long</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">valueOf</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">v</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Adds</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> frequency</span><!--
+--><span class="label0 pred0"> count</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> v</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> v</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0">Value</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Integer</span><!--
+--><span class="label0 pred0"> v</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0">Value</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Long</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">valueOf</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">v</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">longValue</span><!--
+--><span class="label0 pred0">()));</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Adds</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> frequency</span><!--
+--><span class="label0 pred0"> count</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> v</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> v</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0">Value</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">long</span><!--
+--><span class="label0 pred0"> v</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0">Value</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Long</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">valueOf</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">v</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Adds</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> frequency</span><!--
+--><span class="label0 pred0"> count</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> v</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> v</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0">Value</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">char</span><!--
+--><span class="label0 pred0"> v</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0">Value</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Character</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">valueOf</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">v</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0"> Clear</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> frequency</span><!--
+--><span class="label0 pred0"> table</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> clear</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> freq</span><!--
+--><span class="label0 pred0">Table</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">clear</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Returns</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> Iterator</span><!--
+--><span class="label0 pred0"> over</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> set</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> values</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0"> have</span><!--
+--><span class="label0 pred0"> been</span><!--
+--><span class="label0 pred0"> added</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> If</span><!--
+--><span class="label0 pred0"> added</span><!--
+--><span class="label0 pred0"> values</span><!--
+--><span class="label0 pred0"> are</span><!--
+--><span class="label0 pred0"> integral</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">i</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">e</span><!--
+--><span class="label0 pred0">.,</span><!--
+--><span class="label0 pred0"> integers</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> long</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> In</span><!--
+--><span class="label0 pred0">te</span><!--
+--><span class="label0 pred0">gers</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> Long</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0">),</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> they</span><!--
+--><span class="label0 pred0"> are</span><!--
+--><span class="label0 pred0"> converted</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> Long</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0"> when</span><!--
+--><span class="label0 pred0"> they</span><!--
+--><span class="label0 pred0"> are</span><!--
+--><span class="label0 pred0"> added</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> so</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> objects</span><!--
+--><span class="label0 pred0"> returned</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> Iterator</span><!--
+--><span class="label0 pred0"> will</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> case</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> Long</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0">.&lt;/</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> values</span><!--
+--><span class="label0 pred0"> Iterator</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> Iterator</span><!--
+--><span class="label0 pred0"> values</span><!--
+--><span class="label0 pred0">Iterator</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> freq</span><!--
+--><span class="label0 pred0">Table</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">keySet</span><!--
+--><span class="label0 pred0">().</span><!--
+--><span class="label0 pred0">iterator</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0">-------------------------------------------------------------------------</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Returns</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> sum</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> all</span><!--
+--><span class="label0 pred0"> frequencies</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> total</span><!--
+--><span class="label0 pred0"> frequency</span><!--
+--><span class="label0 pred0"> count</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> long</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">Sum</span><!--
+--><span class="label0 pred0">Freq</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> long</span><!--
+--><span class="label0 pred0"> result</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Iterator</span><!--
+--><span class="label0 pred0"> iterator</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> freq</span><!--
+--><span class="label0 pred0">Table</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">values</span><!--
+--><span class="label0 pred0">().</span><!--
+--><span class="label0 pred0">iterator</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> while</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">iterator</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">hasNext</span><!--
+--><span class="label0 pred0">())</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> result</span><!--
+--><span class="label0 pred0"> +=</span><!--
+--><span class="label0 pred0"> ((</span><!--
+--><span class="label0 pred0">Long</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> iterator</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">next</span><!--
+--><span class="label0 pred0">()).</span><!--
+--><span class="label0 pred0">longValue</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> result</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Returns</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> number</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> values</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> v</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Returns</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> comp</span><!--
+--><span class="label0 pred0">arable</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> v</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> lookup</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> frequency</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> v</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> long</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">Count</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Object</span><!--
+--><span class="label0 pred0"> v</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">v</span><!--
+--><span class="label0 pred0"> instanceof</span><!--
+--><span class="label0 pred0"> Integer</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">Count</span><!--
+--><span class="label0 pred0">(((</span><!--
+--><span class="label0 pred0">Integer</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> v</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">longValue</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> long</span><!--
+--><span class="label0 pred0"> result</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> try</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0"> 
+           </span><!--
+--><span class="label0 pred0"> Long</span><!--
+--><span class="label0 pred0"> count</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">Long</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> freq</span><!--
+--><span class="label0 pred0">Table</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">get</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">v</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">count</span><!--
+--><span class="label0 pred0"> !=</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> result</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> count</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">longValue</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0"> catch</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred3">Class</span><!--
+--><span class="label0 pred3">CastException</span><!--
+--><span class="label0 pred1"> ex</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> ignore</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0"> --</span><!--
+--><span class="label0 pred0"> Class</span><!--
+--><span class="label0 pred0">CastException</span><!--
+--><span class="label0 pred0"> will</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> thrown</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> comp</span><!--
+--><span class="label0 pred0">arable</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> result</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Returns</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> number</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> values</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> v</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> v</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> lookup</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> frequency</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> v</span>
+</div>
+<hr/>
+<div>
+<h3>
+Math, 89
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>        if (v instanceof Comparable&lt;?&gt;){<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>        } else {<br/>            throw new IllegalArgumentException(&quot;Object must implement Comparable&quot;);<br/>        }<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> out</span><!--
+--><span class="label-100 pred0">Buffer</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">append</span><!--
+--><span class="label-100 pred0">(&#x27;\</span><!--
+--><span class="label-100 pred0">n</span><!--
+--><span class="label-100 pred0">&#x27;);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> out</span><!--
+--><span class="label-100 pred0">Buffer</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">toString</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Adds</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> frequency</span><!--
+--><span class="label-100 pred0"> count</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> v</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> If</span><!--
+--><span class="label-100 pred0"> other</span><!--
+--><span class="label-100 pred0"> objects</span><!--
+--><span class="label-100 pred0"> have</span><!--
+--><span class="label-100 pred0"> already</span><!--
+--><span class="label-100 pred0"> been</span><!--
+--><span class="label-100 pred0"> added</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> Frequency</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> v</span><!--
+--><span class="label-100 pred0"> must</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> comp</span><!--
+--><span class="label-100 pred0">arable</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> those</span><!--
+--><span class="label-100 pred0"> that</span><!--
+--><span class="label-100 pred0"> have</span><!--
+--><span class="label-100 pred0"> already</span><!--
+--><span class="label-100 pred0"> been</span><!--
+--><span class="label-100 pred0"> added</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;/</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> v</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> add</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">throws</span><!--
+--><span class="label-100 pred0"> IllegalArgumentException</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">v</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> Comparable</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">        </span><!--
+--><span class="label-100 pred0"> or</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> comp</span><!--
+--><span class="label-100 pred0">arable</span><!--
+--><span class="label-100 pred0"> with</span><!--
+--><span class="label-100 pred0"> previous</span><!--
+--><span class="label-100 pred0"> entries</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">deprecated</span><!--
+--><span class="label-100 pred0"> use</span><!--
+--><span class="label-100 pred0"> {@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">add</span><!--
+--><span class="label-100 pred0">Value</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Comparable</span><!--
+--><span class="label-100 pred0">)}</span><!--
+--><span class="label-100 pred0"> instead</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">Deprecated</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> void</span><!--
+--><span class="label-100 pred0"> add</span><!--
+--><span class="label-100 pred0">Value</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Object</span><!--
+--><span class="label-100 pred0"> v</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> add</span><!--
+--><span class="label-100 pred0">Value</span><!--
+--><span class="label-100 pred0">((</span><!--
+--><span class="label-100 pred0">Comparable</span><!--
+--><span class="label-100 pred0">&lt;?</span><!--
+--><span class="label-100 pred0">&gt;)</span><!--
+--><span class="label-100 pred0"> v</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">            </span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Adds</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> frequency</span><!--
+--><span class="label-100 pred0"> count</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> v</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> If</span><!--
+--><span class="label-100 pred0"> other</span><!--
+--><span class="label-100 pred0"> objects</span><!--
+--><span class="label-100 pred0"> have</span><!--
+--><span class="label-100 pred0"> already</span><!--
+--><span class="label-100 pred0"> been</span><!--
+--><span class="label-100 pred0"> added</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> Frequency</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> v</span><!--
+--><span class="label-100 pred0"> must</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> comp</span><!--
+--><span class="label-100 pred0">arable</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> those</span><!--
+--><span class="label-100 pred0"> that</span><!--
+--><span class="label-100 pred0"> have</span><!--
+--><span class="label-100 pred0"> already</span><!--
+--><span class="label-100 pred0"> been</span><!--
+--><span class="label-100 pred0"> added</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;/</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> v</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> add</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">throws</span><!--
+--><span class="label-100 pred0"> IllegalArgumentException</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">v</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> comp</span><!--
+--><span class="label-100 pred0">arable</span><!--
+--><span class="label-100 pred0"> with</span><!--
+--><span class="label-100 pred0"> previous</span><!--
+--><span class="label-100 pred0"> entries</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> void</span><!--
+--><span class="label-100 pred0"> add</span><!--
+--><span class="label-100 pred0">Value</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Comparable</span><!--
+--><span class="label-100 pred0">&lt;?&gt;</span><!--
+--><span class="label-100 pred0">v</span><!--
+--><span class="label-100 pred0">){</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getP</span><!--
+--><span class="label0 pred0">ct</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">foo</span><!--
+--><span class="label0 pred0">&quot;),</span><!--
+--><span class="label0 pred0">tolerance</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">one</span><!--
+--><span class="label0 pred0"> cum</span><!--
+--><span class="label0 pred0"> p</span><!--
+--><span class="label0 pred0">ct</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getC</span><!--
+--><span class="label0 pred0">um</span><!--
+--><span class="label0 pred0">Pct</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">),</span><!--
+--><span class="label0 pred0">tolerance</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">two</span><!--
+--><span class="label0 pred0"> cum</span><!--
+--><span class="label0 pred0"> p</span><!--
+--><span class="label0 pred0">ct</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getC</span><!--
+--><span class="label0 pred0">um</span><!--
+--><span class="label0 pred0">Pct</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Long</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">valueOf</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">)),</span><!--
+--><span class="label0 pred0">tolerance</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">Integer</span><!--
+--><span class="label0 pred0"> argument</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getC</span><!--
+--><span class="label0 pred0">um</span><!--
+--><span class="label0 pred0">Pct</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Integer</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">valueOf</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">)),</span><!--
+--><span class="label0 pred0">tolerance</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">three</span><!--
+--><span class="label0 pred0"> cum</span><!--
+--><span class="label0 pred0"> p</span><!--
+--><span class="label0 pred0">ct</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getC</span><!--
+--><span class="label0 pred0">um</span><!--
+--><span class="label0 pred0">Pct</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">three</span><!--
+--><span class="label0 pred0">L</span><!--
+--><span class="label0 pred0">),</span><!--
+--><span class="label0 pred0">tolerance</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">five</span><!--
+--><span class="label0 pred0"> cum</span><!--
+--><span class="label0 pred0"> p</span><!--
+--><span class="label0 pred0">ct</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getC</span><!--
+--><span class="label0 pred0">um</span><!--
+--><span class="label0 pred0">Pct</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">),</span><!--
+--><span class="label0 pred0">tolerance</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">zero</span><!--
+--><span class="label0 pred0"> cum</span><!--
+--><span class="label0 pred0"> p</span><!--
+--><span class="label0 pred0">ct</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getC</span><!--
+--><span class="label0 pred0">um</span><!--
+--><span class="label0 pred0">Pct</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">),</span><!--
+--><span class="label0 pred0">tolerance</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">foo</span><!--
+--><span class="label0 pred0"> cum</span><!--
+--><span class="label0 pred0"> p</span><!--
+--><span class="label0 pred0">ct</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getC</span><!--
+--><span class="label0 pred0">um</span><!--
+--><span class="label0 pred0">Pct</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">foo</span><!--
+--><span class="label0 pred0">&quot;),</span><!--
+--><span class="label0 pred0">tolerance</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0"> adding</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0">comp</span><!--
+--><span class="label0 pred0">arable</span><!--
+--><span class="label0 pred0"> values</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">Add</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> char</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0">Char</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> &#x27;</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0">&#x27;;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> char</span><!--
+--><span class="label0 pred0"> b</span><!--
+--><span class="label0 pred0">Char</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> &#x27;</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0">&#x27;;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0">&quot;;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">add</span><!--
+--><span class="label0 pred0">Value</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0">Char</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">add</span><!--
+--><span class="label0 pred0">Value</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0">Char</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> try</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">add</span><!--
+--><span class="label0 pred0">Value</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">    </span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> fail</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">Expecting</span><!--
+--><span class="label0 pred0"> IllegalArgumentException</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0"> catch</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label1 pred0">IllegalArgumentException</span><!--
+--><span class="label0 pred0"> ex</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> expected</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> try</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">add</span><!--
+--><span class="label0 pred0">Value</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> fail</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">Expecting</span><!--
+--><span class="label0 pred0"> IllegalArgumentException</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0"> catch</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label1 pred0">IllegalArgumentException</span><!--
+--><span class="label0 pred0"> ex</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> expected</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0"> p</span><!--
+--><span class="label0 pred0">ct</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getP</span><!--
+--><span class="label0 pred0">ct</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0">Char</span><!--
+--><span class="label0 pred0">),</span><!--
+--><span class="label0 pred0">tolerance</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0"> cum</span><!--
+--><span class="label0 pred0"> p</span><!--
+--><span class="label0 pred0">ct</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getC</span><!--
+--><span class="label0 pred0">um</span><!--
+--><span class="label0 pred0">Pct</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0">Char</span><!--
+--><span class="label0 pred0">),</span><!--
+--><span class="label0 pred0">tolerance</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0"> string</span><!--
+--><span class="label0 pred0"> p</span><!--
+--><span class="label0 pred0">ct</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getP</span><!--
+--><span class="label0 pred0">ct</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0">),</span><!--
+--><span class="label0 pred0">tolerance</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0"> string</span><!--
+--><span class="label0 pred0"> cum</span><!--
+--><span class="label0 pred0"> p</span><!--
+--><span class="label0 pred0">ct</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getC</span><!--
+--><span class="label0 pred0">um</span><!--
+--><span class="label0 pred0">Pct</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0">),</span><!--
+--><span class="label0 pred0">tolerance</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> f</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Frequency</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">add</span><!--
+--><span class="label0 pred0">Value</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">One</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> try</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">add</span><!--
+--><span class="label0 pred0">Value</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> Integer</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">One</span><!--
+--><span class="label0 pred0">&quot;));</span><!--
+--><span class="label0 pred0"> 
+           </span><!--
+--><span class="label0 pred0"> fail</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">Expecting</span><!--
+--><span class="label0 pred0"> IllegalArgumentException</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0"> catch</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label1 pred0">IllegalArgumentException</span><!--
+--><span class="label0 pred0"> ex</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> expected</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> Check</span><!--
+--><span class="label0 pred0"> what</span><!--
+--><span class="label0 pred0"> happens</span><!--
+--><span class="label0 pred0"> when</span><!--
+--><span class="label0 pred0"> non</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">Comparable</span><!--
+--><span class="label0 pred0"> objects</span><!--
+--><span class="label0 pred0"> are</span><!--
+--><span class="label0 pred0"> added</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">Add</span><!--
+--><span class="label0 pred0">Non</span><!--
+--><span class="label0 pred0">Comparable</span><!--
+--><span class="label0 pred0">(){</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> try</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">add</span><!--
+--><span class="label0 pred0">Value</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred4"> Object</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> This</span><!--
+--><span class="label0 pred0"> was</span><!--
+--><span class="label0 pred0"> previously</span><!--
+--><span class="label0 pred0"> OK</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> fail</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">Expected</span><!--
+--><span class="label0 pred0"> IllegalArgumentException</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0"> catch</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label1 pred0">IllegalArgumentException</span><!--
+--><span class="label0 pred0"> expected</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">clear</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">add</span><!--
+--><span class="label0 pred0">Value</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> try</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">add</span><!--
+--><span class="label0 pred0">Value</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred3"> Object</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> fail</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">Expected</span><!--
+--><span class="label0 pred0"> IllegalArgumentException</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0"> catch</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label1 pred0">IllegalArgumentException</span><!--
+--><span class="label0 pred0"> expected</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0"> empty</span><!--
+--><span class="label0 pred0"> table</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">Empty</span><!--
+--><span class="label0 pred0">Table</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">freq</span><!--
+--><span class="label0 pred0"> sum</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> empty</span><!--
+--><span class="label0 pred0"> table</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">get</span><!--
+--><span class="label0 pred0">Sum</span><!--
+--><span class="label0 pred0">Freq</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">count</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> empty</span><!--
+--><span class="label0 pred0"> table</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getCount</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">count</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> empty</span><!--
+--><span class="label0 pred0"> table</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getCount</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Integer</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">valueOf</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">)));</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">cum</span><!--
+--><span class="label0 pred0"> freq</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> empty</span><!--
+--><span class="label0 pred0"> table</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getC</span><!--
+--><span class="label0 pred0">um</span><!--
+--><span class="label0 pred0">Freq</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">cum</span><!--
+--><span class="label0 pred0"> freq</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> empty</span><!--
+--><span class="label0 pred0"> table</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getC</span><!--
+--><span class="label0 pred0">um</span><!--
+--><span class="label0 pred0">Freq</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">x</span><!--
+--><span class="label0 pred0">&quot;));</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> assertTrue</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">pct</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> empty</span><!--
+--><span class="label0 pred0"> table</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> Double</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">isNaN</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getP</span><!--
+--><span class="label0 pred0">ct</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">)));</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> assertTrue</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">pct</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> empty</span><!--
+--><span class="label0 pred0"> table</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> Double</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">isNaN</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getP</span><!--
+--><span class="label0 pred0">ct</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Integer</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">valueOf</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">))));</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> assertTrue</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">cum</span><!--
+--><span class="label0 pred0"> p</span><!--
+--><span class="label0 pred0">ct</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> empty</span><!--
+--><span class="label0 pred0"> table</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> Double</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">isNaN</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getC</span><!--
+--><span class="label0 pred0">um</span><!--
+--><span class="label0 pred0">Pct</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">)));</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> assertTrue</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">cum</span><!--
+--><span class="label0 pred0"> p</span><!--
+--><span class="label0 pred0">ct</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> empty</span><!--
+--><span class="label0 pred0"> table</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> Double</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">isNaN</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getC</span><!--
+--><span class="label0 pred0">um</span><!--
+--><span class="label0 pred0">Pct</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Integer</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">valueOf</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">))));</span><!--
+--><span class="label0 pred0">   
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Tests</span><!--
+--><span class="label0 pred0"> toString</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">ToString</span><!--
+--><span class="label0 pred0">(){</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">add</span><!--
+--><span class="label0 pred0">Value</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">one</span><!--
+--><span class="label0 pred0">L</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> f</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">add</span><!--
+--><span class="label0 pred0">Value</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">two</span><!--
+--><span class="label0 pred0">L</span><!--
+--><span class="label0 pred0">);</span>
+</div>
+<hr/>
+</body>
+</html>

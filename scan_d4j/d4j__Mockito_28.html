@@ -1,0 +1,708 @@
+<html>
+<head>
+<style>
+pre {margin: 0.1em }
+
+            span {
+                white-space: pre;
+            }
+
+            .label-100 {
+                border: 1px solid gray;
+            }
+
+            .label0 {
+                border: 1px solid white;
+            }
+
+            .label1 {
+                border: 1px solid blue;
+            }
+            .new {
+                background-color: #8FFF92;
+            }
+
+            .context-size {
+	            padding: 0.1em;
+	            color: white;
+	            background-color: black;
+	            border-radius: 50%;
+	            width: 1.5em;
+	            display: inline-block;
+	            text-align: center;
+	            height: 1.5em;
+	            line-height: 1.5em;
+                margin-right: 0.6em;
+            }
+.pred0{background-color: rgba(255, 0, 0, 0.0);}
+.pred1{background-color: rgba(255, 0, 0, 0.1);}
+.pred2{background-color: rgba(255, 0, 0, 0.2);}
+.pred3{background-color: rgba(255, 0, 0, 0.3);}
+.pred4{background-color: rgba(255, 0, 0, 0.4);}
+.pred5{background-color: rgba(255, 0, 0, 0.5);}
+.pred6{background-color: rgba(255, 0, 0, 0.6);}
+.pred7{background-color: rgba(255, 0, 0, 0.7);}
+.pred8{background-color: rgba(255, 0, 0, 0.8);}
+.pred9{background-color: rgba(255, 0, 0, 0.9);}
+.pred10{background-color: rgba(255, 0, 0, 1.0);}
+</style>
+</head>
+<body>
+<div>
+<h3>
+Mockito, 28
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>            Object injected = mockCandidateFilter.filterCandidate(mocks, field, fieldInstance).thenInject();<br/>            mocks.remove(injected);<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Field</span><!--
+--><span class="label-100 pred0"> field</span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0"> inject</span><!--
+--><span class="label-100 pred0">Mocks</span><!--
+--><span class="label-100 pred0">Fields</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> Set</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Object</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> mock</span><!--
+--><span class="label-100 pred0">sTo</span><!--
+--><span class="label-100 pred0">Be</span><!--
+--><span class="label-100 pred0">Inject</span><!--
+--><span class="label-100 pred0">ed</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> HashSet</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Object</span><!--
+--><span class="label-100 pred0">&gt;(</span><!--
+--><span class="label-100 pred0">mocks</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> Object</span><!--
+--><span class="label-100 pred0"> inject</span><!--
+--><span class="label-100 pred0">Mocks</span><!--
+--><span class="label-100 pred0">Field</span><!--
+--><span class="label-100 pred0">Instance</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> try</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> inject</span><!--
+--><span class="label-100 pred0">Mocks</span><!--
+--><span class="label-100 pred0">Field</span><!--
+--><span class="label-100 pred0">Instance</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Field</span><!--
+--><span class="label-100 pred0">Initializer</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">test</span><!--
+--><span class="label-100 pred0">Class</span><!--
+--><span class="label-100 pred0">Instance</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> field</span><!--
+--><span class="label-100 pred0">).</span><!--
+--><span class="label-100 pred0">initialize</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> catch</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Mockito</span><!--
+--><span class="label-100 pred0">Exception</span><!--
+--><span class="label-100 pred0"> e</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Report</span><!--
+--><span class="label-100 pred0">er</span><!--
+--><span class="label-100 pred0">().</span><!--
+--><span class="label-100 pred0">cannot</span><!--
+--><span class="label-100 pred0">Initialize</span><!--
+--><span class="label-100 pred0">For</span><!--
+--><span class="label-100 pred0">Inject</span><!--
+--><span class="label-100 pred0">Mocks</span><!--
+--><span class="label-100 pred0">Annotation</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">field</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getName</span><!--
+--><span class="label-100 pred0">(),</span><!--
+--><span class="label-100 pred0"> e</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> each</span><!--
+--><span class="label-100 pred0"> field</span><!--
+--><span class="label-100 pred0"> in</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> class</span><!--
+--><span class="label-100 pred0"> hierarchy</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> Class</span><!--
+--><span class="label-100 pred0">&lt;?&gt;</span><!--
+--><span class="label-100 pred0"> field</span><!--
+--><span class="label-100 pred0">Class</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> inject</span><!--
+--><span class="label-100 pred0">Mocks</span><!--
+--><span class="label-100 pred0">Field</span><!--
+--><span class="label-100 pred0">Instance</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getClass</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> while</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">field</span><!--
+--><span class="label-100 pred0">Class</span><!--
+--><span class="label-100 pred0"> !=</span><!--
+--><span class="label-100 pred0"> Object</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">class</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> inject</span><!--
+--><span class="label-100 pred0">Mock</span><!--
+--><span class="label-100 pred0">Candidate</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">field</span><!--
+--><span class="label-100 pred0">Class</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> mock</span><!--
+--><span class="label-100 pred0">sTo</span><!--
+--><span class="label-100 pred0">Be</span><!--
+--><span class="label-100 pred0">Inject</span><!--
+--><span class="label-100 pred0">ed</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> inject</span><!--
+--><span class="label-100 pred0">Mocks</span><!--
+--><span class="label-100 pred0">Field</span><!--
+--><span class="label-100 pred0">Instance</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> field</span><!--
+--><span class="label-100 pred0">Class</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> field</span><!--
+--><span class="label-100 pred0">Class</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Super</span><!--
+--><span class="label-100 pred0">class</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> private</span><!--
+--><span class="label-100 pred0"> void</span><!--
+--><span class="label-100 pred0"> inject</span><!--
+--><span class="label-100 pred0">Mock</span><!--
+--><span class="label-100 pred0">Candidate</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Class</span><!--
+--><span class="label-100 pred0">&lt;?&gt;</span><!--
+--><span class="label-100 pred0"> await</span><!--
+--><span class="label-100 pred0">ing</span><!--
+--><span class="label-100 pred0">Injection</span><!--
+--><span class="label-100 pred0">Clazz</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> Set</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Object</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> mocks</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> Object</span><!--
+--><span class="label-100 pred0"> field</span><!--
+--><span class="label-100 pred0">Instance</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Field</span><!--
+--><span class="label-100 pred0"> field</span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0"> ordered</span><!--
+--><span class="label-100 pred0">Instance</span><!--
+--><span class="label-100 pred0">Fields</span><!--
+--><span class="label-100 pred0">From</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">await</span><!--
+--><span class="label-100 pred0">ing</span><!--
+--><span class="label-100 pred0">Injection</span><!--
+--><span class="label-100 pred0">Clazz</span><!--
+--><span class="label-100 pred0">))</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> mock</span><!--
+--><span class="label-100 pred0">Candidate</span><!--
+--><span class="label-100 pred0">Filter</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">filter</span><!--
+--><span class="label-100 pred0">Candidate</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">mocks</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> field</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> field</span><!--
+--><span class="label-100 pred0">Instance</span><!--
+--><span class="label-100 pred0">).</span><!--
+--><span class="label-100 pred0">then</span><!--
+--><span class="label-100 pred0">Inject</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> private</span><!--
+--><span class="label-100 pred0"> Field</span><!--
+--><span class="label-100 pred0">[]</span><!--
+--><span class="label-100 pred0"> ordered</span><!--
+--><span class="label-100 pred0">Instance</span><!--
+--><span class="label-100 pred0">Fields</span><!--
+--><span class="label-100 pred0">From</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Class</span><!--
+--><span class="label-100 pred0">&lt;?&gt;</span><!--
+--><span class="label-100 pred0"> await</span><!--
+--><span class="label-100 pred0">ing</span><!--
+--><span class="label-100 pred0">Injection</span><!--
+--><span class="label-100 pred0">Clazz</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Field</span><!--
+--><span class="label-100 pred0">[]</span><!--
+--><span class="label-100 pred0"> declared</span><!--
+--><span class="label-100 pred0">Fields</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> await</span><!--
+--><span class="label-100 pred0">ing</span><!--
+--><span class="label-100 pred0">Injection</span><!--
+--><span class="label-100 pred0">Clazz</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getDeclared</span><!--
+--><span class="label-100 pred0">Fields</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Arrays</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">sort</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">declared</span><!--
+--><span class="label-100 pred0">Fields</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> sup</span><!--
+--><span class="label-100 pred0">ert</span><!--
+--><span class="label-100 pred0">ypes</span><!--
+--><span class="label-100 pred0">Last</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> declared</span><!--
+--><span class="label-100 pred0">Fields</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"></span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">}</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">/*</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Copyright</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">c</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">7</span><!--
+--><span class="label0 pred0"> Mockito</span><!--
+--><span class="label0 pred0"> contributors</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> This</span><!--
+--><span class="label0 pred0"> program</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> made</span><!--
+--><span class="label0 pred0"> available</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> terms</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> MIT</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">package</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">mockito</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">internal</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">verification</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">io</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Serializable</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.*;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">mockito</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">internal</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">invocation</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Invocation</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">mockito</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">internal</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">List</span><!--
+--><span class="label0 pred0">Util</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">mockito</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">internal</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">List</span><!--
+--><span class="label0 pred0">Util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Filter</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">public</span><!--
+--><span class="label0 pred0"> class</span><!--
+--><span class="label0 pred0"> Registered</span><!--
+--><span class="label0 pred0">Inv</span><!--
+--><span class="label0 pred0">ocations</span><!--
+--><span class="label0 pred0"> implements</span><!--
+--><span class="label0 pred0"> Serializable</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> long</span><!--
+--><span class="label0 pred0"> serialVersionUID</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">7</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">7</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">7</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">L</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> List</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">Invocation</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> inv</span><!--
+--><span class="label0 pred0">ocations</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> Collections</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">synchronized</span><!--
+--><span class="label0 pred0">List</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> LinkedList</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">Invocation</span><!--
+--><span class="label0 pred0">&gt;());</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Invocation</span><!--
+--><span class="label0 pred0"> invocation</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> inv</span><!--
+--><span class="label0 pred0">ocations</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">add</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">invocation</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> remove</span><!--
+--><span class="label0 pred0">Last</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0">TODO</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0"> specific</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> synchronization</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> block</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">it</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> tested</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> Invocation</span><!--
+--><span class="label0 pred0">Container</span><!--
+--><span class="label0 pred0">Impl</span><!--
+--><span class="label0 pred0">Test</span><!--
+--><span class="label0 pred0"> at</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> moment</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> synchronized</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">inv</span><!--
+--><span class="label0 pred0">ocations</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> last</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> inv</span><!--
+--><span class="label0 pred0">ocations</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">size</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> inv</span><!--
+--><span class="label0 pred0">ocations</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label1 pred0">remove</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">last</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> List</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">Invocation</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred1"> getAll</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> List</span><!--
+--><span class="label0 pred0">Util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">filter</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> LinkedList</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">Invocation</span><!--
+--><span class="label0 pred0">&gt;(</span><!--
+--><span class="label0 pred0">inv</span><!--
+--><span class="label0 pred0">ocations</span><!--
+--><span class="label0 pred0">),</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Remove</span><!--
+--><span class="label0 pred0">ToString</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> class</span><!--
+--><span class="label0 pred0"> Remove</span><!--
+--><span class="label0 pred0">ToString</span><!--
+--><span class="label0 pred0"> implements</span><!--
+--><span class="label0 pred0"> Filter</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">Invocation</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0">Out</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Invocation</span><!--
+--><span class="label0 pred0"> invocation</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> invocation</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">ToString</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">}</span>
+</div>
+<hr/>
+</body>
+</html>

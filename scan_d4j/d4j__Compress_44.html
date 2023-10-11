@@ -1,0 +1,608 @@
+<html>
+<head>
+<style>
+pre {margin: 0.1em }
+
+            span {
+                white-space: pre;
+            }
+
+            .label-100 {
+                border: 1px solid gray;
+            }
+
+            .label0 {
+                border: 1px solid white;
+            }
+
+            .label1 {
+                border: 1px solid blue;
+            }
+            .new {
+                background-color: #8FFF92;
+            }
+
+            .context-size {
+	            padding: 0.1em;
+	            color: white;
+	            background-color: black;
+	            border-radius: 50%;
+	            width: 1.5em;
+	            display: inline-block;
+	            text-align: center;
+	            height: 1.5em;
+	            line-height: 1.5em;
+                margin-right: 0.6em;
+            }
+.pred0{background-color: rgba(255, 0, 0, 0.0);}
+.pred1{background-color: rgba(255, 0, 0, 0.1);}
+.pred2{background-color: rgba(255, 0, 0, 0.2);}
+.pred3{background-color: rgba(255, 0, 0, 0.3);}
+.pred4{background-color: rgba(255, 0, 0, 0.4);}
+.pred5{background-color: rgba(255, 0, 0, 0.5);}
+.pred6{background-color: rgba(255, 0, 0, 0.6);}
+.pred7{background-color: rgba(255, 0, 0, 0.7);}
+.pred8{background-color: rgba(255, 0, 0, 0.8);}
+.pred9{background-color: rgba(255, 0, 0, 0.9);}
+.pred10{background-color: rgba(255, 0, 0, 1.0);}
+</style>
+</head>
+<body>
+<div>
+<h3>
+Compress, 44
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>        if ( checksum == null ){<br/>            throw new NullPointerException(&quot;Parameter checksum must not be null&quot;);<br/>        }<br/>        if ( in == null ){<br/>            throw new NullPointerException(&quot;Parameter in must not be null&quot;);<br/>        }<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0"> WITHOUT</span><!--
+--><span class="label-100 pred0"> WARRANTIES</span><!--
+--><span class="label-100 pred0"> OR</span><!--
+--><span class="label-100 pred0"> CONDITIONS</span><!--
+--><span class="label-100 pred0"> OF</span><!--
+--><span class="label-100 pred0"> ANY</span><!--
+--><span class="label-100 pred0"> KIND</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> either</span><!--
+--><span class="label-100 pred0"> express</span><!--
+--><span class="label-100 pred0"> or</span><!--
+--><span class="label-100 pred0"> implied</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0"> See</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> License</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> specific</span><!--
+--><span class="label-100 pred0"> language</span><!--
+--><span class="label-100 pred0"> governing</span><!--
+--><span class="label-100 pred0"> permissions</span><!--
+--><span class="label-100 pred0"> and</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0"> limitations</span><!--
+--><span class="label-100 pred0"> under</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> License</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">package</span><!--
+--><span class="label-100 pred0"> org</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">apache</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">commons</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">compress</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">utils</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">io</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">IOException</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">io</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">InputStream</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">import</span><!--
+--><span class="label-100 pred0"> java</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">util</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">zip</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Checksum</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">/**</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> A</span><!--
+--><span class="label-100 pred0"> stream</span><!--
+--><span class="label-100 pred0"> that</span><!--
+--><span class="label-100 pred0"> calculates</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> checksum</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> data</span><!--
+--><span class="label-100 pred0"> read</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">Not</span><!--
+--><span class="label-100 pred0">Thread</span><!--
+--><span class="label-100 pred0">Safe</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">since</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">4</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">public</span><!--
+--><span class="label-100 pred0"> class</span><!--
+--><span class="label-100 pred0"> Check</span><!--
+--><span class="label-100 pred0">sum</span><!--
+--><span class="label-100 pred0">Calcul</span><!--
+--><span class="label-100 pred0">ating</span><!--
+--><span class="label-100 pred0">InputStream</span><!--
+--><span class="label-100 pred0"> extends</span><!--
+--><span class="label-100 pred0"> InputStream</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> private</span><!--
+--><span class="label-100 pred0"> final</span><!--
+--><span class="label-100 pred0"> InputStream</span><!--
+--><span class="label-100 pred0"> in</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> private</span><!--
+--><span class="label-100 pred0"> final</span><!--
+--><span class="label-100 pred0"> Check</span><!--
+--><span class="label-100 pred0">sum</span><!--
+--><span class="label-100 pred0"> checksum</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> Check</span><!--
+--><span class="label-100 pred0">sum</span><!--
+--><span class="label-100 pred0">Calcul</span><!--
+--><span class="label-100 pred0">ating</span><!--
+--><span class="label-100 pred0">InputStream</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">final</span><!--
+--><span class="label-100 pred0"> Check</span><!--
+--><span class="label-100 pred0">sum</span><!--
+--><span class="label-100 pred0"> checksum</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> final</span><!--
+--><span class="label-100 pred0"> InputStream</span><!--
+--><span class="label-100 pred0"> in</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">checksum</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> checksum</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">in</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> in</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Reads</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> single</span><!--
+--><span class="label-100 pred0"> byte</span><!--
+--><span class="label-100 pred0"> from</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> stream</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">throws</span><!--
+--><span class="label-100 pred0"> IOException</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> underlying</span><!--
+--><span class="label-100 pred0"> stream</span><!--
+--><span class="label-100 pred0"> throws</span><!--
+--><span class="label-100 pred0"> or</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> stream</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> ex</span><!--
+--><span class="label-100 pred0">hausted</span><!--
+--><span class="label-100 pred0"> and</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> Check</span><!--
+--><span class="label-100 pred0">sum</span><!--
+--><span class="label-100 pred0"> doesn</span><!--
+--><span class="label-100 pred0">&#x27;t</span><!--
+--><span class="label-100 pred0"> match</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> expected</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">Override</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> read</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> throws</span><!--
+--><span class="label-100 pred0"> IOException</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> final</span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> ret</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> in</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">read</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> byte</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">];</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred1"> ByteArrayInputStream</span><!--
+--><span class="label0 pred0"> byteArray</span><!--
+--><span class="label0 pred0">InputStream</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred1"> ByteArrayInputStream</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">byteArray</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Check</span><!--
+--><span class="label0 pred0">sum</span><!--
+--><span class="label0 pred0">Calcul</span><!--
+--><span class="label0 pred0">ating</span><!--
+--><span class="label0 pred0">InputStream</span><!--
+--><span class="label0 pred0"> checksum</span><!--
+--><span class="label0 pred0">Calcul</span><!--
+--><span class="label0 pred0">ating</span><!--
+--><span class="label0 pred0">InputStream</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Check</span><!--
+--><span class="label0 pred0">sum</span><!--
+--><span class="label0 pred0">Calcul</span><!--
+--><span class="label0 pred0">ating</span><!--
+--><span class="label0 pred0">InputStream</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">ad</span><!--
+--><span class="label0 pred0">ler</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> byteArray</span><!--
+--><span class="label0 pred0">InputStream</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> read</span><!--
+--><span class="label0 pred0">Result</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> checksum</span><!--
+--><span class="label0 pred0">Calcul</span><!--
+--><span class="label0 pred0">ating</span><!--
+--><span class="label0 pred0">InputStream</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">read</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">byteArray</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> read</span><!--
+--><span class="label0 pred0">Result</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> byteArray</span><!--
+--><span class="label0 pred0">InputStream</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred1">available</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> assertEquals</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">7</span><!--
+--><span class="label0 pred0">L</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> checksum</span><!--
+--><span class="label0 pred0">Calcul</span><!--
+--><span class="label0 pred0">ating</span><!--
+--><span class="label0 pred0">InputStream</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getValue</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">Test</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">expected</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label1 pred0"> NullPointerException</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred2">class</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">Class</span><!--
+--><span class="label0 pred0">Instantiation</span><!--
+--><span class="label0 pred0">With</span><!--
+--><span class="label0 pred0">Parameter</span><!--
+--><span class="label0 pred0">Being</span><!--
+--><span class="label0 pred0">Null</span><!--
+--><span class="label0 pred0">Throws</span><!--
+--><span class="label0 pred0">NullPointerException</span><!--
+--><span class="label0 pred0">One</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Check</span><!--
+--><span class="label0 pred0">sum</span><!--
+--><span class="label0 pred0">Calcul</span><!--
+--><span class="label0 pred0">ating</span><!--
+--><span class="label0 pred0">InputStream</span><!--
+--><span class="label0 pred0"> checksum</span><!--
+--><span class="label0 pred0">Calcul</span><!--
+--><span class="label0 pred0">ating</span><!--
+--><span class="label0 pred0">InputStream</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Check</span><!--
+--><span class="label0 pred0">sum</span><!--
+--><span class="label0 pred0">Calcul</span><!--
+--><span class="label0 pred0">ating</span><!--
+--><span class="label0 pred0">InputStream</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">null</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">null</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">Test</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">expected</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label1 pred0"> NullPointerException</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred2">class</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">Class</span><!--
+--><span class="label0 pred0">Instantiation</span><!--
+--><span class="label0 pred0">With</span><!--
+--><span class="label0 pred0">Parameter</span><!--
+--><span class="label0 pred0">Being</span><!--
+--><span class="label0 pred0">Null</span><!--
+--><span class="label0 pred0">Throws</span><!--
+--><span class="label0 pred0">NullPointerException</span><!--
+--><span class="label0 pred0">Two</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Check</span><!--
+--><span class="label0 pred0">sum</span><!--
+--><span class="label0 pred0">Calcul</span><!--
+--><span class="label0 pred0">ating</span><!--
+--><span class="label0 pred0">InputStream</span><!--
+--><span class="label0 pred0"> checksum</span><!--
+--><span class="label0 pred0">Calcul</span><!--
+--><span class="label0 pred0">ating</span><!--
+--><span class="label0 pred0">InputStream</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Check</span><!--
+--><span class="label0 pred0">sum</span><!--
+--><span class="label0 pred0">Calcul</span><!--
+--><span class="label0 pred0">ating</span><!--
+--><span class="label0 pred0">InputStream</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">null</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> ByteArrayInputStream</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> byte</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">]));</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">Test</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">expected</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label1 pred0"> NullPointerException</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred1">class</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> test</span><!--
+--><span class="label0 pred0">Class</span><!--
+--><span class="label0 pred0">Instantiation</span><!--
+--><span class="label0 pred0">With</span><!--
+--><span class="label0 pred0">Parameter</span><!--
+--><span class="label0 pred0">Being</span><!--
+--><span class="label0 pred0">Null</span><!--
+--><span class="label0 pred0">Throws</span><!--
+--><span class="label0 pred0">NullPointerException</span><!--
+--><span class="label0 pred0">Three</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Check</span><!--
+--><span class="label0 pred0">sum</span><!--
+--><span class="label0 pred0">Calcul</span><!--
+--><span class="label0 pred0">ating</span><!--
+--><span class="label0 pred0">InputStream</span><!--
+--><span class="label0 pred0"> checksum</span><!--
+--><span class="label0 pred0">Calcul</span><!--
+--><span class="label0 pred0">ating</span><!--
+--><span class="label0 pred0">InputStream</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Check</span><!--
+--><span class="label0 pred0">sum</span><!--
+--><span class="label0 pred0">Calcul</span><!--
+--><span class="label0 pred0">ating</span><!--
+--><span class="label0 pred0">InputStream</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> CRC</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">(),</span><!--
+--><span class="label0 pred0">null</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">}</span>
+</div>
+<hr/>
+</body>
+</html>

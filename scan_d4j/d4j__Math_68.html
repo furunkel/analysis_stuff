@@ -1,0 +1,3818 @@
+<html>
+<head>
+<style>
+pre {margin: 0.1em }
+
+            span {
+                white-space: pre;
+            }
+
+            .label-100 {
+                border: 1px solid gray;
+            }
+
+            .label0 {
+                border: 1px solid white;
+            }
+
+            .label1 {
+                border: 1px solid blue;
+            }
+            .new {
+                background-color: #8FFF92;
+            }
+
+            .context-size {
+	            padding: 0.1em;
+	            color: white;
+	            background-color: black;
+	            border-radius: 50%;
+	            width: 1.5em;
+	            display: inline-block;
+	            text-align: center;
+	            height: 1.5em;
+	            line-height: 1.5em;
+                margin-right: 0.6em;
+            }
+.pred0{background-color: rgba(255, 0, 0, 0.0);}
+.pred1{background-color: rgba(255, 0, 0, 0.1);}
+.pred2{background-color: rgba(255, 0, 0, 0.2);}
+.pred3{background-color: rgba(255, 0, 0, 0.3);}
+.pred4{background-color: rgba(255, 0, 0, 0.4);}
+.pred5{background-color: rgba(255, 0, 0, 0.5);}
+.pred6{background-color: rgba(255, 0, 0, 0.6);}
+.pred7{background-color: rgba(255, 0, 0, 0.7);}
+.pred8{background-color: rgba(255, 0, 0, 0.8);}
+.pred9{background-color: rgba(255, 0, 0, 0.9);}
+.pred10{background-color: rgba(255, 0, 0, 1.0);}
+</style>
+</head>
+<body>
+<div>
+<h3>
+Math, 68
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>        setConvergenceChecker(null);<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>        VectorialPointValuePair current = new VectorialPointValuePair(point, objective);<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>            VectorialPointValuePair previous = current;<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>                return current;<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>                current = new VectorialPointValuePair(point, objective);<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>                if (checker!= null) {<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>                    if (checker.converged(getIterations(), previous, current)) {<br/>                        return current;                        <br/>                    }<br/>                } else {<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>                        return current;<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>                }<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">ul</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">   </span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;{@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Con</span><!--
+--><span class="label-100 pred0">ver</span><!--
+--><span class="label-100 pred0">gence</span><!--
+--><span class="label-100 pred0">Checker</span><!--
+--><span class="label-100 pred0"> vector</span><!--
+--><span class="label-100 pred0">ial</span><!--
+--><span class="label-100 pred0"> convergence</span><!--
+--><span class="label-100 pred0"> checker</span><!--
+--><span class="label-100 pred0">}:</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">   </span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;{@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">setInitial</span><!--
+--><span class="label-100 pred0">Step</span><!--
+--><span class="label-100 pred0">Bound</span><!--
+--><span class="label-100 pred0">Factor</span><!--
+--><span class="label-100 pred0"> initial</span><!--
+--><span class="label-100 pred0"> step</span><!--
+--><span class="label-100 pred0"> bound</span><!--
+--><span class="label-100 pred0"> factor</span><!--
+--><span class="label-100 pred0">}:</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">   </span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;{@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">setMax</span><!--
+--><span class="label-100 pred0">Iterations</span><!--
+--><span class="label-100 pred0"> max</span><!--
+--><span class="label-100 pred0">imal</span><!--
+--><span class="label-100 pred0"> iterations</span><!--
+--><span class="label-100 pred0">}:</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">   </span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;{@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Cost</span><!--
+--><span class="label-100 pred0">Relative</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0"> cost</span><!--
+--><span class="label-100 pred0"> relative</span><!--
+--><span class="label-100 pred0"> tolerance</span><!--
+--><span class="label-100 pred0">}:</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">e</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">   </span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;{@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Par</span><!--
+--><span class="label-100 pred0">Relative</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0"> parameters</span><!--
+--><span class="label-100 pred0"> relative</span><!--
+--><span class="label-100 pred0"> tolerance</span><!--
+--><span class="label-100 pred0">}:</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">e</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">   </span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;{@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Or</span><!--
+--><span class="label-100 pred0">tho</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0"> or</span><!--
+--><span class="label-100 pred0">th</span><!--
+--><span class="label-100 pred0">og</span><!--
+--><span class="label-100 pred0">on</span><!--
+--><span class="label-100 pred0">ality</span><!--
+--><span class="label-100 pred0"> tolerance</span><!--
+--><span class="label-100 pred0">}:</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">e</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0"> &lt;/</span><!--
+--><span class="label-100 pred0">ul</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;/</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">These</span><!--
+--><span class="label-100 pred0"> default</span><!--
+--><span class="label-100 pred0"> values</span><!--
+--><span class="label-100 pred0"> may</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> overridden</span><!--
+--><span class="label-100 pred0"> after</span><!--
+--><span class="label-100 pred0"> construction</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0"> If</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> {@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Con</span><!--
+--><span class="label-100 pred0">ver</span><!--
+--><span class="label-100 pred0">gence</span><!--
+--><span class="label-100 pred0">Checker</span><!--
+--><span class="label-100 pred0"> vector</span><!--
+--><span class="label-100 pred0">ial</span><!--
+--><span class="label-100 pred0"> convergence</span><!--
+--><span class="label-100 pred0"> checker</span><!--
+--><span class="label-100 pred0">}</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> non</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">null</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> it</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> will</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> used</span><!--
+--><span class="label-100 pred0"> instead</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> {@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Cost</span><!--
+--><span class="label-100 pred0">Relative</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0"> cost</span><!--
+--><span class="label-100 pred0"> relative</span><!--
+--><span class="label-100 pred0"> tolerance</span><!--
+--><span class="label-100 pred0">}</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> and</span><!--
+--><span class="label-100 pred0"> {@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Par</span><!--
+--><span class="label-100 pred0">Relative</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0"> parameters</span><!--
+--><span class="label-100 pred0"> relative</span><!--
+--><span class="label-100 pred0"> tolerance</span><!--
+--><span class="label-100 pred0">}</span><!--
+--><span class="label-100 pred0"> settings</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> Le</span><!--
+--><span class="label-100 pred0">ven</span><!--
+--><span class="label-100 pred0">berg</span><!--
+--><span class="label-100 pred0">Mar</span><!--
+--><span class="label-100 pred0">qu</span><!--
+--><span class="label-100 pred0">ard</span><!--
+--><span class="label-100 pred0">t</span><!--
+--><span class="label-100 pred0">Optimizer</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0"> up</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> superclass</span><!--
+--><span class="label-100 pred0"> with</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> default</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0"> max</span><!--
+--><span class="label-100 pred0"> cost</span><!--
+--><span class="label-100 pred0"> evalu</span><!--
+--><span class="label-100 pred0">ations</span><!--
+--><span class="label-100 pred0"> setting</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0">Max</span><!--
+--><span class="label-100 pred0">Iterations</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> default</span><!--
+--><span class="label-100 pred0"> values</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> tuning</span><!--
+--><span class="label-100 pred0"> parameters</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0">Initial</span><!--
+--><span class="label-100 pred0">Step</span><!--
+--><span class="label-100 pred0">Bound</span><!--
+--><span class="label-100 pred0">Factor</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0">Cost</span><!--
+--><span class="label-100 pred0">Relative</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">e</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0">Par</span><!--
+--><span class="label-100 pred0">Relative</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">e</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0">Or</span><!--
+--><span class="label-100 pred0">tho</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">e</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Set</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> positive</span><!--
+--><span class="label-100 pred0"> input</span><!--
+--><span class="label-100 pred0"> variable</span><!--
+--><span class="label-100 pred0"> used</span><!--
+--><span class="label-100 pred0"> in</span><!--
+--><span class="label-100 pred0"> determining</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> initial</span><!--
+--><span class="label-100 pred0"> step</span><!--
+--><span class="label-100 pred0"> bound</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> This</span><!--
+--><span class="label-100 pred0"> bound</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> product</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> initial</span><!--
+--><span class="label-100 pred0">Step</span><!--
+--><span class="label-100 pred0">Bound</span><!--
+--><span class="label-100 pred0">Factor</span><!--
+--><span class="label-100 pred0"> and</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> e</span><!--
+--><span class="label-100 pred0">uclidean</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> norm</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> diag</span><!--
+--><span class="label-100 pred0">*</span><!--
+--><span class="label-100 pred0">x</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> non</span><!--
+--><span class="label-100 pred0">zero</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> or</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> initial</span><!--
+--><span class="label-100 pred0">Step</span><!--
+--><span class="label-100 pred0">Bound</span><!--
+--><span class="label-100 pred0">Factor</span><!--
+--><span class="label-100 pred0"> itself</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0"> In</span><!--
+--><span class="label-100 pred0"> most</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> cases</span><!--
+--><span class="label-100 pred0"> factor</span><!--
+--><span class="label-100 pred0"> should</span><!--
+--><span class="label-100 pred0"> lie</span><!--
+--><span class="label-100 pred0"> in</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> interval</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">).</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> generally</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> recommended</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> j</span><!--
+--><span class="label-100 pred0">ac</span><!--
+--><span class="label-100 pred0">Norm</span><!--
+--><span class="label-100 pred0">    </span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">cols</span><!--
+--><span class="label-100 pred0">];</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> beta</span><!--
+--><span class="label-100 pred0">       </span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">cols</span><!--
+--><span class="label-100 pred0">];</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> permutation</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">cols</span><!--
+--><span class="label-100 pred0">];</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> lm</span><!--
+--><span class="label-100 pred0">Dir</span><!--
+--><span class="label-100 pred0">      </span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">cols</span><!--
+--><span class="label-100 pred0">];</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> local</span><!--
+--><span class="label-100 pred0"> point</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0"> delta</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">Norm</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> method</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> all</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> points</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> simp</span><!--
+--><span class="label0 pred0">lex</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> only</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> best</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> worst</span><!--
+--><span class="label0 pred0"> ones</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;/</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> iteration</span><!--
+--><span class="label0 pred0"> index</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> current</span><!--
+--><span class="label0 pred0"> iteration</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> previous</span><!--
+--><span class="label0 pred0"> point</span><!--
+--><span class="label0 pred0"> from</span><!--
+--><span class="label0 pred0"> previous</span><!--
+--><span class="label0 pred0"> iteration</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> current</span><!--
+--><span class="label0 pred0"> point</span><!--
+--><span class="label0 pred0"> from</span><!--
+--><span class="label0 pred0"> current</span><!--
+--><span class="label0 pred0"> iteration</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> true</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> algorithm</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> considered</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> have</span><!--
+--><span class="label0 pred0"> conver</span><!--
+--><span class="label0 pred0">ged</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+ </span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label1 pred0"> conver</span><!--
+--><span class="label1 pred0">ged</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">int</span><!--
+--><span class="label0 pred0"> iteration</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Vector</span><!--
+--><span class="label0 pred0">ial</span><!--
+--><span class="label0 pred0">Point</span><!--
+--><span class="label0 pred0">ValuePair</span><!--
+--><span class="label1 pred0"> previous</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Vector</span><!--
+--><span class="label0 pred0">ial</span><!--
+--><span class="label0 pred0">Point</span><!--
+--><span class="label0 pred0">ValuePair</span><!--
+--><span class="label1 pred0"> current</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">}</span>
+</div>
+<hr/>
+<div>
+<h3>
+Math, 68
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>        setConvergenceChecker(null);<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>        VectorialPointValuePair current = new VectorialPointValuePair(point, objective);<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>            VectorialPointValuePair previous = current;<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>                return current;<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>                current = new VectorialPointValuePair(point, objective);<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>                if (checker!= null) {<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>                    if (checker.converged(getIterations(), previous, current)) {<br/>                        return current;                        <br/>                    }<br/>                } else {<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>                        return current;<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>                }<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">ul</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">   </span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;{@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Con</span><!--
+--><span class="label-100 pred0">ver</span><!--
+--><span class="label-100 pred0">gence</span><!--
+--><span class="label-100 pred0">Checker</span><!--
+--><span class="label-100 pred0"> vector</span><!--
+--><span class="label-100 pred0">ial</span><!--
+--><span class="label-100 pred0"> convergence</span><!--
+--><span class="label-100 pred0"> checker</span><!--
+--><span class="label-100 pred0">}:</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">   </span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;{@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">setInitial</span><!--
+--><span class="label-100 pred0">Step</span><!--
+--><span class="label-100 pred0">Bound</span><!--
+--><span class="label-100 pred0">Factor</span><!--
+--><span class="label-100 pred0"> initial</span><!--
+--><span class="label-100 pred0"> step</span><!--
+--><span class="label-100 pred0"> bound</span><!--
+--><span class="label-100 pred0"> factor</span><!--
+--><span class="label-100 pred0">}:</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">   </span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;{@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">setMax</span><!--
+--><span class="label-100 pred0">Iterations</span><!--
+--><span class="label-100 pred0"> max</span><!--
+--><span class="label-100 pred0">imal</span><!--
+--><span class="label-100 pred0"> iterations</span><!--
+--><span class="label-100 pred0">}:</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">   </span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;{@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Cost</span><!--
+--><span class="label-100 pred0">Relative</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0"> cost</span><!--
+--><span class="label-100 pred0"> relative</span><!--
+--><span class="label-100 pred0"> tolerance</span><!--
+--><span class="label-100 pred0">}:</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">e</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">   </span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;{@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Par</span><!--
+--><span class="label-100 pred0">Relative</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0"> parameters</span><!--
+--><span class="label-100 pred0"> relative</span><!--
+--><span class="label-100 pred0"> tolerance</span><!--
+--><span class="label-100 pred0">}:</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">e</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">   </span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;{@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Or</span><!--
+--><span class="label-100 pred0">tho</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0"> or</span><!--
+--><span class="label-100 pred0">th</span><!--
+--><span class="label-100 pred0">og</span><!--
+--><span class="label-100 pred0">on</span><!--
+--><span class="label-100 pred0">ality</span><!--
+--><span class="label-100 pred0"> tolerance</span><!--
+--><span class="label-100 pred0">}:</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">e</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0"> &lt;/</span><!--
+--><span class="label-100 pred0">ul</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;/</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">These</span><!--
+--><span class="label-100 pred0"> default</span><!--
+--><span class="label-100 pred0"> values</span><!--
+--><span class="label-100 pred0"> may</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> overridden</span><!--
+--><span class="label-100 pred0"> after</span><!--
+--><span class="label-100 pred0"> construction</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0"> If</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> {@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Con</span><!--
+--><span class="label-100 pred0">ver</span><!--
+--><span class="label-100 pred0">gence</span><!--
+--><span class="label-100 pred0">Checker</span><!--
+--><span class="label-100 pred0"> vector</span><!--
+--><span class="label-100 pred0">ial</span><!--
+--><span class="label-100 pred0"> convergence</span><!--
+--><span class="label-100 pred0"> checker</span><!--
+--><span class="label-100 pred0">}</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> non</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">null</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> it</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> will</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> used</span><!--
+--><span class="label-100 pred0"> instead</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> {@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Cost</span><!--
+--><span class="label-100 pred0">Relative</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0"> cost</span><!--
+--><span class="label-100 pred0"> relative</span><!--
+--><span class="label-100 pred0"> tolerance</span><!--
+--><span class="label-100 pred0">}</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> and</span><!--
+--><span class="label-100 pred0"> {@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Par</span><!--
+--><span class="label-100 pred0">Relative</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0"> parameters</span><!--
+--><span class="label-100 pred0"> relative</span><!--
+--><span class="label-100 pred0"> tolerance</span><!--
+--><span class="label-100 pred0">}</span><!--
+--><span class="label-100 pred0"> settings</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> Le</span><!--
+--><span class="label-100 pred0">ven</span><!--
+--><span class="label-100 pred0">berg</span><!--
+--><span class="label-100 pred0">Mar</span><!--
+--><span class="label-100 pred0">qu</span><!--
+--><span class="label-100 pred0">ard</span><!--
+--><span class="label-100 pred0">t</span><!--
+--><span class="label-100 pred0">Optimizer</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0"> up</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> superclass</span><!--
+--><span class="label-100 pred0"> with</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> default</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0"> max</span><!--
+--><span class="label-100 pred0"> cost</span><!--
+--><span class="label-100 pred0"> evalu</span><!--
+--><span class="label-100 pred0">ations</span><!--
+--><span class="label-100 pred0"> setting</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0">Max</span><!--
+--><span class="label-100 pred0">Iterations</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> default</span><!--
+--><span class="label-100 pred0"> values</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> tuning</span><!--
+--><span class="label-100 pred0"> parameters</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0">Initial</span><!--
+--><span class="label-100 pred0">Step</span><!--
+--><span class="label-100 pred0">Bound</span><!--
+--><span class="label-100 pred0">Factor</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0">Cost</span><!--
+--><span class="label-100 pred0">Relative</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">e</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0">Par</span><!--
+--><span class="label-100 pred0">Relative</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">e</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0">Or</span><!--
+--><span class="label-100 pred0">tho</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">e</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Set</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> positive</span><!--
+--><span class="label-100 pred0"> input</span><!--
+--><span class="label-100 pred0"> variable</span><!--
+--><span class="label-100 pred0"> used</span><!--
+--><span class="label-100 pred0"> in</span><!--
+--><span class="label-100 pred0"> determining</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> initial</span><!--
+--><span class="label-100 pred0"> step</span><!--
+--><span class="label-100 pred0"> bound</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> This</span><!--
+--><span class="label-100 pred0"> bound</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> product</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> initial</span><!--
+--><span class="label-100 pred0">Step</span><!--
+--><span class="label-100 pred0">Bound</span><!--
+--><span class="label-100 pred0">Factor</span><!--
+--><span class="label-100 pred0"> and</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> e</span><!--
+--><span class="label-100 pred0">uclidean</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> norm</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> diag</span><!--
+--><span class="label-100 pred0">*</span><!--
+--><span class="label-100 pred0">x</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> non</span><!--
+--><span class="label-100 pred0">zero</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> or</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> initial</span><!--
+--><span class="label-100 pred0">Step</span><!--
+--><span class="label-100 pred0">Bound</span><!--
+--><span class="label-100 pred0">Factor</span><!--
+--><span class="label-100 pred0"> itself</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0"> In</span><!--
+--><span class="label-100 pred0"> most</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> cases</span><!--
+--><span class="label-100 pred0"> factor</span><!--
+--><span class="label-100 pred0"> should</span><!--
+--><span class="label-100 pred0"> lie</span><!--
+--><span class="label-100 pred0"> in</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> interval</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">).</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> generally</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> recommended</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> j</span><!--
+--><span class="label-100 pred0">ac</span><!--
+--><span class="label-100 pred0">Norm</span><!--
+--><span class="label-100 pred0">    </span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">cols</span><!--
+--><span class="label-100 pred0">];</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> beta</span><!--
+--><span class="label-100 pred0">       </span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">cols</span><!--
+--><span class="label-100 pred0">];</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> permutation</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">cols</span><!--
+--><span class="label-100 pred0">];</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> lm</span><!--
+--><span class="label-100 pred0">Dir</span><!--
+--><span class="label-100 pred0">      </span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">cols</span><!--
+--><span class="label-100 pred0">];</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> local</span><!--
+--><span class="label-100 pred0"> point</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0"> delta</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">Norm</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">/*</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Licensed</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> Apache</span><!--
+--><span class="label0 pred0"> Software</span><!--
+--><span class="label0 pred0"> Foundation</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">ASF</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> one</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> more</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> contributor</span><!--
+--><span class="label0 pred0"> license</span><!--
+--><span class="label0 pred0"> agreements</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> See</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> NOTICE</span><!--
+--><span class="label0 pred0"> file</span><!--
+--><span class="label0 pred0"> distributed</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> work</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> additional</span><!--
+--><span class="label0 pred0"> information</span><!--
+--><span class="label0 pred0"> regarding</span><!--
+--><span class="label0 pred0"> copyright</span><!--
+--><span class="label0 pred0"> ownership</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> ASF</span><!--
+--><span class="label0 pred0"> licenses</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> file</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> You</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> Apache</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Version</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">the</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">License</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0"> you</span><!--
+--><span class="label0 pred0"> may</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> use</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> file</span><!--
+--><span class="label0 pred0"> except</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> compliance</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> You</span><!--
+--><span class="label0 pred0"> may</span><!--
+--><span class="label0 pred0"> obtain</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> copy</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> at</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">     </span><!--
+--><span class="label0 pred0"> http</span><!--
+--><span class="label0 pred0">://</span><!--
+--><span class="label0 pred0">www</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">apache</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">org</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">licenses</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">LICENSE</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Unless</span><!--
+--><span class="label0 pred0"> required</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> applicable</span><!--
+--><span class="label0 pred0"> law</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> agreed</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> writing</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> software</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> distributed</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> distributed</span><!--
+--><span class="label0 pred0"> on</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">AS</span><!--
+--><span class="label0 pred0"> IS</span><!--
+--><span class="label0 pred0">&quot;</span><!--
+--><span class="label0 pred0"> BASIS</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> WITHOUT</span><!--
+--><span class="label0 pred0"> WARRANTIES</span><!--
+--><span class="label0 pred0"> OR</span><!--
+--><span class="label0 pred0"> CONDITIONS</span><!--
+--><span class="label0 pred0"> OF</span><!--
+--><span class="label0 pred0"> ANY</span><!--
+--><span class="label0 pred0"> KIND</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> either</span><!--
+--><span class="label0 pred0"> express</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> implied</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> See</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> specific</span><!--
+--><span class="label0 pred0"> language</span><!--
+--><span class="label0 pred0"> governing</span><!--
+--><span class="label0 pred0"> permissions</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> limitations</span><!--
+--><span class="label0 pred0"> under</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> License</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">package</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">apache</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">commons</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">math</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">optimization</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">apache</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">commons</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">math</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Function</span><!--
+--><span class="label0 pred0">Evaluation</span><!--
+--><span class="label0 pred0">Exception</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">apache</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">commons</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">math</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">analysis</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Different</span><!--
+--><span class="label0 pred0">iable</span><!--
+--><span class="label0 pred0">Mult</span><!--
+--><span class="label0 pred0">ivariate</span><!--
+--><span class="label0 pred0">Vector</span><!--
+--><span class="label0 pred0">ial</span><!--
+--><span class="label0 pred0">Function</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">/**</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> This</span><!--
+--><span class="label0 pred0"> interface</span><!--
+--><span class="label0 pred0"> represents</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> optimization</span><!--
+--><span class="label0 pred0"> algorithm</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">link</span><!--
+--><span class="label0 pred0"> Different</span><!--
+--><span class="label0 pred0">iable</span><!--
+--><span class="label0 pred0">Mult</span><!--
+--><span class="label0 pred0">ivariate</span><!--
+--><span class="label0 pred0">Vector</span><!--
+--><span class="label0 pred0">ial</span><!--
+--><span class="label0 pred0">Function</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> vector</span><!--
+--><span class="label0 pred0">ial</span><!--
+--><span class="label0 pred0"> different</span><!--
+--><span class="label0 pred0">iable</span><!--
+--><span class="label0 pred0"> objective</span><!--
+--><span class="label0 pred0"> functions</span><!--
+--><span class="label0 pred0">}.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">Optimization</span><!--
+--><span class="label0 pred0"> algorithms</span><!--
+--><span class="label0 pred0"> find</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> input</span><!--
+--><span class="label0 pred0"> point</span><!--
+--><span class="label0 pred0"> set</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0"> either</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">link</span><!--
+--><span class="label0 pred0"> Goal</span><!--
+--><span class="label0 pred0">Type</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> max</span><!--
+--><span class="label0 pred0">imize</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> minimize</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> objective</span><!--
+--><span class="label0 pred0"> function</span><!--
+--><span class="label0 pred0">.&lt;/</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">see</span><!--
+--><span class="label0 pred0"> Mult</span><!--
+--><span class="label0 pred0">ivariate</span><!--
+--><span class="label0 pred0">Real</span><!--
+--><span class="label0 pred0">Optimizer</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">see</span><!--
+--><span class="label0 pred0"> Different</span><!--
+--><span class="label0 pred0">iable</span><!--
+--><span class="label0 pred0">Mult</span><!--
+--><span class="label0 pred0">ivariate</span><!--
+--><span class="label0 pred0">Real</span><!--
+--><span class="label0 pred0">Optimizer</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">version</span><!--
+--><span class="label0 pred0"> $</span><!--
+--><span class="label0 pred0">Revision</span><!--
+--><span class="label0 pred0">$</span><!--
+--><span class="label0 pred0"> $</span><!--
+--><span class="label0 pred0">Date</span><!--
+--><span class="label0 pred0">$</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">since</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">public</span><!--
+--><span class="label0 pred0"> interface</span><!--
+--><span class="label0 pred0"> Different</span><!--
+--><span class="label0 pred0">iable</span><!--
+--><span class="label0 pred0">Mult</span><!--
+--><span class="label0 pred0">ivariate</span><!--
+--><span class="label0 pred0">Vector</span><!--
+--><span class="label0 pred0">ial</span><!--
+--><span class="label0 pred0">Optimizer</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0"> Set</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> max</span><!--
+--><span class="label0 pred0">imal</span><!--
+--><span class="label0 pred0"> number</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> iterations</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> algorithm</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> max</span><!--
+--><span class="label0 pred0">Iterations</span><!--
+--><span class="label0 pred0"> max</span><!--
+--><span class="label0 pred0">imal</span><!--
+--><span class="label0 pred0"> number</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> function</span><!--
+--><span class="label0 pred0"> calls</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> .</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> set</span><!--
+--><span class="label0 pred0">Max</span><!--
+--><span class="label0 pred0">Iterations</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">int</span><!--
+--><span class="label0 pred0"> max</span><!--
+--><span class="label0 pred0">Iterations</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0"> Get</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> max</span><!--
+--><span class="label0 pred0">imal</span><!--
+--><span class="label0 pred0"> number</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> iterations</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> algorithm</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+     </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> max</span><!--
+--><span class="label0 pred0">imal</span><!--
+--><span class="label0 pred0"> number</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> iterations</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> getMax</span><!--
+--><span class="label0 pred0">Iterations</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0"> Get</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> number</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> iterations</span><!--
+--><span class="label0 pred0"> realized</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> algorithm</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> number</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> iterations</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label1 pred1"> get</span><!--
+--><span class="label1 pred1">Iterations</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0"> Set</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> max</span><!--
+--><span class="label0 pred0">imal</span><!--
+--><span class="label0 pred0"> number</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> functions</span><!--
+--><span class="label0 pred0"> evalu</span><!--
+--><span class="label0 pred0">ations</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> max</span><!--
+--><span class="label0 pred0">Evalu</span><!--
+--><span class="label0 pred0">ations</span><!--
+--><span class="label0 pred0"> max</span><!--
+--><span class="label0 pred0">imal</span><!--
+--><span class="label0 pred0"> number</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> function</span><!--
+--><span class="label0 pred0"> evalu</span><!--
+--><span class="label0 pred0">ations</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred4"> set</span><!--
+--><span class="label0 pred5">Max</span><!--
+--><span class="label0 pred3">Evalu</span><!--
+--><span class="label0 pred3">ations</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">int</span><!--
+--><span class="label0 pred0"> max</span><!--
+--><span class="label0 pred0">Evalu</span><!--
+--><span class="label0 pred0">ations</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0"> Get</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> max</span><!--
+--><span class="label0 pred0">imal</span><!--
+--><span class="label0 pred0"> number</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> functions</span><!--
+--><span class="label0 pred0"> evalu</span><!--
+--><span class="label0 pred0">ations</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> max</span><!--
+--><span class="label0 pred0">imal</span><!--
+--><span class="label0 pred0"> number</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> functions</span><!--
+--><span class="label0 pred0"> evalu</span><!--
+--><span class="label0 pred0">ations</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+  </span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> getMax</span><!--
+--><span class="label0 pred0">Evalu</span><!--
+--><span class="label0 pred0">ations</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0"> Get</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> number</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> evalu</span><!--
+--><span class="label0 pred0">ations</span><!--
+--><span class="label0 pred0"> of</span>
+</div>
+<hr/>
+<div>
+<h3>
+Math, 68
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>        setConvergenceChecker(null);<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>        VectorialPointValuePair current = new VectorialPointValuePair(point, objective);<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>            VectorialPointValuePair previous = current;<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>                return current;<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>                current = new VectorialPointValuePair(point, objective);<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>                if (checker!= null) {<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>                    if (checker.converged(getIterations(), previous, current)) {<br/>                        return current;                        <br/>                    }<br/>                } else {<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>                        return current;<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>                }<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">ul</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">   </span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;{@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Con</span><!--
+--><span class="label-100 pred0">ver</span><!--
+--><span class="label-100 pred0">gence</span><!--
+--><span class="label-100 pred0">Checker</span><!--
+--><span class="label-100 pred0"> vector</span><!--
+--><span class="label-100 pred0">ial</span><!--
+--><span class="label-100 pred0"> convergence</span><!--
+--><span class="label-100 pred0"> checker</span><!--
+--><span class="label-100 pred0">}:</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">   </span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;{@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">setInitial</span><!--
+--><span class="label-100 pred0">Step</span><!--
+--><span class="label-100 pred0">Bound</span><!--
+--><span class="label-100 pred0">Factor</span><!--
+--><span class="label-100 pred0"> initial</span><!--
+--><span class="label-100 pred0"> step</span><!--
+--><span class="label-100 pred0"> bound</span><!--
+--><span class="label-100 pred0"> factor</span><!--
+--><span class="label-100 pred0">}:</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">   </span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;{@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">setMax</span><!--
+--><span class="label-100 pred0">Iterations</span><!--
+--><span class="label-100 pred0"> max</span><!--
+--><span class="label-100 pred0">imal</span><!--
+--><span class="label-100 pred0"> iterations</span><!--
+--><span class="label-100 pred0">}:</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">   </span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;{@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Cost</span><!--
+--><span class="label-100 pred0">Relative</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0"> cost</span><!--
+--><span class="label-100 pred0"> relative</span><!--
+--><span class="label-100 pred0"> tolerance</span><!--
+--><span class="label-100 pred0">}:</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">e</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">   </span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;{@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Par</span><!--
+--><span class="label-100 pred0">Relative</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0"> parameters</span><!--
+--><span class="label-100 pred0"> relative</span><!--
+--><span class="label-100 pred0"> tolerance</span><!--
+--><span class="label-100 pred0">}:</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">e</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">   </span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;{@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Or</span><!--
+--><span class="label-100 pred0">tho</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0"> or</span><!--
+--><span class="label-100 pred0">th</span><!--
+--><span class="label-100 pred0">og</span><!--
+--><span class="label-100 pred0">on</span><!--
+--><span class="label-100 pred0">ality</span><!--
+--><span class="label-100 pred0"> tolerance</span><!--
+--><span class="label-100 pred0">}:</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">e</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0"> &lt;/</span><!--
+--><span class="label-100 pred0">ul</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;/</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">These</span><!--
+--><span class="label-100 pred0"> default</span><!--
+--><span class="label-100 pred0"> values</span><!--
+--><span class="label-100 pred0"> may</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> overridden</span><!--
+--><span class="label-100 pred0"> after</span><!--
+--><span class="label-100 pred0"> construction</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0"> If</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> {@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Con</span><!--
+--><span class="label-100 pred0">ver</span><!--
+--><span class="label-100 pred0">gence</span><!--
+--><span class="label-100 pred0">Checker</span><!--
+--><span class="label-100 pred0"> vector</span><!--
+--><span class="label-100 pred0">ial</span><!--
+--><span class="label-100 pred0"> convergence</span><!--
+--><span class="label-100 pred0"> checker</span><!--
+--><span class="label-100 pred0">}</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> non</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">null</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> it</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> will</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> used</span><!--
+--><span class="label-100 pred0"> instead</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> {@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Cost</span><!--
+--><span class="label-100 pred0">Relative</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0"> cost</span><!--
+--><span class="label-100 pred0"> relative</span><!--
+--><span class="label-100 pred0"> tolerance</span><!--
+--><span class="label-100 pred0">}</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> and</span><!--
+--><span class="label-100 pred0"> {@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Par</span><!--
+--><span class="label-100 pred0">Relative</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0"> parameters</span><!--
+--><span class="label-100 pred0"> relative</span><!--
+--><span class="label-100 pred0"> tolerance</span><!--
+--><span class="label-100 pred0">}</span><!--
+--><span class="label-100 pred0"> settings</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> Le</span><!--
+--><span class="label-100 pred0">ven</span><!--
+--><span class="label-100 pred0">berg</span><!--
+--><span class="label-100 pred0">Mar</span><!--
+--><span class="label-100 pred0">qu</span><!--
+--><span class="label-100 pred0">ard</span><!--
+--><span class="label-100 pred0">t</span><!--
+--><span class="label-100 pred0">Optimizer</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0"> up</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> superclass</span><!--
+--><span class="label-100 pred0"> with</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> default</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0"> max</span><!--
+--><span class="label-100 pred0"> cost</span><!--
+--><span class="label-100 pred0"> evalu</span><!--
+--><span class="label-100 pred0">ations</span><!--
+--><span class="label-100 pred0"> setting</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0">Max</span><!--
+--><span class="label-100 pred0">Iterations</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> default</span><!--
+--><span class="label-100 pred0"> values</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> tuning</span><!--
+--><span class="label-100 pred0"> parameters</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0">Initial</span><!--
+--><span class="label-100 pred0">Step</span><!--
+--><span class="label-100 pred0">Bound</span><!--
+--><span class="label-100 pred0">Factor</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0">Cost</span><!--
+--><span class="label-100 pred0">Relative</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">e</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0">Par</span><!--
+--><span class="label-100 pred0">Relative</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">e</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0">Or</span><!--
+--><span class="label-100 pred0">tho</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">e</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Set</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> positive</span><!--
+--><span class="label-100 pred0"> input</span><!--
+--><span class="label-100 pred0"> variable</span><!--
+--><span class="label-100 pred0"> used</span><!--
+--><span class="label-100 pred0"> in</span><!--
+--><span class="label-100 pred0"> determining</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> initial</span><!--
+--><span class="label-100 pred0"> step</span><!--
+--><span class="label-100 pred0"> bound</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> This</span><!--
+--><span class="label-100 pred0"> bound</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> product</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> initial</span><!--
+--><span class="label-100 pred0">Step</span><!--
+--><span class="label-100 pred0">Bound</span><!--
+--><span class="label-100 pred0">Factor</span><!--
+--><span class="label-100 pred0"> and</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> e</span><!--
+--><span class="label-100 pred0">uclidean</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> norm</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> diag</span><!--
+--><span class="label-100 pred0">*</span><!--
+--><span class="label-100 pred0">x</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> non</span><!--
+--><span class="label-100 pred0">zero</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> or</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> initial</span><!--
+--><span class="label-100 pred0">Step</span><!--
+--><span class="label-100 pred0">Bound</span><!--
+--><span class="label-100 pred0">Factor</span><!--
+--><span class="label-100 pred0"> itself</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0"> In</span><!--
+--><span class="label-100 pred0"> most</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> cases</span><!--
+--><span class="label-100 pred0"> factor</span><!--
+--><span class="label-100 pred0"> should</span><!--
+--><span class="label-100 pred0"> lie</span><!--
+--><span class="label-100 pred0"> in</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> interval</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">).</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> generally</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> recommended</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> j</span><!--
+--><span class="label-100 pred0">ac</span><!--
+--><span class="label-100 pred0">Norm</span><!--
+--><span class="label-100 pred0">    </span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">cols</span><!--
+--><span class="label-100 pred0">];</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> beta</span><!--
+--><span class="label-100 pred0">       </span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">cols</span><!--
+--><span class="label-100 pred0">];</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> permutation</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">cols</span><!--
+--><span class="label-100 pred0">];</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> lm</span><!--
+--><span class="label-100 pred0">Dir</span><!--
+--><span class="label-100 pred0">      </span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">cols</span><!--
+--><span class="label-100 pred0">];</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> local</span><!--
+--><span class="label-100 pred0"> point</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0"> delta</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">Norm</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">int</span><!--
+--><span class="label0 pred0"> max</span><!--
+--><span class="label0 pred0">Iterations</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">max</span><!--
+--><span class="label0 pred0">Iterations</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> max</span><!--
+--><span class="label0 pred0">Iterations</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">inheritDoc</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> getMax</span><!--
+--><span class="label0 pred0">Iterations</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> max</span><!--
+--><span class="label0 pred0">Iterations</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">inheritDoc</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label1 pred0"> get</span><!--
+--><span class="label1 pred0">Iterations</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> iterations</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">inheritDoc</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> set</span><!--
+--><span class="label0 pred0">Max</span><!--
+--><span class="label0 pred0">Evalu</span><!--
+--><span class="label0 pred0">ations</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">int</span><!--
+--><span class="label0 pred0"> max</span><!--
+--><span class="label0 pred0">Evalu</span><!--
+--><span class="label0 pred0">ations</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">max</span><!--
+--><span class="label0 pred0">Evalu</span><!--
+--><span class="label0 pred0">ations</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> max</span><!--
+--><span class="label0 pred0">Evalu</span><!--
+--><span class="label0 pred0">ations</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">inheritDoc</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> getMax</span><!--
+--><span class="label0 pred0">Evalu</span><!--
+--><span class="label0 pred0">ations</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> max</span><!--
+--><span class="label0 pred0">Evalu</span><!--
+--><span class="label0 pred0">ations</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">inheritDoc</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">Evalu</span><!--
+--><span class="label0 pred0">ations</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> objective</span><!--
+--><span class="label0 pred0">Evalu</span><!--
+--><span class="label0 pred0">ations</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">inheritDoc</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">J</span><!--
+--><span class="label0 pred0">acobian</span><!--
+--><span class="label0 pred0">Evalu</span><!--
+--><span class="label0 pred0">ations</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> j</span><!--
+--><span class="label0 pred0">acobian</span><!--
+--><span class="label0 pred0">Evalu</span><!--
+--><span class="label0 pred0">ations</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">inheritDoc</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> set</span><!--
+--><span class="label0 pred0">Con</span><!--
+--><span class="label0 pred0">ver</span><!--
+--><span class="label0 pred0">gence</span><!--
+--><span class="label0 pred0">Checker</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Vector</span><!--
+--><span class="label0 pred0">ial</span><!--
+--><span class="label0 pred0">Con</span><!--
+--><span class="label0 pred0">ver</span><!--
+--><span class="label0 pred0">gence</span><!--
+--><span class="label0 pred0">Checker</span><!--
+--><span class="label0 pred0"> convergence</span><!--
+--><span class="label0 pred0">Checker</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">checker</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> convergence</span><!--
+--><span class="label0 pred0">Checker</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">inheritDoc</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> Vector</span><!--
+--><span class="label0 pred0">ial</span><!--
+--><span class="label0 pred0">Con</span><!--
+--><span class="label0 pred0">ver</span><!--
+--><span class="label0 pred0">gence</span><!--
+--><span class="label0 pred0">Checker</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">Con</span><!--
+--><span class="label0 pred0">ver</span><!--
+--><span class="label0 pred0">gence</span><!--
+--><span class="label0 pred0">Checker</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> checker</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0"> Increment</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> iterations</span><!--
+--><span class="label0 pred0"> counter</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">exception</span><!--
+--><span class="label0 pred0"> Optimization</span><!--
+--><span class="label0 pred0">Exception</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> max</span><!--
+--><span class="label0 pred0">imal</span><!--
+--><span class="label0 pred0"> number</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> iterations</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> exceeded</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> protected</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> increment</span><!--
+--><span class="label0 pred0">Iterations</span><!--
+--><span class="label0 pred0">Counter</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> throws</span><!--
+--><span class="label0 pred0"> Optimization</span><!--
+--><span class="label0 pred0">Exception</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (++</span><!--
+--><span class="label0 pred0">iterations</span><!--
+--><span class="label0 pred0"> &gt;</span><!--
+--><span class="label0 pred0"> max</span><!--
+--><span class="label0 pred0">Iterations</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> throw</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Optimization</span><!--
+--><span class="label0 pred0">Exception</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> Max</span><!--
+--><span class="label0 pred0">Iterations</span><!--
+--><span class="label0 pred0">Exceeded</span><!--
+--><span class="label0 pred0">Exception</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">max</span><!--
+--><span class="label0 pred0">Iterations</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Update</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> j</span><!--
+--><span class="label0 pred0">acobian</span><!--
+--><span class="label0 pred0"> matrix</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">exception</span><!--
+--><span class="label0 pred0"> Function</span><!--
+--><span class="label0 pred0">Evaluation</span><!--
+--><span class="label0 pred0">Exception</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> function</span><!--
+--><span class="label0 pred0"> j</span><!--
+--><span class="label0 pred0">acobian</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> cannot</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> evaluated</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> its</span><!--
+--><span class="label0 pred0"> dimension</span><!--
+--><span class="label0 pred0"> doesn</span><!--
+--><span class="label0 pred0">&#x27;t</span><!--
+--><span class="label0 pred0"> match</span><!--
+--><span class="label0 pred0"> problem</span><!--
+--><span class="label0 pred0"> dimension</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> protected</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> update</span><!--
+--><span class="label0 pred0">J</span><!--
+--><span class="label0 pred0">acobian</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> throws</span><!--
+--><span class="label0 pred0"> Function</span><!--
+--><span class="label0 pred0">Evaluation</span><!--
+--><span class="label0 pred0">Exception</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> ++</span><!--
+--><span class="label0 pred0">jacob</span><!--
+--><span class="label0 pred0">ian</span><!--
+--><span class="label0 pred0">Evalu</span><!--
+--><span class="label0 pred0">ations</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> j</span><!--
+--><span class="label0 pred0">acobian</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> j</span><!--
+--><span class="label0 pred0">F</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">value</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">point</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">jacob</span><!--
+--><span class="label0 pred0">ian</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">length</span><!--
+--><span class="label0 pred0"> !=</span><!--
+--><span class="label0 pred0"> rows</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> throw</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Function</span><!--
+--><span class="label0 pred0">Evaluation</span><!--
+--><span class="label0 pred0">Exception</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">point</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">dimension</span><!--
+--><span class="label0 pred0"> mismatch</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0"> !=</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">}&quot;,</span><!--
+--><span class="label0 pred0">
+                                                 </span><!--
+--><span class="label0 pred0"> j</span><!--
+--><span class="label0 pred0">acobian</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">length</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> rows</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">int</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0"> rows</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0">++)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0">[]</span><!--
+--><span class="label0 pred0"> ji</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> j</span><!--
+--><span class="label0 pred0">acobian</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">i</span><!--
+--><span class="label0 pred0">];</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> factor</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred1">Math</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">sqrt</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">residual</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0">Weights</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">i</span><!--
+--><span class="label0 pred0">]);</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">int</span><!--
+--><span class="label0 pred0"> j</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> j</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0"> cols</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> ++</span><!--
+--><span class="label0 pred0">j</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> ji</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">j</span><!--
+--><span class="label0 pred0">]</span><!--
+--><span class="label0 pred0"> *=</span><!--
+--><span class="label0 pred0"> factor</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Update</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> residual</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0"> array</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> cost</span><!--
+--><span class="label0 pred0"> function</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">exception</span><!--
+--><span class="label0 pred0"> Function</span><!--
+--><span class="label0 pred0">Evaluation</span><!--
+--><span class="label0 pred0">Exception</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> function</span><!--
+--><span class="label0 pred0"> cannot</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> evaluated</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> its</span><!--
+--><span class="label0 pred0"> dimension</span><!--
+--><span class="label0 pred0"> doesn</span><!--
+--><span class="label0 pred0">&#x27;t</span><!--
+--><span class="label0 pred0"> match</span><!--
+--><span class="label0 pred0"> problem</span><!--
+--><span class="label0 pred0"> dimension</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> max</span>
+</div>
+<hr/>
+<div>
+<h3>
+Math, 68
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>        setConvergenceChecker(null);<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>        VectorialPointValuePair current = new VectorialPointValuePair(point, objective);<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>            VectorialPointValuePair previous = current;<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>                return current;<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>                current = new VectorialPointValuePair(point, objective);<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>                if (checker!= null) {<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>                    if (checker.converged(getIterations(), previous, current)) {<br/>                        return current;                        <br/>                    }<br/>                } else {<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>                        return current;<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>                }<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">ul</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">   </span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;{@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Con</span><!--
+--><span class="label-100 pred0">ver</span><!--
+--><span class="label-100 pred0">gence</span><!--
+--><span class="label-100 pred0">Checker</span><!--
+--><span class="label-100 pred0"> vector</span><!--
+--><span class="label-100 pred0">ial</span><!--
+--><span class="label-100 pred0"> convergence</span><!--
+--><span class="label-100 pred0"> checker</span><!--
+--><span class="label-100 pred0">}:</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">   </span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;{@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">setInitial</span><!--
+--><span class="label-100 pred0">Step</span><!--
+--><span class="label-100 pred0">Bound</span><!--
+--><span class="label-100 pred0">Factor</span><!--
+--><span class="label-100 pred0"> initial</span><!--
+--><span class="label-100 pred0"> step</span><!--
+--><span class="label-100 pred0"> bound</span><!--
+--><span class="label-100 pred0"> factor</span><!--
+--><span class="label-100 pred0">}:</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">   </span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;{@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">setMax</span><!--
+--><span class="label-100 pred0">Iterations</span><!--
+--><span class="label-100 pred0"> max</span><!--
+--><span class="label-100 pred0">imal</span><!--
+--><span class="label-100 pred0"> iterations</span><!--
+--><span class="label-100 pred0">}:</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">   </span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;{@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Cost</span><!--
+--><span class="label-100 pred0">Relative</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0"> cost</span><!--
+--><span class="label-100 pred0"> relative</span><!--
+--><span class="label-100 pred0"> tolerance</span><!--
+--><span class="label-100 pred0">}:</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">e</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">   </span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;{@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Par</span><!--
+--><span class="label-100 pred0">Relative</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0"> parameters</span><!--
+--><span class="label-100 pred0"> relative</span><!--
+--><span class="label-100 pred0"> tolerance</span><!--
+--><span class="label-100 pred0">}:</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">e</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">   </span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;{@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Or</span><!--
+--><span class="label-100 pred0">tho</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0"> or</span><!--
+--><span class="label-100 pred0">th</span><!--
+--><span class="label-100 pred0">og</span><!--
+--><span class="label-100 pred0">on</span><!--
+--><span class="label-100 pred0">ality</span><!--
+--><span class="label-100 pred0"> tolerance</span><!--
+--><span class="label-100 pred0">}:</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">e</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0"> &lt;/</span><!--
+--><span class="label-100 pred0">ul</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;/</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">These</span><!--
+--><span class="label-100 pred0"> default</span><!--
+--><span class="label-100 pred0"> values</span><!--
+--><span class="label-100 pred0"> may</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> overridden</span><!--
+--><span class="label-100 pred0"> after</span><!--
+--><span class="label-100 pred0"> construction</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0"> If</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> {@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Con</span><!--
+--><span class="label-100 pred0">ver</span><!--
+--><span class="label-100 pred0">gence</span><!--
+--><span class="label-100 pred0">Checker</span><!--
+--><span class="label-100 pred0"> vector</span><!--
+--><span class="label-100 pred0">ial</span><!--
+--><span class="label-100 pred0"> convergence</span><!--
+--><span class="label-100 pred0"> checker</span><!--
+--><span class="label-100 pred0">}</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> non</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">null</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> it</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> will</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> used</span><!--
+--><span class="label-100 pred0"> instead</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> {@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Cost</span><!--
+--><span class="label-100 pred0">Relative</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0"> cost</span><!--
+--><span class="label-100 pred0"> relative</span><!--
+--><span class="label-100 pred0"> tolerance</span><!--
+--><span class="label-100 pred0">}</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> and</span><!--
+--><span class="label-100 pred0"> {@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">Par</span><!--
+--><span class="label-100 pred0">Relative</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0"> parameters</span><!--
+--><span class="label-100 pred0"> relative</span><!--
+--><span class="label-100 pred0"> tolerance</span><!--
+--><span class="label-100 pred0">}</span><!--
+--><span class="label-100 pred0"> settings</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> Le</span><!--
+--><span class="label-100 pred0">ven</span><!--
+--><span class="label-100 pred0">berg</span><!--
+--><span class="label-100 pred0">Mar</span><!--
+--><span class="label-100 pred0">qu</span><!--
+--><span class="label-100 pred0">ard</span><!--
+--><span class="label-100 pred0">t</span><!--
+--><span class="label-100 pred0">Optimizer</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0"> up</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> superclass</span><!--
+--><span class="label-100 pred0"> with</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> default</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0"> max</span><!--
+--><span class="label-100 pred0"> cost</span><!--
+--><span class="label-100 pred0"> evalu</span><!--
+--><span class="label-100 pred0">ations</span><!--
+--><span class="label-100 pred0"> setting</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0">Max</span><!--
+--><span class="label-100 pred0">Iterations</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> default</span><!--
+--><span class="label-100 pred0"> values</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> tuning</span><!--
+--><span class="label-100 pred0"> parameters</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0">Initial</span><!--
+--><span class="label-100 pred0">Step</span><!--
+--><span class="label-100 pred0">Bound</span><!--
+--><span class="label-100 pred0">Factor</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0">Cost</span><!--
+--><span class="label-100 pred0">Relative</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">e</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0">Par</span><!--
+--><span class="label-100 pred0">Relative</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">e</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0">Or</span><!--
+--><span class="label-100 pred0">tho</span><!--
+--><span class="label-100 pred0">Tolerance</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">e</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Set</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> positive</span><!--
+--><span class="label-100 pred0"> input</span><!--
+--><span class="label-100 pred0"> variable</span><!--
+--><span class="label-100 pred0"> used</span><!--
+--><span class="label-100 pred0"> in</span><!--
+--><span class="label-100 pred0"> determining</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> initial</span><!--
+--><span class="label-100 pred0"> step</span><!--
+--><span class="label-100 pred0"> bound</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> This</span><!--
+--><span class="label-100 pred0"> bound</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> product</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> initial</span><!--
+--><span class="label-100 pred0">Step</span><!--
+--><span class="label-100 pred0">Bound</span><!--
+--><span class="label-100 pred0">Factor</span><!--
+--><span class="label-100 pred0"> and</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> e</span><!--
+--><span class="label-100 pred0">uclidean</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> norm</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> diag</span><!--
+--><span class="label-100 pred0">*</span><!--
+--><span class="label-100 pred0">x</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> non</span><!--
+--><span class="label-100 pred0">zero</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> or</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> initial</span><!--
+--><span class="label-100 pred0">Step</span><!--
+--><span class="label-100 pred0">Bound</span><!--
+--><span class="label-100 pred0">Factor</span><!--
+--><span class="label-100 pred0"> itself</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0"> In</span><!--
+--><span class="label-100 pred0"> most</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> cases</span><!--
+--><span class="label-100 pred0"> factor</span><!--
+--><span class="label-100 pred0"> should</span><!--
+--><span class="label-100 pred0"> lie</span><!--
+--><span class="label-100 pred0"> in</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> interval</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">).</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> generally</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> recommended</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> j</span><!--
+--><span class="label-100 pred0">ac</span><!--
+--><span class="label-100 pred0">Norm</span><!--
+--><span class="label-100 pred0">    </span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">cols</span><!--
+--><span class="label-100 pred0">];</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> beta</span><!--
+--><span class="label-100 pred0">       </span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">cols</span><!--
+--><span class="label-100 pred0">];</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> permutation</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">cols</span><!--
+--><span class="label-100 pred0">];</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> lm</span><!--
+--><span class="label-100 pred0">Dir</span><!--
+--><span class="label-100 pred0">      </span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">cols</span><!--
+--><span class="label-100 pred0">];</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> local</span><!--
+--><span class="label-100 pred0"> point</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0"> delta</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">Norm</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0"> order</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> perform</span><!--
+--><span class="label0 pred0"> only</span><!--
+--><span class="label0 pred0"> absolute</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> checks</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> relative</span><!--
+--><span class="label0 pred0"> tolerance</span><!--
+--><span class="label0 pred0"> must</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> set</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> negative</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;/</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> relative</span><!--
+--><span class="label0 pred0">Threshold</span><!--
+--><span class="label0 pred0"> relative</span><!--
+--><span class="label0 pred0"> tolerance</span><!--
+--><span class="label0 pred0"> threshold</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> absolute</span><!--
+--><span class="label0 pred0">Threshold</span><!--
+--><span class="label0 pred0"> absolute</span><!--
+--><span class="label0 pred0"> tolerance</span><!--
+--><span class="label0 pred0"> threshold</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> Simple</span><!--
+--><span class="label0 pred0">Vector</span><!--
+--><span class="label0 pred0">ial</span><!--
+--><span class="label0 pred0">Value</span><!--
+--><span class="label0 pred0">Checker</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> relative</span><!--
+--><span class="label0 pred0">Threshold</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+                                      </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> absolute</span><!--
+--><span class="label0 pred0">Threshold</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">relative</span><!--
+--><span class="label0 pred0">Threshold</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> relative</span><!--
+--><span class="label0 pred0">Threshold</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">absolute</span><!--
+--><span class="label0 pred0">Threshold</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> absolute</span><!--
+--><span class="label0 pred0">Threshold</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">inheritDoc</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label1 pred0"> conver</span><!--
+--><span class="label1 pred0">ged</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">final</span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> iteration</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+                            </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> Vector</span><!--
+--><span class="label0 pred0">ial</span><!--
+--><span class="label0 pred0">Point</span><!--
+--><span class="label0 pred0">ValuePair</span><!--
+--><span class="label1 pred0"> previous</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+                            </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> Vector</span><!--
+--><span class="label0 pred0">ial</span><!--
+--><span class="label0 pred0">Point</span><!--
+--><span class="label0 pred0">ValuePair</span><!--
+--><span class="label1 pred0"> current</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0">[]</span><!--
+--><span class="label0 pred0"> p</span><!--
+--><span class="label0 pred0">       </span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label1 pred0"> previous</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getValue</span><!--
+--><span class="label0 pred0">Ref</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0">[]</span><!--
+--><span class="label0 pred0"> c</span><!--
+--><span class="label0 pred0">       </span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label1 pred0"> current</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getValue</span><!--
+--><span class="label0 pred0">Ref</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">int</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0"> p</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">length</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> ++</span><!--
+--><span class="label0 pred0">i</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> pi</span><!--
+--><span class="label0 pred0">        </span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> p</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">i</span><!--
+--><span class="label0 pred0">];</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> ci</span><!--
+--><span class="label0 pred0">        </span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> c</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">i</span><!--
+--><span class="label0 pred0">];</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> difference</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> Math</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">abs</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">pi</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> ci</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> size</span><!--
+--><span class="label0 pred0">      </span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> Math</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">max</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Math</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">abs</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">pi</span><!--
+--><span class="label0 pred0">),</span><!--
+--><span class="label0 pred0"> Math</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">abs</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">ci</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> ((</span><!--
+--><span class="label0 pred0">difference</span><!--
+--><span class="label0 pred0"> &gt;</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">size</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> relative</span><!--
+--><span class="label0 pred0">Threshold</span><!--
+--><span class="label0 pred0">))</span><!--
+--><span class="label0 pred0"> &amp;&amp;</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">difference</span><!--
+--><span class="label0 pred0"> &gt;</span><!--
+--><span class="label0 pred0"> absolute</span><!--
+--><span class="label0 pred0">Threshold</span><!--
+--><span class="label0 pred0">))</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> false</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> true</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">}</span>
+</div>
+<hr/>
+</body>
+</html>

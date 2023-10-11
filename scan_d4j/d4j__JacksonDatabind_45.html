@@ -1,0 +1,2149 @@
+<html>
+<head>
+<style>
+pre {margin: 0.1em }
+
+            span {
+                white-space: pre;
+            }
+
+            .label-100 {
+                border: 1px solid gray;
+            }
+
+            .label0 {
+                border: 1px solid white;
+            }
+
+            .label1 {
+                border: 1px solid blue;
+            }
+            .new {
+                background-color: #8FFF92;
+            }
+
+            .context-size {
+	            padding: 0.1em;
+	            color: white;
+	            background-color: black;
+	            border-radius: 50%;
+	            width: 1.5em;
+	            display: inline-block;
+	            text-align: center;
+	            height: 1.5em;
+	            line-height: 1.5em;
+                margin-right: 0.6em;
+            }
+.pred0{background-color: rgba(255, 0, 0, 0.0);}
+.pred1{background-color: rgba(255, 0, 0, 0.1);}
+.pred2{background-color: rgba(255, 0, 0, 0.2);}
+.pred3{background-color: rgba(255, 0, 0, 0.3);}
+.pred4{background-color: rgba(255, 0, 0, 0.4);}
+.pred5{background-color: rgba(255, 0, 0, 0.5);}
+.pred6{background-color: rgba(255, 0, 0, 0.6);}
+.pred7{background-color: rgba(255, 0, 0, 0.7);}
+.pred8{background-color: rgba(255, 0, 0, 0.8);}
+.pred9{background-color: rgba(255, 0, 0, 0.9);}
+.pred10{background-color: rgba(255, 0, 0, 1.0);}
+</style>
+</head>
+<body>
+<div>
+<h3>
+JacksonDatabind, 45
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>                if ((shape == JsonFormat.Shape.STRING) || format.hasPattern()<br/>                                || format.hasLocale() || format.hasTimeZone()) {<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> super</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">type</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> _</span><!--
+--><span class="label-100 pred0">use</span><!--
+--><span class="label-100 pred0">Timestamp</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> use</span><!--
+--><span class="label-100 pred0">Timestamp</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> _</span><!--
+--><span class="label-100 pred0">custom</span><!--
+--><span class="label-100 pred0">Format</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> custom</span><!--
+--><span class="label-100 pred0">Format</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> abstract</span><!--
+--><span class="label-100 pred0"> DateTime</span><!--
+--><span class="label-100 pred0">Serializer</span><!--
+--><span class="label-100 pred0">Base</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> with</span><!--
+--><span class="label-100 pred0">Format</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Boolean</span><!--
+--><span class="label-100 pred0"> timestamp</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> Date</span><!--
+--><span class="label-100 pred0">Format</span><!--
+--><span class="label-100 pred0"> custom</span><!--
+--><span class="label-100 pred0">Format</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">Override</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> JsonSerializer</span><!--
+--><span class="label-100 pred0">&lt;?&gt;</span><!--
+--><span class="label-100 pred0"> create</span><!--
+--><span class="label-100 pred0">Context</span><!--
+--><span class="label-100 pred0">ual</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Serializer</span><!--
+--><span class="label-100 pred0">Provider</span><!--
+--><span class="label-100 pred0"> serializers</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> Bean</span><!--
+--><span class="label-100 pred0">Property</span><!--
+--><span class="label-100 pred0"> property</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> throws</span><!--
+--><span class="label-100 pred0"> Json</span><!--
+--><span class="label-100 pred0">Mapping</span><!--
+--><span class="label-100 pred0">Exception</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">property</span><!--
+--><span class="label-100 pred0"> !=</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> Json</span><!--
+--><span class="label-100 pred0">Format</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Value</span><!--
+--><span class="label-100 pred0"> format</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> serializers</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getAnnotation</span><!--
+--><span class="label-100 pred0">Int</span><!--
+--><span class="label-100 pred0">ros</span><!--
+--><span class="label-100 pred0">pector</span><!--
+--><span class="label-100 pred0">().</span><!--
+--><span class="label-100 pred0">find</span><!--
+--><span class="label-100 pred0">Format</span><!--
+--><span class="label-100 pred0">((</span><!--
+--><span class="label-100 pred0">Annotated</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0">property</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Member</span><!--
+--><span class="label-100 pred0">());</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">format</span><!--
+--><span class="label-100 pred0"> !=</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+            </span><!--
+--><span class="label-100 pred0">	</span><!--
+--><span class="label-100 pred0">//</span><!--
+--><span class="label-100 pred0"> Simple</span><!--
+--><span class="label-100 pred0"> case</span><!--
+--><span class="label-100 pred0"> first</span><!--
+--><span class="label-100 pred0">:</span><!--
+--><span class="label-100 pred0"> serialize</span><!--
+--><span class="label-100 pred0"> as</span><!--
+--><span class="label-100 pred0"> numeric</span><!--
+--><span class="label-100 pred0"> timestamp</span><!--
+--><span class="label-100 pred0">?</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> Json</span><!--
+--><span class="label-100 pred0">Format</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Shape</span><!--
+--><span class="label-100 pred0"> shape</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> format</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Shape</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">shape</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">is</span><!--
+--><span class="label-100 pred0">Numeric</span><!--
+--><span class="label-100 pred0">())</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> with</span><!--
+--><span class="label-100 pred0">Format</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Boolean</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">TRUE</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">format</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Shape</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> ==</span><!--
+--><span class="label-100 pred0"> Json</span><!--
+--><span class="label-100 pred0">Format</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Shape</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">STRING</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> Time</span><!--
+--><span class="label-100 pred0">Zone</span><!--
+--><span class="label-100 pred0"> tz</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> format</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getTime</span><!--
+--><span class="label-100 pred0">Zone</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> final</span><!--
+--><span class="label-100 pred0"> String</span><!--
+--><span class="label-100 pred0"> pattern</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> format</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">has</span><!--
+--><span class="label-100 pred0">Pattern</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0">
+                                   </span><!--
+--><span class="label-100 pred0"> ?</span><!--
+--><span class="label-100 pred0"> format</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Pattern</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0">
+                                   </span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0"> Std</span><!--
+--><span class="label-100 pred0">DateFormat</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">DATE</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">FORMAT</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">STR</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">ISO</span><!--
+--><span class="label-100 pred0">8</span><!--
+--><span class="label-100 pred0">6</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> final</span><!--
+--><span class="label-100 pred0"> Locale</span><!--
+--><span class="label-100 pred0"> loc</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> format</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">has</span><!--
+--><span class="label-100 pred0">Locale</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0">
+                                   </span><!--
+--><span class="label-100 pred0"> ?</span><!--
+--><span class="label-100 pred0"> format</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getLocale</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0">
+                                   </span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0"> serializers</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getLocale</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> SimpleDateFormat</span><!--
+--><span class="label-100 pred0"> df</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> SimpleDateFormat</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">pattern</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> loc</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">tz</span><!--
+--><span class="label-100 pred0"> ==</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+                       </span><!--
+--><span class="label-100 pred0"> tz</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> serializers</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getTime</span><!--
+--><span class="label-100 pred0">Zone</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> df</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">TimeZone</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">tz</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">charAt</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">len</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> &#x27;:</span><!--
+--><span class="label0 pred0">&#x27;)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> StringBuilder</span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> StringBuilder</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">date</span><!--
+--><span class="label0 pred0">Str</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">insert</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">len</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> &quot;.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> date</span><!--
+--><span class="label0 pred0">Str</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">toString</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> Let</span><!--
+--><span class="label0 pred0">&#x27;s</span><!--
+--><span class="label0 pred0"> see</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> we</span><!--
+--><span class="label0 pred0"> have</span><!--
+--><span class="label0 pred0"> timezone</span><!--
+--><span class="label0 pred0"> indicator</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0">...</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label1 pred0">has</span><!--
+--><span class="label1 pred0">TimeZone</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">date</span><!--
+--><span class="label0 pred0">Str</span><!--
+--><span class="label0 pred0">))</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> c</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> date</span><!--
+--><span class="label0 pred0">Str</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">charAt</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">len</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">c</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> &#x27;:</span><!--
+--><span class="label0 pred0">&#x27;)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> remove</span><!--
+--><span class="label0 pred0"> optional</span><!--
+--><span class="label0 pred0"> colon</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> remove</span><!--
+--><span class="label0 pred0"> colon</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> StringBuilder</span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> StringBuilder</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">date</span><!--
+--><span class="label0 pred0">Str</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">delete</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">len</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> len</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> date</span><!--
+--><span class="label0 pred0">Str</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">toString</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">c</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> &#x27;+&#x27;</span><!--
+--><span class="label0 pred0"> ||</span><!--
+--><span class="label0 pred0"> c</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> &#x27;-&#x27;)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> missing</span><!--
+--><span class="label0 pred0"> minutes</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> let</span><!--
+--><span class="label0 pred0">&#x27;s</span><!--
+--><span class="label0 pred0"> just</span><!--
+--><span class="label0 pred0"> append</span><!--
+--><span class="label0 pred0"> &#x27;</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">&#x27;</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> date</span><!--
+--><span class="label0 pred0">Str</span><!--
+--><span class="label0 pred0"> +=</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">&quot;;</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> M</span><!--
+--><span class="label0 pred0">illiseconds</span><!--
+--><span class="label0 pred0"> partial</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> missing</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> even</span><!--
+--><span class="label0 pred0"> seconds</span><!--
+--><span class="label0 pred0"> are</span><!--
+--><span class="label0 pred0"> optional</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> len</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> date</span><!--
+--><span class="label0 pred0">Str</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred4">length</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> remove</span><!--
+--><span class="label0 pred0"> &#x27;</span><!--
+--><span class="label0 pred0">T</span><!--
+--><span class="label0 pred0">&#x27;,</span><!--
+--><span class="label0 pred0"> &#x27;+&#x27;</span><!--
+--><span class="label0 pred0">/&#x27;</span><!--
+--><span class="label0 pred0">-&#x27;</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">digit</span><!--
+--><span class="label0 pred0"> timezone</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">offset</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> time</span><!--
+--><span class="label0 pred0">Len</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> len</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> date</span><!--
+--><span class="label0 pred0">Str</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">lastIndexOf</span><!--
+--><span class="label0 pred0">(&#x27;</span><!--
+--><span class="label0 pred0">T</span><!--
+--><span class="label0 pred0">&#x27;)</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">time</span><!--
+--><span class="label0 pred0">Len</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> hh</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0">mm</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0">ss</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> .</span><!--
+--><span class="label0 pred0">sss</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> offset</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> len</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> insertion</span><!--
+--><span class="label0 pred0"> offset</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> before</span><!--
+--><span class="label0 pred0"> tz</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">offset</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> StringBuilder</span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> StringBuilder</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">date</span><!--
+--><span class="label0 pred0">Str</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> switch</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">time</span><!--
+--><span class="label0 pred0">Len</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> case</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0">
+                       </span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">insert</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">offset</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> &#x27;</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">&#x27;);</span><!--
+--><span class="label0 pred0"> break</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> case</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0">
+                       </span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">insert</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">offset</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0"> break</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> case</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> legal</span><!--
+--><span class="label0 pred0">?</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">just</span><!--
+--><span class="label0 pred0"> second</span><!--
+--><span class="label0 pred0"> fraction</span><!--
+--><span class="label0 pred0"> marker</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+                       </span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">insert</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">offset</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0"> break</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> case</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0">
+                       </span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">insert</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">offset</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> &quot;.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0"> break</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> case</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">7</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> legal</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> have</span><!--
+--><span class="label0 pred0"> single</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">digit</span><!--
+--><span class="label0 pred0"> second</span><!--
+--><span class="label0 pred0">
+                       </span><!--
+--><span class="label0 pred0"> break</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> case</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> probably</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> legal</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> but</span><!--
+--><span class="label0 pred0"> let</span><!--
+--><span class="label0 pred0">&#x27;s</span><!--
+--><span class="label0 pred0"> allow</span><!--
+--><span class="label0 pred0">
+                       </span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">insert</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">offset</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> case</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> legal</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> omit</span><!--
+--><span class="label0 pred0"> seconds</span><!--
+--><span class="label0 pred0">
+                       </span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">insert</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">offset</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> &quot;:</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> date</span><!--
+--><span class="label0 pred0">Str</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">toString</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> df</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> _</span><!--
+--><span class="label0 pred0">format</span><!--
+--><span class="label0 pred0">ISO</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> format</span><!--
+--><span class="label0 pred0">Str</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> DATE</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">FORMAT</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">STR</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">ISO</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (_</span><!--
+--><span class="label0 pred0">format</span><!--
+--><span class="label0 pred0">ISO</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> df</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> _</span><!--
+--><span class="label0 pred0">format</span><!--
+--><span class="label0 pred0">ISO</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> _</span><!--
+--><span class="label0 pred0">clone</span><!--
+--><span class="label0 pred0">Format</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">DATE</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">FORMAT</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">ISO</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> format</span><!--
+--><span class="label0 pred0">Str</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+                           </span><!--
+--><span class="label0 pred0"> _</span><!--
+--><span class="label0 pred0">timezone</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> _</span><!--
+--><span class="label0 pred0">locale</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> _</span><!--
+--><span class="label0 pred0">len</span><!--
+--><span class="label0 pred0">ient</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> If</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> plain</span><!--
+--><span class="label0 pred0"> date</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> E</span><!--
+--><span class="label0 pred0">asi</span><!--
+--><span class="label0 pred0">est</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> just</span><!--
+--><span class="label0 pred0"> patch</span><!--
+--><span class="label0 pred0"> &#x27;</span><!--
+--><span class="label0 pred0">Z</span><!--
+--><span class="label0 pred0">&#x27;</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> end</span><!--
+--><span class="label0 pred0">?</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> StringBuilder</span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> StringBuilder</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">date</span><!--
+--><span class="label0 pred0">Str</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> And</span><!--
+--><span class="label0 pred0"> possible</span><!--
+--><span class="label0 pred0"> also</span><!--
+--><span class="label0 pred0"> milli</span><!--
+--><span class="label0 pred0">second</span><!--
+--><span class="label0 pred0"> part</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> missing</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> time</span><!--
+--><span class="label0 pred0">Len</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> len</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> date</span><!--
+--><span class="label0 pred0">Str</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">lastIndexOf</span><!--
+--><span class="label0 pred0">(&#x27;</span><!--
+--><span class="label0 pred0">T</span><!--
+--><span class="label0 pred0">&#x27;)</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">time</span><!--
+--><span class="label0 pred0">Len</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> missing</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> partial</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> switch</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">time</span><!--
+--><span class="label0 pred0">Len</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> case</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(&#x27;</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">&#x27;);</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> case</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(&#x27;</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">&#x27;);</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> case</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(&#x27;</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">&#x27;);</span><!--
+--><span class="label0 pred0">
+                       </span><!--
+--><span class="label0 pred0"> break</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> default</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0">
+                       </span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(&quot;.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(&#x27;</span><!--
+--><span class="label0 pred0">Z</span><!--
+--><span class="label0 pred0">&#x27;);</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> date</span><!--
+--><span class="label0 pred0">Str</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">toString</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> df</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> _</span><!--
+--><span class="label0 pred0">format</span><!--
+--><span class="label0 pred0">ISO</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">z</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> format</span><!--
+--><span class="label0 pred0">Str</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> DATE</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">FORMAT</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">STR</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">ISO</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">Z</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">df</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> df</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> _</span><!--
+--><span class="label0 pred0">format</span><!--
+--><span class="label0 pred0">ISO</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">6</span>
+</div>
+<hr/>
+<div>
+<h3>
+JacksonDatabind, 45
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>                if ((shape == JsonFormat.Shape.STRING) || format.hasPattern()<br/>                                || format.hasLocale() || format.hasTimeZone()) {<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> super</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">type</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> _</span><!--
+--><span class="label-100 pred0">use</span><!--
+--><span class="label-100 pred0">Timestamp</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> use</span><!--
+--><span class="label-100 pred0">Timestamp</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> _</span><!--
+--><span class="label-100 pred0">custom</span><!--
+--><span class="label-100 pred0">Format</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> custom</span><!--
+--><span class="label-100 pred0">Format</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> abstract</span><!--
+--><span class="label-100 pred0"> DateTime</span><!--
+--><span class="label-100 pred0">Serializer</span><!--
+--><span class="label-100 pred0">Base</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">T</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> with</span><!--
+--><span class="label-100 pred0">Format</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Boolean</span><!--
+--><span class="label-100 pred0"> timestamp</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> Date</span><!--
+--><span class="label-100 pred0">Format</span><!--
+--><span class="label-100 pred0"> custom</span><!--
+--><span class="label-100 pred0">Format</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">Override</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> JsonSerializer</span><!--
+--><span class="label-100 pred0">&lt;?&gt;</span><!--
+--><span class="label-100 pred0"> create</span><!--
+--><span class="label-100 pred0">Context</span><!--
+--><span class="label-100 pred0">ual</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Serializer</span><!--
+--><span class="label-100 pred0">Provider</span><!--
+--><span class="label-100 pred0"> serializers</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> Bean</span><!--
+--><span class="label-100 pred0">Property</span><!--
+--><span class="label-100 pred0"> property</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> throws</span><!--
+--><span class="label-100 pred0"> Json</span><!--
+--><span class="label-100 pred0">Mapping</span><!--
+--><span class="label-100 pred0">Exception</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">property</span><!--
+--><span class="label-100 pred0"> !=</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> Json</span><!--
+--><span class="label-100 pred0">Format</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Value</span><!--
+--><span class="label-100 pred0"> format</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> serializers</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getAnnotation</span><!--
+--><span class="label-100 pred0">Int</span><!--
+--><span class="label-100 pred0">ros</span><!--
+--><span class="label-100 pred0">pector</span><!--
+--><span class="label-100 pred0">().</span><!--
+--><span class="label-100 pred0">find</span><!--
+--><span class="label-100 pred0">Format</span><!--
+--><span class="label-100 pred0">((</span><!--
+--><span class="label-100 pred0">Annotated</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0">property</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Member</span><!--
+--><span class="label-100 pred0">());</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">format</span><!--
+--><span class="label-100 pred0"> !=</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+            </span><!--
+--><span class="label-100 pred0">	</span><!--
+--><span class="label-100 pred0">//</span><!--
+--><span class="label-100 pred0"> Simple</span><!--
+--><span class="label-100 pred0"> case</span><!--
+--><span class="label-100 pred0"> first</span><!--
+--><span class="label-100 pred0">:</span><!--
+--><span class="label-100 pred0"> serialize</span><!--
+--><span class="label-100 pred0"> as</span><!--
+--><span class="label-100 pred0"> numeric</span><!--
+--><span class="label-100 pred0"> timestamp</span><!--
+--><span class="label-100 pred0">?</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> Json</span><!--
+--><span class="label-100 pred0">Format</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Shape</span><!--
+--><span class="label-100 pred0"> shape</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> format</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Shape</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">shape</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">is</span><!--
+--><span class="label-100 pred0">Numeric</span><!--
+--><span class="label-100 pred0">())</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> with</span><!--
+--><span class="label-100 pred0">Format</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Boolean</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">TRUE</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">format</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Shape</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> ==</span><!--
+--><span class="label-100 pred0"> Json</span><!--
+--><span class="label-100 pred0">Format</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">Shape</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">STRING</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> Time</span><!--
+--><span class="label-100 pred0">Zone</span><!--
+--><span class="label-100 pred0"> tz</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> format</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getTime</span><!--
+--><span class="label-100 pred0">Zone</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> final</span><!--
+--><span class="label-100 pred0"> String</span><!--
+--><span class="label-100 pred0"> pattern</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> format</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">has</span><!--
+--><span class="label-100 pred0">Pattern</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0">
+                                   </span><!--
+--><span class="label-100 pred0"> ?</span><!--
+--><span class="label-100 pred0"> format</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">Pattern</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0">
+                                   </span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0"> Std</span><!--
+--><span class="label-100 pred0">DateFormat</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">DATE</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">FORMAT</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">STR</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">ISO</span><!--
+--><span class="label-100 pred0">8</span><!--
+--><span class="label-100 pred0">6</span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> final</span><!--
+--><span class="label-100 pred0"> Locale</span><!--
+--><span class="label-100 pred0"> loc</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> format</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">has</span><!--
+--><span class="label-100 pred0">Locale</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0">
+                                   </span><!--
+--><span class="label-100 pred0"> ?</span><!--
+--><span class="label-100 pred0"> format</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getLocale</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0">
+                                   </span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0"> serializers</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getLocale</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> SimpleDateFormat</span><!--
+--><span class="label-100 pred0"> df</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> SimpleDateFormat</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">pattern</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> loc</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">tz</span><!--
+--><span class="label-100 pred0"> ==</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+                       </span><!--
+--><span class="label-100 pred0"> tz</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> serializers</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">getTime</span><!--
+--><span class="label-100 pred0">Zone</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> df</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">set</span><!--
+--><span class="label-100 pred0">TimeZone</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">tz</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">z</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> _</span><!--
+--><span class="label0 pred0">clone</span><!--
+--><span class="label0 pred0">Format</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">DATE</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">FORMAT</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">ISO</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">Z</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> format</span><!--
+--><span class="label0 pred0">Str</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+                           </span><!--
+--><span class="label0 pred0"> _</span><!--
+--><span class="label0 pred0">timezone</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> _</span><!--
+--><span class="label0 pred0">locale</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> _</span><!--
+--><span class="label0 pred0">len</span><!--
+--><span class="label0 pred0">ient</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Date</span><!--
+--><span class="label0 pred0"> dt</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> df</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">parse</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">date</span><!--
+--><span class="label0 pred0">Str</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> pos</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">Dec</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> t</span><!--
+--><span class="label0 pred0">atu</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0"> With</span><!--
+--><span class="label0 pred0"> non</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">len</span><!--
+--><span class="label0 pred0">ient</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> may</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">dt</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> throw</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> ParseException</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">format</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">Can</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> parse</span><!--
+--><span class="label0 pred0"> date</span><!--
+--><span class="label0 pred0"> \&quot;%</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0">\&quot;:</span><!--
+--><span class="label0 pred0"> while</span><!--
+--><span class="label0 pred0"> it</span><!--
+--><span class="label0 pred0"> seems</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> fit</span><!--
+--><span class="label0 pred0"> format</span><!--
+--><span class="label0 pred0"> &#x27;%</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0">&#x27;,</span><!--
+--><span class="label0 pred0"> parsing</span><!--
+--><span class="label0 pred0"> fails</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">len</span><!--
+--><span class="label0 pred0">i</span><!--
+--><span class="label0 pred0">ency</span><!--
+--><span class="label0 pred0">?</span><!--
+--><span class="label0 pred0"> %</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0">)&quot;,</span><!--
+--><span class="label0 pred0">
+                          </span><!--
+--><span class="label0 pred0"> date</span><!--
+--><span class="label0 pred0">Str</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> format</span><!--
+--><span class="label0 pred0">Str</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> _</span><!--
+--><span class="label0 pred0">len</span><!--
+--><span class="label0 pred0">ient</span><!--
+--><span class="label0 pred0">),</span><!--
+--><span class="label0 pred0">
+              </span><!--
+--><span class="label0 pred0"> pos</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getError</span><!--
+--><span class="label0 pred0">Index</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> dt</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> protected</span><!--
+--><span class="label0 pred0"> Date</span><!--
+--><span class="label0 pred0"> parse</span><!--
+--><span class="label0 pred0">As</span><!--
+--><span class="label0 pred0">RFC</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> date</span><!--
+--><span class="label0 pred0">Str</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Parse</span><!--
+--><span class="label0 pred0">Position</span><!--
+--><span class="label0 pred0"> pos</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (_</span><!--
+--><span class="label0 pred0">format</span><!--
+--><span class="label0 pred0">RFC</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> _</span><!--
+--><span class="label0 pred0">format</span><!--
+--><span class="label0 pred0">RFC</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> _</span><!--
+--><span class="label0 pred0">clone</span><!--
+--><span class="label0 pred0">Format</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">DATE</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">FORMAT</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">RFC</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> DATE</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">FORMAT</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">STR</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">RFC</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label0 pred0"> _</span><!--
+--><span class="label0 pred0">timezone</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> _</span><!--
+--><span class="label0 pred0">locale</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> _</span><!--
+--><span class="label0 pred0">len</span><!--
+--><span class="label0 pred0">ient</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> _</span><!--
+--><span class="label0 pred0">format</span><!--
+--><span class="label0 pred0">RFC</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">parse</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">date</span><!--
+--><span class="label0 pred0">Str</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> pos</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label1 pred0"> has</span><!--
+--><span class="label1 pred0">TimeZone</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> str</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> Only</span><!--
+--><span class="label0 pred0"> accept</span><!--
+--><span class="label0 pred0"> &quot;+</span><!--
+--><span class="label0 pred0">hh</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;+</span><!--
+--><span class="label0 pred0">hh</span><!--
+--><span class="label0 pred0">mm</span><!--
+--><span class="label0 pred0">&quot;</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> &quot;+</span><!--
+--><span class="label0 pred0">hh</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0">mm</span><!--
+--><span class="label0 pred0">&quot;</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">and</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> minus</span><!--
+--><span class="label0 pred0">),</span><!--
+--><span class="label0 pred0"> so</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> len</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> str</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">length</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">len</span><!--
+--><span class="label0 pred0"> &gt;=</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> char</span><!--
+--><span class="label0 pred0"> c</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> str</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">charAt</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">len</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">c</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> &#x27;+&#x27;</span><!--
+--><span class="label0 pred0"> ||</span><!--
+--><span class="label0 pred0"> c</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> &#x27;-&#x27;)</span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> true</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> c</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> str</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">charAt</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">len</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">c</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> &#x27;+&#x27;</span><!--
+--><span class="label0 pred0"> ||</span><!--
+--><span class="label0 pred0"> c</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> &#x27;-&#x27;)</span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> true</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> c</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> str</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">charAt</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">len</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">c</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> &#x27;+&#x27;</span><!--
+--><span class="label0 pred0"> ||</span><!--
+--><span class="label0 pred0"> c</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> &#x27;-&#x27;)</span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> true</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> false</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> Date</span><!--
+--><span class="label0 pred0">Format</span><!--
+--><span class="label0 pred0"> _</span><!--
+--><span class="label0 pred0">clone</span><!--
+--><span class="label0 pred0">Format</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">DateFormat</span><!--
+--><span class="label0 pred0"> df</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> format</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> Time</span><!--
+--><span class="label0 pred0">Zone</span><!--
+--><span class="label0 pred0"> tz</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Locale</span><!--
+--><span class="label0 pred0"> loc</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Boolean</span><!--
+--><span class="label0 pred0"> len</span><!--
+--><span class="label0 pred0">ient</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (!</span><!--
+--><span class="label0 pred0">loc</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred10">equals</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">DEFAULT</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">LOCAL</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">))</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> df</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> SimpleDateFormat</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">format</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> loc</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> df</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">set</span><!--
+--><span class="label0 pred0">TimeZone</span><!--
+--><span class="label0 pred0">((</span><!--
+--><span class="label0 pred0">tz</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> ?</span><!--
+--><span class="label0 pred0"> DEFAULT</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">TIME</span><!--
+--><span class="label0 pred0">ZONE</span><!--
+--><span class="label0 pred0"> :</span><!--
+--><span class="label0 pred0"> tz</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> df</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">DateFormat</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> df</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">clone</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">tz</span><!--
+--><span class="label0 pred0"> !=</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> df</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">set</span><!--
+--><span class="label0 pred0">TimeZone</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">tz</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">len</span><!--
+--><span class="label0 pred0">ient</span><!--
+--><span class="label0 pred0"> !=</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> df</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">set</span><!--
+--><span class="label0 pred0">Len</span><!--
+--><span class="label0 pred0">ient</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">len</span><!--
+--><span class="label0 pred0">ient</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">boolean</span><!--
+--><span class="label0 pred0">Value</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> df</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> protected</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> _</span><!--
+--><span class="label0 pred0">clear</span><!--
+--><span class="label0 pred0">Formats</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> _</span><!--
+--><span class="label0 pred0">format</span><!--
+--><span class="label0 pred0">RFC</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> _</span><!--
+--><span class="label0 pred0">format</span><!--
+--><span class="label0 pred0">ISO</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> _</span><!--
+--><span class="label0 pred0">format</span><!--
+--><span class="label0 pred0">ISO</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">z</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> _</span><!--
+--><span class="label0 pred0">format</span><!--
+--><span class="label0 pred0">Plain</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">}</span>
+</div>
+<hr/>
+</body>
+</html>

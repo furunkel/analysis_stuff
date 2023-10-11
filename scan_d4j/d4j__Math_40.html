@@ -1,0 +1,3437 @@
+<html>
+<head>
+<style>
+pre {margin: 0.1em }
+
+            span {
+                white-space: pre;
+            }
+
+            .label-100 {
+                border: 1px solid gray;
+            }
+
+            .label0 {
+                border: 1px solid white;
+            }
+
+            .label1 {
+                border: 1px solid blue;
+            }
+            .new {
+                background-color: #8FFF92;
+            }
+
+            .context-size {
+	            padding: 0.1em;
+	            color: white;
+	            background-color: black;
+	            border-radius: 50%;
+	            width: 1.5em;
+	            display: inline-block;
+	            text-align: center;
+	            height: 1.5em;
+	            line-height: 1.5em;
+                margin-right: 0.6em;
+            }
+.pred0{background-color: rgba(255, 0, 0, 0.0);}
+.pred1{background-color: rgba(255, 0, 0, 0.1);}
+.pred2{background-color: rgba(255, 0, 0, 0.2);}
+.pred3{background-color: rgba(255, 0, 0, 0.3);}
+.pred4{background-color: rgba(255, 0, 0, 0.4);}
+.pred5{background-color: rgba(255, 0, 0, 0.5);}
+.pred6{background-color: rgba(255, 0, 0, 0.6);}
+.pred7{background-color: rgba(255, 0, 0, 0.7);}
+.pred8{background-color: rgba(255, 0, 0, 0.8);}
+.pred9{background-color: rgba(255, 0, 0, 0.9);}
+.pred10{background-color: rgba(255, 0, 0, 1.0);}
+</style>
+</head>
+<body>
+<div>
+<h3>
+Math, 40
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>                final int p = agingA - MAXIMAL_AGING;<br/>                final double weightA = (1 &lt;&lt; p) - 1;<br/>                final double weightB = p + 1;<br/>                targetY = (weightA * yA - weightB * REDUCTION_FACTOR * yB) / (weightA + weightB);<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>                final int p = agingB - MAXIMAL_AGING;<br/>                final double weightA = p + 1;<br/>                final double weightB = (1 &lt;&lt; p) - 1;<br/>                targetY = (weightB * yB - weightA * REDUCTION_FACTOR * yA) / (weightA + weightB);<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> abs</span><!--
+--><span class="label-100 pred0">YA</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0"> abs</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0">B</span><!--
+--><span class="label-100 pred0"> ?</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">A</span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">B</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> case</span><!--
+--><span class="label-100 pred0"> LEFT</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">SIDE</span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">A</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> case</span><!--
+--><span class="label-100 pred0"> RIGHT</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">SIDE</span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">B</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> case</span><!--
+--><span class="label-100 pred0"> BE</span><!--
+--><span class="label-100 pred0">LOW</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">SIDE</span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">y</span><!--
+--><span class="label-100 pred0">A</span><!--
+--><span class="label-100 pred0"> &lt;=</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> ?</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">A</span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">B</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> case</span><!--
+--><span class="label-100 pred0"> A</span><!--
+--><span class="label-100 pred0">BO</span><!--
+--><span class="label-100 pred0">VE</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">SIDE</span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">y</span><!--
+--><span class="label-100 pred0">A</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> ?</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">B</span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">A</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> default</span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> should</span><!--
+--><span class="label-100 pred0"> never</span><!--
+--><span class="label-100 pred0"> happen</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> throw</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Math</span><!--
+--><span class="label-100 pred0">Internal</span><!--
+--><span class="label-100 pred0">Error</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">null</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> target</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0"> evaluation</span><!--
+--><span class="label-100 pred0"> point</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> target</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">aging</span><!--
+--><span class="label-100 pred0">A</span><!--
+--><span class="label-100 pred0"> &gt;=</span><!--
+--><span class="label-100 pred0"> MAX</span><!--
+--><span class="label-100 pred0">IMAL</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">AGING</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> we</span><!--
+--><span class="label-100 pred0"> keep</span><!--
+--><span class="label-100 pred0"> updating</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> high</span><!--
+--><span class="label-100 pred0"> bracket</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> try</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> comp</span><!--
+--><span class="label-100 pred0">ens</span><!--
+--><span class="label-100 pred0">ate</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> target</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> -</span><!--
+--><span class="label-100 pred0">RED</span><!--
+--><span class="label-100 pred0">UCTION</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">FACTOR</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> y</span><!--
+--><span class="label-100 pred0">B</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">aging</span><!--
+--><span class="label-100 pred0">B</span><!--
+--><span class="label-100 pred0"> &gt;=</span><!--
+--><span class="label-100 pred0"> MAX</span><!--
+--><span class="label-100 pred0">IMAL</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">AGING</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> we</span><!--
+--><span class="label-100 pred0"> keep</span><!--
+--><span class="label-100 pred0"> updating</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> low</span><!--
+--><span class="label-100 pred0"> bracket</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> try</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> comp</span><!--
+--><span class="label-100 pred0">ens</span><!--
+--><span class="label-100 pred0">ate</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> target</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> -</span><!--
+--><span class="label-100 pred0">RED</span><!--
+--><span class="label-100 pred0">UCTION</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">FACTOR</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> y</span><!--
+--><span class="label-100 pred0">A</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> bracket</span><!--
+--><span class="label-100 pred0">ing</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> bal</span><!--
+--><span class="label-100 pred0">anced</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> try</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> find</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> root</span><!--
+--><span class="label-100 pred0"> itself</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> target</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> make</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> few</span><!--
+--><span class="label-100 pred0"> attempts</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> guess</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> root</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0">X</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> start</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> end</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> nb</span><!--
+--><span class="label-100 pred0">Points</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> do</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> guess</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> current</span><!--
+--><span class="label-100 pred0"> target</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> using</span><!--
+--><span class="label-100 pred0"> inverse</span><!--
+--><span class="label-100 pred0"> polynomial</span><!--
+--><span class="label-100 pred0"> interpolation</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> System</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">arraycopy</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">x</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> start</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> tmp</span><!--
+--><span class="label-100 pred0">X</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> start</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> end</span><!--
+--><span class="label-100 pred0"> -</span><!--
+--><span class="label-100 pred0"> start</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0">X</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> guess</span><!--
+--><span class="label-100 pred0">X</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">target</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> tmp</span><!--
+--><span class="label-100 pred0">X</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> y</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> start</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> end</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> y</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> y</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> ya</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> /*</span><!--
+--><span class="label0 pred0"> Compute</span><!--
+--><span class="label0 pred0"> ln</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">x</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> lo</span><!--
+--><span class="label0 pred0">res</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> log</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">x</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> l</span><!--
+--><span class="label0 pred0">ns</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">Double</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">isIn</span><!--
+--><span class="label0 pred0">finite</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">lo</span><!--
+--><span class="label0 pred0">res</span><!--
+--><span class="label0 pred0">)){</span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> don</span><!--
+--><span class="label0 pred0">&#x27;t</span><!--
+--><span class="label0 pred0"> allow</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> converted</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> NaN</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> lo</span><!--
+--><span class="label0 pred0">res</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> l</span><!--
+--><span class="label0 pred0">na</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> l</span><!--
+--><span class="label0 pred0">ns</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">];</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> l</span><!--
+--><span class="label0 pred0">nb</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> l</span><!--
+--><span class="label0 pred0">ns</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">];</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> /*</span><!--
+--><span class="label0 pred0"> re</span><!--
+--><span class="label0 pred0">split</span><!--
+--><span class="label0 pred0"> l</span><!--
+--><span class="label0 pred0">ns</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> tmp</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> l</span><!--
+--><span class="label0 pred0">na</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> HEX</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> tmp</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> l</span><!--
+--><span class="label0 pred0">na</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> tmp</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> tmp</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> l</span><!--
+--><span class="label0 pred0">nb</span><!--
+--><span class="label0 pred0"> +=</span><!--
+--><span class="label0 pred0"> l</span><!--
+--><span class="label0 pred0">na</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> tmp</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> l</span><!--
+--><span class="label0 pred0">na</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> tmp</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> y</span><!--
+--><span class="label0 pred0">*</span><!--
+--><span class="label0 pred0">ln</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">x</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">aa</span><!--
+--><span class="label0 pred0">+</span><!--
+--><span class="label0 pred0">ab</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> aa</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> l</span><!--
+--><span class="label0 pred0">na</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> ya</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> ab</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> l</span><!--
+--><span class="label0 pred0">na</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> y</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> l</span><!--
+--><span class="label0 pred0">nb</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> ya</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> l</span><!--
+--><span class="label0 pred0">nb</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> y</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> l</span><!--
+--><span class="label0 pred0">na</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> aa</span><!--
+--><span class="label0 pred0">+</span><!--
+--><span class="label0 pred0">ab</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> l</span><!--
+--><span class="label0 pred0">nb</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> -(</span><!--
+--><span class="label0 pred0">ln</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> aa</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> ab</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> z</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0"> /</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> z</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> z</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> l</span><!--
+--><span class="label0 pred0">nb</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0"> /</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> z</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> z</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> l</span><!--
+--><span class="label0 pred0">nb</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0"> /</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> z</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> z</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> l</span><!--
+--><span class="label0 pred0">nb</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> z</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> z</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> l</span><!--
+--><span class="label0 pred0">nb</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> z</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> z</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> l</span><!--
+--><span class="label0 pred0">nb</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> result</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> exp</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">ln</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> z</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0">result</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> result</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> result</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> z</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> result</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> Computes</span><!--
+--><span class="label0 pred0"> sin</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">x</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> where</span><!--
+--><span class="label0 pred0"> |</span><!--
+--><span class="label0 pred0">x</span><!--
+--><span class="label0 pred0">|</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> Use</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> Re</span><!--
+--><span class="label0 pred0">mez</span><!--
+--><span class="label0 pred0"> polynomial</span><!--
+--><span class="label0 pred0"> approximation</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> number</span><!--
+--><span class="label0 pred0"> smaller</span><!--
+--><span class="label0 pred0"> than</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> sin</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">x</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> poly</span><!--
+--><span class="label0 pred0">Sine</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">*</span><!--
+--><span class="label0 pred0">x</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label1 pred0"> p</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">7</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">7</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">7</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">7</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label1 pred0"> p</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label1 pred0"> p</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label1 pred0"> p</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label1 pred0"> p</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label1 pred0"> p</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label1 pred0"> p</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0"> *=</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0"> *=</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label1 pred0"> p</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label1 pred0"> p</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label1 pred0"> p</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> Computes</span><!--
+--><span class="label0 pred0"> cos</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">x</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> where</span><!--
+--><span class="label0 pred0"> |</span><!--
+--><span class="label0 pred0">x</span><!--
+--><span class="label0 pred0">|</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> Use</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> Re</span><!--
+--><span class="label0 pred0">mez</span><!--
+--><span class="label0 pred0"> polynomial</span><!--
+--><span class="label0 pred0"> approximation</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> number</span><!--
+--><span class="label0 pred0"> smaller</span><!--
+--><span class="label0 pred0"> than</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> cos</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">x</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> poly</span><!--
+--><span class="label0 pred0">Cos</span><!--
+--><span class="label0 pred0">ine</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">double</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">*</span><!--
+--><span class="label0 pred0">x</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label1 pred0"> p</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">7</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">7</span><!--
+--><span class="label0 pred0">7</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">7</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label1 pred0"> p</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label1 pred0"> p</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">;</span>
+</div>
+<hr/>
+<div>
+<h3>
+Math, 40
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>                final int p = agingA - MAXIMAL_AGING;<br/>                final double weightA = (1 &lt;&lt; p) - 1;<br/>                final double weightB = p + 1;<br/>                targetY = (weightA * yA - weightB * REDUCTION_FACTOR * yB) / (weightA + weightB);<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>                final int p = agingB - MAXIMAL_AGING;<br/>                final double weightA = p + 1;<br/>                final double weightB = (1 &lt;&lt; p) - 1;<br/>                targetY = (weightB * yB - weightA * REDUCTION_FACTOR * yA) / (weightA + weightB);<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> abs</span><!--
+--><span class="label-100 pred0">YA</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0"> abs</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0">B</span><!--
+--><span class="label-100 pred0"> ?</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">A</span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">B</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> case</span><!--
+--><span class="label-100 pred0"> LEFT</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">SIDE</span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">A</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> case</span><!--
+--><span class="label-100 pred0"> RIGHT</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">SIDE</span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">B</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> case</span><!--
+--><span class="label-100 pred0"> BE</span><!--
+--><span class="label-100 pred0">LOW</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">SIDE</span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">y</span><!--
+--><span class="label-100 pred0">A</span><!--
+--><span class="label-100 pred0"> &lt;=</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> ?</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">A</span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">B</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> case</span><!--
+--><span class="label-100 pred0"> A</span><!--
+--><span class="label-100 pred0">BO</span><!--
+--><span class="label-100 pred0">VE</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">SIDE</span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">y</span><!--
+--><span class="label-100 pred0">A</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> ?</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">B</span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">A</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> default</span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> should</span><!--
+--><span class="label-100 pred0"> never</span><!--
+--><span class="label-100 pred0"> happen</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> throw</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Math</span><!--
+--><span class="label-100 pred0">Internal</span><!--
+--><span class="label-100 pred0">Error</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">null</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> target</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0"> evaluation</span><!--
+--><span class="label-100 pred0"> point</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> target</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">aging</span><!--
+--><span class="label-100 pred0">A</span><!--
+--><span class="label-100 pred0"> &gt;=</span><!--
+--><span class="label-100 pred0"> MAX</span><!--
+--><span class="label-100 pred0">IMAL</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">AGING</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> we</span><!--
+--><span class="label-100 pred0"> keep</span><!--
+--><span class="label-100 pred0"> updating</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> high</span><!--
+--><span class="label-100 pred0"> bracket</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> try</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> comp</span><!--
+--><span class="label-100 pred0">ens</span><!--
+--><span class="label-100 pred0">ate</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> target</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> -</span><!--
+--><span class="label-100 pred0">RED</span><!--
+--><span class="label-100 pred0">UCTION</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">FACTOR</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> y</span><!--
+--><span class="label-100 pred0">B</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">aging</span><!--
+--><span class="label-100 pred0">B</span><!--
+--><span class="label-100 pred0"> &gt;=</span><!--
+--><span class="label-100 pred0"> MAX</span><!--
+--><span class="label-100 pred0">IMAL</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">AGING</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> we</span><!--
+--><span class="label-100 pred0"> keep</span><!--
+--><span class="label-100 pred0"> updating</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> low</span><!--
+--><span class="label-100 pred0"> bracket</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> try</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> comp</span><!--
+--><span class="label-100 pred0">ens</span><!--
+--><span class="label-100 pred0">ate</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> target</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> -</span><!--
+--><span class="label-100 pred0">RED</span><!--
+--><span class="label-100 pred0">UCTION</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">FACTOR</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> y</span><!--
+--><span class="label-100 pred0">A</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> bracket</span><!--
+--><span class="label-100 pred0">ing</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> bal</span><!--
+--><span class="label-100 pred0">anced</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> try</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> find</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> root</span><!--
+--><span class="label-100 pred0"> itself</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> target</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> make</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> few</span><!--
+--><span class="label-100 pred0"> attempts</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> guess</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> root</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0">X</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> start</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> end</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> nb</span><!--
+--><span class="label-100 pred0">Points</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> do</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> guess</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> current</span><!--
+--><span class="label-100 pred0"> target</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> using</span><!--
+--><span class="label-100 pred0"> inverse</span><!--
+--><span class="label-100 pred0"> polynomial</span><!--
+--><span class="label-100 pred0"> interpolation</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> System</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">arraycopy</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">x</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> start</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> tmp</span><!--
+--><span class="label-100 pred0">X</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> start</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> end</span><!--
+--><span class="label-100 pred0"> -</span><!--
+--><span class="label-100 pred0"> start</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0">X</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> guess</span><!--
+--><span class="label-100 pred0">X</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">target</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> tmp</span><!--
+--><span class="label-100 pred0">X</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> y</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> start</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> end</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label1 pred0"> p</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label1 pred0"> p</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label1 pred0"> p</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label1 pred0"> p</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label1 pred0"> p</span><!--
+--><span class="label0 pred0"> *=</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label1 pred0"> p</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> Compute</span><!--
+--><span class="label0 pred0"> s</span><!--
+--><span class="label0 pred0">ine</span><!--
+--><span class="label0 pred0"> over</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> first</span><!--
+--><span class="label0 pred0"> quadr</span><!--
+--><span class="label0 pred0">ant</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0"> pi</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> Use</span><!--
+--><span class="label0 pred0"> combination</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> table</span><!--
+--><span class="label0 pred0"> lookup</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> r</span><!--
+--><span class="label0 pred0">ational</span><!--
+--><span class="label0 pred0"> polynomial</span><!--
+--><span class="label0 pred0"> expansion</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> xa</span><!--
+--><span class="label0 pred0"> number</span><!--
+--><span class="label0 pred0"> from</span><!--
+--><span class="label0 pred0"> which</span><!--
+--><span class="label0 pred0"> s</span><!--
+--><span class="label0 pred0">ine</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> requested</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0"> extra</span><!--
+--><span class="label0 pred0"> bits</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">may</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> sin</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">xa</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> sin</span><!--
+--><span class="label0 pred0">Q</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">double</span><!--
+--><span class="label0 pred0"> xa</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> idx</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">int</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> ((</span><!--
+--><span class="label0 pred0">xa</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> epsilon</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> xa</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> E</span><!--
+--><span class="label0 pred0">IGH</span><!--
+--><span class="label0 pred0">TH</span><!--
+--><span class="label0 pred0">S</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">idx</span><!--
+--><span class="label0 pred0">];</span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0">idx</span><!--
+--><span class="label0 pred0">*</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> Table</span><!--
+--><span class="label0 pred0"> look</span><!--
+--><span class="label0 pred0">ups</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> sint</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> S</span><!--
+--><span class="label0 pred0">INE</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">TABLE</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">idx</span><!--
+--><span class="label0 pred0">];</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> sint</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> S</span><!--
+--><span class="label0 pred0">INE</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">TABLE</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">idx</span><!--
+--><span class="label0 pred0">];</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> cost</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> COS</span><!--
+--><span class="label0 pred0">INE</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">TABLE</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">idx</span><!--
+--><span class="label0 pred0">];</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> cost</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> COS</span><!--
+--><span class="label0 pred0">INE</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">TABLE</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">idx</span><!--
+--><span class="label0 pred0">];</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> Pol</span><!--
+--><span class="label0 pred0">ynomial</span><!--
+--><span class="label0 pred0"> eval</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> sin</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">epsilon</span><!--
+--><span class="label0 pred0">),</span><!--
+--><span class="label0 pred0"> cos</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">epsilon</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> sin</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">ps</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> epsilon</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> sin</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">ps</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> poly</span><!--
+--><span class="label0 pred0">Sine</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">epsilon</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> cos</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">ps</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> cos</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">ps</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> poly</span><!--
+--><span class="label0 pred0">Cos</span><!--
+--><span class="label0 pred0">ine</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">epsilon</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> Split</span><!--
+--><span class="label0 pred0"> epsilon</span><!--
+--><span class="label0 pred0">  </span><!--
+--><span class="label0 pred0"> xa</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> temp</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> sin</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">ps</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> HEX</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> temp</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">sin</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">ps</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> temp</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> temp</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> sin</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">ps</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0"> +=</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> sin</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">ps</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> temp</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> sin</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">ps</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> temp</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> /*</span><!--
+--><span class="label0 pred0"> Compute</span><!--
+--><span class="label0 pred0"> sin</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">x</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> angle</span><!--
+--><span class="label0 pred0"> addition</span><!--
+--><span class="label0 pred0"> formula</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> result</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> /*</span><!--
+--><span class="label0 pred0"> Compute</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> following</span><!--
+--><span class="label0 pred0"> sum</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0">
+        </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+        </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> result</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> sint</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> cost</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0">*</span><!--
+--><span class="label0 pred0">sin</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">ps</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> sint</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0">*</span><!--
+--><span class="label0 pred0">cos</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">ps</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> cost</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0">*</span><!--
+--><span class="label0 pred0">sin</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">ps</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0">
+        </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">         </span><!--
+--><span class="label0 pred0"> sint</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> cost</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0">*</span><!--
+--><span class="label0 pred0">sin</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">ps</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> sint</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0">*</span><!--
+--><span class="label0 pred0">cos</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">ps</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> cost</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0">*</span><!--
+--><span class="label0 pred0">sin</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">ps</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+        </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+        </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Range</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> elements</span><!--
+--><span class="label0 pred0">
+        </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+        </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> xxx</span><!--
+--><span class="label0 pred0">t</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0">   </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">           </span><!--
+--><span class="label0 pred0"> PI</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">
+        </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> xxx</span><!--
+--><span class="label0 pred0">tB</span><!--
+--><span class="label0 pred0">  </span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">e</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">      </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">e</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">
+        </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> sin</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">ps</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">      </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">
+        </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> sin</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">ps</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">e</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">       </span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">e</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">
+        </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> cos</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">ps</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0">  </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">
+        </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> cos</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">ps</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0">  </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">          </span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">6</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">
+        </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+        </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0">result</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> sint</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> cost</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0">*</span><!--
+--><span class="label0 pred0">sin</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">ps</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> sint</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0">*</span><!--
+--><span class="label0 pred0">cos</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">ps</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> cost</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0">*</span><!--
+--><span class="label0 pred0">sin</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">ps</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0">         </span><!--
+--><span class="label0 pred0"> sint</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> cost</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0">*</span><!--
+--><span class="label0 pred0">sin</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">ps</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> sint</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0">*</span><!--
+--><span class="label0 pred0">cos</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">ps</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> cost</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0">*</span><!--
+--><span class="label0 pred0">sin</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">ps</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0">result</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> sint</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> sint</span><!--
+--><span class="label0 pred0">A</span><!--
+--><span class="label0 pred0">*</span><!--
+--><span class="label0 pred0">cos</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">ps</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> sint</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> sint</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> cos</span><!--
+--><span class="label0 pred0">E</span><!--
+--><span class="label0 pred0">ps</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0">result</span><!--
+--><span class="label0 pred0"> +=</span><!--
+--><span class="label0 pred0"> cost</span>
+</div>
+<hr/>
+<div>
+<h3>
+Math, 40
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>                final int p = agingA - MAXIMAL_AGING;<br/>                final double weightA = (1 &lt;&lt; p) - 1;<br/>                final double weightB = p + 1;<br/>                targetY = (weightA * yA - weightB * REDUCTION_FACTOR * yB) / (weightA + weightB);<br/>&lt;CHANGEE&gt;<br/>&lt;CHANGES&gt;<br/>                final int p = agingB - MAXIMAL_AGING;<br/>                final double weightA = p + 1;<br/>                final double weightB = (1 &lt;&lt; p) - 1;<br/>                targetY = (weightB * yB - weightA * REDUCTION_FACTOR * yA) / (weightA + weightB);<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> abs</span><!--
+--><span class="label-100 pred0">YA</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0"> abs</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0">B</span><!--
+--><span class="label-100 pred0"> ?</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">A</span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">B</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> case</span><!--
+--><span class="label-100 pred0"> LEFT</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">SIDE</span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">A</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> case</span><!--
+--><span class="label-100 pred0"> RIGHT</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">SIDE</span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">B</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> case</span><!--
+--><span class="label-100 pred0"> BE</span><!--
+--><span class="label-100 pred0">LOW</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">SIDE</span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">y</span><!--
+--><span class="label-100 pred0">A</span><!--
+--><span class="label-100 pred0"> &lt;=</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> ?</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">A</span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">B</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> case</span><!--
+--><span class="label-100 pred0"> A</span><!--
+--><span class="label-100 pred0">BO</span><!--
+--><span class="label-100 pred0">VE</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">SIDE</span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">y</span><!--
+--><span class="label-100 pred0">A</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> ?</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">B</span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0">A</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> default</span><!--
+--><span class="label-100 pred0"> :</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> should</span><!--
+--><span class="label-100 pred0"> never</span><!--
+--><span class="label-100 pred0"> happen</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> throw</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> Math</span><!--
+--><span class="label-100 pred0">Internal</span><!--
+--><span class="label-100 pred0">Error</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">null</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> target</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0"> evaluation</span><!--
+--><span class="label-100 pred0"> point</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> target</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">aging</span><!--
+--><span class="label-100 pred0">A</span><!--
+--><span class="label-100 pred0"> &gt;=</span><!--
+--><span class="label-100 pred0"> MAX</span><!--
+--><span class="label-100 pred0">IMAL</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">AGING</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> we</span><!--
+--><span class="label-100 pred0"> keep</span><!--
+--><span class="label-100 pred0"> updating</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> high</span><!--
+--><span class="label-100 pred0"> bracket</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> try</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> comp</span><!--
+--><span class="label-100 pred0">ens</span><!--
+--><span class="label-100 pred0">ate</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> target</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> -</span><!--
+--><span class="label-100 pred0">RED</span><!--
+--><span class="label-100 pred0">UCTION</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">FACTOR</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> y</span><!--
+--><span class="label-100 pred0">B</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">aging</span><!--
+--><span class="label-100 pred0">B</span><!--
+--><span class="label-100 pred0"> &gt;=</span><!--
+--><span class="label-100 pred0"> MAX</span><!--
+--><span class="label-100 pred0">IMAL</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">AGING</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> we</span><!--
+--><span class="label-100 pred0"> keep</span><!--
+--><span class="label-100 pred0"> updating</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> low</span><!--
+--><span class="label-100 pred0"> bracket</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> try</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> comp</span><!--
+--><span class="label-100 pred0">ens</span><!--
+--><span class="label-100 pred0">ate</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> target</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> -</span><!--
+--><span class="label-100 pred0">RED</span><!--
+--><span class="label-100 pred0">UCTION</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">FACTOR</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> y</span><!--
+--><span class="label-100 pred0">A</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0"> else</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> bracket</span><!--
+--><span class="label-100 pred0">ing</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> bal</span><!--
+--><span class="label-100 pred0">anced</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> try</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> find</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> root</span><!--
+--><span class="label-100 pred0"> itself</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> target</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> make</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> few</span><!--
+--><span class="label-100 pred0"> attempts</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> guess</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> root</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0">X</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> start</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> end</span><!--
+--><span class="label-100 pred0">  </span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> nb</span><!--
+--><span class="label-100 pred0">Points</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> do</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> guess</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> current</span><!--
+--><span class="label-100 pred0"> target</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> using</span><!--
+--><span class="label-100 pred0"> inverse</span><!--
+--><span class="label-100 pred0"> polynomial</span><!--
+--><span class="label-100 pred0"> interpolation</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> System</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">arraycopy</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">x</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> start</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> tmp</span><!--
+--><span class="label-100 pred0">X</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> start</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> end</span><!--
+--><span class="label-100 pred0"> -</span><!--
+--><span class="label-100 pred0"> start</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> next</span><!--
+--><span class="label-100 pred0">X</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> guess</span><!--
+--><span class="label-100 pred0">X</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">target</span><!--
+--><span class="label-100 pred0">Y</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> tmp</span><!--
+--><span class="label-100 pred0">X</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> y</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> start</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> end</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0"> represented</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> exactly</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> result</span><!--
+--><span class="label0 pred0"> interval</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">em</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">closed</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">em</span><!--
+--><span class="label0 pred0">&gt;,</span><!--
+--><span class="label0 pred0"> it</span><!--
+--><span class="label0 pred0"> cannot</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> half</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">closed</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> as</span><!--
+--><span class="label0 pred0"> would</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> more</span><!--
+--><span class="label0 pred0"> s</span><!--
+--><span class="label0 pred0">atis</span><!--
+--><span class="label0 pred0">factory</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> pure</span><!--
+--><span class="label0 pred0">ly</span><!--
+--><span class="label0 pred0"> mathematical</span><!--
+--><span class="label0 pred0"> view</span><!--
+--><span class="label0 pred0">.&lt;/</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> angle</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> normalize</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> center</span><!--
+--><span class="label0 pred0"> center</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> desired</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">&amp;</span><!--
+--><span class="label0 pred0">pi</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> interval</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> result</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">k</span><!--
+--><span class="label0 pred0">&amp;</span><!--
+--><span class="label0 pred0">pi</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> integer</span><!--
+--><span class="label0 pred0"> k</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> center</span><!--
+--><span class="label0 pred0">-&amp;</span><!--
+--><span class="label0 pred0">pi</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> &amp;</span><!--
+--><span class="label0 pred0">lt</span><!--
+--><span class="label0 pred0">;=</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">k</span><!--
+--><span class="label0 pred0">&amp;</span><!--
+--><span class="label0 pred0">pi</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> &amp;</span><!--
+--><span class="label0 pred0">lt</span><!--
+--><span class="label0 pred0">;=</span><!--
+--><span class="label0 pred0"> center</span><!--
+--><span class="label0 pred0">+</span><!--
+--><span class="label0 pred0">&amp;</span><!--
+--><span class="label0 pred0">pi</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">since</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> normalize</span><!--
+--><span class="label0 pred0">Angle</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">double</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> center</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+        </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> TWO</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">PI</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Fast</span><!--
+--><span class="label0 pred0">Math</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">floor</span><!--
+--><span class="label0 pred0">((</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> Fast</span><!--
+--><span class="label0 pred0">Math</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">PI</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> center</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> /</span><!--
+--><span class="label0 pred0"> TWO</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">PI</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">Reduce</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> |</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> offset</span><!--
+--><span class="label0 pred0">|}</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> primary</span><!--
+--><span class="label0 pred0"> interval</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> [</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> |</span><!--
+--><span class="label0 pred0">period</span><!--
+--><span class="label0 pred0">|</span><!--
+--><span class="label0 pred0">)}</span><!--
+--><span class="label0 pred0">.&lt;/</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">Specific</span><!--
+--><span class="label0 pred0">ally</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0"> returned</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">br</span><!--
+--><span class="label0 pred0">/&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> |</span><!--
+--><span class="label0 pred0">period</span><!--
+--><span class="label0 pred0">|</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> floor</span><!--
+--><span class="label0 pred0">((</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> offset</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> /</span><!--
+--><span class="label0 pred0"> |</span><!--
+--><span class="label0 pred0">period</span><!--
+--><span class="label0 pred0">|)</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> offset</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0">.&lt;/</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">If</span><!--
+--><span class="label0 pred0"> any</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> parameters</span><!--
+--><span class="label0 pred0"> are</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> NaN</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> infinite</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> result</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> NaN</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0">.&lt;/</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> Value</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> reduce</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> period</span><!--
+--><span class="label0 pred0"> Period</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> offset</span><!--
+--><span class="label0 pred0"> Value</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0"> will</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> mapped</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">}.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> within</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> interval</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> [</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0"> |</span><!--
+--><span class="label0 pred0">period</span><!--
+--><span class="label0 pred0">|)</span><!--
+--><span class="label0 pred0">},</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0"> corresponds</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0">}.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> reduce</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">double</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+                               </span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> period</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+                               </span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> offset</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label1 pred0"> p</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> Fast</span><!--
+--><span class="label0 pred0">Math</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">abs</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">period</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label1 pred0"> p</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Fast</span><!--
+--><span class="label0 pred0">Math</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">floor</span><!--
+--><span class="label0 pred0">((</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> offset</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> /</span><!--
+--><span class="label1 pred0"> p</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> offset</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Returns</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> first</span><!--
+--><span class="label0 pred0"> argument</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> sign</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> second</span><!--
+--><span class="label0 pred0"> argument</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> magnitude</span><!--
+--><span class="label0 pred0"> M</span><!--
+--><span class="label0 pred0">agnitude</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> returned</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> sign</span><!--
+--><span class="label0 pred0"> Sign</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> returned</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> magnitude</span><!--
+--><span class="label0 pred0"> equal</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> magnitude</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> same</span><!--
+--><span class="label0 pred0"> sign</span><!--
+--><span class="label0 pred0"> as</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> sign</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0"> argument</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">throws</span><!--
+--><span class="label0 pred0"> Math</span><!--
+--><span class="label0 pred0">Arithmetic</span><!--
+--><span class="label0 pred0">Exception</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> magnitude</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> Byte</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">MIN</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">VALUE</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> sign</span><!--
+--><span class="label0 pred0"> &gt;=</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">}.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> byte</span><!--
+--><span class="label0 pred0"> copy</span><!--
+--><span class="label0 pred0">Sign</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">byte</span><!--
+--><span class="label0 pred0"> magnitude</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> byte</span><!--
+--><span class="label0 pred0"> sign</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> ((</span><!--
+--><span class="label0 pred0">magnitude</span><!--
+--><span class="label0 pred0"> &gt;=</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0"> &amp;&amp;</span><!--
+--><span class="label0 pred0"> sign</span><!--
+--><span class="label0 pred0"> &gt;=</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> ||</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">magnitude</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0"> &amp;&amp;</span><!--
+--><span class="label0 pred0"> sign</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">))</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> Sign</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> OK</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> magnitude</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">sign</span><!--
+--><span class="label0 pred0"> &gt;=</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0"> &amp;&amp;</span><!--
+--><span class="label0 pred0">
+                  </span><!--
+--><span class="label0 pred0"> magnitude</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> Byte</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">MIN</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">VALUE</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> throw</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Math</span><!--
+--><span class="label0 pred0">Arithmetic</span><!--
+--><span class="label0 pred0">Exception</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Localized</span><!--
+--><span class="label0 pred0">Formats</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">OVER</span><!--
+--><span class="label0 pred0">FLOW</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">byte</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0">magnitude</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> Flip</span><!--
+--><span class="label0 pred0"> sign</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Returns</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> first</span><!--
+--><span class="label0 pred0"> argument</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> sign</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> second</span><!--
+--><span class="label0 pred0"> argument</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> magnitude</span><!--
+--><span class="label0 pred0"> M</span><!--
+--><span class="label0 pred0">agnitude</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> returned</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> sign</span><!--
+--><span class="label0 pred0"> Sign</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> returned</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> magnitude</span><!--
+--><span class="label0 pred0"> equal</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> magnitude</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> same</span><!--
+--><span class="label0 pred0"> sign</span><!--
+--><span class="label0 pred0"> as</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> sign</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0"> argument</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">throws</span><!--
+--><span class="label0 pred0"> Math</span><!--
+--><span class="label0 pred0">Arithmetic</span><!--
+--><span class="label0 pred0">Exception</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> magnitude</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> Short</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">MIN</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">VALUE</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> sign</span><!--
+--><span class="label0 pred0"> &gt;=</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">}.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> short</span><!--
+--><span class="label0 pred0"> copy</span><!--
+--><span class="label0 pred0">Sign</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">short</span><!--
+--><span class="label0 pred0"> magnitude</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> short</span><!--
+--><span class="label0 pred0"> sign</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span>
+</div>
+<hr/>
+</body>
+</html>

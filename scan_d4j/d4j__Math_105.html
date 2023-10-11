@@ -1,0 +1,4110 @@
+<html>
+<head>
+<style>
+pre {margin: 0.1em }
+
+            span {
+                white-space: pre;
+            }
+
+            .label-100 {
+                border: 1px solid gray;
+            }
+
+            .label0 {
+                border: 1px solid white;
+            }
+
+            .label1 {
+                border: 1px solid blue;
+            }
+            .new {
+                background-color: #8FFF92;
+            }
+
+            .context-size {
+	            padding: 0.1em;
+	            color: white;
+	            background-color: black;
+	            border-radius: 50%;
+	            width: 1.5em;
+	            display: inline-block;
+	            text-align: center;
+	            height: 1.5em;
+	            line-height: 1.5em;
+                margin-right: 0.6em;
+            }
+.pred0{background-color: rgba(255, 0, 0, 0.0);}
+.pred1{background-color: rgba(255, 0, 0, 0.1);}
+.pred2{background-color: rgba(255, 0, 0, 0.2);}
+.pred3{background-color: rgba(255, 0, 0, 0.3);}
+.pred4{background-color: rgba(255, 0, 0, 0.4);}
+.pred5{background-color: rgba(255, 0, 0, 0.5);}
+.pred6{background-color: rgba(255, 0, 0, 0.6);}
+.pred7{background-color: rgba(255, 0, 0, 0.7);}
+.pred8{background-color: rgba(255, 0, 0, 0.8);}
+.pred9{background-color: rgba(255, 0, 0, 0.9);}
+.pred10{background-color: rgba(255, 0, 0, 1.0);}
+</style>
+</head>
+<body>
+<div>
+<h3>
+Math, 105
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>        return Math.max(0d, sumYY - sumXY * sumXY / sumXX);<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> The</span><!--
+--><span class="label-100 pred0"> sums</span><!--
+--><span class="label-100 pred0"> are</span><!--
+--><span class="label-100 pred0"> accumulated</span><!--
+--><span class="label-100 pred0"> using</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> updating</span><!--
+--><span class="label-100 pred0"> algorithm</span><!--
+--><span class="label-100 pred0"> referenced</span><!--
+--><span class="label-100 pred0"> in</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> {@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">addData</span><!--
+--><span class="label-100 pred0">}.</span><!--
+--><span class="label-100 pred0">  
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> The</span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> constr</span><!--
+--><span class="label-100 pred0">ained</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> non</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">negative</span><!--
+--><span class="label-100 pred0"> -</span><!--
+--><span class="label-100 pred0"> i</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">e</span><!--
+--><span class="label-100 pred0">.,</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> due</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> rounding</span><!--
+--><span class="label-100 pred0"> errors</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> computational</span><!--
+--><span class="label-100 pred0"> formula</span><!--
+--><span class="label-100 pred0"> returns</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> negative</span><!--
+--><span class="label-100 pred0"> result</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> returned</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">strong</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">Preconditions</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">strong</span><!--
+--><span class="label-100 pred0">&gt;:</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">ul</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">At</span><!--
+--><span class="label-100 pred0"> least</span><!--
+--><span class="label-100 pred0"> two</span><!--
+--><span class="label-100 pred0"> observations</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">with</span><!--
+--><span class="label-100 pred0"> at</span><!--
+--><span class="label-100 pred0"> least</span><!--
+--><span class="label-100 pred0"> two</span><!--
+--><span class="label-100 pred0"> different</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0"> values</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> must</span><!--
+--><span class="label-100 pred0"> have</span><!--
+--><span class="label-100 pred0"> been</span><!--
+--><span class="label-100 pred0"> added</span><!--
+--><span class="label-100 pred0"> before</span><!--
+--><span class="label-100 pred0"> invoking</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> method</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0"> If</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> method</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> invoked</span><!--
+--><span class="label-100 pred0"> before</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> model</span><!--
+--><span class="label-100 pred0"> can</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> estimated</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">Double</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0">NaN</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> returned</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;/</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;&lt;/</span><!--
+--><span class="label-100 pred0">ul</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">return</span><!--
+--><span class="label-100 pred0"> sum</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> squared</span><!--
+--><span class="label-100 pred0"> errors</span><!--
+--><span class="label-100 pred0"> associated</span><!--
+--><span class="label-100 pred0"> with</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> regression</span><!--
+--><span class="label-100 pred0"> model</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">Sum</span><!--
+--><span class="label-100 pred0">Squared</span><!--
+--><span class="label-100 pred0">Errors</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> sum</span><!--
+--><span class="label-100 pred0">YY</span><!--
+--><span class="label-100 pred0"> -</span><!--
+--><span class="label-100 pred0"> sum</span><!--
+--><span class="label-100 pred0">XY</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> sum</span><!--
+--><span class="label-100 pred0">XY</span><!--
+--><span class="label-100 pred0"> /</span><!--
+--><span class="label-100 pred0"> sum</span><!--
+--><span class="label-100 pred0">XX</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Returns</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> sum</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> squared</span><!--
+--><span class="label-100 pred0"> de</span><!--
+--><span class="label-100 pred0">viations</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> y</span><!--
+--><span class="label-100 pred0"> values</span><!--
+--><span class="label-100 pred0"> about</span><!--
+--><span class="label-100 pred0"> their</span><!--
+--><span class="label-100 pred0"> mean</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> This</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> defined</span><!--
+--><span class="label-100 pred0"> as</span><!--
+--><span class="label-100 pred0"> S</span><!--
+--><span class="label-100 pred0">STO</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">a</span><!--
+--><span class="label-100 pred0"> href</span><!--
+--><span class="label-100 pred0">=&quot;</span><!--
+--><span class="label-100 pred0">http</span><!--
+--><span class="label-100 pred0">://</span><!--
+--><span class="label-100 pred0">www</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">xy</span><!--
+--><span class="label-100 pred0">co</span><!--
+--><span class="label-100 pred0">on</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">com</span><!--
+--><span class="label-100 pred0">/</span><!--
+--><span class="label-100 pred0">Sum</span><!--
+--><span class="label-100 pred0">Of</span><!--
+--><span class="label-100 pred0">S</span><!--
+--><span class="label-100 pred0">quares</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">htm</span><!--
+--><span class="label-100 pred0">&quot;&gt;</span><!--
+--><span class="label-100 pred0">here</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">a</span><!--
+--><span class="label-100 pred0">&gt;.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> If</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">n</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;,</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> returns</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">Double</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">NaN</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">return</span><!--
+--><span class="label-100 pred0"> sum</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> squared</span><!--
+--><span class="label-100 pred0"> de</span><!--
+--><span class="label-100 pred0">viations</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> y</span><!--
+--><span class="label-100 pred0"> values</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> getTotal</span><!--
+--><span class="label-100 pred0">Sum</span><!--
+--><span class="label-100 pred0">S</span><!--
+--><span class="label-100 pred0">quares</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">d</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> n</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Returns</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> number</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> observations</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0"> have</span><!--
+--><span class="label0 pred0"> been</span><!--
+--><span class="label0 pred0"> added</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> model</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> n</span><!--
+--><span class="label0 pred0"> number</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> observations</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0"> have</span><!--
+--><span class="label0 pred0"> been</span><!--
+--><span class="label0 pred0"> added</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> long</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">N</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> n</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Returns</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">predicted</span><!--
+--><span class="label0 pred0">&quot;</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">y</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0"> associated</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> supplied</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">x</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> based</span><!--
+--><span class="label0 pred0"> on</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> data</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0"> has</span><!--
+--><span class="label0 pred0"> been</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> added</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> model</span><!--
+--><span class="label0 pred0"> when</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> method</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> activated</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> predict</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">x</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> intercept</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> slope</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0"> &lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">strong</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">Preconditions</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">strong</span><!--
+--><span class="label0 pred0">&gt;:</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">ul</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">li</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">At</span><!--
+--><span class="label0 pred0"> least</span><!--
+--><span class="label0 pred0"> two</span><!--
+--><span class="label0 pred0"> observations</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">with</span><!--
+--><span class="label0 pred0"> at</span><!--
+--><span class="label0 pred0"> least</span><!--
+--><span class="label0 pred0"> two</span><!--
+--><span class="label0 pred0"> different</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0"> values</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> must</span><!--
+--><span class="label0 pred0"> have</span><!--
+--><span class="label0 pred0"> been</span><!--
+--><span class="label0 pred0"> added</span><!--
+--><span class="label0 pred0"> before</span><!--
+--><span class="label0 pred0"> invoking</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> method</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> If</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> method</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> invoked</span><!--
+--><span class="label0 pred0"> before</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> model</span><!--
+--><span class="label0 pred0"> can</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> estimated</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">Double</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">NaN</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> returned</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;/</span><!--
+--><span class="label0 pred0">li</span><!--
+--><span class="label0 pred0">&gt;&lt;/</span><!--
+--><span class="label0 pred0">ul</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0"> input</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">x</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> predicted</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">y</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> predict</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">double</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> b</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> getS</span><!--
+--><span class="label0 pred0">lope</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">Intercept</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> b</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Returns</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> intercept</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> estimated</span><!--
+--><span class="label0 pred0"> regression</span><!--
+--><span class="label0 pred0"> line</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> least</span><!--
+--><span class="label0 pred0"> squares</span><!--
+--><span class="label0 pred0"> estimate</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> intercept</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> computed</span><!--
+--><span class="label0 pred0"> using</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0"> href</span><!--
+--><span class="label0 pred0">=&quot;</span><!--
+--><span class="label0 pred0">http</span><!--
+--><span class="label0 pred0">://</span><!--
+--><span class="label0 pred0">www</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">xy</span><!--
+--><span class="label0 pred0">co</span><!--
+--><span class="label0 pred0">on</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">com</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">est</span><!--
+--><span class="label0 pred0">imation</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">htm</span><!--
+--><span class="label0 pred0">&quot;&gt;</span><!--
+--><span class="label0 pred0">normal</span><!--
+--><span class="label0 pred0"> equations</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0">&gt;.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> intercept</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> sometimes</span><!--
+--><span class="label0 pred0"> den</span><!--
+--><span class="label0 pred0">oted</span><!--
+--><span class="label0 pred0"> b</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">strong</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">Preconditions</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">strong</span><!--
+--><span class="label0 pred0">&gt;:</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">ul</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">li</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">At</span><!--
+--><span class="label0 pred0"> least</span><!--
+--><span class="label0 pred0"> two</span><!--
+--><span class="label0 pred0"> observations</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">with</span><!--
+--><span class="label0 pred0"> at</span><!--
+--><span class="label0 pred0"> least</span><!--
+--><span class="label0 pred0"> two</span><!--
+--><span class="label0 pred0"> different</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0"> values</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> must</span><!--
+--><span class="label0 pred0"> have</span><!--
+--><span class="label0 pred0"> been</span><!--
+--><span class="label0 pred0"> added</span><!--
+--><span class="label0 pred0"> before</span><!--
+--><span class="label0 pred0"> invoking</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> method</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> If</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> method</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> invoked</span><!--
+--><span class="label0 pred0"> before</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> model</span><!--
+--><span class="label0 pred0"> can</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> estimated</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">Double</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">NaN</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> returned</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;/</span><!--
+--><span class="label0 pred0">li</span><!--
+--><span class="label0 pred0">&gt;&lt;/</span><!--
+--><span class="label0 pred0">ul</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> intercept</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> regression</span><!--
+--><span class="label0 pred0"> line</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">Intercept</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">Intercept</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">getS</span><!--
+--><span class="label0 pred0">lope</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Returns</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> slope</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> estimated</span><!--
+--><span class="label0 pred0"> regression</span><!--
+--><span class="label0 pred0"> line</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">  
+   </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> least</span><!--
+--><span class="label0 pred0"> squares</span><!--
+--><span class="label0 pred0"> estimate</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> slope</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> computed</span><!--
+--><span class="label0 pred0"> using</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> 
+   </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0"> href</span><!--
+--><span class="label0 pred0">=&quot;</span><!--
+--><span class="label0 pred0">http</span><!--
+--><span class="label0 pred0">://</span><!--
+--><span class="label0 pred0">www</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">xy</span><!--
+--><span class="label0 pred0">co</span><!--
+--><span class="label0 pred0">on</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">com</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">est</span><!--
+--><span class="label0 pred0">imation</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">htm</span><!--
+--><span class="label0 pred0">&quot;&gt;</span><!--
+--><span class="label0 pred0">normal</span><!--
+--><span class="label0 pred0"> equations</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0">&gt;.</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> slope</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> sometimes</span><!--
+--><span class="label0 pred0"> den</span><!--
+--><span class="label0 pred0">oted</span><!--
+--><span class="label0 pred0"> b</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> 
+   </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">strong</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">Preconditions</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">strong</span><!--
+--><span class="label0 pred0">&gt;:</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">ul</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">li</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">At</span><!--
+--><span class="label0 pred0"> least</span><!--
+--><span class="label0 pred0"> two</span><!--
+--><span class="label0 pred0"> observations</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">with</span><!--
+--><span class="label0 pred0"> at</span><!--
+--><span class="label0 pred0"> least</span><!--
+--><span class="label0 pred0"> two</span><!--
+--><span class="label0 pred0"> different</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0"> values</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> must</span><!--
+--><span class="label0 pred0"> have</span><!--
+--><span class="label0 pred0"> been</span><!--
+--><span class="label0 pred0"> added</span><!--
+--><span class="label0 pred0"> before</span><!--
+--><span class="label0 pred0"> invoking</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> method</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> If</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> method</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> 
+   </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> invoked</span><!--
+--><span class="label0 pred0"> before</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> model</span><!--
+--><span class="label0 pred0"> can</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> estimated</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">Double</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">NaN</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> returned</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;/</span><!--
+--><span class="label0 pred0">li</span><!--
+--><span class="label0 pred0">&gt;&lt;/</span><!--
+--><span class="label0 pred0">ul</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> slope</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> regression</span><!--
+--><span class="label0 pred0"> line</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> getS</span><!--
+--><span class="label0 pred0">lope</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">n</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> Double</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">NaN</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0">not</span><!--
+--><span class="label0 pred0"> enough</span><!--
+--><span class="label0 pred0"> data</span><!--
+--><span class="label0 pred0"> 
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label1 pred10">Math</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred9">abs</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">sum</span><!--
+--><span class="label0 pred0">XX</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Double</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">MIN</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">VALUE</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> Double</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">NaN</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0">not</span><!--
+--><span class="label0 pred0"> enough</span><!--
+--><span class="label0 pred0"> variation</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> sum</span><!--
+--><span class="label0 pred0">XY</span><!--
+--><span class="label0 pred0"> /</span><!--
+--><span class="label0 pred0"> sum</span><!--
+--><span class="label0 pred0">XX</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Returns</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0"> href</span>
+</div>
+<hr/>
+<div>
+<h3>
+Math, 105
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>        return Math.max(0d, sumYY - sumXY * sumXY / sumXX);<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> The</span><!--
+--><span class="label-100 pred0"> sums</span><!--
+--><span class="label-100 pred0"> are</span><!--
+--><span class="label-100 pred0"> accumulated</span><!--
+--><span class="label-100 pred0"> using</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> updating</span><!--
+--><span class="label-100 pred0"> algorithm</span><!--
+--><span class="label-100 pred0"> referenced</span><!--
+--><span class="label-100 pred0"> in</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> {@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">addData</span><!--
+--><span class="label-100 pred0">}.</span><!--
+--><span class="label-100 pred0">  
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> The</span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> constr</span><!--
+--><span class="label-100 pred0">ained</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> non</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">negative</span><!--
+--><span class="label-100 pred0"> -</span><!--
+--><span class="label-100 pred0"> i</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">e</span><!--
+--><span class="label-100 pred0">.,</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> due</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> rounding</span><!--
+--><span class="label-100 pred0"> errors</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> computational</span><!--
+--><span class="label-100 pred0"> formula</span><!--
+--><span class="label-100 pred0"> returns</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> negative</span><!--
+--><span class="label-100 pred0"> result</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> returned</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">strong</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">Preconditions</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">strong</span><!--
+--><span class="label-100 pred0">&gt;:</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">ul</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">At</span><!--
+--><span class="label-100 pred0"> least</span><!--
+--><span class="label-100 pred0"> two</span><!--
+--><span class="label-100 pred0"> observations</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">with</span><!--
+--><span class="label-100 pred0"> at</span><!--
+--><span class="label-100 pred0"> least</span><!--
+--><span class="label-100 pred0"> two</span><!--
+--><span class="label-100 pred0"> different</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0"> values</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> must</span><!--
+--><span class="label-100 pred0"> have</span><!--
+--><span class="label-100 pred0"> been</span><!--
+--><span class="label-100 pred0"> added</span><!--
+--><span class="label-100 pred0"> before</span><!--
+--><span class="label-100 pred0"> invoking</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> method</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0"> If</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> method</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> invoked</span><!--
+--><span class="label-100 pred0"> before</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> model</span><!--
+--><span class="label-100 pred0"> can</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> estimated</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">Double</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0">NaN</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> returned</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;/</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;&lt;/</span><!--
+--><span class="label-100 pred0">ul</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">return</span><!--
+--><span class="label-100 pred0"> sum</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> squared</span><!--
+--><span class="label-100 pred0"> errors</span><!--
+--><span class="label-100 pred0"> associated</span><!--
+--><span class="label-100 pred0"> with</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> regression</span><!--
+--><span class="label-100 pred0"> model</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">Sum</span><!--
+--><span class="label-100 pred0">Squared</span><!--
+--><span class="label-100 pred0">Errors</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> sum</span><!--
+--><span class="label-100 pred0">YY</span><!--
+--><span class="label-100 pred0"> -</span><!--
+--><span class="label-100 pred0"> sum</span><!--
+--><span class="label-100 pred0">XY</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> sum</span><!--
+--><span class="label-100 pred0">XY</span><!--
+--><span class="label-100 pred0"> /</span><!--
+--><span class="label-100 pred0"> sum</span><!--
+--><span class="label-100 pred0">XX</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Returns</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> sum</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> squared</span><!--
+--><span class="label-100 pred0"> de</span><!--
+--><span class="label-100 pred0">viations</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> y</span><!--
+--><span class="label-100 pred0"> values</span><!--
+--><span class="label-100 pred0"> about</span><!--
+--><span class="label-100 pred0"> their</span><!--
+--><span class="label-100 pred0"> mean</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> This</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> defined</span><!--
+--><span class="label-100 pred0"> as</span><!--
+--><span class="label-100 pred0"> S</span><!--
+--><span class="label-100 pred0">STO</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">a</span><!--
+--><span class="label-100 pred0"> href</span><!--
+--><span class="label-100 pred0">=&quot;</span><!--
+--><span class="label-100 pred0">http</span><!--
+--><span class="label-100 pred0">://</span><!--
+--><span class="label-100 pred0">www</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">xy</span><!--
+--><span class="label-100 pred0">co</span><!--
+--><span class="label-100 pred0">on</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">com</span><!--
+--><span class="label-100 pred0">/</span><!--
+--><span class="label-100 pred0">Sum</span><!--
+--><span class="label-100 pred0">Of</span><!--
+--><span class="label-100 pred0">S</span><!--
+--><span class="label-100 pred0">quares</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">htm</span><!--
+--><span class="label-100 pred0">&quot;&gt;</span><!--
+--><span class="label-100 pred0">here</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">a</span><!--
+--><span class="label-100 pred0">&gt;.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> If</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">n</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;,</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> returns</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">Double</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">NaN</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">return</span><!--
+--><span class="label-100 pred0"> sum</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> squared</span><!--
+--><span class="label-100 pred0"> de</span><!--
+--><span class="label-100 pred0">viations</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> y</span><!--
+--><span class="label-100 pred0"> values</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> getTotal</span><!--
+--><span class="label-100 pred0">Sum</span><!--
+--><span class="label-100 pred0">S</span><!--
+--><span class="label-100 pred0">quares</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">=&quot;</span><!--
+--><span class="label0 pred0">http</span><!--
+--><span class="label0 pred0">://</span><!--
+--><span class="label0 pred0">www</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">xy</span><!--
+--><span class="label0 pred0">co</span><!--
+--><span class="label0 pred0">on</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">com</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">Sum</span><!--
+--><span class="label0 pred0">Of</span><!--
+--><span class="label0 pred0">S</span><!--
+--><span class="label0 pred0">quares</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">htm</span><!--
+--><span class="label0 pred0">&quot;&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> sum</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> squared</span><!--
+--><span class="label0 pred0"> errors</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">SSE</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> associated</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> regression</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> model</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> sum</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> computed</span><!--
+--><span class="label0 pred0"> using</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> computational</span><!--
+--><span class="label0 pred0"> formula</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">SSE</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> S</span><!--
+--><span class="label0 pred0">YY</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">S</span><!--
+--><span class="label0 pred0">XY</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> S</span><!--
+--><span class="label0 pred0">XY</span><!--
+--><span class="label0 pred0"> /</span><!--
+--><span class="label0 pred0"> S</span><!--
+--><span class="label0 pred0">XX</span><!--
+--><span class="label0 pred0">)&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> where</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">SY</span><!--
+--><span class="label0 pred0">Y</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> sum</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> squared</span><!--
+--><span class="label0 pred0"> de</span><!--
+--><span class="label0 pred0">viations</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> y</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> values</span><!--
+--><span class="label0 pred0"> about</span><!--
+--><span class="label0 pred0"> their</span><!--
+--><span class="label0 pred0"> mean</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">S</span><!--
+--><span class="label0 pred0">XX</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> similar</span><!--
+--><span class="label0 pred0">ly</span><!--
+--><span class="label0 pred0"> defined</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">S</span><!--
+--><span class="label0 pred0">XY</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> sum</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> products</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> y</span><!--
+--><span class="label0 pred0"> mean</span><!--
+--><span class="label0 pred0"> de</span><!--
+--><span class="label0 pred0">viations</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">n</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> Double</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">NaN</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> sum</span><!--
+--><span class="label0 pred0">YY</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Returns</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> sum</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> squared</span><!--
+--><span class="label0 pred0"> de</span><!--
+--><span class="label0 pred0">viations</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> predicted</span><!--
+--><span class="label0 pred0"> y</span><!--
+--><span class="label0 pred0"> values</span><!--
+--><span class="label0 pred0"> about</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> their</span><!--
+--><span class="label0 pred0"> mean</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">which</span><!--
+--><span class="label0 pred0"> equals</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> mean</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> y</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> This</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> usually</span><!--
+--><span class="label0 pred0"> abbre</span><!--
+--><span class="label0 pred0">vi</span><!--
+--><span class="label0 pred0">ated</span><!--
+--><span class="label0 pred0"> S</span><!--
+--><span class="label0 pred0">SR</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> S</span><!--
+--><span class="label0 pred0">SM</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> It</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> defined</span><!--
+--><span class="label0 pred0"> as</span><!--
+--><span class="label0 pred0"> S</span><!--
+--><span class="label0 pred0">SM</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0"> href</span><!--
+--><span class="label0 pred0">=&quot;</span><!--
+--><span class="label0 pred0">http</span><!--
+--><span class="label0 pred0">://</span><!--
+--><span class="label0 pred0">www</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">xy</span><!--
+--><span class="label0 pred0">co</span><!--
+--><span class="label0 pred0">on</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">com</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">Sum</span><!--
+--><span class="label0 pred0">Of</span><!--
+--><span class="label0 pred0">S</span><!--
+--><span class="label0 pred0">quares</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">htm</span><!--
+--><span class="label0 pred0">&quot;&gt;</span><!--
+--><span class="label0 pred0">here</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">strong</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">Preconditions</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">strong</span><!--
+--><span class="label0 pred0">&gt;:</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">ul</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">li</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">At</span><!--
+--><span class="label0 pred0"> least</span><!--
+--><span class="label0 pred0"> two</span><!--
+--><span class="label0 pred0"> observations</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">with</span><!--
+--><span class="label0 pred0"> at</span><!--
+--><span class="label0 pred0"> least</span><!--
+--><span class="label0 pred0"> two</span><!--
+--><span class="label0 pred0"> different</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0"> values</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> must</span><!--
+--><span class="label0 pred0"> have</span><!--
+--><span class="label0 pred0"> been</span><!--
+--><span class="label0 pred0"> added</span><!--
+--><span class="label0 pred0"> before</span><!--
+--><span class="label0 pred0"> invoking</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> method</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> If</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> method</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> invoked</span><!--
+--><span class="label0 pred0"> before</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> model</span><!--
+--><span class="label0 pred0"> can</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> estimated</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">Double</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">NaN</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> returned</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;/</span><!--
+--><span class="label0 pred0">li</span><!--
+--><span class="label0 pred0">&gt;&lt;/</span><!--
+--><span class="label0 pred0">ul</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> sum</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> squared</span><!--
+--><span class="label0 pred0"> de</span><!--
+--><span class="label0 pred0">viations</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> predicted</span><!--
+--><span class="label0 pred0"> y</span><!--
+--><span class="label0 pred0"> values</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">Regression</span><!--
+--><span class="label0 pred0">Sum</span><!--
+--><span class="label0 pred0">S</span><!--
+--><span class="label0 pred0">quares</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">Regression</span><!--
+--><span class="label0 pred0">Sum</span><!--
+--><span class="label0 pred0">S</span><!--
+--><span class="label0 pred0">quares</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">getS</span><!--
+--><span class="label0 pred0">lope</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Returns</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> sum</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> squared</span><!--
+--><span class="label0 pred0"> errors</span><!--
+--><span class="label0 pred0"> divided</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> degrees</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> freedom</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> usually</span><!--
+--><span class="label0 pred0"> abbre</span><!--
+--><span class="label0 pred0">vi</span><!--
+--><span class="label0 pred0">ated</span><!--
+--><span class="label0 pred0"> M</span><!--
+--><span class="label0 pred0">SE</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> If</span><!--
+--><span class="label0 pred0"> there</span><!--
+--><span class="label0 pred0"> are</span><!--
+--><span class="label0 pred0"> fewer</span><!--
+--><span class="label0 pred0"> than</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">strong</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">three</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">strong</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> data</span><!--
+--><span class="label0 pred0"> pairs</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> model</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> there</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> no</span><!--
+--><span class="label0 pred0"> variation</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">x</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;,</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> returns</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">Double</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">NaN</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> sum</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> squared</span><!--
+--><span class="label0 pred0"> de</span><!--
+--><span class="label0 pred0">viations</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> y</span><!--
+--><span class="label0 pred0"> values</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">Mean</span><!--
+--><span class="label0 pred0">Square</span><!--
+--><span class="label0 pred0">Error</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">n</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> Double</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">NaN</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">Sum</span><!--
+--><span class="label0 pred0">Squared</span><!--
+--><span class="label0 pred0">Errors</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> /</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">double</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">n</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Returns</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0"> href</span><!--
+--><span class="label0 pred0">=&quot;</span><!--
+--><span class="label0 pred0">http</span><!--
+--><span class="label0 pred0">://</span><!--
+--><span class="label0 pred0">math</span><!--
+--><span class="label0 pred0">world</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">w</span><!--
+--><span class="label0 pred0">ol</span><!--
+--><span class="label0 pred0">fram</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">com</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">Correlation</span><!--
+--><span class="label0 pred0">Coefficient</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">html</span><!--
+--><span class="label0 pred0">&quot;&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> P</span><!--
+--><span class="label0 pred0">ear</span><!--
+--><span class="label0 pred0">son</span><!--
+--><span class="label0 pred0">&#x27;s</span><!--
+--><span class="label0 pred0"> product</span><!--
+--><span class="label0 pred0"> moment</span><!--
+--><span class="label0 pred0"> correlation</span><!--
+--><span class="label0 pred0"> coefficient</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0">&gt;,</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> usually</span><!--
+--><span class="label0 pred0"> den</span><!--
+--><span class="label0 pred0">oted</span><!--
+--><span class="label0 pred0"> r</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">strong</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">Preconditions</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">strong</span><!--
+--><span class="label0 pred0">&gt;:</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">ul</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">li</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">At</span><!--
+--><span class="label0 pred0"> least</span><!--
+--><span class="label0 pred0"> two</span><!--
+--><span class="label0 pred0"> observations</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">with</span><!--
+--><span class="label0 pred0"> at</span><!--
+--><span class="label0 pred0"> least</span><!--
+--><span class="label0 pred0"> two</span><!--
+--><span class="label0 pred0"> different</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0"> values</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> must</span><!--
+--><span class="label0 pred0"> have</span><!--
+--><span class="label0 pred0"> been</span><!--
+--><span class="label0 pred0"> added</span><!--
+--><span class="label0 pred0"> before</span><!--
+--><span class="label0 pred0"> invoking</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> method</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> If</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> method</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> invoked</span><!--
+--><span class="label0 pred0"> before</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> model</span><!--
+--><span class="label0 pred0"> can</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> estimated</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">Double</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">NaN</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> returned</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;/</span><!--
+--><span class="label0 pred0">li</span><!--
+--><span class="label0 pred0">&gt;&lt;/</span><!--
+--><span class="label0 pred0">ul</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> P</span><!--
+--><span class="label0 pred0">ear</span><!--
+--><span class="label0 pred0">son</span><!--
+--><span class="label0 pred0">&#x27;s</span><!--
+--><span class="label0 pred0"> r</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">R</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> b</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> getS</span><!--
+--><span class="label0 pred0">lope</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> result</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label1 pred1"> Math</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">sqrt</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">get</span><!--
+--><span class="label0 pred0">RS</span><!--
+--><span class="label0 pred0">quare</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> result</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0">result</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> result</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span>
+</div>
+<hr/>
+<div>
+<h3>
+Math, 105
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>        return Math.max(0d, sumYY - sumXY * sumXY / sumXX);<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> The</span><!--
+--><span class="label-100 pred0"> sums</span><!--
+--><span class="label-100 pred0"> are</span><!--
+--><span class="label-100 pred0"> accumulated</span><!--
+--><span class="label-100 pred0"> using</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> updating</span><!--
+--><span class="label-100 pred0"> algorithm</span><!--
+--><span class="label-100 pred0"> referenced</span><!--
+--><span class="label-100 pred0"> in</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> {@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">addData</span><!--
+--><span class="label-100 pred0">}.</span><!--
+--><span class="label-100 pred0">  
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> The</span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> constr</span><!--
+--><span class="label-100 pred0">ained</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> non</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">negative</span><!--
+--><span class="label-100 pred0"> -</span><!--
+--><span class="label-100 pred0"> i</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">e</span><!--
+--><span class="label-100 pred0">.,</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> due</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> rounding</span><!--
+--><span class="label-100 pred0"> errors</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> computational</span><!--
+--><span class="label-100 pred0"> formula</span><!--
+--><span class="label-100 pred0"> returns</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> negative</span><!--
+--><span class="label-100 pred0"> result</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> returned</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">strong</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">Preconditions</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">strong</span><!--
+--><span class="label-100 pred0">&gt;:</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">ul</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">At</span><!--
+--><span class="label-100 pred0"> least</span><!--
+--><span class="label-100 pred0"> two</span><!--
+--><span class="label-100 pred0"> observations</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">with</span><!--
+--><span class="label-100 pred0"> at</span><!--
+--><span class="label-100 pred0"> least</span><!--
+--><span class="label-100 pred0"> two</span><!--
+--><span class="label-100 pred0"> different</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0"> values</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> must</span><!--
+--><span class="label-100 pred0"> have</span><!--
+--><span class="label-100 pred0"> been</span><!--
+--><span class="label-100 pred0"> added</span><!--
+--><span class="label-100 pred0"> before</span><!--
+--><span class="label-100 pred0"> invoking</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> method</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0"> If</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> method</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> invoked</span><!--
+--><span class="label-100 pred0"> before</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> model</span><!--
+--><span class="label-100 pred0"> can</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> estimated</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">Double</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0">NaN</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> returned</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;/</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;&lt;/</span><!--
+--><span class="label-100 pred0">ul</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">return</span><!--
+--><span class="label-100 pred0"> sum</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> squared</span><!--
+--><span class="label-100 pred0"> errors</span><!--
+--><span class="label-100 pred0"> associated</span><!--
+--><span class="label-100 pred0"> with</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> regression</span><!--
+--><span class="label-100 pred0"> model</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">Sum</span><!--
+--><span class="label-100 pred0">Squared</span><!--
+--><span class="label-100 pred0">Errors</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> sum</span><!--
+--><span class="label-100 pred0">YY</span><!--
+--><span class="label-100 pred0"> -</span><!--
+--><span class="label-100 pred0"> sum</span><!--
+--><span class="label-100 pred0">XY</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> sum</span><!--
+--><span class="label-100 pred0">XY</span><!--
+--><span class="label-100 pred0"> /</span><!--
+--><span class="label-100 pred0"> sum</span><!--
+--><span class="label-100 pred0">XX</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Returns</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> sum</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> squared</span><!--
+--><span class="label-100 pred0"> de</span><!--
+--><span class="label-100 pred0">viations</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> y</span><!--
+--><span class="label-100 pred0"> values</span><!--
+--><span class="label-100 pred0"> about</span><!--
+--><span class="label-100 pred0"> their</span><!--
+--><span class="label-100 pred0"> mean</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> This</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> defined</span><!--
+--><span class="label-100 pred0"> as</span><!--
+--><span class="label-100 pred0"> S</span><!--
+--><span class="label-100 pred0">STO</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">a</span><!--
+--><span class="label-100 pred0"> href</span><!--
+--><span class="label-100 pred0">=&quot;</span><!--
+--><span class="label-100 pred0">http</span><!--
+--><span class="label-100 pred0">://</span><!--
+--><span class="label-100 pred0">www</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">xy</span><!--
+--><span class="label-100 pred0">co</span><!--
+--><span class="label-100 pred0">on</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">com</span><!--
+--><span class="label-100 pred0">/</span><!--
+--><span class="label-100 pred0">Sum</span><!--
+--><span class="label-100 pred0">Of</span><!--
+--><span class="label-100 pred0">S</span><!--
+--><span class="label-100 pred0">quares</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">htm</span><!--
+--><span class="label-100 pred0">&quot;&gt;</span><!--
+--><span class="label-100 pred0">here</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">a</span><!--
+--><span class="label-100 pred0">&gt;.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> If</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">n</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;,</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> returns</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">Double</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">NaN</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">return</span><!--
+--><span class="label-100 pred0"> sum</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> squared</span><!--
+--><span class="label-100 pred0"> de</span><!--
+--><span class="label-100 pred0">viations</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> y</span><!--
+--><span class="label-100 pred0"> values</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> getTotal</span><!--
+--><span class="label-100 pred0">Sum</span><!--
+--><span class="label-100 pred0">S</span><!--
+--><span class="label-100 pred0">quares</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Returns</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0"> href</span><!--
+--><span class="label0 pred0">=&quot;</span><!--
+--><span class="label0 pred0">http</span><!--
+--><span class="label0 pred0">://</span><!--
+--><span class="label0 pred0">www</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">xy</span><!--
+--><span class="label0 pred0">co</span><!--
+--><span class="label0 pred0">on</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">com</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">coefficient</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">htm</span><!--
+--><span class="label0 pred0">&quot;&gt;</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> coefficient</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> determin</span><!--
+--><span class="label0 pred0">ation</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0">&gt;,</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> usually</span><!--
+--><span class="label0 pred0"> den</span><!--
+--><span class="label0 pred0">oted</span><!--
+--><span class="label0 pred0"> r</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">square</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">strong</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">Preconditions</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">strong</span><!--
+--><span class="label0 pred0">&gt;:</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">ul</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">li</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">At</span><!--
+--><span class="label0 pred0"> least</span><!--
+--><span class="label0 pred0"> two</span><!--
+--><span class="label0 pred0"> observations</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">with</span><!--
+--><span class="label0 pred0"> at</span><!--
+--><span class="label0 pred0"> least</span><!--
+--><span class="label0 pred0"> two</span><!--
+--><span class="label0 pred0"> different</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0"> values</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> must</span><!--
+--><span class="label0 pred0"> have</span><!--
+--><span class="label0 pred0"> been</span><!--
+--><span class="label0 pred0"> added</span><!--
+--><span class="label0 pred0"> before</span><!--
+--><span class="label0 pred0"> invoking</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> method</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> If</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> method</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> invoked</span><!--
+--><span class="label0 pred0"> before</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> model</span><!--
+--><span class="label0 pred0"> can</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> estimated</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">Double</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">NaN</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> returned</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;/</span><!--
+--><span class="label0 pred0">li</span><!--
+--><span class="label0 pred0">&gt;&lt;/</span><!--
+--><span class="label0 pred0">ul</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> r</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">square</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">RS</span><!--
+--><span class="label0 pred0">quare</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> s</span><!--
+--><span class="label0 pred0">sto</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> getTotal</span><!--
+--><span class="label0 pred0">Sum</span><!--
+--><span class="label0 pred0">S</span><!--
+--><span class="label0 pred0">quares</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">s</span><!--
+--><span class="label0 pred0">sto</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">Sum</span><!--
+--><span class="label0 pred0">Squared</span><!--
+--><span class="label0 pred0">Errors</span><!--
+--><span class="label0 pred0">())</span><!--
+--><span class="label0 pred0"> /</span><!--
+--><span class="label0 pred0"> s</span><!--
+--><span class="label0 pred0">sto</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Returns</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0"> href</span><!--
+--><span class="label0 pred0">=&quot;</span><!--
+--><span class="label0 pred0">http</span><!--
+--><span class="label0 pred0">://</span><!--
+--><span class="label0 pred0">www</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">xy</span><!--
+--><span class="label0 pred0">co</span><!--
+--><span class="label0 pred0">on</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">com</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">stand</span><!--
+--><span class="label0 pred0">ar</span><!--
+--><span class="label0 pred0">der</span><!--
+--><span class="label0 pred0">ror</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">htm</span><!--
+--><span class="label0 pred0">&quot;&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> standard</span><!--
+--><span class="label0 pred0"> error</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> intercept</span><!--
+--><span class="label0 pred0"> estimate</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0">&gt;,</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> usually</span><!--
+--><span class="label0 pred0"> den</span><!--
+--><span class="label0 pred0">oted</span><!--
+--><span class="label0 pred0"> s</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> If</span><!--
+--><span class="label0 pred0"> there</span><!--
+--><span class="label0 pred0"> are</span><!--
+--><span class="label0 pred0"> fewer</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">strong</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">three</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">strong</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> observations</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> model</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> there</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> no</span><!--
+--><span class="label0 pred0"> variation</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> returns</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">Double</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">NaN</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> standard</span><!--
+--><span class="label0 pred0"> error</span><!--
+--><span class="label0 pred0"> associated</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> intercept</span><!--
+--><span class="label0 pred0"> estimate</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">Intercept</span><!--
+--><span class="label0 pred0">Std</span><!--
+--><span class="label0 pred0">Err</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label1 pred5"> Math</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">sqrt</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">Mean</span><!--
+--><span class="label0 pred0">Square</span><!--
+--><span class="label0 pred0">Error</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> ((</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">d</span><!--
+--><span class="label0 pred0"> /</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">double</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> n</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">x</span><!--
+--><span class="label0 pred0">bar</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">bar</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> /</span><!--
+--><span class="label0 pred0"> sum</span><!--
+--><span class="label0 pred0">XX</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Returns</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0"> href</span><!--
+--><span class="label0 pred0">=&quot;</span><!--
+--><span class="label0 pred0">http</span><!--
+--><span class="label0 pred0">://</span><!--
+--><span class="label0 pred0">www</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">xy</span><!--
+--><span class="label0 pred0">co</span><!--
+--><span class="label0 pred0">on</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">com</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">stand</span><!--
+--><span class="label0 pred0">error</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">htm</span><!--
+--><span class="label0 pred0">&quot;&gt;</span><!--
+--><span class="label0 pred0">standard</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> error</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> slope</span><!--
+--><span class="label0 pred0"> estimate</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0">&gt;,</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> usually</span><!--
+--><span class="label0 pred0"> den</span><!--
+--><span class="label0 pred0">oted</span><!--
+--><span class="label0 pred0"> s</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> If</span><!--
+--><span class="label0 pred0"> there</span><!--
+--><span class="label0 pred0"> are</span><!--
+--><span class="label0 pred0"> fewer</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">strong</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">three</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">strong</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> data</span><!--
+--><span class="label0 pred0"> pairs</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> model</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> there</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> no</span><!--
+--><span class="label0 pred0"> variation</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> returns</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">Double</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">NaN</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> standard</span><!--
+--><span class="label0 pred0"> error</span><!--
+--><span class="label0 pred0"> associated</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> slope</span><!--
+--><span class="label0 pred0"> estimate</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> getS</span><!--
+--><span class="label0 pred0">lope</span><!--
+--><span class="label0 pred0">Std</span><!--
+--><span class="label0 pred0">Err</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label1 pred7"> Math</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">sqrt</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">get</span><!--
+--><span class="label0 pred0">Mean</span><!--
+--><span class="label0 pred0">Square</span><!--
+--><span class="label0 pred0">Error</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> /</span><!--
+--><span class="label0 pred0"> sum</span><!--
+--><span class="label0 pred0">XX</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Returns</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> half</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">width</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">%</span><!--
+--><span class="label0 pred0"> confidence</span><!--
+--><span class="label0 pred0"> interval</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> slope</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> estimate</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">%</span><!--
+--><span class="label0 pred0"> confidence</span><!--
+--><span class="label0 pred0"> interval</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;(</span><!--
+--><span class="label0 pred0">getS</span><!--
+--><span class="label0 pred0">lope</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> getS</span><!--
+--><span class="label0 pred0">lope</span><!--
+--><span class="label0 pred0">Confidence</span><!--
+--><span class="label0 pred0">Interval</span><!--
+--><span class="label0 pred0">(),</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> getS</span><!--
+--><span class="label0 pred0">lope</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> getS</span><!--
+--><span class="label0 pred0">lope</span><!--
+--><span class="label0 pred0">Confidence</span><!--
+--><span class="label0 pred0">Interval</span><!--
+--><span class="label0 pred0">())</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> If</span><!--
+--><span class="label0 pred0"> there</span><!--
+--><span class="label0 pred0"> are</span><!--
+--><span class="label0 pred0"> fewer</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">strong</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">three</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">strong</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> observations</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> model</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> there</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> no</span><!--
+--><span class="label0 pred0"> variation</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> x</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> returns</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">Double</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">NaN</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">strong</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">Usage</span><!--
+--><span class="label0 pred0"> Note</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">strong</span><!--
+--><span class="label0 pred0">&gt;:&lt;</span><!--
+--><span class="label0 pred0">br</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> validity</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> statistic</span><!--
+--><span class="label0 pred0"> depends</span><!--
+--><span class="label0 pred0"> on</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> assumption</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> observations</span><!--
+--><span class="label0 pred0"> included</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> model</span><!--
+--><span class="label0 pred0"> are</span><!--
+--><span class="label0 pred0"> drawn</span><!--
+--><span class="label0 pred0"> from</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0"> href</span><!--
+--><span class="label0 pred0">=&quot;</span><!--
+--><span class="label0 pred0">http</span><!--
+--><span class="label0 pred0">://</span><!--
+--><span class="label0 pred0">math</span><!--
+--><span class="label0 pred0">world</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">w</span><!--
+--><span class="label0 pred0">ol</span><!--
+--><span class="label0 pred0">fram</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">com</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">B</span><!--
+--><span class="label0 pred0">ivariate</span><!--
+--><span class="label0 pred0">Normal</span><!--
+--><span class="label0 pred0">Distribution</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">html</span><!--
+--><span class="label0 pred0">&quot;&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> B</span><!--
+--><span class="label0 pred0">ivariate</span><!--
+--><span class="label0 pred0"> Normal</span><!--
+--><span class="label0 pred0"> Distribution</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0">&gt;.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> half</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">width</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">9</span><!--
+--><span class="label0 pred0">5</span><!--
+--><span class="label0 pred0">%</span><!--
+--><span class="label0 pred0"> confidence</span><!--
+--><span class="label0 pred0"> interval</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> slope</span><!--
+--><span class="label0 pred0"> estimate</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">throws</span><!--
+--><span class="label0 pred0"> Math</span><!--
+--><span class="label0 pred0">Exception</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> confidence</span><!--
+--><span class="label0 pred0"> interval</span><!--
+--><span class="label0 pred0"> can</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> computed</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> getS</span><!--
+--><span class="label0 pred0">lope</span><!--
+--><span class="label0 pred0">Confidence</span><!--
+--><span class="label0 pred0">Interval</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> throws</span><!--
+--><span class="label0 pred0"> Math</span><!--
+--><span class="label0 pred0">Exception</span>
+</div>
+<hr/>
+<div>
+<h3>
+Math, 105
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>        return Math.max(0d, sumYY - sumXY * sumXY / sumXX);<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> The</span><!--
+--><span class="label-100 pred0"> sums</span><!--
+--><span class="label-100 pred0"> are</span><!--
+--><span class="label-100 pred0"> accumulated</span><!--
+--><span class="label-100 pred0"> using</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> updating</span><!--
+--><span class="label-100 pred0"> algorithm</span><!--
+--><span class="label-100 pred0"> referenced</span><!--
+--><span class="label-100 pred0"> in</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> {@</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0"> #</span><!--
+--><span class="label-100 pred0">addData</span><!--
+--><span class="label-100 pred0">}.</span><!--
+--><span class="label-100 pred0">  
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> The</span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> constr</span><!--
+--><span class="label-100 pred0">ained</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> non</span><!--
+--><span class="label-100 pred0">-</span><!--
+--><span class="label-100 pred0">negative</span><!--
+--><span class="label-100 pred0"> -</span><!--
+--><span class="label-100 pred0"> i</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">e</span><!--
+--><span class="label-100 pred0">.,</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> due</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> rounding</span><!--
+--><span class="label-100 pred0"> errors</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> computational</span><!--
+--><span class="label-100 pred0"> formula</span><!--
+--><span class="label-100 pred0"> returns</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> negative</span><!--
+--><span class="label-100 pred0"> result</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">0</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> returned</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">strong</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">Preconditions</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">strong</span><!--
+--><span class="label-100 pred0">&gt;:</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">ul</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">At</span><!--
+--><span class="label-100 pred0"> least</span><!--
+--><span class="label-100 pred0"> two</span><!--
+--><span class="label-100 pred0"> observations</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">with</span><!--
+--><span class="label-100 pred0"> at</span><!--
+--><span class="label-100 pred0"> least</span><!--
+--><span class="label-100 pred0"> two</span><!--
+--><span class="label-100 pred0"> different</span><!--
+--><span class="label-100 pred0"> x</span><!--
+--><span class="label-100 pred0"> values</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> must</span><!--
+--><span class="label-100 pred0"> have</span><!--
+--><span class="label-100 pred0"> been</span><!--
+--><span class="label-100 pred0"> added</span><!--
+--><span class="label-100 pred0"> before</span><!--
+--><span class="label-100 pred0"> invoking</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> method</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0"> If</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> method</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> invoked</span><!--
+--><span class="label-100 pred0"> before</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> model</span><!--
+--><span class="label-100 pred0"> can</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> estimated</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">Double</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0">NaN</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> returned</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;/</span><!--
+--><span class="label-100 pred0">li</span><!--
+--><span class="label-100 pred0">&gt;&lt;/</span><!--
+--><span class="label-100 pred0">ul</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">return</span><!--
+--><span class="label-100 pred0"> sum</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> squared</span><!--
+--><span class="label-100 pred0"> errors</span><!--
+--><span class="label-100 pred0"> associated</span><!--
+--><span class="label-100 pred0"> with</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> regression</span><!--
+--><span class="label-100 pred0"> model</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> get</span><!--
+--><span class="label-100 pred0">Sum</span><!--
+--><span class="label-100 pred0">Squared</span><!--
+--><span class="label-100 pred0">Errors</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> sum</span><!--
+--><span class="label-100 pred0">YY</span><!--
+--><span class="label-100 pred0"> -</span><!--
+--><span class="label-100 pred0"> sum</span><!--
+--><span class="label-100 pred0">XY</span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> sum</span><!--
+--><span class="label-100 pred0">XY</span><!--
+--><span class="label-100 pred0"> /</span><!--
+--><span class="label-100 pred0"> sum</span><!--
+--><span class="label-100 pred0">XX</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Returns</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> sum</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> squared</span><!--
+--><span class="label-100 pred0"> de</span><!--
+--><span class="label-100 pred0">viations</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> y</span><!--
+--><span class="label-100 pred0"> values</span><!--
+--><span class="label-100 pred0"> about</span><!--
+--><span class="label-100 pred0"> their</span><!--
+--><span class="label-100 pred0"> mean</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> This</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> defined</span><!--
+--><span class="label-100 pred0"> as</span><!--
+--><span class="label-100 pred0"> S</span><!--
+--><span class="label-100 pred0">STO</span><!--
+--><span class="label-100 pred0"> 
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">a</span><!--
+--><span class="label-100 pred0"> href</span><!--
+--><span class="label-100 pred0">=&quot;</span><!--
+--><span class="label-100 pred0">http</span><!--
+--><span class="label-100 pred0">://</span><!--
+--><span class="label-100 pred0">www</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">xy</span><!--
+--><span class="label-100 pred0">co</span><!--
+--><span class="label-100 pred0">on</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">com</span><!--
+--><span class="label-100 pred0">/</span><!--
+--><span class="label-100 pred0">Sum</span><!--
+--><span class="label-100 pred0">Of</span><!--
+--><span class="label-100 pred0">S</span><!--
+--><span class="label-100 pred0">quares</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">htm</span><!--
+--><span class="label-100 pred0">&quot;&gt;</span><!--
+--><span class="label-100 pred0">here</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">a</span><!--
+--><span class="label-100 pred0">&gt;.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">p</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> If</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">n</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;,</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> returns</span><!--
+--><span class="label-100 pred0"> &lt;</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0">Double</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">NaN</span><!--
+--><span class="label-100 pred0">&lt;/</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0">&gt;.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">return</span><!--
+--><span class="label-100 pred0"> sum</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> squared</span><!--
+--><span class="label-100 pred0"> de</span><!--
+--><span class="label-100 pred0">viations</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> y</span><!--
+--><span class="label-100 pred0"> values</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> double</span><!--
+--><span class="label-100 pred0"> getTotal</span><!--
+--><span class="label-100 pred0">Sum</span><!--
+--><span class="label-100 pred0">S</span><!--
+--><span class="label-100 pred0">quares</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">cumulative</span><!--
+--><span class="label0 pred0">Probability</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">
+                   </span><!--
+--><span class="label1 pred1"> Math</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">abs</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">getS</span><!--
+--><span class="label0 pred0">lope</span><!--
+--><span class="label0 pred0">())</span><!--
+--><span class="label0 pred0"> /</span><!--
+--><span class="label0 pred0"> getS</span><!--
+--><span class="label0 pred0">lope</span><!--
+--><span class="label0 pred0">Std</span><!--
+--><span class="label0 pred0">Err</span><!--
+--><span class="label0 pred0">()));</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> ----------------</span><!--
+--><span class="label0 pred0">-----</span><!--
+--><span class="label0 pred0">Private</span><!--
+--><span class="label0 pred0"> methods</span><!--
+--><span class="label0 pred0">--------------------------------</span><!--
+--><span class="label0 pred0">---</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Returns</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> intercept</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> estimated</span><!--
+--><span class="label0 pred0"> regression</span><!--
+--><span class="label0 pred0"> line</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> given</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> slope</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Will</span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">NaN</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> slope</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">NaN</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0">&gt;.</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> slope</span><!--
+--><span class="label0 pred0"> current</span><!--
+--><span class="label0 pred0"> slope</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> intercept</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> regression</span><!--
+--><span class="label0 pred0"> line</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">Intercept</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">double</span><!--
+--><span class="label0 pred0"> slope</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">sum</span><!--
+--><span class="label0 pred0">Y</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> slope</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred1"> sum</span><!--
+--><span class="label0 pred5">X</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> /</span><!--
+--><span class="label0 pred0"> ((</span><!--
+--><span class="label0 pred0">double</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> n</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Computes</span><!--
+--><span class="label0 pred0"> S</span><!--
+--><span class="label0 pred0">SR</span><!--
+--><span class="label0 pred0"> from</span><!--
+--><span class="label0 pred0"> b</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> slope</span><!--
+--><span class="label0 pred0"> regression</span><!--
+--><span class="label0 pred0"> slope</span><!--
+--><span class="label0 pred0"> estimate</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> sum</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> squared</span><!--
+--><span class="label0 pred0"> de</span><!--
+--><span class="label0 pred0">viations</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> predicted</span><!--
+--><span class="label0 pred0"> y</span><!--
+--><span class="label0 pred0"> values</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> double</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">Regression</span><!--
+--><span class="label0 pred0">Sum</span><!--
+--><span class="label0 pred0">S</span><!--
+--><span class="label0 pred0">quares</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">double</span><!--
+--><span class="label0 pred0"> slope</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> slope</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> slope</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> sum</span><!--
+--><span class="label0 pred0">XX</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Uses</span><!--
+--><span class="label0 pred0"> distribution</span><!--
+--><span class="label0 pred0"> framework</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> t</span><!--
+--><span class="label0 pred0"> distribution</span><!--
+--><span class="label0 pred0"> instance</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> df</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> n</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> t</span><!--
+--><span class="label0 pred0"> distribution</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> df</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> n</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> T</span><!--
+--><span class="label0 pred0">Distribution</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">TD</span><!--
+--><span class="label0 pred0">ist</span><!--
+--><span class="label0 pred0">ribution</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> Distribution</span><!--
+--><span class="label0 pred0">Factory</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">newInstance</span><!--
+--><span class="label0 pred0">().</span><!--
+--><span class="label0 pred0">create</span><!--
+--><span class="label0 pred0">TD</span><!--
+--><span class="label0 pred0">ist</span><!--
+--><span class="label0 pred0">ribution</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">n</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">}</span>
+</div>
+<hr/>
+</body>
+</html>

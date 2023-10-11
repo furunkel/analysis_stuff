@@ -1,0 +1,3526 @@
+<html>
+<head>
+<style>
+pre {margin: 0.1em }
+
+            span {
+                white-space: pre;
+            }
+
+            .label-100 {
+                border: 1px solid gray;
+            }
+
+            .label0 {
+                border: 1px solid white;
+            }
+
+            .label1 {
+                border: 1px solid blue;
+            }
+            .new {
+                background-color: #8FFF92;
+            }
+
+            .context-size {
+	            padding: 0.1em;
+	            color: white;
+	            background-color: black;
+	            border-radius: 50%;
+	            width: 1.5em;
+	            display: inline-block;
+	            text-align: center;
+	            height: 1.5em;
+	            line-height: 1.5em;
+                margin-right: 0.6em;
+            }
+.pred0{background-color: rgba(255, 0, 0, 0.0);}
+.pred1{background-color: rgba(255, 0, 0, 0.1);}
+.pred2{background-color: rgba(255, 0, 0, 0.2);}
+.pred3{background-color: rgba(255, 0, 0, 0.3);}
+.pred4{background-color: rgba(255, 0, 0, 0.4);}
+.pred5{background-color: rgba(255, 0, 0, 0.5);}
+.pred6{background-color: rgba(255, 0, 0, 0.6);}
+.pred7{background-color: rgba(255, 0, 0, 0.7);}
+.pred8{background-color: rgba(255, 0, 0, 0.8);}
+.pred9{background-color: rgba(255, 0, 0, 0.9);}
+.pred10{background-color: rgba(255, 0, 0, 1.0);}
+</style>
+</head>
+<body>
+<div>
+<h3>
+Jsoup, 88
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>        return Attributes.checkNotNull(val);<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> key</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> key</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0"> must</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> void</span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0">Key</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">String</span><!--
+--><span class="label-100 pred0"> key</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Validate</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">notNull</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">key</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> key</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> key</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">trim</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Validate</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">not</span><!--
+--><span class="label-100 pred0">Empty</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">key</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> tri</span><!--
+--><span class="label-100 pred0">mm</span><!--
+--><span class="label-100 pred0">ing</span><!--
+--><span class="label-100 pred0"> could</span><!--
+--><span class="label-100 pred0"> potentially</span><!--
+--><span class="label-100 pred0"> make</span><!--
+--><span class="label-100 pred0"> empty</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> so</span><!--
+--><span class="label-100 pred0"> validate</span><!--
+--><span class="label-100 pred0"> here</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">parent</span><!--
+--><span class="label-100 pred0"> !=</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> i</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">indexOf</span><!--
+--><span class="label-100 pred0">Key</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">key</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">i</span><!--
+--><span class="label-100 pred0"> !=</span><!--
+--><span class="label-100 pred0"> Attributes</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">NotFound</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">keys</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">i</span><!--
+--><span class="label-100 pred0">]</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> key</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">key</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> key</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> Get</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> attribute</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">return</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> attribute</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> String</span><!--
+--><span class="label-100 pred0"> getValue</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> val</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> Set</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> attribute</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> val</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> attribute</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0"> must</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> String</span><!--
+--><span class="label-100 pred0"> setValue</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">String</span><!--
+--><span class="label-100 pred0"> val</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> String</span><!--
+--><span class="label-100 pred0"> old</span><!--
+--><span class="label-100 pred0">Val</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">key</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">parent</span><!--
+--><span class="label-100 pred0"> !=</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> i</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">indexOf</span><!--
+--><span class="label-100 pred0">Key</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">key</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">i</span><!--
+--><span class="label-100 pred0"> !=</span><!--
+--><span class="label-100 pred0"> Attributes</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">NotFound</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">vals</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">i</span><!--
+--><span class="label-100 pred0">]</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> val</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">package</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">js</span><!--
+--><span class="label0 pred0">oup</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">nodes</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">js</span><!--
+--><span class="label0 pred0">oup</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Serialization</span><!--
+--><span class="label0 pred0">Exception</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">js</span><!--
+--><span class="label0 pred0">oup</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">internal</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">StringUtil</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">js</span><!--
+--><span class="label0 pred0">oup</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">helper</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Validate</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">io</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">IOException</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Arrays</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">/**</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> A</span><!--
+--><span class="label0 pred0"> single</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">Only</span><!--
+--><span class="label0 pred0"> used</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> presentation</span><!--
+--><span class="label0 pred0">.)</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">public</span><!--
+--><span class="label0 pred0"> class</span><!--
+--><span class="label0 pred0"> Attribute</span><!--
+--><span class="label0 pred0"> implements</span><!--
+--><span class="label0 pred0"> Map</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Entry</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0">&gt;,</span><!--
+--><span class="label0 pred0"> Clone</span><!--
+--><span class="label0 pred0">able</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0">[]</span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label0 pred0">Attributes</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">allow</span><!--
+--><span class="label0 pred0">fullscreen</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">async</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">aut</span><!--
+--><span class="label0 pred0">of</span><!--
+--><span class="label0 pred0">ocus</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">checked</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">compact</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">declare</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">default</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">defer</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">disabled</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">form</span><!--
+--><span class="label0 pred0">no</span><!--
+--><span class="label0 pred0">validate</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">hidden</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">in</span><!--
+--><span class="label0 pred0">ert</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">map</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">items</span><!--
+--><span class="label0 pred0">cope</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">multiple</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">muted</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">no</span><!--
+--><span class="label0 pred0">href</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">no</span><!--
+--><span class="label0 pred0">resize</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">n</span><!--
+--><span class="label0 pred0">osh</span><!--
+--><span class="label0 pred0">ade</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">no</span><!--
+--><span class="label0 pred0">validate</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">nowrap</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">open</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">readonly</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">required</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">reversed</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">se</span><!--
+--><span class="label0 pred0">am</span><!--
+--><span class="label0 pred0">less</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">selected</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">sortable</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">tr</span><!--
+--><span class="label0 pred0">ues</span><!--
+--><span class="label0 pred0">peed</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">type</span><!--
+--><span class="label0 pred0">must</span><!--
+--><span class="label0 pred0">match</span><!--
+--><span class="label0 pred0">&quot;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> };</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> val</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> Attributes</span><!--
+--><span class="label0 pred0"> parent</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> used</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> update</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> holding</span><!--
+--><span class="label0 pred0"> Attributes</span><!--
+--><span class="label0 pred0"> when</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0"> /</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> changed</span><!--
+--><span class="label0 pred0"> via</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> interface</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Create</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> from</span><!--
+--><span class="label0 pred0"> un</span><!--
+--><span class="label0 pred0">encoded</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">raw</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> case</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> preserved</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">see</span><!--
+--><span class="label0 pred0"> #</span><!--
+--><span class="label0 pred0">createFrom</span><!--
+--><span class="label0 pred0">Encoded</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> Attribute</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">key</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Create</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> from</span><!--
+--><span class="label0 pred0"> un</span><!--
+--><span class="label0 pred0">encoded</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">raw</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> case</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> preserved</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> val</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> parent</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> containing</span><!--
+--><span class="label0 pred0"> Attributes</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">this</span><!--
+--><span class="label0 pred0"> Attribute</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> automatically</span><!--
+--><span class="label0 pred0"> added</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> said</span><!--
+--><span class="label0 pred0"> Attributes</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">see</span><!--
+--><span class="label0 pred0"> #</span><!--
+--><span class="label0 pred0">createFrom</span><!--
+--><span class="label0 pred0">Encoded</span><!--
+--><span class="label0 pred0">*/</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> Attribute</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> val</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Attributes</span><!--
+--><span class="label0 pred0"> parent</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred2"> Validate</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred2">notNull</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">key</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred5">trim</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred2"> Validate</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred1">not</span><!--
+--><span class="label0 pred1">Empty</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">key</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> tri</span><!--
+--><span class="label0 pred0">mm</span><!--
+--><span class="label0 pred0">ing</span><!--
+--><span class="label0 pred0"> could</span><!--
+--><span class="label0 pred0"> potentially</span><!--
+--><span class="label0 pred0"> make</span><!--
+--><span class="label0 pred0"> empty</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> so</span><!--
+--><span class="label0 pred0"> validate</span><!--
+--><span class="label0 pred0"> here</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">key</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">val</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> val</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">parent</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> parent</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> Get</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred1"> getKey</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> Set</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> case</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> preserved</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">val</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> val</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> old</span><!--
+--><span class="label0 pred0">Val</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> Get</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> HTML</span><!--
+--><span class="label0 pred0"> representation</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> e</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">g</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> href</span><!--
+--><span class="label0 pred0">=&quot;</span><!--
+--><span class="label0 pred0">index</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">html</span><!--
+--><span class="label0 pred0">&quot;}</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> HTML</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> html</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> StringBuilder</span><!--
+--><span class="label0 pred0"> sb</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0">Util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">borrow</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> try</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+        </span><!--
+--><span class="label0 pred0">	</span><!--
+--><span class="label0 pred0">html</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">sb</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">new</span><!--
+--><span class="label0 pred0"> Document</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">&quot;)).</span><!--
+--><span class="label0 pred0">output</span><!--
+--><span class="label0 pred0">Settings</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0"> catch</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">IOException</span><!--
+--><span class="label0 pred0"> exception</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+        </span><!--
+--><span class="label0 pred0">	</span><!--
+--><span class="label0 pred0">throw</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Serialization</span><!--
+--><span class="label0 pred0">Exception</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">exception</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0">Util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">release</span><!--
+--><span class="label0 pred0">Builder</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">sb</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> protected</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> html</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> val</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Append</span><!--
+--><span class="label0 pred0">able</span><!--
+--><span class="label0 pred0"> accum</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Document</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Output</span><!--
+--><span class="label0 pred0">Settings</span><!--
+--><span class="label0 pred0"> out</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> throws</span><!--
+--><span class="label0 pred0"> IOException</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> accum</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">key</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (!</span><!--
+--><span class="label0 pred0">should</span><!--
+--><span class="label0 pred0">Collapse</span><!--
+--><span class="label0 pred0">Attribute</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">key</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> val</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> out</span><!--
+--><span class="label0 pred0">))</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> accum</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">=\&quot;</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> Entities</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">escape</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">accum</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Attributes</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label1 pred0">checkNotNull</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">val</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> ,</span><!--
+--><span class="label0 pred0"> out</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> true</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> false</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> false</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> accum</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">(&#x27;&quot;</span><!--
+--><span class="label0 pred0">&#x27;);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> protected</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> html</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Append</span><!--
+--><span class="label0 pred0">able</span><!--
+--><span class="label0 pred0"> accum</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Document</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Output</span><!--
+--><span class="label0 pred0">Settings</span><!--
+--><span class="label0 pred0"> out</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> throws</span><!--
+--><span class="label0 pred0"> IOException</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> html</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">key</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> val</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> accum</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> out</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> Get</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> string</span><!--
+--><span class="label0 pred0"> representation</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> implemented</span><!--
+--><span class="label0 pred0"> as</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">link</span><!--
+--><span class="label0 pred0"> #</span><!--
+--><span class="label0 pred0">html</span><!--
+--><span class="label0 pred0">()}.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> string</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">Override</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> toString</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> html</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Create</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Attribute</span><!--
+--><span class="label0 pred0"> from</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> un</span><!--
+--><span class="label0 pred0">encoded</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> HTML</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> encoded</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> un</span><!--
+--><span class="label0 pred0">encoded</span><!--
+--><span class="label0 pred0">Key</span><!--
+--><span class="label0 pred0"> assumes</span>
+</div>
+<hr/>
+<div>
+<h3>
+Jsoup, 88
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>        return Attributes.checkNotNull(val);<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> key</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> key</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0"> must</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> void</span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0">Key</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">String</span><!--
+--><span class="label-100 pred0"> key</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Validate</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">notNull</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">key</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> key</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> key</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">trim</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Validate</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">not</span><!--
+--><span class="label-100 pred0">Empty</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">key</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> tri</span><!--
+--><span class="label-100 pred0">mm</span><!--
+--><span class="label-100 pred0">ing</span><!--
+--><span class="label-100 pred0"> could</span><!--
+--><span class="label-100 pred0"> potentially</span><!--
+--><span class="label-100 pred0"> make</span><!--
+--><span class="label-100 pred0"> empty</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> so</span><!--
+--><span class="label-100 pred0"> validate</span><!--
+--><span class="label-100 pred0"> here</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">parent</span><!--
+--><span class="label-100 pred0"> !=</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> i</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">indexOf</span><!--
+--><span class="label-100 pred0">Key</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">key</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">i</span><!--
+--><span class="label-100 pred0"> !=</span><!--
+--><span class="label-100 pred0"> Attributes</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">NotFound</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">keys</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">i</span><!--
+--><span class="label-100 pred0">]</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> key</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">key</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> key</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> Get</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> attribute</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">return</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> attribute</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> String</span><!--
+--><span class="label-100 pred0"> getValue</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> val</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> Set</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> attribute</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> val</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> attribute</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0"> must</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> String</span><!--
+--><span class="label-100 pred0"> setValue</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">String</span><!--
+--><span class="label-100 pred0"> val</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> String</span><!--
+--><span class="label-100 pred0"> old</span><!--
+--><span class="label-100 pred0">Val</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">key</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">parent</span><!--
+--><span class="label-100 pred0"> !=</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> i</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">indexOf</span><!--
+--><span class="label-100 pred0">Key</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">key</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">i</span><!--
+--><span class="label-100 pred0"> !=</span><!--
+--><span class="label-100 pred0"> Attributes</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">NotFound</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">vals</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">i</span><!--
+--><span class="label-100 pred0">]</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> val</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">package</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">js</span><!--
+--><span class="label0 pred0">oup</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">nodes</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">js</span><!--
+--><span class="label0 pred0">oup</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Serialization</span><!--
+--><span class="label0 pred0">Exception</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">js</span><!--
+--><span class="label0 pred0">oup</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">internal</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">StringUtil</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">js</span><!--
+--><span class="label0 pred0">oup</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">helper</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Validate</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">io</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">IOException</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Abstract</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Abstract</span><!--
+--><span class="label0 pred0">Set</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">ArrayList</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Arrays</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Collections</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Iterator</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">List</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Map</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> java</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">util</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Set</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">import</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">js</span><!--
+--><span class="label0 pred0">oup</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">internal</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Normalizer</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">lower</span><!--
+--><span class="label0 pred0">Case</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">/**</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> attributes</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> Element</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Attributes</span><!--
+--><span class="label0 pred0"> are</span><!--
+--><span class="label0 pred0"> treated</span><!--
+--><span class="label0 pred0"> as</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> map</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0"> there</span><!--
+--><span class="label0 pred0"> can</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> only</span><!--
+--><span class="label0 pred0"> one</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0"> associated</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">name</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;/</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Attribute</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0"> comparisons</span><!--
+--><span class="label0 pred0"> are</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> generally</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">case</span><!--
+--><span class="label0 pred0"> sensitive</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0">&gt;.</span><!--
+--><span class="label0 pred0"> By</span><!--
+--><span class="label0 pred0"> default</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> HTML</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> names</span><!--
+--><span class="label0 pred0"> are</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> normalized</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> lower</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">case</span><!--
+--><span class="label0 pred0"> on</span><!--
+--><span class="label0 pred0"> parsing</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> That</span><!--
+--><span class="label0 pred0"> means</span><!--
+--><span class="label0 pred0"> you</span><!--
+--><span class="label0 pred0"> should</span><!--
+--><span class="label0 pred0"> use</span><!--
+--><span class="label0 pred0"> lower</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">case</span><!--
+--><span class="label0 pred0"> strings</span><!--
+--><span class="label0 pred0"> when</span><!--
+--><span class="label0 pred0"> referring</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> attributes</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;/</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">author</span><!--
+--><span class="label0 pred0"> Jon</span><!--
+--><span class="label0 pred0">athan</span><!--
+--><span class="label0 pred0"> H</span><!--
+--><span class="label0 pred0">ed</span><!--
+--><span class="label0 pred0">ley</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> j</span><!--
+--><span class="label0 pred0">on</span><!--
+--><span class="label0 pred0">athan</span><!--
+--><span class="label0 pred0">@</span><!--
+--><span class="label0 pred0">hed</span><!--
+--><span class="label0 pred0">ley</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">net</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+</span><!--
+--><span class="label0 pred0">public</span><!--
+--><span class="label0 pred0"> class</span><!--
+--><span class="label0 pred0"> Attributes</span><!--
+--><span class="label0 pred0"> implements</span><!--
+--><span class="label0 pred0"> Iterable</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">Attribute</span><!--
+--><span class="label0 pred0">&gt;,</span><!--
+--><span class="label0 pred0"> Clone</span><!--
+--><span class="label0 pred0">able</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> protected</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> data</span><!--
+--><span class="label0 pred0">Prefix</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">data</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">&quot;;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> Initial</span><!--
+--><span class="label0 pred0">Capacity</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> todo</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> analyze</span><!--
+--><span class="label0 pred0"> Alex</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">MM</span><!--
+--><span class="label0 pred0"> sites</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> determine</span><!--
+--><span class="label0 pred0"> best</span><!--
+--><span class="label0 pred0"> setting</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> manages</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">val</span><!--
+--><span class="label0 pred0"> arrays</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> Grow</span><!--
+--><span class="label0 pred0">th</span><!--
+--><span class="label0 pred0">Factor</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0">[]</span><!--
+--><span class="label0 pred0"> Empty</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> {};</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> NotFound</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred10"> Empty</span><!--
+--><span class="label0 pred10">String</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> &quot;&quot;;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> size</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> number</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> slots</span><!--
+--><span class="label0 pred0"> used</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">not</span><!--
+--><span class="label0 pred0"> capacity</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> which</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> keys</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">length</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0">[]</span><!--
+--><span class="label0 pred0"> keys</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> Empty</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0">[]</span><!--
+--><span class="label0 pred0"> vals</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> Empty</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> check</span><!--
+--><span class="label0 pred0"> there</span><!--
+--><span class="label0 pred0">&#x27;s</span><!--
+--><span class="label0 pred0"> room</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> more</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> check</span><!--
+--><span class="label0 pred0">Capacity</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">int</span><!--
+--><span class="label0 pred0"> min</span><!--
+--><span class="label0 pred0">New</span><!--
+--><span class="label0 pred0">Size</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Validate</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">isTrue</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">min</span><!--
+--><span class="label0 pred0">New</span><!--
+--><span class="label0 pred0">Size</span><!--
+--><span class="label0 pred0"> &gt;=</span><!--
+--><span class="label0 pred0"> size</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> cur</span><!--
+--><span class="label0 pred0">Size</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> keys</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">length</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">cur</span><!--
+--><span class="label0 pred0">Size</span><!--
+--><span class="label0 pred0"> &gt;=</span><!--
+--><span class="label0 pred0"> min</span><!--
+--><span class="label0 pred0">New</span><!--
+--><span class="label0 pred0">Size</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0">Size</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> cur</span><!--
+--><span class="label0 pred0">Size</span><!--
+--><span class="label0 pred0"> &gt;=</span><!--
+--><span class="label0 pred0"> Initial</span><!--
+--><span class="label0 pred0">Capacity</span><!--
+--><span class="label0 pred0"> ?</span><!--
+--><span class="label0 pred0"> size</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Grow</span><!--
+--><span class="label0 pred0">th</span><!--
+--><span class="label0 pred0">Factor</span><!--
+--><span class="label0 pred0"> :</span><!--
+--><span class="label0 pred0"> Initial</span><!--
+--><span class="label0 pred0">Capacity</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">min</span><!--
+--><span class="label0 pred0">New</span><!--
+--><span class="label0 pred0">Size</span><!--
+--><span class="label0 pred0"> &gt;</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0">Size</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0">Size</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> min</span><!--
+--><span class="label0 pred0">New</span><!--
+--><span class="label0 pred0">Size</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> keys</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> copy</span><!--
+--><span class="label0 pred0">Of</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">keys</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0">Size</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> vals</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> copy</span><!--
+--><span class="label0 pred0">Of</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">vals</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0">Size</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> simple</span><!--
+--><span class="label0 pred0"> implementation</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> Arrays</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">copy</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> support</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> Android</span><!--
+--><span class="label0 pred0"> API</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">8</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0">[]</span><!--
+--><span class="label0 pred0"> copy</span><!--
+--><span class="label0 pred0">Of</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0">[]</span><!--
+--><span class="label0 pred0"> orig</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> size</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0">[]</span><!--
+--><span class="label0 pred0"> copy</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">size</span><!--
+--><span class="label0 pred0">];</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> System</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">arraycopy</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">orig</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> copy</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> Math</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">min</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">orig</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">length</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> size</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> copy</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> indexOf</span><!--
+--><span class="label0 pred0">Key</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Validate</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">notNull</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">key</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">int</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0"> size</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0">++)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">key</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">equals</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">keys</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">i</span><!--
+--><span class="label0 pred0">]))</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> NotFound</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> indexOf</span><!--
+--><span class="label0 pred0">Key</span><!--
+--><span class="label0 pred0">IgnoreCase</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Validate</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">notNull</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">key</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">int</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0"> size</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0">++)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">key</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">equalsIgnoreCase</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">keys</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">i</span><!--
+--><span class="label0 pred0">]))</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> NotFound</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> we</span><!--
+--><span class="label0 pred0"> track</span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label0 pred0"> attributes</span><!--
+--><span class="label0 pred0"> as</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> values</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> they</span><!--
+--><span class="label0 pred0">&#x27;re</span><!--
+--><span class="label0 pred0"> just</span><!--
+--><span class="label0 pred0"> keys</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> so</span><!--
+--><span class="label0 pred0"> returns</span><!--
+--><span class="label0 pred0"> empty</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> consumers</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> static</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label1 pred0"> checkNotNull</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> val</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> val</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0"> ?</span><!--
+--><span class="label0 pred10"> Empty</span><!--
+--><span class="label0 pred10">String</span><!--
+--><span class="label0 pred0"> :</span><!--
+--><span class="label0 pred0"> val</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> Get</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">case</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">sensitive</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> set</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> empty</span><!--
+--><span class="label0 pred0"> string</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> set</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">or</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> @</span>
+</div>
+<hr/>
+<div>
+<h3>
+Jsoup, 88
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>        return Attributes.checkNotNull(val);<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> key</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> key</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0"> must</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> void</span><!--
+--><span class="label-100 pred0"> set</span><!--
+--><span class="label-100 pred0">Key</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">String</span><!--
+--><span class="label-100 pred0"> key</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Validate</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">notNull</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">key</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> key</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> key</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">trim</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> Validate</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">not</span><!--
+--><span class="label-100 pred0">Empty</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">key</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> tri</span><!--
+--><span class="label-100 pred0">mm</span><!--
+--><span class="label-100 pred0">ing</span><!--
+--><span class="label-100 pred0"> could</span><!--
+--><span class="label-100 pred0"> potentially</span><!--
+--><span class="label-100 pred0"> make</span><!--
+--><span class="label-100 pred0"> empty</span><!--
+--><span class="label-100 pred0">,</span><!--
+--><span class="label-100 pred0"> so</span><!--
+--><span class="label-100 pred0"> validate</span><!--
+--><span class="label-100 pred0"> here</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">parent</span><!--
+--><span class="label-100 pred0"> !=</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> i</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">indexOf</span><!--
+--><span class="label-100 pred0">Key</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">key</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">i</span><!--
+--><span class="label-100 pred0"> !=</span><!--
+--><span class="label-100 pred0"> Attributes</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">NotFound</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">keys</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">i</span><!--
+--><span class="label-100 pred0">]</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> key</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">key</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> key</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> Get</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> attribute</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">return</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> attribute</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> String</span><!--
+--><span class="label-100 pred0"> getValue</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> val</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> Set</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> attribute</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> val</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> attribute</span><!--
+--><span class="label-100 pred0"> value</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0"> must</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> String</span><!--
+--><span class="label-100 pred0"> setValue</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">String</span><!--
+--><span class="label-100 pred0"> val</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> String</span><!--
+--><span class="label-100 pred0"> old</span><!--
+--><span class="label-100 pred0">Val</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">get</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">key</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">parent</span><!--
+--><span class="label-100 pred0"> !=</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> int</span><!--
+--><span class="label-100 pred0"> i</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">indexOf</span><!--
+--><span class="label-100 pred0">Key</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">this</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">key</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">i</span><!--
+--><span class="label-100 pred0"> !=</span><!--
+--><span class="label-100 pred0"> Attributes</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">NotFound</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> parent</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">vals</span><!--
+--><span class="label-100 pred0">[</span><!--
+--><span class="label-100 pred0">i</span><!--
+--><span class="label-100 pred0">]</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> val</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">see</span><!--
+--><span class="label0 pred0"> #</span><!--
+--><span class="label0 pred0">has</span><!--
+--><span class="label0 pred0">Key</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> indexOf</span><!--
+--><span class="label0 pred0">Key</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">key</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> NotFound</span><!--
+--><span class="label0 pred0"> ?</span><!--
+--><span class="label0 pred9"> Empty</span><!--
+--><span class="label0 pred9">String</span><!--
+--><span class="label0 pred0"> :</span><!--
+--><span class="label1 pred0"> checkNotNull</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">vals</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">i</span><!--
+--><span class="label0 pred0">]);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Get</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0">&#x27;s</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> case</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">ins</span><!--
+--><span class="label0 pred0">ensitive</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> first</span><!--
+--><span class="label0 pred0"> matching</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> set</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> empty</span><!--
+--><span class="label0 pred0"> string</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> set</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">ora</span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">IgnoreCase</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> indexOf</span><!--
+--><span class="label0 pred0">Key</span><!--
+--><span class="label0 pred0">IgnoreCase</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">key</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> NotFound</span><!--
+--><span class="label0 pred0"> ?</span><!--
+--><span class="label0 pred9"> Empty</span><!--
+--><span class="label0 pred9">String</span><!--
+--><span class="label0 pred0"> :</span><!--
+--><span class="label1 pred0"> checkNotNull</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">vals</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">i</span><!--
+--><span class="label0 pred0">]);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> adds</span><!--
+--><span class="label0 pred0"> without</span><!--
+--><span class="label0 pred0"> checking</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0"> exists</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> check</span><!--
+--><span class="label0 pred0">Capacity</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred1">size</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> keys</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">size</span><!--
+--><span class="label0 pred0">]</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> vals</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">size</span><!--
+--><span class="label0 pred0">]</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> size</span><!--
+--><span class="label0 pred0">++;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Set</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> replace</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> existing</span><!--
+--><span class="label0 pred0"> one</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0"> case</span><!--
+--><span class="label0 pred0"> sensitive</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> these</span><!--
+--><span class="label0 pred0"> attributes</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> chaining</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> Attributes</span><!--
+--><span class="label0 pred0"> put</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> indexOf</span><!--
+--><span class="label0 pred0">Key</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">key</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">i</span><!--
+--><span class="label0 pred0"> !=</span><!--
+--><span class="label0 pred0"> NotFound</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> vals</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">i</span><!--
+--><span class="label0 pred0">]</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">key</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> put</span><!--
+--><span class="label0 pred0">IgnoreCase</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> String</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> indexOf</span><!--
+--><span class="label0 pred0">Key</span><!--
+--><span class="label0 pred0">IgnoreCase</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">key</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">i</span><!--
+--><span class="label0 pred0"> !=</span><!--
+--><span class="label0 pred0"> NotFound</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> vals</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">i</span><!--
+--><span class="label0 pred0">]</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (!</span><!--
+--><span class="label0 pred0">keys</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">i</span><!--
+--><span class="label0 pred0">].</span><!--
+--><span class="label0 pred4">equals</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">key</span><!--
+--><span class="label0 pred0">))</span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> case</span><!--
+--><span class="label0 pred0"> changed</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> update</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> keys</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">i</span><!--
+--><span class="label0 pred0">]</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">key</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Set</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> remove</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> false</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0"> case</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">ins</span><!--
+--><span class="label0 pred0">ensitive</span><!--
+--><span class="label0 pred0">&lt;/</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> these</span><!--
+--><span class="label0 pred0"> attributes</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> chaining</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> Attributes</span><!--
+--><span class="label0 pred0"> put</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label0 pred0"> value</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">value</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> put</span><!--
+--><span class="label0 pred0">IgnoreCase</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">key</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> remove</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">key</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> Set</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> replace</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> existing</span><!--
+--><span class="label0 pred0"> one</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> case</span><!--
+--><span class="label0 pred0"> sensitive</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> these</span><!--
+--><span class="label0 pred0"> attributes</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> chaining</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> Attributes</span><!--
+--><span class="label0 pred0"> put</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Attribute</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Validate</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">notNull</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">attribute</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> put</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">attribute</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getKey</span><!--
+--><span class="label0 pred0">(),</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">getValue</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">parent</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> removes</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> sh</span><!--
+--><span class="label0 pred0">ifts</span><!--
+--><span class="label0 pred0"> up</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> private</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> remove</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">int</span><!--
+--><span class="label0 pred0"> index</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Validate</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">isFalse</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">index</span><!--
+--><span class="label0 pred0"> &gt;=</span><!--
+--><span class="label0 pred0"> size</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> shifted</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> size</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> index</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">shift</span><!--
+--><span class="label0 pred0">ed</span><!--
+--><span class="label0 pred0"> &gt;</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> System</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">arraycopy</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">keys</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> index</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> keys</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> index</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> shifted</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> System</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">arraycopy</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">vals</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> index</span><!--
+--><span class="label0 pred0"> +</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> vals</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> index</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> shifted</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> size</span><!--
+--><span class="label0 pred0">--;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> keys</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">size</span><!--
+--><span class="label0 pred0">]</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> release</span><!--
+--><span class="label0 pred0"> hold</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> vals</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">size</span><!--
+--><span class="label0 pred0">]</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> Remove</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">Case</span><!--
+--><span class="label0 pred0"> sensitive</span><!--
+--><span class="label0 pred0">.&lt;/</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> remove</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> remove</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> indexOf</span><!--
+--><span class="label0 pred0">Key</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">key</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">i</span><!--
+--><span class="label0 pred0"> !=</span><!--
+--><span class="label0 pred0"> NotFound</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> remove</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">i</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> Remove</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">Case</span><!--
+--><span class="label0 pred0"> ins</span><!--
+--><span class="label0 pred0">ensitive</span><!--
+--><span class="label0 pred0">.&lt;/</span><!--
+--><span class="label0 pred0">b</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> remove</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> remove</span><!--
+--><span class="label0 pred0">IgnoreCase</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> indexOf</span><!--
+--><span class="label0 pred0">Key</span><!--
+--><span class="label0 pred0">IgnoreCase</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">key</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">i</span><!--
+--><span class="label0 pred0"> !=</span><!--
+--><span class="label0 pred0"> NotFound</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> remove</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">i</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> Tests</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> these</span><!--
+--><span class="label0 pred0"> attributes</span><!--
+--><span class="label0 pred0"> contain</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0"> attribute</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0"> case</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">sensitive</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> check</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> true</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0"> exists</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> false</span><!--
+--><span class="label0 pred0"> otherwise</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label0 pred0"> has</span><!--
+--><span class="label0 pred0">Key</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> key</span><!--
+--><span class="label0 pred0">)</span>
+</div>
+<hr/>
+</body>
+</html>

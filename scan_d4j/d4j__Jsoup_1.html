@@ -1,0 +1,2356 @@
+<html>
+<head>
+<style>
+pre {margin: 0.1em }
+
+            span {
+                white-space: pre;
+            }
+
+            .label-100 {
+                border: 1px solid gray;
+            }
+
+            .label0 {
+                border: 1px solid white;
+            }
+
+            .label1 {
+                border: 1px solid blue;
+            }
+            .new {
+                background-color: #8FFF92;
+            }
+
+            .context-size {
+	            padding: 0.1em;
+	            color: white;
+	            background-color: black;
+	            border-radius: 50%;
+	            width: 1.5em;
+	            display: inline-block;
+	            text-align: center;
+	            height: 1.5em;
+	            line-height: 1.5em;
+                margin-right: 0.6em;
+            }
+.pred0{background-color: rgba(255, 0, 0, 0.0);}
+.pred1{background-color: rgba(255, 0, 0, 0.1);}
+.pred2{background-color: rgba(255, 0, 0, 0.2);}
+.pred3{background-color: rgba(255, 0, 0, 0.3);}
+.pred4{background-color: rgba(255, 0, 0, 0.4);}
+.pred5{background-color: rgba(255, 0, 0, 0.5);}
+.pred6{background-color: rgba(255, 0, 0, 0.6);}
+.pred7{background-color: rgba(255, 0, 0, 0.7);}
+.pred8{background-color: rgba(255, 0, 0, 0.8);}
+.pred9{background-color: rgba(255, 0, 0, 0.9);}
+.pred10{background-color: rgba(255, 0, 0, 1.0);}
+</style>
+</head>
+<body>
+<div>
+<h3>
+Jsoup, 1
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>            body().prependChild(node);<br/>            body().prependChild(new TextNode(&quot; &quot;, &quot;&quot;));<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0"> do</span><!--
+--><span class="label-100 pred0"> in</span><!--
+--><span class="label-100 pred0"> inverse</span><!--
+--><span class="label-100 pred0"> order</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> maintain</span><!--
+--><span class="label-100 pred0"> text</span><!--
+--><span class="label-100 pred0"> order</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> normal</span><!--
+--><span class="label-100 pred0">ise</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">head</span><!--
+--><span class="label-100 pred0">());</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> normal</span><!--
+--><span class="label-100 pred0">ise</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">select</span><!--
+--><span class="label-100 pred0">(&quot;</span><!--
+--><span class="label-100 pred0">html</span><!--
+--><span class="label-100 pred0">&quot;).</span><!--
+--><span class="label-100 pred0">first</span><!--
+--><span class="label-100 pred0">());</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> normal</span><!--
+--><span class="label-100 pred0">ise</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">this</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">        
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> does</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> recurse</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> private</span><!--
+--><span class="label-100 pred0"> void</span><!--
+--><span class="label-100 pred0"> normal</span><!--
+--><span class="label-100 pred0">ise</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Element</span><!--
+--><span class="label-100 pred0"> element</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> List</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Node</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0">Move</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> ArrayList</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Node</span><!--
+--><span class="label-100 pred0">&gt;();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Node</span><!--
+--><span class="label-100 pred0"> node</span><!--
+--><span class="label-100 pred0">:</span><!--
+--><span class="label-100 pred0"> element</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">childNodes</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">node</span><!--
+--><span class="label-100 pred0"> instanceof</span><!--
+--><span class="label-100 pred0"> Text</span><!--
+--><span class="label-100 pred0">Node</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> Text</span><!--
+--><span class="label-100 pred0">Node</span><!--
+--><span class="label-100 pred0"> tn</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Text</span><!--
+--><span class="label-100 pred0">Node</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> node</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (!</span><!--
+--><span class="label-100 pred0">tn</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">isBlank</span><!--
+--><span class="label-100 pred0">())</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0">Move</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">add</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">tn</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Node</span><!--
+--><span class="label-100 pred0"> node</span><!--
+--><span class="label-100 pred0">:</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0">Move</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> element</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">removeChild</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">node</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> body</span><!--
+--><span class="label-100 pred0">().</span><!--
+--><span class="label-100 pred0">appendChild</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">new</span><!--
+--><span class="label-100 pred0"> Text</span><!--
+--><span class="label-100 pred0">Node</span><!--
+--><span class="label-100 pred0">(&quot;</span><!--
+--><span class="label-100 pred0"> &quot;,</span><!--
+--><span class="label-100 pred0"> &quot;&quot;));</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> body</span><!--
+--><span class="label-100 pred0">().</span><!--
+--><span class="label-100 pred0">appendChild</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">node</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">Override</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> String</span><!--
+--><span class="label-100 pred0"> outer</span><!--
+--><span class="label-100 pred0">Html</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> super</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">html</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> no</span><!--
+--><span class="label-100 pred0"> outer</span><!--
+--><span class="label-100 pred0"> wrapper</span><!--
+--><span class="label-100 pred0"> tag</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> Set</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> text</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> {@</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0"> body</span><!--
+--><span class="label-100 pred0">}</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> document</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0"> Any</span><!--
+--><span class="label-100 pred0"> existing</span><!--
+--><span class="label-100 pred0"> nodes</span><!--
+--><span class="label-100 pred0"> within</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> body</span><!--
+--><span class="label-100 pred0"> will</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> cleared</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> text</span><!--
+--><span class="label-100 pred0"> un</span><!--
+--><span class="label-100 pred0">encoded</span><!--
+--><span class="label-100 pred0"> text</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">return</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> document</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">Override</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0"> based</span><!--
+--><span class="label0 pred0"> on</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0"> filtered</span><!--
+--><span class="label0 pred0"> list</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> index</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> index</span><!--
+--><span class="label0 pred0"> number</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> retrieve</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> child</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> it</span><!--
+--><span class="label0 pred0"> exists</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> absent</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">see</span><!--
+--><span class="label0 pred0"> #</span><!--
+--><span class="label0 pred0">child</span><!--
+--><span class="label0 pred0">Node</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">int</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> Element</span><!--
+--><span class="label0 pred0"> child</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">int</span><!--
+--><span class="label0 pred0"> index</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> children</span><!--
+--><span class="label0 pred0">().</span><!--
+--><span class="label0 pred0">get</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">index</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Get</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0">&#x27;s</span><!--
+--><span class="label0 pred0"> child</span><!--
+--><span class="label0 pred0"> elements</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">/&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> This</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> effectively</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> filter</span><!--
+--><span class="label0 pred0"> on</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">link</span><!--
+--><span class="label0 pred0"> #</span><!--
+--><span class="label0 pred0">childNodes</span><!--
+--><span class="label0 pred0">()}</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0"> Element</span><!--
+--><span class="label0 pred0"> nodes</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> child</span><!--
+--><span class="label0 pred0"> elements</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> If</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0"> has</span><!--
+--><span class="label0 pred0"> no</span><!--
+--><span class="label0 pred0"> children</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> returns</span><!--
+--><span class="label0 pred0"> an</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> empty</span><!--
+--><span class="label0 pred0"> list</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">see</span><!--
+--><span class="label0 pred0"> #</span><!--
+--><span class="label0 pred0">childNodes</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> Elements</span><!--
+--><span class="label0 pred0"> children</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> create</span><!--
+--><span class="label0 pred0"> on</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> fly</span><!--
+--><span class="label0 pred0"> rather</span><!--
+--><span class="label0 pred0"> than</span><!--
+--><span class="label0 pred0"> maintaining</span><!--
+--><span class="label0 pred0"> two</span><!--
+--><span class="label0 pred0"> lists</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> gets</span><!--
+--><span class="label0 pred0"> slow</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> memo</span><!--
+--><span class="label0 pred0">ize</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> mark</span><!--
+--><span class="label0 pred0"> dirty</span><!--
+--><span class="label0 pred0"> on</span><!--
+--><span class="label0 pred0"> change</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> List</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">Element</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> elements</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> ArrayList</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">Element</span><!--
+--><span class="label0 pred0">&gt;();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">Node</span><!--
+--><span class="label0 pred0"> node</span><!--
+--><span class="label0 pred0"> :</span><!--
+--><span class="label0 pred0"> child</span><!--
+--><span class="label0 pred0">Nodes</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">node</span><!--
+--><span class="label0 pred0"> instanceof</span><!--
+--><span class="label0 pred0"> Element</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> elements</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">add</span><!--
+--><span class="label0 pred0">((</span><!--
+--><span class="label0 pred0">Element</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> node</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Elements</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">elements</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Find</span><!--
+--><span class="label0 pred0"> elements</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0"> match</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> selector</span><!--
+--><span class="label0 pred0"> query</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0"> as</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> starting</span><!--
+--><span class="label0 pred0"> context</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> Mat</span><!--
+--><span class="label0 pred0">ched</span><!--
+--><span class="label0 pred0"> elements</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> may</span><!--
+--><span class="label0 pred0"> include</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> any</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> its</span><!--
+--><span class="label0 pred0"> children</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">/&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> This</span><!--
+--><span class="label0 pred0"> method</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> generally</span><!--
+--><span class="label0 pred0"> more</span><!--
+--><span class="label0 pred0"> powerful</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> use</span><!--
+--><span class="label0 pred0"> than</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> DOM</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">type</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">Element</span><!--
+--><span class="label0 pred0">By</span><!--
+--><span class="label0 pred0">*}</span><!--
+--><span class="label0 pred0"> methods</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> because</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> multiple</span><!--
+--><span class="label0 pred0"> filters</span><!--
+--><span class="label0 pred0"> can</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> combined</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> e</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">g</span><!--
+--><span class="label0 pred0">.:</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">ul</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">li</span><!--
+--><span class="label0 pred0">&gt;{@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> el</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">select</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">href</span><!--
+--><span class="label0 pred0">]</span><!--
+--><span class="label0 pred0">&quot;)}</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> finds</span><!--
+--><span class="label0 pred0"> links</span><!--
+--><span class="label0 pred0"> ({</span><!--
+--><span class="label0 pred0">@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0"> tags</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> href</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0"> attributes</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">li</span><!--
+--><span class="label0 pred0">&gt;{@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> el</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">select</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">a</span><!--
+--><span class="label0 pred0">[</span><!--
+--><span class="label0 pred0">href</span><!--
+--><span class="label0 pred0">*=</span><!--
+--><span class="label0 pred0">example</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">com</span><!--
+--><span class="label0 pred0">]</span><!--
+--><span class="label0 pred0">&quot;)}</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> finds</span><!--
+--><span class="label0 pred0"> links</span><!--
+--><span class="label0 pred0"> pointing</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> example</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">com</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">loose</span><!--
+--><span class="label0 pred0">ly</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;/</span><!--
+--><span class="label0 pred0">ul</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">p</span><!--
+--><span class="label0 pred0">/&gt;</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> See</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> query</span><!--
+--><span class="label0 pred0"> syntax</span><!--
+--><span class="label0 pred0"> documentation</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">link</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">js</span><!--
+--><span class="label0 pred0">oup</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">select</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Selector</span><!--
+--><span class="label0 pred0">}.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> query</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">link</span><!--
+--><span class="label0 pred0"> Selector</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0"> query</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> elements</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0"> match</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> query</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">empty</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> none</span><!--
+--><span class="label0 pred0"> match</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">see</span><!--
+--><span class="label0 pred0"> org</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">js</span><!--
+--><span class="label0 pred0">oup</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">select</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">Selector</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> Elements</span><!--
+--><span class="label0 pred0"> select</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> query</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> Selector</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">select</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">query</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Add</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> node</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> last</span><!--
+--><span class="label0 pred0"> child</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> child</span><!--
+--><span class="label0 pred0"> node</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> Must</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> already</span><!--
+--><span class="label0 pred0"> have</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> parent</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> so</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0"> you</span><!--
+--><span class="label0 pred0"> can</span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0"> more</span><!--
+--><span class="label0 pred0"> child</span><!--
+--><span class="label0 pred0"> nodes</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> elements</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> Element</span><!--
+--><span class="label0 pred3"> append</span><!--
+--><span class="label0 pred4">Child</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Node</span><!--
+--><span class="label0 pred0"> child</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Validate</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">notNull</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">child</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> child</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">setParent</span><!--
+--><span class="label0 pred0">Node</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">this</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> child</span><!--
+--><span class="label0 pred0">Nodes</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">add</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">child</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Add</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> node</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> start</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0">&#x27;s</span><!--
+--><span class="label0 pred0"> children</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> child</span><!--
+--><span class="label0 pred0"> node</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> Must</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> already</span><!--
+--><span class="label0 pred0"> have</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> parent</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> so</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0"> you</span><!--
+--><span class="label0 pred0"> can</span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0"> more</span><!--
+--><span class="label0 pred0"> child</span><!--
+--><span class="label0 pred0"> nodes</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> elements</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> Element</span><!--
+--><span class="label1 pred5"> prepend</span><!--
+--><span class="label1 pred6">Child</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Node</span><!--
+--><span class="label0 pred0"> child</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Validate</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">notNull</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">child</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> child</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">setParent</span><!--
+--><span class="label0 pred0">Node</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">this</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> child</span><!--
+--><span class="label0 pred0">Nodes</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">add</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> child</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Create</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> tag</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0"> it</span><!--
+--><span class="label0 pred0"> as</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> last</span><!--
+--><span class="label0 pred0"> child</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> tagName</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> tag</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">e</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">g</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> div</span><!--
+--><span class="label0 pred0">}).</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> allow</span><!--
+--><span class="label0 pred0"> you</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0"> content</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> it</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> e</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">g</span><!--
+--><span class="label0 pred0">.:</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> parent</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">append</span><!--
+--><span class="label0 pred0">Element</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">h</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">&quot;).</span><!--
+--><span class="label0 pred0">attr</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">id</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">header</span><!--
+--><span class="label0 pred0">&quot;).</span><!--
+--><span class="label0 pred0">text</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">Welcome</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> Element</span><!--
+--><span class="label0 pred4"> append</span><!--
+--><span class="label0 pred6">Element</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> tagName</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Element</span><!--
+--><span class="label0 pred0"> child</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Element</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">valueOf</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">tagName</span><!--
+--><span class="label0 pred0">),</span><!--
+--><span class="label0 pred0"> base</span><!--
+--><span class="label0 pred0">Uri</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred4"> append</span><!--
+--><span class="label0 pred6">Child</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">child</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> child</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Create</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> tag</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0"> it</span><!--
+--><span class="label0 pred0"> as</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> first</span><!--
+--><span class="label0 pred0"> child</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> 
+    </span>
+</div>
+<hr/>
+<div>
+<h3>
+Jsoup, 1
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>            body().prependChild(node);<br/>            body().prependChild(new TextNode(&quot; &quot;, &quot;&quot;));<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0"> do</span><!--
+--><span class="label-100 pred0"> in</span><!--
+--><span class="label-100 pred0"> inverse</span><!--
+--><span class="label-100 pred0"> order</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0"> maintain</span><!--
+--><span class="label-100 pred0"> text</span><!--
+--><span class="label-100 pred0"> order</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> normal</span><!--
+--><span class="label-100 pred0">ise</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">head</span><!--
+--><span class="label-100 pred0">());</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> normal</span><!--
+--><span class="label-100 pred0">ise</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">select</span><!--
+--><span class="label-100 pred0">(&quot;</span><!--
+--><span class="label-100 pred0">html</span><!--
+--><span class="label-100 pred0">&quot;).</span><!--
+--><span class="label-100 pred0">first</span><!--
+--><span class="label-100 pred0">());</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> normal</span><!--
+--><span class="label-100 pred0">ise</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">this</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">        
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> does</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> recurse</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> private</span><!--
+--><span class="label-100 pred0"> void</span><!--
+--><span class="label-100 pred0"> normal</span><!--
+--><span class="label-100 pred0">ise</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">Element</span><!--
+--><span class="label-100 pred0"> element</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> List</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Node</span><!--
+--><span class="label-100 pred0">&gt;</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0">Move</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> new</span><!--
+--><span class="label-100 pred0"> ArrayList</span><!--
+--><span class="label-100 pred0">&lt;</span><!--
+--><span class="label-100 pred0">Node</span><!--
+--><span class="label-100 pred0">&gt;();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Node</span><!--
+--><span class="label-100 pred0"> node</span><!--
+--><span class="label-100 pred0">:</span><!--
+--><span class="label-100 pred0"> element</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">childNodes</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">node</span><!--
+--><span class="label-100 pred0"> instanceof</span><!--
+--><span class="label-100 pred0"> Text</span><!--
+--><span class="label-100 pred0">Node</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> Text</span><!--
+--><span class="label-100 pred0">Node</span><!--
+--><span class="label-100 pred0"> tn</span><!--
+--><span class="label-100 pred0"> =</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Text</span><!--
+--><span class="label-100 pred0">Node</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> node</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+               </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (!</span><!--
+--><span class="label-100 pred0">tn</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">isBlank</span><!--
+--><span class="label-100 pred0">())</span><!--
+--><span class="label-100 pred0">
+                   </span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0">Move</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">add</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">tn</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> for</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">Node</span><!--
+--><span class="label-100 pred0"> node</span><!--
+--><span class="label-100 pred0">:</span><!--
+--><span class="label-100 pred0"> to</span><!--
+--><span class="label-100 pred0">Move</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> element</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">removeChild</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">node</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> body</span><!--
+--><span class="label-100 pred0">().</span><!--
+--><span class="label-100 pred0">appendChild</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">new</span><!--
+--><span class="label-100 pred0"> Text</span><!--
+--><span class="label-100 pred0">Node</span><!--
+--><span class="label-100 pred0">(&quot;</span><!--
+--><span class="label-100 pred0"> &quot;,</span><!--
+--><span class="label-100 pred0"> &quot;&quot;));</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> body</span><!--
+--><span class="label-100 pred0">().</span><!--
+--><span class="label-100 pred0">appendChild</span><!--
+--><span class="label-100 pred0">(</span><!--
+--><span class="label-100 pred0">node</span><!--
+--><span class="label-100 pred0">);</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">Override</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> String</span><!--
+--><span class="label-100 pred0"> outer</span><!--
+--><span class="label-100 pred0">Html</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> super</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">html</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0"> //</span><!--
+--><span class="label-100 pred0"> no</span><!--
+--><span class="label-100 pred0"> outer</span><!--
+--><span class="label-100 pred0"> wrapper</span><!--
+--><span class="label-100 pred0"> tag</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> Set</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> text</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> {@</span><!--
+--><span class="label-100 pred0">code</span><!--
+--><span class="label-100 pred0"> body</span><!--
+--><span class="label-100 pred0">}</span><!--
+--><span class="label-100 pred0"> of</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> document</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0"> Any</span><!--
+--><span class="label-100 pred0"> existing</span><!--
+--><span class="label-100 pred0"> nodes</span><!--
+--><span class="label-100 pred0"> within</span><!--
+--><span class="label-100 pred0"> the</span><!--
+--><span class="label-100 pred0"> body</span><!--
+--><span class="label-100 pred0"> will</span><!--
+--><span class="label-100 pred0"> be</span><!--
+--><span class="label-100 pred0"> cleared</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">param</span><!--
+--><span class="label-100 pred0"> text</span><!--
+--><span class="label-100 pred0"> un</span><!--
+--><span class="label-100 pred0">encoded</span><!--
+--><span class="label-100 pred0"> text</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">return</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> document</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">Override</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> tagName</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> tag</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">e</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">g</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> div</span><!--
+--><span class="label0 pred0">}).</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> allow</span><!--
+--><span class="label0 pred0"> you</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0"> content</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> it</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> e</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">g</span><!--
+--><span class="label0 pred0">.:</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> parent</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">prepend</span><!--
+--><span class="label0 pred0">Element</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">h</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">&quot;).</span><!--
+--><span class="label0 pred0">attr</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">id</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> &quot;</span><!--
+--><span class="label0 pred0">header</span><!--
+--><span class="label0 pred0">&quot;).</span><!--
+--><span class="label0 pred0">text</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">Welcome</span><!--
+--><span class="label0 pred0">&quot;);</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> Element</span><!--
+--><span class="label0 pred0"> prepend</span><!--
+--><span class="label0 pred0">Element</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> tagName</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Element</span><!--
+--><span class="label0 pred0"> child</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Element</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Tag</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">valueOf</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">tagName</span><!--
+--><span class="label0 pred0">),</span><!--
+--><span class="label0 pred0"> base</span><!--
+--><span class="label0 pred0">Uri</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label1 pred0"> prepend</span><!--
+--><span class="label1 pred0">Child</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">child</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> child</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Create</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> append</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Text</span><!--
+--><span class="label0 pred0">Node</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> text</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> un</span><!--
+--><span class="label0 pred0">encoded</span><!--
+--><span class="label0 pred0"> text</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> Element</span><!--
+--><span class="label0 pred1"> append</span><!--
+--><span class="label0 pred1">Text</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> text</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Text</span><!--
+--><span class="label0 pred0">Node</span><!--
+--><span class="label0 pred0"> node</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Text</span><!--
+--><span class="label0 pred0">Node</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">text</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> base</span><!--
+--><span class="label0 pred0">Uri</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred1"> append</span><!--
+--><span class="label0 pred1">Child</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">node</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Create</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> prepend</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Text</span><!--
+--><span class="label0 pred0">Node</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> 
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> text</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> un</span><!--
+--><span class="label0 pred0">encoded</span><!--
+--><span class="label0 pred0"> text</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> Element</span><!--
+--><span class="label0 pred0"> prepend</span><!--
+--><span class="label0 pred0">Text</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> text</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Text</span><!--
+--><span class="label0 pred0">Node</span><!--
+--><span class="label0 pred0"> node</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Text</span><!--
+--><span class="label0 pred0">Node</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">text</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> base</span><!--
+--><span class="label0 pred0">Uri</span><!--
+--><span class="label0 pred0">());</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label1 pred0"> prepend</span><!--
+--><span class="label1 pred0">Child</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">node</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Add</span><!--
+--><span class="label0 pred0"> inner</span><!--
+--><span class="label0 pred0"> HTML</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> supplied</span><!--
+--><span class="label0 pred0"> HTML</span><!--
+--><span class="label0 pred0"> will</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> parsed</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> each</span><!--
+--><span class="label0 pred0"> node</span><!--
+--><span class="label0 pred0"> appended</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> end</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> children</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> html</span><!--
+--><span class="label0 pred0"> HTML</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0"> inside</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> after</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> existing</span><!--
+--><span class="label0 pred0"> HTML</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">see</span><!--
+--><span class="label0 pred0"> #</span><!--
+--><span class="label0 pred0">html</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> Element</span><!--
+--><span class="label0 pred1"> append</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> html</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Validate</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">notNull</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">html</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Element</span><!--
+--><span class="label0 pred0"> fragment</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred1"> Parser</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">parse</span><!--
+--><span class="label0 pred0">Body</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">html</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> base</span><!--
+--><span class="label0 pred0">Uri</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">body</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> TODO</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0"> must</span><!--
+--><span class="label0 pred0"> parse</span><!--
+--><span class="label0 pred0"> without</span><!--
+--><span class="label0 pred0"> implicit</span><!--
+--><span class="label0 pred0"> elements</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> so</span><!--
+--><span class="label0 pred0"> you</span><!--
+--><span class="label0 pred0"> can</span><!--
+--><span class="label0 pred0"> e</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">g</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">td</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">tr</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">without</span><!--
+--><span class="label0 pred0"> creating</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> whole</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> table</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">Node</span><!--
+--><span class="label0 pred0"> node</span><!--
+--><span class="label0 pred0"> :</span><!--
+--><span class="label0 pred0"> fragment</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">childNodes</span><!--
+--><span class="label0 pred0">())</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> node</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">parentNode</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred1"> append</span><!--
+--><span class="label0 pred1">Child</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">node</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Add</span><!--
+--><span class="label0 pred0"> inner</span><!--
+--><span class="label0 pred0"> HTML</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> supplied</span><!--
+--><span class="label0 pred0"> HTML</span><!--
+--><span class="label0 pred0"> will</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> parsed</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> each</span><!--
+--><span class="label0 pred0"> node</span><!--
+--><span class="label0 pred0"> pre</span><!--
+--><span class="label0 pred0">pended</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> start</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> children</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> html</span><!--
+--><span class="label0 pred0"> HTML</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0"> inside</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> before</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> existing</span><!--
+--><span class="label0 pred0"> HTML</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">see</span><!--
+--><span class="label0 pred0"> #</span><!--
+--><span class="label0 pred0">html</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> Element</span><!--
+--><span class="label0 pred1"> prepend</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> html</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Validate</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">notNull</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">html</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Element</span><!--
+--><span class="label0 pred0"> fragment</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred1"> Parser</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">parse</span><!--
+--><span class="label0 pred0">Body</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">html</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> base</span><!--
+--><span class="label0 pred0">Uri</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">body</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> TODO</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0"> must</span><!--
+--><span class="label0 pred0"> parse</span><!--
+--><span class="label0 pred0"> without</span><!--
+--><span class="label0 pred0"> implicit</span><!--
+--><span class="label0 pred0"> elements</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> so</span><!--
+--><span class="label0 pred0"> you</span><!--
+--><span class="label0 pred0"> can</span><!--
+--><span class="label0 pred0"> e</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">g</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> add</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">td</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">tr</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">without</span><!--
+--><span class="label0 pred0"> creating</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> whole</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> table</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> List</span><!--
+--><span class="label0 pred0">&lt;</span><!--
+--><span class="label0 pred0">Node</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0"> nodes</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> fragment</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">childNodes</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">int</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> nodes</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">size</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0"> &gt;=</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> i</span><!--
+--><span class="label0 pred0">--)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> Node</span><!--
+--><span class="label0 pred0"> node</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> nodes</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">get</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">i</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> node</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">parentNode</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label1 pred0"> prepend</span><!--
+--><span class="label1 pred0">Child</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">node</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Remove</span><!--
+--><span class="label0 pred0"> all</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0">&#x27;s</span><!--
+--><span class="label0 pred0"> child</span><!--
+--><span class="label0 pred0"> nodes</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> Any</span><!--
+--><span class="label0 pred0"> attributes</span><!--
+--><span class="label0 pred0"> are</span><!--
+--><span class="label0 pred0"> left</span><!--
+--><span class="label0 pred0"> as</span><!--
+--><span class="label0 pred0">-</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> Element</span><!--
+--><span class="label0 pred0"> empty</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> child</span><!--
+--><span class="label0 pred0">Nodes</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">clear</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> Wrap</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> supplied</span><!--
+--><span class="label0 pred0"> HTML</span><!--
+--><span class="label0 pred0"> around</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> html</span><!--
+--><span class="label0 pred0"> HTML</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> wrap</span><!--
+--><span class="label0 pred0"> around</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> e</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">g</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> &lt;</span><!--
+--><span class="label0 pred0">div</span><!--
+--><span class="label0 pred0"> class</span><!--
+--><span class="label0 pred0">=&quot;</span><!--
+--><span class="label0 pred0">head</span><!--
+--><span class="label0 pred0">&quot;&gt;&lt;/</span><!--
+--><span class="label0 pred0">div</span><!--
+--><span class="label0 pred0">&gt;</span><!--
+--><span class="label0 pred0">}.</span><!--
+--><span class="label0 pred0"> Can</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> ar</span><!--
+--><span class="label0 pred0">bit</span><!--
+--><span class="label0 pred0">ral</span><!--
+--><span class="label0 pred0">ily</span><!--
+--><span class="label0 pred0"> deep</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> for</span><!--
+--><span class="label0 pred0"> chaining</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> Element</span><!--
+--><span class="label0 pred0"> wrap</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">String</span><!--
+--><span class="label0 pred0"> html</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Validate</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">not</span><!--
+--><span class="label0 pred0">Empty</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">html</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Element</span><!--
+--><span class="label0 pred0"> wrap</span><!--
+--><span class="label0 pred0">Body</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred1"> Parser</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">parse</span><!--
+--><span class="label0 pred0">Body</span><!--
+--><span class="label0 pred0">Fragment</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">html</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> base</span><!--
+--><span class="label0 pred0">Uri</span><!--
+--><span class="label0 pred0">).</span><!--
+--><span class="label0 pred0">body</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Elements</span><!--
+--><span class="label0 pred0"> wrap</span><!--
+--><span class="label0 pred0">Children</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> wrap</span><!--
+--><span class="label0 pred0">Body</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">children</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Element</span><!--
+--><span class="label0 pred0"> wrap</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> wrap</span><!--
+--><span class="label0 pred0">Children</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">first</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">wrap</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> nothing</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> wrap</span><!--
+--><span class="label0 pred0"> with</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0"> noop</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> Element</span><!--
+--><span class="label0 pred0"> dee</span><!--
+--><span class="label0 pred0">pe</span><!--
+--><span class="label0 pred0">st</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">Deep</span><!--
+--><span class="label0 pred0">Child</span><!--
+--><span class="label0 pred0">(</span>
+</div>
+<hr/>
+</body>
+</html>

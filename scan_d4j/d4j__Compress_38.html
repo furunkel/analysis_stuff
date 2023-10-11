@@ -1,0 +1,2410 @@
+<html>
+<head>
+<style>
+pre {margin: 0.1em }
+
+            span {
+                white-space: pre;
+            }
+
+            .label-100 {
+                border: 1px solid gray;
+            }
+
+            .label0 {
+                border: 1px solid white;
+            }
+
+            .label1 {
+                border: 1px solid blue;
+            }
+            .new {
+                background-color: #8FFF92;
+            }
+
+            .context-size {
+	            padding: 0.1em;
+	            color: white;
+	            background-color: black;
+	            border-radius: 50%;
+	            width: 1.5em;
+	            display: inline-block;
+	            text-align: center;
+	            height: 1.5em;
+	            line-height: 1.5em;
+                margin-right: 0.6em;
+            }
+.pred0{background-color: rgba(255, 0, 0, 0.0);}
+.pred1{background-color: rgba(255, 0, 0, 0.1);}
+.pred2{background-color: rgba(255, 0, 0, 0.2);}
+.pred3{background-color: rgba(255, 0, 0, 0.3);}
+.pred4{background-color: rgba(255, 0, 0, 0.4);}
+.pred5{background-color: rgba(255, 0, 0, 0.5);}
+.pred6{background-color: rgba(255, 0, 0, 0.6);}
+.pred7{background-color: rgba(255, 0, 0, 0.7);}
+.pred8{background-color: rgba(255, 0, 0, 0.8);}
+.pred9{background-color: rgba(255, 0, 0, 0.9);}
+.pred10{background-color: rgba(255, 0, 0, 1.0);}
+</style>
+</head>
+<body>
+<div>
+<h3>
+Compress, 38
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>        if (!isPaxHeader() &amp;&amp;!isGlobalPaxHeader() &amp;&amp; getName().endsWith(&quot;/&quot;)) {<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">since</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> boolean</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0">Global</span><!--
+--><span class="label-100 pred0">P</span><!--
+--><span class="label-100 pred0">ax</span><!--
+--><span class="label-100 pred0">Header</span><!--
+--><span class="label-100 pred0">(){</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> link</span><!--
+--><span class="label-100 pred0">Flag</span><!--
+--><span class="label-100 pred0"> ==</span><!--
+--><span class="label-100 pred0"> L</span><!--
+--><span class="label-100 pred0">F</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">P</span><!--
+--><span class="label-100 pred0">AX</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">GLOBAL</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">EXT</span><!--
+--><span class="label-100 pred0">ENDED</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">HEADER</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Return</span><!--
+--><span class="label-100 pred0"> whether</span><!--
+--><span class="label-100 pred0"> or</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> entry</span><!--
+--><span class="label-100 pred0"> represents</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> directory</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">return</span><!--
+--><span class="label-100 pred0"> True</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> entry</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> directory</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">Override</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> boolean</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0">Directory</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">file</span><!--
+--><span class="label-100 pred0"> !=</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> file</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">isDirectory</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0">Flag</span><!--
+--><span class="label-100 pred0"> ==</span><!--
+--><span class="label-100 pred0"> L</span><!--
+--><span class="label-100 pred0">F</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">DIR</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> true</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">getName</span><!--
+--><span class="label-100 pred0">().</span><!--
+--><span class="label-100 pred0">endsWith</span><!--
+--><span class="label-100 pred0">(&quot;/</span><!--
+--><span class="label-100 pred0">&quot;))</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> true</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> false</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Check</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0">normal</span><!--
+--><span class="label-100 pred0"> file</span><!--
+--><span class="label-100 pred0">&quot;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">since</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">return</span><!--
+--><span class="label-100 pred0"> whether</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0">normal</span><!--
+--><span class="label-100 pred0"> file</span><!--
+--><span class="label-100 pred0">&quot;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> boolean</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0">File</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">file</span><!--
+--><span class="label-100 pred0"> !=</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0">GN</span><!--
+--><span class="label0 pred0">US</span><!--
+--><span class="label0 pred0">parse</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0">Old</span><!--
+--><span class="label0 pred0">GN</span><!--
+--><span class="label0 pred0">US</span><!--
+--><span class="label0 pred0">parse</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> ||</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0">P</span><!--
+--><span class="label0 pred0">ax</span><!--
+--><span class="label0 pred0">GN</span><!--
+--><span class="label0 pred0">US</span><!--
+--><span class="label0 pred0">parse</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Indic</span><!--
+--><span class="label0 pred0">ate</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> entry</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> GNU</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> star</span><!--
+--><span class="label0 pred0"> sparse</span><!--
+--><span class="label0 pred0"> block</span><!--
+--><span class="label0 pred0"> using</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> old</span><!--
+--><span class="label0 pred0">gnu</span><!--
+--><span class="label0 pred0"> format</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> true</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> sparse</span><!--
+--><span class="label0 pred0"> extension</span><!--
+--><span class="label0 pred0"> provided</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> GNU</span><!--
+--><span class="label0 pred0"> tar</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> star</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">since</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0">Old</span><!--
+--><span class="label0 pred0">GN</span><!--
+--><span class="label0 pred0">US</span><!--
+--><span class="label0 pred0">parse</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> link</span><!--
+--><span class="label0 pred0">Flag</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> L</span><!--
+--><span class="label0 pred0">F</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">GN</span><!--
+--><span class="label0 pred0">UT</span><!--
+--><span class="label0 pred0">YPE</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">SPARSE</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Indic</span><!--
+--><span class="label0 pred0">ate</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> entry</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> GNU</span><!--
+--><span class="label0 pred0"> sparse</span><!--
+--><span class="label0 pred0"> block</span><!--
+--><span class="label0 pred0"> using</span><!--
+--><span class="label0 pred0"> one</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> P</span><!--
+--><span class="label0 pred0">AX</span><!--
+--><span class="label0 pred0"> formats</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> true</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> sparse</span><!--
+--><span class="label0 pred0"> extension</span><!--
+--><span class="label0 pred0"> provided</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> GNU</span><!--
+--><span class="label0 pred0"> tar</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">since</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0">P</span><!--
+--><span class="label0 pred0">ax</span><!--
+--><span class="label0 pred0">GN</span><!--
+--><span class="label0 pred0">US</span><!--
+--><span class="label0 pred0">parse</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> p</span><!--
+--><span class="label0 pred0">ax</span><!--
+--><span class="label0 pred0">GN</span><!--
+--><span class="label0 pred0">US</span><!--
+--><span class="label0 pred0">parse</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Indic</span><!--
+--><span class="label0 pred0">ate</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> entry</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> star</span><!--
+--><span class="label0 pred0"> sparse</span><!--
+--><span class="label0 pred0"> block</span><!--
+--><span class="label0 pred0"> using</span><!--
+--><span class="label0 pred0"> P</span><!--
+--><span class="label0 pred0">AX</span><!--
+--><span class="label0 pred0"> headers</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> true</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> sparse</span><!--
+--><span class="label0 pred0"> extension</span><!--
+--><span class="label0 pred0"> provided</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> star</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">since</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0">Star</span><!--
+--><span class="label0 pred0">Sparse</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> star</span><!--
+--><span class="label0 pred0">Sparse</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Indic</span><!--
+--><span class="label0 pred0">ate</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> entry</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> GNU</span><!--
+--><span class="label0 pred0"> long</span><!--
+--><span class="label0 pred0"> link</span><!--
+--><span class="label0 pred0">name</span><!--
+--><span class="label0 pred0"> block</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> true</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> long</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0"> extension</span><!--
+--><span class="label0 pred0"> provided</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> GNU</span><!--
+--><span class="label0 pred0"> tar</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0">GN</span><!--
+--><span class="label0 pred0">UL</span><!--
+--><span class="label0 pred0">ong</span><!--
+--><span class="label0 pred0">Link</span><!--
+--><span class="label0 pred0">Entry</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> link</span><!--
+--><span class="label0 pred0">Flag</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> L</span><!--
+--><span class="label0 pred0">F</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">GN</span><!--
+--><span class="label0 pred0">UT</span><!--
+--><span class="label0 pred0">YPE</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">LON</span><!--
+--><span class="label0 pred0">GL</span><!--
+--><span class="label0 pred0">INK</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Indic</span><!--
+--><span class="label0 pred0">ate</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> entry</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> GNU</span><!--
+--><span class="label0 pred0"> long</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0"> block</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> true</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> long</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0"> extension</span><!--
+--><span class="label0 pred0"> provided</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0"> GNU</span><!--
+--><span class="label0 pred0"> tar</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0">GN</span><!--
+--><span class="label0 pred0">UL</span><!--
+--><span class="label0 pred0">ong</span><!--
+--><span class="label0 pred0">Name</span><!--
+--><span class="label0 pred0">Entry</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> link</span><!--
+--><span class="label0 pred0">Flag</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> L</span><!--
+--><span class="label0 pred0">F</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">GN</span><!--
+--><span class="label0 pred0">UT</span><!--
+--><span class="label0 pred0">YPE</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">LONG</span><!--
+--><span class="label0 pred0">NAME</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Check</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> P</span><!--
+--><span class="label0 pred0">ax</span><!--
+--><span class="label0 pred0"> header</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> true</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> P</span><!--
+--><span class="label0 pred0">ax</span><!--
+--><span class="label0 pred0"> header</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">since</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label1 pred1"> is</span><!--
+--><span class="label1 pred1">P</span><!--
+--><span class="label1 pred1">ax</span><!--
+--><span class="label1 pred1">Header</span><!--
+--><span class="label0 pred0">(){</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> link</span><!--
+--><span class="label0 pred0">Flag</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> L</span><!--
+--><span class="label0 pred0">F</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">P</span><!--
+--><span class="label0 pred0">AX</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">EXT</span><!--
+--><span class="label0 pred0">ENDED</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">HEADER</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">LC</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> ||</span><!--
+--><span class="label0 pred0"> link</span><!--
+--><span class="label0 pred0">Flag</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> L</span><!--
+--><span class="label0 pred0">F</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">P</span><!--
+--><span class="label0 pred0">AX</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">EXT</span><!--
+--><span class="label0 pred0">ENDED</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">HEADER</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">UC</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Check</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> P</span><!--
+--><span class="label0 pred0">ax</span><!--
+--><span class="label0 pred0"> header</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> {@</span><!--
+--><span class="label0 pred0">code</span><!--
+--><span class="label0 pred0"> true</span><!--
+--><span class="label0 pred0">}</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> P</span><!--
+--><span class="label0 pred0">ax</span><!--
+--><span class="label0 pred0"> header</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> file</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">isFile</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">link</span><!--
+--><span class="label0 pred0">Flag</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> L</span><!--
+--><span class="label0 pred0">F</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">OLD</span><!--
+--><span class="label0 pred0">NORM</span><!--
+--><span class="label0 pred0"> ||</span><!--
+--><span class="label0 pred0"> link</span><!--
+--><span class="label0 pred0">Flag</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> L</span><!--
+--><span class="label0 pred0">F</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">NORMAL</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> true</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> !</span><!--
+--><span class="label0 pred0">getName</span><!--
+--><span class="label0 pred0">().</span><!--
+--><span class="label0 pred0">endsWith</span><!--
+--><span class="label0 pred0">(&quot;/&quot;);</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Check</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> symbolic</span><!--
+--><span class="label0 pred0"> link</span><!--
+--><span class="label0 pred0"> entry</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">since</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> whether</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> symbolic</span><!--
+--><span class="label0 pred0"> link</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label0 pred2"> is</span><!--
+--><span class="label0 pred2">Symbolic</span><!--
+--><span class="label0 pred2">Link</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> link</span><!--
+--><span class="label0 pred0">Flag</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> L</span><!--
+--><span class="label0 pred0">F</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">SY</span><!--
+--><span class="label0 pred0">ML</span><!--
+--><span class="label0 pred0">INK</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Check</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> link</span><!--
+--><span class="label0 pred0"> entry</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">since</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> whether</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> link</span><!--
+--><span class="label0 pred0"> entry</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred1">Link</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> link</span><!--
+--><span class="label0 pred0">Flag</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> L</span><!--
+--><span class="label0 pred0">F</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">LINK</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Check</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> character</span><!--
+--><span class="label0 pred0"> device</span><!--
+--><span class="label0 pred0"> entry</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">since</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> whether</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> character</span><!--
+--><span class="label0 pred0"> device</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0">Character</span><!--
+--><span class="label0 pred0">Device</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> link</span><!--
+--><span class="label0 pred0">Flag</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> L</span><!--
+--><span class="label0 pred0">F</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">CH</span><!--
+--><span class="label0 pred0">R</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Check</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> block</span><!--
+--><span class="label0 pred0"> device</span><!--
+--><span class="label0 pred0"> entry</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">since</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> whether</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> block</span><!--
+--><span class="label0 pred0"> device</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0">Block</span><!--
+--><span class="label0 pred0">Device</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> link</span><!--
+--><span class="label0 pred0">Flag</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> L</span><!--
+--><span class="label0 pred0">F</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">BLK</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Check</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> FIFO</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">pipe</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> entry</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">since</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">1</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">2</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> whether</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> FIFO</span><!--
+--><span class="label0 pred0"> entry</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0">FIFO</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> link</span><!--
+--><span class="label0 pred0">Flag</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> L</span><!--
+--><span class="label0 pred0">F</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">FIFO</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Check</span><!--
+--><span class="label0 pred0"> whether</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> sparse</span><!--
+--><span class="label0 pred0"> entry</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span>
+</div>
+<hr/>
+<div>
+<h3>
+Compress, 38
+</h3>
+<pre class="new">
+&lt;FILEB&gt;<br/>&lt;CHANGES&gt;<br/>        if (!isPaxHeader() &amp;&amp;!isGlobalPaxHeader() &amp;&amp; getName().endsWith(&quot;/&quot;)) {<br/>&lt;CHANGEE&gt;<br/>&lt;FILEE&gt;<br/>
+</pre>
+<span class="label-100 pred0">&lt;FILEB&gt;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">since</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> boolean</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0">Global</span><!--
+--><span class="label-100 pred0">P</span><!--
+--><span class="label-100 pred0">ax</span><!--
+--><span class="label-100 pred0">Header</span><!--
+--><span class="label-100 pred0">(){</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> link</span><!--
+--><span class="label-100 pred0">Flag</span><!--
+--><span class="label-100 pred0"> ==</span><!--
+--><span class="label-100 pred0"> L</span><!--
+--><span class="label-100 pred0">F</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">P</span><!--
+--><span class="label-100 pred0">AX</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">GLOBAL</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">EXT</span><!--
+--><span class="label-100 pred0">ENDED</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">HEADER</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Return</span><!--
+--><span class="label-100 pred0"> whether</span><!--
+--><span class="label-100 pred0"> or</span><!--
+--><span class="label-100 pred0"> not</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> entry</span><!--
+--><span class="label-100 pred0"> represents</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> directory</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">return</span><!--
+--><span class="label-100 pred0"> True</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> entry</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> directory</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">Override</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> boolean</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0">Directory</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">file</span><!--
+--><span class="label-100 pred0"> !=</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> file</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">isDirectory</span><!--
+--><span class="label-100 pred0">();</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">link</span><!--
+--><span class="label-100 pred0">Flag</span><!--
+--><span class="label-100 pred0"> ==</span><!--
+--><span class="label-100 pred0"> L</span><!--
+--><span class="label-100 pred0">F</span><!--
+--><span class="label-100 pred0">_</span><!--
+--><span class="label-100 pred0">DIR</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> true</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGES&gt;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">getName</span><!--
+--><span class="label-100 pred0">().</span><!--
+--><span class="label-100 pred0">endsWith</span><!--
+--><span class="label-100 pred0">(&quot;/</span><!--
+--><span class="label-100 pred0">&quot;))</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;CHANGEE&gt;</span><!--
+--><span class="label-100 pred0">
+           </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> true</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> return</span><!--
+--><span class="label-100 pred0"> false</span><!--
+--><span class="label-100 pred0">;</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> }</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> /**</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> Check</span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0">normal</span><!--
+--><span class="label-100 pred0"> file</span><!--
+--><span class="label-100 pred0">&quot;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">since</span><!--
+--><span class="label-100 pred0"> </span><!--
+--><span class="label-100 pred0">1</span><!--
+--><span class="label-100 pred0">.</span><!--
+--><span class="label-100 pred0">2</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> *</span><!--
+--><span class="label-100 pred0"> @</span><!--
+--><span class="label-100 pred0">return</span><!--
+--><span class="label-100 pred0"> whether</span><!--
+--><span class="label-100 pred0"> this</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0"> a</span><!--
+--><span class="label-100 pred0"> &quot;</span><!--
+--><span class="label-100 pred0">normal</span><!--
+--><span class="label-100 pred0"> file</span><!--
+--><span class="label-100 pred0">&quot;</span><!--
+--><span class="label-100 pred0">
+    </span><!--
+--><span class="label-100 pred0"> */</span><!--
+--><span class="label-100 pred0">
+   </span><!--
+--><span class="label-100 pred0"> public</span><!--
+--><span class="label-100 pred0"> boolean</span><!--
+--><span class="label-100 pred0"> is</span><!--
+--><span class="label-100 pred0">File</span><!--
+--><span class="label-100 pred0">()</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+       </span><!--
+--><span class="label-100 pred0"> if</span><!--
+--><span class="label-100 pred0"> (</span><!--
+--><span class="label-100 pred0">file</span><!--
+--><span class="label-100 pred0"> !=</span><!--
+--><span class="label-100 pred0"> null</span><!--
+--><span class="label-100 pred0">)</span><!--
+--><span class="label-100 pred0"> {</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;FILEE&gt;</span><!--
+--><span class="label-100 pred0">
+</span><!--
+--><span class="label-100 pred0">&lt;SCANS&gt;</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> bytes</span><!--
+--><span class="label0 pred0"> skipped</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">exception</span><!--
+--><span class="label0 pred0"> IOException</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">               </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> some</span><!--
+--><span class="label0 pred0"> other</span><!--
+--><span class="label0 pred0"> I</span><!--
+--><span class="label0 pred0">/</span><!--
+--><span class="label0 pred0">O</span><!--
+--><span class="label0 pred0"> error</span><!--
+--><span class="label0 pred0"> occurs</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">Override</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> long</span><!--
+--><span class="label0 pred0"> skip</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">final</span><!--
+--><span class="label0 pred0"> long</span><!--
+--><span class="label0 pred0"> n</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> throws</span><!--
+--><span class="label0 pred0"> IOException</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">n</span><!--
+--><span class="label0 pred0"> &lt;=</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0"> ||</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0">Directory</span><!--
+--><span class="label0 pred0">())</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> long</span><!--
+--><span class="label0 pred0"> available</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> entry</span><!--
+--><span class="label0 pred0">Size</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> entry</span><!--
+--><span class="label0 pred0">Offset</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> long</span><!--
+--><span class="label0 pred0"> skipped</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">skip</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">Math</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">min</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">n</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> available</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0"> 
+       </span><!--
+--><span class="label0 pred0"> count</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">skipped</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> entry</span><!--
+--><span class="label0 pred0">Offset</span><!--
+--><span class="label0 pred0"> +=</span><!--
+--><span class="label0 pred0"> skipped</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> skipped</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Since</span><!--
+--><span class="label0 pred0"> we</span><!--
+--><span class="label0 pred0"> do</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> support</span><!--
+--><span class="label0 pred0"> marking</span><!--
+--><span class="label0 pred0"> just</span><!--
+--><span class="label0 pred0"> yet</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> we</span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> false</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> False</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">Override</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> boolean</span><!--
+--><span class="label0 pred0"> mark</span><!--
+--><span class="label0 pred0">Supported</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> false</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Since</span><!--
+--><span class="label0 pred0"> we</span><!--
+--><span class="label0 pred0"> do</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> support</span><!--
+--><span class="label0 pred0"> marking</span><!--
+--><span class="label0 pred0"> just</span><!--
+--><span class="label0 pred0"> yet</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> we</span><!--
+--><span class="label0 pred0"> do</span><!--
+--><span class="label0 pred0"> nothing</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">param</span><!--
+--><span class="label0 pred0"> mark</span><!--
+--><span class="label0 pred0">Limit</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> limit</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> mark</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">Override</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> mark</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">final</span><!--
+--><span class="label0 pred0"> int</span><!--
+--><span class="label0 pred0"> mark</span><!--
+--><span class="label0 pred0">Limit</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Since</span><!--
+--><span class="label0 pred0"> we</span><!--
+--><span class="label0 pred0"> do</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> support</span><!--
+--><span class="label0 pred0"> marking</span><!--
+--><span class="label0 pred0"> just</span><!--
+--><span class="label0 pred0"> yet</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> we</span><!--
+--><span class="label0 pred0"> do</span><!--
+--><span class="label0 pred0"> nothing</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">Override</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> synchronized</span><!--
+--><span class="label0 pred0"> void</span><!--
+--><span class="label0 pred0"> reset</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> /**</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Get</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> next</span><!--
+--><span class="label0 pred0"> entry</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> this</span><!--
+--><span class="label0 pred0"> tar</span><!--
+--><span class="label0 pred0"> archive</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0"> This</span><!--
+--><span class="label0 pred0"> will</span><!--
+--><span class="label0 pred0"> skip</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> over</span><!--
+--><span class="label0 pred0"> any</span><!--
+--><span class="label0 pred0"> remaining</span><!--
+--><span class="label0 pred0"> data</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> current</span><!--
+--><span class="label0 pred0"> entry</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> there</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> is</span><!--
+--><span class="label0 pred0"> one</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> place</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> input</span><!--
+--><span class="label0 pred0"> stream</span><!--
+--><span class="label0 pred0"> at</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> header</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> next</span><!--
+--><span class="label0 pred0"> entry</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> read</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> header</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> instantiate</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> Tar</span><!--
+--><span class="label0 pred0">Entry</span><!--
+--><span class="label0 pred0"> from</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> header</span><!--
+--><span class="label0 pred0"> bytes</span><!--
+--><span class="label0 pred0"> and</span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0"> entry</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> If</span><!--
+--><span class="label0 pred0"> there</span><!--
+--><span class="label0 pred0"> are</span><!--
+--><span class="label0 pred0"> no</span><!--
+--><span class="label0 pred0"> more</span><!--
+--><span class="label0 pred0"> entries</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> archive</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0"> will</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> be</span><!--
+--><span class="label0 pred0"> returned</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> indicate</span><!--
+--><span class="label0 pred0"> that</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> end</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> archive</span><!--
+--><span class="label0 pred0"> has</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> been</span><!--
+--><span class="label0 pred0"> reached</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">return</span><!--
+--><span class="label0 pred0"> The</span><!--
+--><span class="label0 pred0"> next</span><!--
+--><span class="label0 pred0"> Tar</span><!--
+--><span class="label0 pred0">Entry</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> archive</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> or</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> *</span><!--
+--><span class="label0 pred0"> @</span><!--
+--><span class="label0 pred0">throws</span><!--
+--><span class="label0 pred0"> IOException</span><!--
+--><span class="label0 pred0"> on</span><!--
+--><span class="label0 pred0"> error</span><!--
+--><span class="label0 pred0">
+    </span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+   </span><!--
+--><span class="label0 pred0"> public</span><!--
+--><span class="label0 pred0"> Tar</span><!--
+--><span class="label0 pred0">Archive</span><!--
+--><span class="label0 pred0">Entry</span><!--
+--><span class="label0 pred0"> getNext</span><!--
+--><span class="label0 pred0">Tar</span><!--
+--><span class="label0 pred0">Entry</span><!--
+--><span class="label0 pred0">()</span><!--
+--><span class="label0 pred0"> throws</span><!--
+--><span class="label0 pred0"> IOException</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">has</span><!--
+--><span class="label0 pred0">Hit</span><!--
+--><span class="label0 pred0">EOF</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">curr</span><!--
+--><span class="label0 pred0">Entry</span><!--
+--><span class="label0 pred0"> !=</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> /*</span><!--
+--><span class="label0 pred0"> Skip</span><!--
+--><span class="label0 pred0"> will</span><!--
+--><span class="label0 pred0"> only</span><!--
+--><span class="label0 pred0"> go</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> end</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> current</span><!--
+--><span class="label0 pred0"> entry</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> IO</span><!--
+--><span class="label0 pred0">Utils</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">skip</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">this</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> Long</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">MAX</span><!--
+--><span class="label0 pred0">_</span><!--
+--><span class="label0 pred0">VALUE</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> /*</span><!--
+--><span class="label0 pred0"> skip</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> end</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> last</span><!--
+--><span class="label0 pred0"> record</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> skip</span><!--
+--><span class="label0 pred0">Record</span><!--
+--><span class="label0 pred0">Padding</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> byte</span><!--
+--><span class="label0 pred0">[]</span><!--
+--><span class="label0 pred0"> header</span><!--
+--><span class="label0 pred0">Buf</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">Record</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">header</span><!--
+--><span class="label0 pred0">Buf</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> /*</span><!--
+--><span class="label0 pred0"> hit</span><!--
+--><span class="label0 pred0"> EOF</span><!--
+--><span class="label0 pred0"> */</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> curr</span><!--
+--><span class="label0 pred0">Entry</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> try</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> curr</span><!--
+--><span class="label0 pred0">Entry</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> Tar</span><!--
+--><span class="label0 pred0">Archive</span><!--
+--><span class="label0 pred0">Entry</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">header</span><!--
+--><span class="label0 pred0">Buf</span><!--
+--><span class="label0 pred0">,</span><!--
+--><span class="label0 pred0"> zip</span><!--
+--><span class="label0 pred0">Encoding</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0"> catch</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">final</span><!--
+--><span class="label0 pred0"> IllegalArgumentException</span><!--
+--><span class="label0 pred0"> e</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> throw</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> IOException</span><!--
+--><span class="label0 pred0">(&quot;</span><!--
+--><span class="label0 pred0">Error</span><!--
+--><span class="label0 pred0"> detected</span><!--
+--><span class="label0 pred0"> parsing</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> header</span><!--
+--><span class="label0 pred0">&quot;,</span><!--
+--><span class="label0 pred0"> e</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> entry</span><!--
+--><span class="label0 pred0">Offset</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> entry</span><!--
+--><span class="label0 pred0">Size</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> curr</span><!--
+--><span class="label0 pred0">Entry</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred1">getSize</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">curr</span><!--
+--><span class="label0 pred0">Entry</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">GN</span><!--
+--><span class="label0 pred0">UL</span><!--
+--><span class="label0 pred0">ong</span><!--
+--><span class="label0 pred0">Link</span><!--
+--><span class="label0 pred0">Entry</span><!--
+--><span class="label0 pred0">())</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> byte</span><!--
+--><span class="label0 pred0">[]</span><!--
+--><span class="label0 pred0"> long</span><!--
+--><span class="label0 pred0">Link</span><!--
+--><span class="label0 pred0">Data</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">Long</span><!--
+--><span class="label0 pred0">Name</span><!--
+--><span class="label0 pred0">Data</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">long</span><!--
+--><span class="label0 pred0">Link</span><!--
+--><span class="label0 pred0">Data</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> Bug</span><!--
+--><span class="label0 pred0">zilla</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> Mal</span><!--
+--><span class="label0 pred0">formed</span><!--
+--><span class="label0 pred0"> tar</span><!--
+--><span class="label0 pred0"> file</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> long</span><!--
+--><span class="label0 pred0"> link</span><!--
+--><span class="label0 pred0"> entry</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> followed</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> entry</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> curr</span><!--
+--><span class="label0 pred0">Entry</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">set</span><!--
+--><span class="label0 pred0">Link</span><!--
+--><span class="label0 pred0">Name</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">zip</span><!--
+--><span class="label0 pred0">Encoding</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">decode</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">long</span><!--
+--><span class="label0 pred0">Link</span><!--
+--><span class="label0 pred0">Data</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">curr</span><!--
+--><span class="label0 pred0">Entry</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">GN</span><!--
+--><span class="label0 pred0">UL</span><!--
+--><span class="label0 pred0">ong</span><!--
+--><span class="label0 pred0">Name</span><!--
+--><span class="label0 pred0">Entry</span><!--
+--><span class="label0 pred0">())</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> final</span><!--
+--><span class="label0 pred0"> byte</span><!--
+--><span class="label0 pred0">[]</span><!--
+--><span class="label0 pred0"> long</span><!--
+--><span class="label0 pred0">Name</span><!--
+--><span class="label0 pred0">Data</span><!--
+--><span class="label0 pred0"> =</span><!--
+--><span class="label0 pred0"> get</span><!--
+--><span class="label0 pred0">Long</span><!--
+--><span class="label0 pred0">Name</span><!--
+--><span class="label0 pred0">Data</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">long</span><!--
+--><span class="label0 pred0">Name</span><!--
+--><span class="label0 pred0">Data</span><!--
+--><span class="label0 pred0"> ==</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">)</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> Bug</span><!--
+--><span class="label0 pred0">zilla</span><!--
+--><span class="label0 pred0">:</span><!--
+--><span class="label0 pred0"> </span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">0</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">3</span><!--
+--><span class="label0 pred0">4</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> Mal</span><!--
+--><span class="label0 pred0">formed</span><!--
+--><span class="label0 pred0"> tar</span><!--
+--><span class="label0 pred0"> file</span><!--
+--><span class="label0 pred0"> -</span><!--
+--><span class="label0 pred0"> long</span><!--
+--><span class="label0 pred0"> entry</span><!--
+--><span class="label0 pred0"> name</span><!--
+--><span class="label0 pred0"> not</span><!--
+--><span class="label0 pred0"> followed</span><!--
+--><span class="label0 pred0"> by</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> entry</span><!--
+--><span class="label0 pred0">
+               </span><!--
+--><span class="label0 pred0"> return</span><!--
+--><span class="label0 pred0"> null</span><!--
+--><span class="label0 pred0">;</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> curr</span><!--
+--><span class="label0 pred0">Entry</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">setName</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">zip</span><!--
+--><span class="label0 pred0">Encoding</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">decode</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">long</span><!--
+--><span class="label0 pred0">Name</span><!--
+--><span class="label0 pred0">Data</span><!--
+--><span class="label0 pred0">));</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">curr</span><!--
+--><span class="label0 pred0">Entry</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">Global</span><!--
+--><span class="label0 pred0">P</span><!--
+--><span class="label0 pred0">ax</span><!--
+--><span class="label0 pred0">Header</span><!--
+--><span class="label0 pred0">()){</span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> Process</span><!--
+--><span class="label0 pred0"> Global</span><!--
+--><span class="label0 pred0"> P</span><!--
+--><span class="label0 pred0">ax</span><!--
+--><span class="label0 pred0"> headers</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> read</span><!--
+--><span class="label0 pred0">Global</span><!--
+--><span class="label0 pred0">P</span><!--
+--><span class="label0 pred0">ax</span><!--
+--><span class="label0 pred0">Headers</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">curr</span><!--
+--><span class="label0 pred0">Entry</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label1 pred0">is</span><!--
+--><span class="label1 pred0">P</span><!--
+--><span class="label1 pred0">ax</span><!--
+--><span class="label1 pred0">Header</span><!--
+--><span class="label0 pred0">()){</span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> Process</span><!--
+--><span class="label0 pred0"> P</span><!--
+--><span class="label0 pred0">ax</span><!--
+--><span class="label0 pred0"> headers</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> p</span><!--
+--><span class="label0 pred0">ax</span><!--
+--><span class="label0 pred0">Headers</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0"> else</span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (!</span><!--
+--><span class="label0 pred0">global</span><!--
+--><span class="label0 pred0">P</span><!--
+--><span class="label0 pred0">ax</span><!--
+--><span class="label0 pred0">Headers</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred1">isEmpty</span><!--
+--><span class="label0 pred0">())</span><!--
+--><span class="label0 pred0"> {</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> apply</span><!--
+--><span class="label0 pred0">P</span><!--
+--><span class="label0 pred0">ax</span><!--
+--><span class="label0 pred0">Headers</span><!--
+--><span class="label0 pred0">To</span><!--
+--><span class="label0 pred0">Current</span><!--
+--><span class="label0 pred0">Entry</span><!--
+--><span class="label0 pred0">(</span><!--
+--><span class="label0 pred0">global</span><!--
+--><span class="label0 pred0">P</span><!--
+--><span class="label0 pred0">ax</span><!--
+--><span class="label0 pred0">Headers</span><!--
+--><span class="label0 pred0">);</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> if</span><!--
+--><span class="label0 pred0"> (</span><!--
+--><span class="label0 pred0">curr</span><!--
+--><span class="label0 pred0">Entry</span><!--
+--><span class="label0 pred0">.</span><!--
+--><span class="label0 pred0">is</span><!--
+--><span class="label0 pred0">Old</span><!--
+--><span class="label0 pred0">GN</span><!--
+--><span class="label0 pred0">US</span><!--
+--><span class="label0 pred0">parse</span><!--
+--><span class="label0 pred0">()){</span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> Process</span><!--
+--><span class="label0 pred0"> sparse</span><!--
+--><span class="label0 pred0"> files</span><!--
+--><span class="label0 pred0">
+           </span><!--
+--><span class="label0 pred0"> read</span><!--
+--><span class="label0 pred0">Old</span><!--
+--><span class="label0 pred0">GN</span><!--
+--><span class="label0 pred0">US</span><!--
+--><span class="label0 pred0">parse</span><!--
+--><span class="label0 pred0">();</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> }</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> If</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> size</span><!--
+--><span class="label0 pred0"> of</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> next</span><!--
+--><span class="label0 pred0"> element</span><!--
+--><span class="label0 pred0"> in</span><!--
+--><span class="label0 pred0"> the</span><!--
+--><span class="label0 pred0"> archive</span><!--
+--><span class="label0 pred0"> has</span><!--
+--><span class="label0 pred0"> changed</span><!--
+--><span class="label0 pred0">
+       </span><!--
+--><span class="label0 pred0"> //</span><!--
+--><span class="label0 pred0"> due</span><!--
+--><span class="label0 pred0"> to</span><!--
+--><span class="label0 pred0"> a</span><!--
+--><span class="label0 pred0"> new</span><!--
+--><span class="label0 pred0"> size</span>
+</div>
+<hr/>
+</body>
+</html>
